@@ -1,0 +1,11 @@
+# Separate image: these packages do not modify Airflow's dependency environment.
+langgraph==1.0.3
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+matplotlib==3.10.7
+SQLAlchemy==2.0.44
+psycopg[binary]==3.2.12
+streamlit==1.50.0
+plotly==6.3.1
+graphviz==0.21

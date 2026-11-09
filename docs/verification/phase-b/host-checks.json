@@ -1,0 +1,49 @@
+{
+  "checked_at_utc": "2026-11-09T02:42:20.359162+00:00",
+  "phase": "B",
+  "pytest_exit_code": 0,
+  "python_ast_files": 14,
+  "host_versions": {
+    "pandas": "3.1.0",
+    "numpy": "2.4.6",
+    "psycopg": "3.3.6",
+    "requests": "2.34.2",
+    "matplotlib": "3.10.7",
+    "pytest": "8.4.2"
+  },
+  "cached_source_probe": {
+    "note": "Prior real downloads, not a DAG/DB run",
+    "bike": {
+      "rows": 731,
+      "unique_dates": 731,
+      "min_date": "2011-01-01",
+      "max_date": "2012-12-31",
+      "expected_days": 731
+    },
+    "weather": {
+      "rows": 731,
+      "unique_dates": 731,
+      "min_date": "2011-01-01",
+      "max_date": "2012-12-31",
+      "expected_days": 731,
+      "timezone": "America/New_York",
+      "utc_offset_seconds": -18000,
+      "grid_latitude": 39.0,
+      "grid_longitude": -77.0,
+      "date_boundary_note": "API returned date labels; fixed-offset daily windows, not DST-exact civil days."
+    },
+    "merge": {
+      "bike_only": 0,
+      "weather_only": 0,
+      "matched": 731,
+      "bike_rows": 731,
+      "weather_rows": 731,
+      "merged_rows": 731
+    },
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33"
+  },
+  "actual_dag_parse": "pending real Linux Airflow",
+  "actual_database_rows": null,
+  "actual_dag_runs": [],
+  "part2": "not implemented"
+}

@@ -1,0 +1,14 @@
+FROM apache/airflow:3.4.0-python3.11
+COPY --chown=airflow:root requirements/airflow.txt /tmp/requirements.txt
+COPY --chown=airflow:root requirements/airflow-constraints-3.11.txt /tmp/constraints.txt
+RUN pip install --no-cache-dir "apache-airflow==3.4.0" \
+    --constraint /tmp/constraints.txt --requirement /tmp/requirements.txt "pytest==8.4.2" \
+    && pip check
+COPY --chown=airflow:root scripts/init_airflow.py /opt/project/scripts/init_airflow.py
+COPY --chown=airflow:root scripts/verify_dag.py /opt/project/scripts/verify_dag.py
+COPY --chown=airflow:root sql/ /opt/project/sql/
+COPY --chown=airflow:root tests/ /opt/project/tests/
+COPY --chown=airflow:root dags/ /opt/project/dags/
+COPY --chown=airflow:root pytest.ini /opt/project/pytest.ini
+ENV PYTHONPATH=/opt/project/src
+COPY --chown=airflow:root src/ /opt/project/src/

@@ -1,0 +1,6 @@
+{
+  "approval": "User explicitly approved controlled runtime test",
+  "status": "runtime verified",
+  "runtime_success": true,
+  "results": "runtime-results.json"
+}

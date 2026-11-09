@@ -1,0 +1,11 @@
+{
+  "python_files_ast_parsed": 17,
+  "local_markdown_links_resolved": 63,
+  "text_files_checked_for_actual_local_credentials": 69,
+  "credential_leaks_found": 0,
+  "compose_default_profile_valid": true,
+  "compose_ml_profile_valid": true,
+  "heldout_rows": 184,
+  "saved_predictions_independently_match_mae_rmse": true,
+  "negative_selected_predictions": 1
+}

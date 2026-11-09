@@ -1,0 +1,33 @@
+{
+  "derived": {
+    "elapsed_day": "days since 2011-01-01; calendar-only",
+    "month_sin_cos": "calendar month cycle"
+  },
+  "excluded": [
+    "atemp",
+    "casual",
+    "cnt",
+    "hum",
+    "instant",
+    "registered",
+    "temp",
+    "weathersit",
+    "windspeed"
+  ],
+  "final_refit_scope": "train+validation only after frozen selection",
+  "inputs": [
+    "weekday",
+    "season",
+    "temperature_2m_mean",
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "precipitation_sum",
+    "wind_speed_10m_max",
+    "month_sin",
+    "month_cos",
+    "holiday",
+    "workingday",
+    "elapsed_day"
+  ],
+  "preprocessing_fit_scope": "training partition only during candidate selection"
+}

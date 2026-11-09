@@ -1,0 +1,1 @@
+[{"dag_id": "dc_bike_weather_daily", "fileloc": "/opt/airflow/dags/dc_bike_weather.py", "owners": ["airflow"], "is_paused": "False", "bundle_name": "dags-folder", "bundle_version": null}]

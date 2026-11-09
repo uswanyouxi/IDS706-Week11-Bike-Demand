@@ -1,0 +1,107 @@
+[
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_01/task_id=clean_bike/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\2e6003b7f6ec3ea9b43699a1\\task_id=clean_bike\\attempt=1.log",
+    "bytes": 4593
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_01/task_id=clean_weather/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\2e6003b7f6ec3ea9b43699a1\\task_id=clean_weather\\attempt=1.log",
+    "bytes": 5130
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_01/task_id=download_uci/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\2e6003b7f6ec3ea9b43699a1\\task_id=download_uci\\attempt=1.log",
+    "bytes": 4416
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_01/task_id=fetch_era5_weather/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\2e6003b7f6ec3ea9b43699a1\\task_id=fetch_era5_weather\\attempt=1.log",
+    "bytes": 4977
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_01/task_id=load_application_postgres/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\2e6003b7f6ec3ea9b43699a1\\task_id=load_application_postgres\\attempt=1.log",
+    "bytes": 4170
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_01/task_id=read_database_and_make_eda/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\2e6003b7f6ec3ea9b43699a1\\task_id=read_database_and_make_eda\\attempt=1.log",
+    "bytes": 6453
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_01/task_id=validate_and_merge_dates/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\2e6003b7f6ec3ea9b43699a1\\task_id=validate_and_merge_dates\\attempt=1.log",
+    "bytes": 5857
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_02/task_id=clean_bike/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\3f0c5b99a18c83f3e98bc59c\\task_id=clean_bike\\attempt=1.log",
+    "bytes": 4593
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_02/task_id=clean_weather/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\3f0c5b99a18c83f3e98bc59c\\task_id=clean_weather\\attempt=1.log",
+    "bytes": 5130
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_02/task_id=download_uci/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\3f0c5b99a18c83f3e98bc59c\\task_id=download_uci\\attempt=1.log",
+    "bytes": 4417
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_02/task_id=fetch_era5_weather/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\3f0c5b99a18c83f3e98bc59c\\task_id=fetch_era5_weather\\attempt=1.log",
+    "bytes": 4978
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_02/task_id=load_application_postgres/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\3f0c5b99a18c83f3e98bc59c\\task_id=load_application_postgres\\attempt=1.log",
+    "bytes": 4170
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_02/task_id=read_database_and_make_eda/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\3f0c5b99a18c83f3e98bc59c\\task_id=read_database_and_make_eda\\attempt=1.log",
+    "bytes": 6805
+  },
+  {
+    "original_linux_relative_path": "run_id=phase_b_manual_02/task_id=validate_and_merge_dates/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\3f0c5b99a18c83f3e98bc59c\\task_id=validate_and_merge_dates\\attempt=1.log",
+    "bytes": 5857
+  },
+  {
+    "original_linux_relative_path": "run_id=scheduled__2026-11-08T11:00:00+00:00/task_id=clean_bike/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\ed16b9044267dcba9617d614\\task_id=clean_bike\\attempt=1.log",
+    "bytes": 4764
+  },
+  {
+    "original_linux_relative_path": "run_id=scheduled__2026-11-08T11:00:00+00:00/task_id=clean_weather/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\ed16b9044267dcba9617d614\\task_id=clean_weather\\attempt=1.log",
+    "bytes": 5301
+  },
+  {
+    "original_linux_relative_path": "run_id=scheduled__2026-11-08T11:00:00+00:00/task_id=download_uci/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\ed16b9044267dcba9617d614\\task_id=download_uci\\attempt=1.log",
+    "bytes": 4588
+  },
+  {
+    "original_linux_relative_path": "run_id=scheduled__2026-11-08T11:00:00+00:00/task_id=fetch_era5_weather/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\ed16b9044267dcba9617d614\\task_id=fetch_era5_weather\\attempt=1.log",
+    "bytes": 5149
+  },
+  {
+    "original_linux_relative_path": "run_id=scheduled__2026-11-08T11:00:00+00:00/task_id=load_application_postgres/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\ed16b9044267dcba9617d614\\task_id=load_application_postgres\\attempt=1.log",
+    "bytes": 4359
+  },
+  {
+    "original_linux_relative_path": "run_id=scheduled__2026-11-08T11:00:00+00:00/task_id=read_database_and_make_eda/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\ed16b9044267dcba9617d614\\task_id=read_database_and_make_eda\\attempt=1.log",
+    "bytes": 7070
+  },
+  {
+    "original_linux_relative_path": "run_id=scheduled__2026-11-08T11:00:00+00:00/task_id=validate_and_merge_dates/attempt=1.log",
+    "exported_path": "docs\\verification\\phase-b\\airflow-task-logs\\ed16b9044267dcba9617d614\\task_id=validate_and_merge_dates\\attempt=1.log",
+    "bytes": 6027
+  }
+]

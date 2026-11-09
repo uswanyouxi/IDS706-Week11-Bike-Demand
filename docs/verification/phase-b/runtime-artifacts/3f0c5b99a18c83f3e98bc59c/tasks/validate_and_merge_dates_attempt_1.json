@@ -1,0 +1,40 @@
+{
+  "attempt": 1,
+  "elapsed_seconds": 0.03692870500003664,
+  "finished_at_utc": "2026-11-09T02:57:40.613041+00:00",
+  "result": {
+    "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/clean/merged.json",
+    "report_path": "/opt/project/artifacts/pipeline/3f0c5b99a18c83f3e98bc59c/validation/merged.json",
+    "rows": 731,
+    "sources": {
+      "open_meteo": {
+        "bytes": 27626,
+        "content_type": "application/json; charset=utf-8",
+        "final_url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601",
+        "http_status": 200,
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/weather.json",
+        "requested_model": "era5",
+        "requested_timezone": "America/New_York",
+        "retrieved_at_utc": "2026-11-09T02:57:36.558548+00:00",
+        "sha256": "3000a04e8aa276da506f844d46f4e4c3e91cbc1770ee707b070c68b7e5aaaf49",
+        "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601"
+      },
+      "uci": {
+        "bytes": 279992,
+        "content_type": null,
+        "day_csv_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+        "final_url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+        "http_status": 200,
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/day.csv",
+        "raw_path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/uci.zip",
+        "retrieved_at_utc": "2026-11-09T02:57:38.547845+00:00",
+        "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+        "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip"
+      }
+    }
+  },
+  "run_id": "phase_b_manual_02",
+  "started_at_utc": "2026-11-09T02:57:40.575641+00:00",
+  "status": "success",
+  "task_id": "validate_and_merge_dates"
+}

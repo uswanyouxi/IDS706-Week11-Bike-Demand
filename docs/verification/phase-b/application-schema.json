@@ -1,0 +1,82 @@
+[
+  {
+    "column": "date",
+    "type": "date",
+    "nullable": "NO"
+  },
+  {
+    "column": "cnt",
+    "type": "integer",
+    "nullable": "NO"
+  },
+  {
+    "column": "yr",
+    "type": "smallint",
+    "nullable": "NO"
+  },
+  {
+    "column": "mnth",
+    "type": "smallint",
+    "nullable": "NO"
+  },
+  {
+    "column": "weekday",
+    "type": "smallint",
+    "nullable": "NO"
+  },
+  {
+    "column": "season",
+    "type": "smallint",
+    "nullable": "NO"
+  },
+  {
+    "column": "holiday",
+    "type": "boolean",
+    "nullable": "NO"
+  },
+  {
+    "column": "workingday",
+    "type": "boolean",
+    "nullable": "NO"
+  },
+  {
+    "column": "temperature_2m_mean",
+    "type": "double precision",
+    "nullable": "NO"
+  },
+  {
+    "column": "temperature_2m_max",
+    "type": "double precision",
+    "nullable": "NO"
+  },
+  {
+    "column": "temperature_2m_min",
+    "type": "double precision",
+    "nullable": "NO"
+  },
+  {
+    "column": "precipitation_sum",
+    "type": "double precision",
+    "nullable": "NO"
+  },
+  {
+    "column": "wind_speed_10m_max",
+    "type": "double precision",
+    "nullable": "NO"
+  },
+  {
+    "column": "dataset_hash",
+    "type": "text",
+    "nullable": "NO"
+  },
+  {
+    "column": "pipeline_run_id",
+    "type": "text",
+    "nullable": "NO"
+  },
+  {
+    "column": "loaded_at",
+    "type": "timestamp with time zone",
+    "nullable": "NO"
+  }
+]

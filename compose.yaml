@@ -1,0 +1,208 @@
+name: ids706-bike-demand
+
+x-airflow-env: &airflow-env
+  AIRFLOW__CORE__EXECUTOR: LocalExecutor
+  AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
+  AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+  AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+  # Two independent ingestion/cleaning branches may run concurrently.
+  AIRFLOW__CORE__PARALLELISM: '2'
+  AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG: '2'
+  AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG: '1'
+  AIRFLOW__API__WORKERS: '1'
+  AIRFLOW__DAG_PROCESSOR__PARSING_PROCESSES: '1'
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  NUMEXPR_NUM_THREADS: '1'
+  AIRFLOW__CORE__DEFAULT_TIMEZONE: America/New_York
+  AIRFLOW__CORE__EXECUTION_API_SERVER_URL: http://airflow-apiserver:8080/execution/
+  AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg://airflow:${AIRFLOW_META_PASSWORD:?Generate .env first}@airflow-db:5432/airflow
+  AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY:?Generate .env first}
+  AIRFLOW__API__SECRET_KEY: ${AIRFLOW_API_SECRET_KEY:?Generate .env first}
+  AIRFLOW__API_AUTH__JWT_SECRET: ${AIRFLOW_JWT_SECRET:?Generate .env first}
+  AIRFLOW__API_AUTH__JWT_ISSUER: ids706-local
+  AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
+  APP_DB_HOST: app-db
+  APP_DB_PORT: '5432'
+  APP_DB_NAME: bike_demand
+  APP_DB_USER: bike_app
+  APP_DB_PASSWORD: ${APP_DB_PASSWORD:?Generate .env first}
+  PROJECT_DATA_DIR: /opt/project/data
+  PROJECT_ARTIFACT_DIR: /opt/project/artifacts
+  MPLCONFIGDIR: /tmp/matplotlib
+
+x-airflow-common: &airflow-common
+  image: ids706-airflow:3.4.0-py3.11
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
+  user: '${AIRFLOW_UID:-50000}:0'
+  environment: *airflow-env
+  volumes:
+    - ./dags:/opt/airflow/dags:ro
+    - ./src:/opt/project/src:ro
+    - airflow-logs:/opt/airflow/logs
+    - project-data:/opt/project/data
+    - project-artifacts:/opt/project/artifacts
+  restart: unless-stopped
+
+services:
+  storage-init:
+    image: ids706-airflow:3.4.0-py3.11
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    user: '0:0'
+    entrypoint: ['python', '-c']
+    command:
+      - "import os; paths=['/opt/project/data','/opt/project/artifacts','/opt/airflow/logs']; [(os.chown(p,50000,0),os.chmod(p,0o2775)) for p in paths]"
+    volumes:
+      - project-data:/opt/project/data
+      - project-artifacts:/opt/project/artifacts
+      - airflow-logs:/opt/airflow/logs
+    restart: 'no'
+
+  airflow-db:
+    image: postgres:16.11-bookworm
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: ${AIRFLOW_META_PASSWORD:?Generate .env first}
+      POSTGRES_DB: airflow
+    volumes:
+      - airflow-metadata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U airflow -d airflow']
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  app-db:
+    image: postgres:16.11-bookworm
+    environment:
+      POSTGRES_USER: bike_app
+      POSTGRES_PASSWORD: ${APP_DB_PASSWORD:?Generate .env first}
+      POSTGRES_DB: bike_demand
+    volumes:
+      - app-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U bike_app -d bike_demand']
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  airflow-init:
+    <<: *airflow-common
+    # Official entrypoint sets umask; this Python script checks DB readiness itself.
+    command: ['python', '/opt/project/scripts/init_airflow.py']
+    environment:
+      <<: *airflow-env
+      AIRFLOW_ADMIN_USERNAME: ${AIRFLOW_ADMIN_USERNAME:-student}
+      AIRFLOW_ADMIN_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD:?Generate .env first}
+    depends_on:
+      airflow-db:
+        condition: service_healthy
+      storage-init:
+        condition: service_completed_successfully
+    restart: 'no'
+
+  airflow-apiserver:
+    <<: *airflow-common
+    command: api-server
+    ports:
+      - '127.0.0.1:8080:8080'
+    healthcheck:
+      test: ['CMD', 'curl', '--fail', 'http://localhost:8080/api/v2/monitor/health']
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    healthcheck:
+      test: ['CMD-SHELL', 'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    depends_on:
+      airflow-apiserver:
+        condition: service_healthy
+      app-db:
+        condition: service_healthy
+
+  airflow-dag-processor:
+    <<: *airflow-common
+    command: dag-processor
+    healthcheck:
+      test: ['CMD-SHELL', 'airflow jobs check --job-type DagProcessorJob --hostname "$${HOSTNAME}"']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+  dashboard:
+    profiles: [ml]
+    image: ids706-ml:1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile.ml
+    environment:
+      APP_DB_HOST: app-db
+      APP_DB_PORT: '5432'
+      APP_DB_NAME: bike_demand
+      APP_DB_USER: bike_app
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:?Generate .env first}
+      PROJECT_ARTIFACT_DIR: /opt/project/artifacts
+      MPLCONFIGDIR: /tmp/matplotlib
+    ports:
+      - '127.0.0.1:8501:8501'
+    volumes:
+      - project-artifacts:/opt/project/artifacts:ro
+    depends_on:
+      app-db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  ml-runner:
+    profiles: [ml]
+    image: ids706-ml:1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile.ml
+    user: '10001:0'
+    # Preserve group write on new model subdirectories/files; never world-write.
+    command: ['/bin/sh', '-c', 'umask 0002; exec python agents/run.py']
+    environment:
+      APP_DB_HOST: app-db
+      APP_DB_PORT: '5432'
+      APP_DB_NAME: bike_demand
+      APP_DB_USER: bike_app
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:?Generate .env first}
+      PROJECT_ARTIFACT_DIR: /opt/project/artifacts
+      MPLCONFIGDIR: /tmp/matplotlib
+    volumes:
+      - project-artifacts:/opt/project/artifacts
+    depends_on:
+      app-db:
+        condition: service_healthy
+      storage-init:
+        condition: service_completed_successfully
+    restart: 'no'
+
+volumes:
+  airflow-metadata:
+  app-postgres:
+  airflow-logs:
+  project-data:
+  project-artifacts:

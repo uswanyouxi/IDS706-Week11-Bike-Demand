@@ -1,0 +1,188 @@
+{
+  "artifacts": {
+    "events": "events.jsonl",
+    "features": "features.json",
+    "graph": "graph.json",
+    "graph_plot": "agent_graph.png",
+    "model": "selected_model.joblib",
+    "predictions": "test_predictions.csv",
+    "provenance": "provenance.json",
+    "report": "report.json",
+    "snapshot": "database_snapshot.csv",
+    "splits": "splits.json",
+    "test_plot": "test_predictions.png",
+    "validation_plot": "validation_rmse.png"
+  },
+  "attempt": 2,
+  "baseline_metrics": {
+    "train": {
+      "mae": 1197.7539801088385,
+      "r2": 0.0,
+      "rmse": 1376.8636667749531
+    },
+    "validation": {
+      "mae": 2052.4352702092424,
+      "r2": -1.0329129927112528,
+      "rmse": 2449.8871519358
+    }
+  },
+  "best_spec": {
+    "alpha": 10.0,
+    "name": "ridge"
+  },
+  "best_validation_rmse": 1573.8114428802473,
+  "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+  "decision": "finish",
+  "error": null,
+  "events_recorded": 26,
+  "feature_names": [
+    "weekday",
+    "season",
+    "temperature_2m_mean",
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "precipitation_sum",
+    "wind_speed_10m_max",
+    "month_sin",
+    "month_cos",
+    "holiday",
+    "workingday",
+    "elapsed_day"
+  ],
+  "final_metrics": {
+    "dummy": {
+      "mae": 2452.6403008504894,
+      "r2": -1.3945793319422521,
+      "rmse": 2694.302463599049
+    },
+    "selected": {
+      "mae": 904.7064645271217,
+      "r2": 0.5231228475591951,
+      "rmse": 1202.3613050409385
+    }
+  },
+  "framing": "Retrospective weather-conditioned backtest, not an operational future forecast.",
+  "graph_source": "compiled StateGraph.get_graph().to_json()",
+  "max_attempts": 2,
+  "min_attempts": 2,
+  "model_artifact_note": "Only load joblib artifacts you trust; dashboard never unpickles models.",
+  "provenance": {
+    "database": "bike_demand",
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "origin": "application_postgresql",
+    "pipeline_run_id": "phase_b_manual_02",
+    "query": "SELECT date, cnt, yr, mnth, weekday, season, holiday, workingday, temperature_2m_mean, temperature_2m_max, temperature_2m_min, precipitation_sum, wind_speed_10m_max FROM bike_analytics.bike_daily ORDER BY date",
+    "rows": 731,
+    "snapshot_isolation": "repeatable read",
+    "sources": {
+      "open_meteo": {
+        "bytes": 27626,
+        "content_type": "application/json; charset=utf-8",
+        "final_url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601",
+        "http_status": 200,
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/weather.json",
+        "requested_model": "era5",
+        "requested_timezone": "America/New_York",
+        "retrieved_at_utc": "2026-11-09T02:57:36.558548+00:00",
+        "sha256": "3000a04e8aa276da506f844d46f4e4c3e91cbc1770ee707b070c68b7e5aaaf49",
+        "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601"
+      },
+      "uci": {
+        "bytes": 279992,
+        "content_type": null,
+        "day_csv_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+        "final_url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+        "http_status": 200,
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/day.csv",
+        "raw_path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/uci.zip",
+        "retrieved_at_utc": "2026-11-09T02:57:38.547845+00:00",
+        "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+        "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip"
+      }
+    },
+    "table": "bike_analytics.bike_daily",
+    "transaction_read_only": "on"
+  },
+  "routes": [
+    {
+      "after_attempt": 1,
+      "best_candidate": {
+        "alpha": 10.0,
+        "name": "ridge"
+      },
+      "best_validation_rmse": 1573.8114428802473,
+      "decision": "retry",
+      "next_candidate_reason": "stronger Ridge regularization because validation/train RMSE > 1.5",
+      "reason": "predeclared_candidate_comparison",
+      "validation_target_rmse": 2327.39279433901
+    },
+    {
+      "after_attempt": 2,
+      "best_candidate": {
+        "alpha": 10.0,
+        "name": "ridge"
+      },
+      "best_validation_rmse": 1573.8114428802473,
+      "decision": "finish",
+      "next_candidate_reason": null,
+      "reason": "validation_target_met",
+      "validation_target_rmse": 2327.39279433901
+    }
+  ],
+  "run_id": "ml_main_01",
+  "seed": 706,
+  "status": "success",
+  "stop_reason": "validation_target_met",
+  "target": "cnt",
+  "target_improvement": 0.05,
+  "test_policy": "One final stage after frozen validation selection; both selected model and Dummy refit on train+validation.",
+  "test_stage_count": 1,
+  "trials": [
+    {
+      "attempt": 1,
+      "candidate": {
+        "alpha": 10.0,
+        "name": "ridge"
+      },
+      "status": "success",
+      "train": {
+        "mae": 428.7561757078901,
+        "r2": 0.8352724787587951,
+        "rmse": 558.8226769824741
+      },
+      "validation": {
+        "mae": 1362.2482884502779,
+        "r2": 0.1610578231104831,
+        "rmse": 1573.8114428802473
+      },
+      "validation_to_train_rmse": 2.8162984569246556
+    },
+    {
+      "attempt": 2,
+      "candidate": {
+        "alpha": 100.0,
+        "name": "ridge"
+      },
+      "status": "success",
+      "train": {
+        "mae": 465.85770643401804,
+        "r2": 0.8080276869495366,
+        "rmse": 603.2679299356554
+      },
+      "validation": {
+        "mae": 1379.5454927760954,
+        "r2": 0.1174881924611525,
+        "rmse": 1614.1613592952408
+      },
+      "validation_to_train_rmse": 2.6756956224532065
+    }
+  ],
+  "versions": {
+    "langgraph": "1.0.3",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "psycopg": "3.2.12",
+    "scikit-learn": "1.7.2",
+    "streamlit": "1.50.0"
+  }
+}

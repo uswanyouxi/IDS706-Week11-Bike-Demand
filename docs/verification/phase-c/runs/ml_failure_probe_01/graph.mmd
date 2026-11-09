@@ -1,0 +1,42 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_postgres(load_postgres)
+	prepare_features(prepare_features)
+	dummy_baseline(dummy_baseline)
+	choose_candidate(choose_candidate)
+	train_model(train_model)
+	evaluate_validation(evaluate_validation)
+	conditional_router(conditional_router)
+	final_test_once(final_test_once)
+	report(report)
+	failure_report(failure_report)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_postgres;
+	choose_candidate -. &nbsp;failed&nbsp; .-> failure_report;
+	choose_candidate -. &nbsp;ok&nbsp; .-> train_model;
+	conditional_router -. &nbsp;retry&nbsp; .-> choose_candidate;
+	conditional_router -. &nbsp;failure&nbsp; .-> failure_report;
+	conditional_router -. &nbsp;finish&nbsp; .-> final_test_once;
+	dummy_baseline -. &nbsp;ok&nbsp; .-> choose_candidate;
+	dummy_baseline -. &nbsp;failed&nbsp; .-> failure_report;
+	evaluate_validation -. &nbsp;ok&nbsp; .-> conditional_router;
+	evaluate_validation -. &nbsp;failed&nbsp; .-> failure_report;
+	final_test_once -. &nbsp;failed&nbsp; .-> failure_report;
+	final_test_once -. &nbsp;ok&nbsp; .-> report;
+	load_postgres -. &nbsp;failed&nbsp; .-> failure_report;
+	load_postgres -. &nbsp;ok&nbsp; .-> prepare_features;
+	prepare_features -. &nbsp;ok&nbsp; .-> dummy_baseline;
+	prepare_features -. &nbsp;failed&nbsp; .-> failure_report;
+	report -. &nbsp;done&nbsp; .-> __end__;
+	report -. &nbsp;failed&nbsp; .-> failure_report;
+	train_model -. &nbsp;ok&nbsp; .-> evaluate_validation;
+	train_model -. &nbsp;failed&nbsp; .-> failure_report;
+	failure_report --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

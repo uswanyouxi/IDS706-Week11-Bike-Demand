@@ -1,0 +1,17 @@
+.git
+.env
+.env.*
+!.env.example
+.venv
+__pycache__
+logs
+data
+artifacts
+screenshots
+assignment
+prompts
+docs
+
+**/__pycache__/
+**/*.pyc
+.pytest_cache/

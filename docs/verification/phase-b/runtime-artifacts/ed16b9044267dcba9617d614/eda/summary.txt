@@ -1,0 +1,5 @@
+Read 731 persisted rows from bike_demand.bike_analytics.bike_daily.
+Dates: 2011-01-01 to 2012-12-31; total rentals: 3,292,679.
+Mean daily rentals: 4504.35.
+Demand/temperature Pearson r: 0.607; demand/precipitation r: -0.281.
+Retrospective associations only; no causal or future-forecast claim. API fixed-offset day boundaries apply.

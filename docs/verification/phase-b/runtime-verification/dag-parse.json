@@ -1,0 +1,61 @@
+{
+  "checked_at_utc": "2026-11-09T02:57:21.052348+00:00",
+  "real_airflow_parse": true,
+  "dag_id": "dc_bike_weather_daily",
+  "schedule": "0 6 * * *",
+  "timezone": "America/New_York",
+  "catchup": false,
+  "max_active_runs": 1,
+  "max_active_tasks": 2,
+  "task_ids": [
+    "clean_bike",
+    "clean_weather",
+    "download_uci",
+    "end",
+    "fetch_era5_weather",
+    "load_application_postgres",
+    "read_database_and_make_eda",
+    "start",
+    "validate_and_merge_dates"
+  ],
+  "edges": {
+    "start": [
+      "download_uci",
+      "fetch_era5_weather"
+    ],
+    "end": [],
+    "download_uci": [
+      "clean_bike"
+    ],
+    "fetch_era5_weather": [
+      "clean_weather"
+    ],
+    "clean_bike": [
+      "validate_and_merge_dates"
+    ],
+    "clean_weather": [
+      "validate_and_merge_dates"
+    ],
+    "validate_and_merge_dates": [
+      "load_application_postgres"
+    ],
+    "load_application_postgres": [
+      "read_database_and_make_eda"
+    ],
+    "read_database_and_make_eda": [
+      "end"
+    ]
+  },
+  "task_retries": {
+    "start": 2,
+    "end": 2,
+    "download_uci": 2,
+    "fetch_era5_weather": 2,
+    "clean_bike": 0,
+    "clean_weather": 0,
+    "validate_and_merge_dates": 0,
+    "load_application_postgres": 2,
+    "read_database_and_make_eda": 2
+  },
+  "import_errors": {}
+}

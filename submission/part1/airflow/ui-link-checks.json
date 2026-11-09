@@ -1,0 +1,32 @@
+[
+  {
+    "url": "http://localhost:8080/dags",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "scope": "App HTML route response only; no browser visual/authenticated UI observation"
+  },
+  {
+    "url": "http://localhost:8080/dags/dc_bike_weather_daily",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "scope": "App HTML route response only; no browser visual/authenticated UI observation"
+  },
+  {
+    "url": "http://localhost:8080/dags/dc_bike_weather_daily/runs",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "scope": "App HTML route response only; no browser visual/authenticated UI observation"
+  },
+  {
+    "url": "http://localhost:8080/dags/dc_bike_weather_daily/runs/phase_b_manual_02",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "scope": "App HTML route response only; no browser visual/authenticated UI observation"
+  },
+  {
+    "url": "http://localhost:8080/dags/dc_bike_weather_daily/details",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "scope": "App HTML route response only; no browser visual/authenticated UI observation"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "database": "bike_demand",
+  "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+  "distinct_dates": 731,
+  "rows": 731,
+  "run_id": "scheduled__2026-11-08T11:00:00+00:00",
+  "table": "bike_analytics.bike_daily"
+}

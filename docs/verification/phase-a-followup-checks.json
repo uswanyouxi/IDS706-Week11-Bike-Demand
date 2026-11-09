@@ -1,0 +1,65 @@
+{
+  "checked_at_utc": "2026-11-09T02:19:37.251248+00:00",
+  "scope": "Phase A static/source review; no container operations",
+  "init_script_copy_path": "/opt/project/scripts/init_airflow.py",
+  "init_copy_and_no_masking_mount": true,
+  "default_services": [
+    "airflow-apiserver",
+    "airflow-dag-processor",
+    "airflow-db",
+    "airflow-init",
+    "airflow-scheduler",
+    "app-db",
+    "storage-init"
+  ],
+  "ml_profiles_explicit": true,
+  "airflow_34_documented_environment_names": [
+    "AIRFLOW__API_AUTH__JWT_ISSUER",
+    "AIRFLOW__API_AUTH__JWT_SECRET",
+    "AIRFLOW__API__SECRET_KEY",
+    "AIRFLOW__API__WORKERS",
+    "AIRFLOW__CORE__AUTH_MANAGER",
+    "AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION",
+    "AIRFLOW__CORE__DEFAULT_TIMEZONE",
+    "AIRFLOW__CORE__EXECUTION_API_SERVER_URL",
+    "AIRFLOW__CORE__EXECUTOR",
+    "AIRFLOW__CORE__FERNET_KEY",
+    "AIRFLOW__CORE__LOAD_EXAMPLES",
+    "AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG",
+    "AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG",
+    "AIRFLOW__CORE__PARALLELISM",
+    "AIRFLOW__DAG_PROCESSOR__PARSING_PROCESSES",
+    "AIRFLOW__DATABASE__SQL_ALCHEMY_CONN",
+    "AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK"
+  ],
+  "official_compose_health_tokens_matched": true,
+  "dependency_gates_verified": true,
+  "shared_secret_consistency": true,
+  "permission_design": {
+    "root_owner_uid": 50000,
+    "shared_gid": 0,
+    "root_mode": "2775",
+    "ml_uid": 10001,
+    "ml_gid": 0,
+    "ml_umask": "0002",
+    "world_write": false,
+    "actual_volume_write_tested": false
+  },
+  "official_constraints_sha256": "22ac327cdf6fe75b8d873ab363455bbe0645c03cee3e3896c6513d583c25e5f8",
+  "constraints_remote_equal": true,
+  "source_recheck": {
+    "mode": "offline recheck of prior real downloads, not a new remote fetch",
+    "original_fetches_utc": {
+      "uci": "2026-11-09T01:04:34.291413+00:00",
+      "open_meteo": "2026-11-09T01:04:35.005549+00:00"
+    },
+    "hashes_match": true,
+    "uci_rows": 731,
+    "uci_columns": 16,
+    "weather_rows": 731,
+    "matched_dates": 731
+  },
+  "python_ast_files": 8,
+  "mocked_init_tests_passed": 12,
+  "runtime_verified": false
+}

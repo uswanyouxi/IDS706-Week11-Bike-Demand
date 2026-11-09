@@ -1,0 +1,26 @@
+{
+  "attempt": 1,
+  "elapsed_seconds": 0.03544483999996828,
+  "finished_at_utc": "2026-11-09T02:57:39.454885+00:00",
+  "result": {
+    "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/clean/bike.json",
+    "report_path": "/opt/project/artifacts/pipeline/3f0c5b99a18c83f3e98bc59c/validation/bike.json",
+    "rows": 731,
+    "source": {
+      "bytes": 279992,
+      "content_type": null,
+      "day_csv_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+      "final_url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+      "http_status": 200,
+      "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/day.csv",
+      "raw_path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/uci.zip",
+      "retrieved_at_utc": "2026-11-09T02:57:38.547845+00:00",
+      "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+      "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip"
+    }
+  },
+  "run_id": "phase_b_manual_02",
+  "started_at_utc": "2026-11-09T02:57:39.419130+00:00",
+  "status": "success",
+  "task_id": "clean_bike"
+}

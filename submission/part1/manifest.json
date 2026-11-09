@@ -1,0 +1,40 @@
+{
+  "exported_at_utc": "2026-11-09T03:25:08.570450+00:00",
+  "dag_id": "dc_bike_weather_daily",
+  "source_run_id": "phase_b_manual_02",
+  "source_container_directory": "/opt/project/artifacts/pipeline/3f0c5b99a18c83f3e98bc59c",
+  "container_artifact_sha256": {
+    "eda/weather_vs_demand.png": "67eafd2d7b6f24e1e300c23350941a91b245ef2bf291c8201bb72e6fc2db9aa1",
+    "eda/weekday_mean_rentals.png": "f80c6e23c00e55d30e27148bbf95028e4eede6a179a97e6e91593af4e8b9e216",
+    "eda/monthly_mean_rentals.png": "460da41d268424e42ccacff1ca48d1a235e96c61bbd2a1a8d32f96fe9f14c294",
+    "eda/summary.txt": "f30ae2c3247248a934ef444f5bb08cb2ae21cfc322ebea71dd76ff3721bd6f6b",
+    "eda/summary.json": "8368a27f5fd49790c7423b34938d591596248fbcef75be95b7ca8442f30fb005",
+    "validation/bike.json": "9e2933a51c0873b9f906c32996c25674c2948bce24619896f2cb4766924f0759",
+    "validation/merged.json": "05bc6704f1021f9084f4ce5907f591395228b43cbc0781049f03470876726c74",
+    "validation/weather.json": "363db77702870ea4d845509d5c2bc70058f0384353d51b1c6f17c49bbe3d26fe",
+    "load-receipt.json": "841dee01b8e23c809693d1b83659c1e6a23b6ff37b51f8d248b1599f010c7d1b"
+  },
+  "all_export_hashes_match": true,
+  "read_only_postgres_transaction": true,
+  "database_writes": false,
+  "new_dag_runs_triggered": false,
+  "screenshots_created": false,
+  "ui_visual_verification": false,
+  "live_run_checks": [
+    {
+      "run_id": "scheduled__2026-11-08T11:00:00+00:00",
+      "state": "success",
+      "successful_tasks": 9
+    },
+    {
+      "run_id": "phase_b_manual_01",
+      "state": "success",
+      "successful_tasks": 9
+    },
+    {
+      "run_id": "phase_b_manual_02",
+      "state": "success",
+      "successful_tasks": 9
+    }
+  ]
+}

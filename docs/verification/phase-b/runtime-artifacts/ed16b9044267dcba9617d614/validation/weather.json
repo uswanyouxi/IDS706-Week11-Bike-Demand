@@ -1,0 +1,12 @@
+{
+  "date_boundary_note": "API returned date labels; fixed-offset daily windows, not DST-exact civil days.",
+  "expected_days": 731,
+  "grid_latitude": 39.0,
+  "grid_longitude": -77.0,
+  "max_date": "2012-12-31",
+  "min_date": "2011-01-01",
+  "rows": 731,
+  "timezone": "America/New_York",
+  "unique_dates": 731,
+  "utc_offset_seconds": -18000
+}

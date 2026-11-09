@@ -1,0 +1,86 @@
+{
+  "charts": [
+    "/opt/project/artifacts/pipeline/ed16b9044267dcba9617d614/eda/weekday_mean_rentals.png",
+    "/opt/project/artifacts/pipeline/ed16b9044267dcba9617d614/eda/monthly_mean_rentals.png",
+    "/opt/project/artifacts/pipeline/ed16b9044267dcba9617d614/eda/weather_vs_demand.png"
+  ],
+  "created_at_utc": "2026-11-09T02:54:05.106925+00:00",
+  "database": "bike_demand",
+  "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+  "date_max": "2012-12-31",
+  "date_min": "2011-01-01",
+  "interpretation": "Retrospective associations only; no causal or future-forecast claim. API fixed-offset day boundaries apply.",
+  "mean_daily_rentals": 4504.3488372093025,
+  "monthly_mean_rentals": {
+    "1": 2176.3387096774195,
+    "10": 5199.225806451613,
+    "11": 4247.183333333333,
+    "12": 3403.8064516129034,
+    "2": 2655.2982456140353,
+    "3": 3692.2580645161293,
+    "4": 4484.9,
+    "5": 5349.774193548387,
+    "6": 5772.366666666667,
+    "7": 5563.677419354839,
+    "8": 5664.419354838709,
+    "9": 5766.516666666666
+  },
+  "precipitation_pearson_r": -0.28050058745829787,
+  "query": "SELECT date, cnt, yr, mnth, weekday, season, holiday, workingday, temperature_2m_mean, temperature_2m_max, temperature_2m_min, precipitation_sum, wind_speed_10m_max FROM bike_analytics.bike_daily ORDER BY date",
+  "rows": 731,
+  "run_id": "scheduled__2026-11-08T11:00:00+00:00",
+  "sources": {
+    "open_meteo": {
+      "bytes": 27625,
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601",
+      "http_status": 200,
+      "path": "/opt/project/data/runs/ed16b9044267dcba9617d614/raw/weather.json",
+      "requested_model": "era5",
+      "requested_timezone": "America/New_York",
+      "retrieved_at_utc": "2026-11-09T02:53:58.249048+00:00",
+      "sha256": "2b0cf7a17bd7ccab97d6eeebaae651a04ed402f2fed553d1ac4f361f88e4d733",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601"
+    },
+    "uci": {
+      "bytes": 279992,
+      "content_type": null,
+      "day_csv_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+      "final_url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+      "http_status": 200,
+      "path": "/opt/project/data/runs/ed16b9044267dcba9617d614/raw/day.csv",
+      "raw_path": "/opt/project/data/runs/ed16b9044267dcba9617d614/raw/uci.zip",
+      "retrieved_at_utc": "2026-11-09T02:53:58.519318+00:00",
+      "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+      "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip"
+    }
+  },
+  "table": "bike_analytics.bike_daily",
+  "temperature_pearson_r": 0.6074413185412373,
+  "total_rentals": 3292679,
+  "validation": {
+    "bike_only": 0,
+    "bike_rows": 731,
+    "coverage": {
+      "expected_days": 731,
+      "max_date": "2012-12-31",
+      "min_date": "2011-01-01",
+      "rows": 731,
+      "unique_dates": 731
+    },
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "matched": 731,
+    "merged_rows": 731,
+    "weather_only": 0,
+    "weather_rows": 731
+  },
+  "weekday_mean_rentals": {
+    "0": 4228.828571428571,
+    "1": 4338.1238095238095,
+    "2": 4510.663461538462,
+    "3": 4548.538461538462,
+    "4": 4667.259615384615,
+    "5": 4690.288461538462,
+    "6": 4550.542857142857
+  }
+}

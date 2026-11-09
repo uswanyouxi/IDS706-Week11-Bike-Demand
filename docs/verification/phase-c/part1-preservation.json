@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-11-09T04:05:42.767140+00:00",
+  "protected_files_checked": 182,
+  "all_protected_files_unchanged": true,
+  "production_database_unchanged": true,
+  "before": {
+    "rows": 731,
+    "unique_dates": 731,
+    "total_rentals": 3292679,
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "versions": 1
+  },
+  "after": {
+    "rows": 731,
+    "unique_dates": 731,
+    "total_rentals": 3292679,
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "versions": 1
+  },
+  "verification_transaction": "on"
+}

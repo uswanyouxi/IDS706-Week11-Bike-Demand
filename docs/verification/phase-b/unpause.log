@@ -1,0 +1,4 @@
+dag_id                | is_paused
+======================+==========
+dc_bike_weather_daily | True     
+                                 

@@ -1,0 +1,274 @@
+{
+  "edges": [
+    {
+      "source": "__start__",
+      "target": "load_postgres"
+    },
+    {
+      "conditional": true,
+      "data": "failed",
+      "source": "choose_candidate",
+      "target": "failure_report"
+    },
+    {
+      "conditional": true,
+      "data": "ok",
+      "source": "choose_candidate",
+      "target": "train_model"
+    },
+    {
+      "conditional": true,
+      "data": "retry",
+      "source": "conditional_router",
+      "target": "choose_candidate"
+    },
+    {
+      "conditional": true,
+      "data": "failure",
+      "source": "conditional_router",
+      "target": "failure_report"
+    },
+    {
+      "conditional": true,
+      "data": "finish",
+      "source": "conditional_router",
+      "target": "final_test_once"
+    },
+    {
+      "conditional": true,
+      "data": "ok",
+      "source": "dummy_baseline",
+      "target": "choose_candidate"
+    },
+    {
+      "conditional": true,
+      "data": "failed",
+      "source": "dummy_baseline",
+      "target": "failure_report"
+    },
+    {
+      "conditional": true,
+      "data": "ok",
+      "source": "evaluate_validation",
+      "target": "conditional_router"
+    },
+    {
+      "conditional": true,
+      "data": "failed",
+      "source": "evaluate_validation",
+      "target": "failure_report"
+    },
+    {
+      "conditional": true,
+      "data": "failed",
+      "source": "final_test_once",
+      "target": "failure_report"
+    },
+    {
+      "conditional": true,
+      "data": "ok",
+      "source": "final_test_once",
+      "target": "report"
+    },
+    {
+      "conditional": true,
+      "data": "failed",
+      "source": "load_postgres",
+      "target": "failure_report"
+    },
+    {
+      "conditional": true,
+      "data": "ok",
+      "source": "load_postgres",
+      "target": "prepare_features"
+    },
+    {
+      "conditional": true,
+      "data": "ok",
+      "source": "prepare_features",
+      "target": "dummy_baseline"
+    },
+    {
+      "conditional": true,
+      "data": "failed",
+      "source": "prepare_features",
+      "target": "failure_report"
+    },
+    {
+      "conditional": true,
+      "data": "done",
+      "source": "report",
+      "target": "__end__"
+    },
+    {
+      "conditional": true,
+      "data": "failed",
+      "source": "report",
+      "target": "failure_report"
+    },
+    {
+      "conditional": true,
+      "data": "ok",
+      "source": "train_model",
+      "target": "evaluate_validation"
+    },
+    {
+      "conditional": true,
+      "data": "failed",
+      "source": "train_model",
+      "target": "failure_report"
+    },
+    {
+      "source": "failure_report",
+      "target": "__end__"
+    }
+  ],
+  "nodes": [
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "__start__"
+      },
+      "id": "__start__",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "load_postgres"
+      },
+      "id": "load_postgres",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "prepare_features"
+      },
+      "id": "prepare_features",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "dummy_baseline"
+      },
+      "id": "dummy_baseline",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "choose_candidate"
+      },
+      "id": "choose_candidate",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "train_model"
+      },
+      "id": "train_model",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "evaluate_validation"
+      },
+      "id": "evaluate_validation",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "conditional_router"
+      },
+      "id": "conditional_router",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "final_test_once"
+      },
+      "id": "final_test_once",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "report"
+      },
+      "id": "report",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "failure_report"
+      },
+      "id": "failure_report",
+      "type": "runnable"
+    },
+    {
+      "id": "__end__"
+    }
+  ]
+}

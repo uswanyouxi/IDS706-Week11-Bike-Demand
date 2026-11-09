@@ -1,0 +1,7 @@
+# Host tests: Airflow itself is verified on Linux, not installed natively on Windows.
+numpy==2.4.6
+pandas==3.1.0
+psycopg[binary]==3.3.6
+requests==2.34.2
+matplotlib==3.10.7
+pytest==8.4.2

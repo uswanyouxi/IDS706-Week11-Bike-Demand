@@ -1,0 +1,7 @@
+sss.......................................                               [100%]
+- generated xml file: D:\未来\IDS706\IDS706-Week11-Bike-Demand\docs\verification\phase-b\host-tests.xml -
+=========================== short test summary info ===========================
+SKIPPED [1] tests\integration\test_dag.py:8: could not import 'airflow': No module named 'airflow'
+SKIPPED [1] tests\integration\test_postgres.py:20: Set BIKE_TEST_DB_NAME to an existing disposable *_test PostgreSQL database
+SKIPPED [1] tests\integration\test_postgres.py:28: Set BIKE_TEST_DB_NAME to an existing disposable *_test PostgreSQL database
+39 passed, 3 skipped in 0.73s

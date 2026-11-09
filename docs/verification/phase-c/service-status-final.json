@@ -1,0 +1,66 @@
+[
+  {
+    "Service": "airflow-apiserver",
+    "State": "running",
+    "Health": "healthy",
+    "ID": "c41e3cb7874a",
+    "CreatedAt": "2026-11-08 21:56:11 -0500 EST",
+    "Status": "Up About an hour (healthy)"
+  },
+  {
+    "Service": "airflow-dag-processor",
+    "State": "running",
+    "Health": "healthy",
+    "ID": "d31de710ff8e",
+    "CreatedAt": "2026-11-08 21:56:11 -0500 EST",
+    "Status": "Up About an hour (healthy)"
+  },
+  {
+    "Service": "airflow-db",
+    "State": "running",
+    "Health": "healthy",
+    "ID": "98a0796d6df3",
+    "CreatedAt": "2026-11-08 21:47:41 -0500 EST",
+    "Status": "Up About an hour (healthy)"
+  },
+  {
+    "Service": "airflow-init",
+    "State": "exited",
+    "Health": "",
+    "ID": "0fbaca915e0c",
+    "CreatedAt": "2026-11-08 21:56:10 -0500 EST",
+    "Status": "Exited (0) About an hour ago"
+  },
+  {
+    "Service": "airflow-scheduler",
+    "State": "running",
+    "Health": "healthy",
+    "ID": "61af316559d3",
+    "CreatedAt": "2026-11-08 21:56:15 -0500 EST",
+    "Status": "Up About an hour (healthy)"
+  },
+  {
+    "Service": "app-db",
+    "State": "running",
+    "Health": "healthy",
+    "ID": "067be0d68e89",
+    "CreatedAt": "2026-11-08 21:47:41 -0500 EST",
+    "Status": "Up About an hour (healthy)"
+  },
+  {
+    "Service": "dashboard",
+    "State": "running",
+    "Health": "",
+    "ID": "4459a5c6252b",
+    "CreatedAt": "2026-11-08 22:59:35 -0500 EST",
+    "Status": "Up 6 minutes"
+  },
+  {
+    "Service": "storage-init",
+    "State": "exited",
+    "Health": "",
+    "ID": "f39d7894489c",
+    "CreatedAt": "2026-11-08 21:56:09 -0500 EST",
+    "Status": "Exited (0) About an hour ago"
+  }
+]

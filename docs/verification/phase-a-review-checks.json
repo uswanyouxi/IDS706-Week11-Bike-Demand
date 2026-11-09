@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-11-09T02:06:07.012822+00:00",
+  "scope": "Phase A static configuration review; no containers/builds",
+  "compose_default_services": [
+    "airflow-apiserver",
+    "airflow-dag-processor",
+    "airflow-db",
+    "airflow-init",
+    "airflow-scheduler",
+    "app-db",
+    "storage-init"
+  ],
+  "compose_ml_services": [
+    "airflow-apiserver",
+    "airflow-dag-processor",
+    "airflow-db",
+    "airflow-init",
+    "airflow-scheduler",
+    "app-db",
+    "dashboard",
+    "ml-runner",
+    "storage-init"
+  ],
+  "concurrency": 2,
+  "max_active_runs": 1,
+  "api_workers": 1,
+  "dag_parsing_processes": 1,
+  "persistent_distinct_api_and_jwt_secrets": true,
+  "host_raw_is_not_pipeline_volume": true,
+  "application_db_for_agents": true,
+  "python_ast_files": 8,
+  "mocked_init_tests_passed": 3,
+  "constraints_sha256": "22ac327cdf6fe75b8d873ab363455bbe0645c03cee3e3896c6513d583c25e5f8",
+  "remote_constraints_byte_equality": true,
+  "runtime_verified": false
+}

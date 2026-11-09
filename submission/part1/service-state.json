@@ -1,0 +1,44 @@
+[
+  {
+    "Service": "airflow-apiserver",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0
+  },
+  {
+    "Service": "airflow-dag-processor",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0
+  },
+  {
+    "Service": "airflow-db",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0
+  },
+  {
+    "Service": "airflow-init",
+    "State": "exited",
+    "Health": "",
+    "ExitCode": 0
+  },
+  {
+    "Service": "airflow-scheduler",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0
+  },
+  {
+    "Service": "app-db",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0
+  },
+  {
+    "Service": "storage-init",
+    "State": "exited",
+    "Health": "",
+    "ExitCode": 0
+  }
+]

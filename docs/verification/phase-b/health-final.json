@@ -1,0 +1,34 @@
+{
+  "metadatabase": {
+    "status": "healthy"
+  },
+  "scheduler": {
+    "status": "healthy",
+    "latest_scheduler_heartbeat": "2026-11-09T02:59:04.565941+00:00",
+    "detailed_status": "healthy",
+    "instances": [
+      {
+        "hostname": "61af316559d3",
+        "latest_scheduler_heartbeat": "2026-11-09T02:59:04.565941+00:00"
+      }
+    ]
+  },
+  "triggerer": {
+    "status": "unhealthy",
+    "latest_triggerer_heartbeat": null,
+    "detailed_status": "down",
+    "instances": null
+  },
+  "dag_processor": {
+    "status": "healthy",
+    "latest_dag_processor_heartbeat": "2026-11-09T02:59:03.844315+00:00",
+    "detailed_status": "healthy",
+    "instances": [
+      {
+        "hostname": "d31de710ff8e",
+        "latest_dag_processor_heartbeat": "2026-11-09T02:59:03.844315+00:00",
+        "bundle_names": null
+      }
+    ]
+  }
+}

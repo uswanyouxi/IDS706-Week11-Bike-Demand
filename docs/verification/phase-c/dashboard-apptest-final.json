@@ -1,0 +1,11 @@
+{
+  "framework": "Streamlit AppTest in actual dashboard container",
+  "main_run": "ml_main_01",
+  "exceptions": 0,
+  "compiled_graph_rendered": true,
+  "completed_metric_table_matches_actual_report": true,
+  "retry_replay_event": 14,
+  "retry_replay_attempt": 1,
+  "failure_run_displayed_without_success_metrics": true,
+  "browser_pixels_or_screenshots_verified": false
+}

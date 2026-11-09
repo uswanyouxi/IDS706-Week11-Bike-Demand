@@ -1,0 +1,51 @@
+[
+  {
+    "Service": "airflow-apiserver",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0,
+    "Image": "ids706-airflow:3.4.0-py3.11"
+  },
+  {
+    "Service": "airflow-dag-processor",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0,
+    "Image": "ids706-airflow:3.4.0-py3.11"
+  },
+  {
+    "Service": "airflow-db",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0,
+    "Image": "postgres:16.11-bookworm"
+  },
+  {
+    "Service": "airflow-init",
+    "State": "exited",
+    "Health": "",
+    "ExitCode": 0,
+    "Image": "ids706-airflow:3.4.0-py3.11"
+  },
+  {
+    "Service": "airflow-scheduler",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0,
+    "Image": "ids706-airflow:3.4.0-py3.11"
+  },
+  {
+    "Service": "app-db",
+    "State": "running",
+    "Health": "healthy",
+    "ExitCode": 0,
+    "Image": "postgres:16.11-bookworm"
+  },
+  {
+    "Service": "storage-init",
+    "State": "exited",
+    "Health": "",
+    "ExitCode": 0,
+    "Image": "ids706-airflow:3.4.0-py3.11"
+  }
+]

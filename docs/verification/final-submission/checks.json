@@ -1,0 +1,101 @@
+{
+  "checked_at_utc": "2026-11-09T05:29:02.535851+00:00",
+  "manifest": "submission/commit-files.txt",
+  "recommended_files": 317,
+  "category_file_counts": {
+    "(root)": 9,
+    "agents": 2,
+    "artifacts": 3,
+    "assignment": 3,
+    "dags": 2,
+    "dashboard": 2,
+    "data": 1,
+    "docs": 209,
+    "requirements": 5,
+    "screenshots": 7,
+    "scripts": 11,
+    "sql": 3,
+    "src": 17,
+    "submission": 29,
+    "tests": 14
+  },
+  "total_candidate_bytes": 4266223,
+  "preservation": {
+    "verified_implementation": {
+      "files": 43,
+      "unchanged": true
+    },
+    "original_evidence": {
+      "files": 214,
+      "unchanged": true
+    }
+  },
+  "python_files_ast_parsed": 40,
+  "local_markdown_targets_checked": 91,
+  "broken_local_links": [],
+  "linked_files_excluded_from_git": [],
+  "secret_scan_text_files": 294,
+  "secret_findings": [],
+  "forbidden_submission_paths": [],
+  "ignore_probes": 28,
+  "ignore_probe_failures": [],
+  "screenshots": {
+    "screenshots/01_airflow_dag_success.png": {
+      "width": 2048,
+      "height": 999,
+      "sha256": "77fe5e40da57c0385b64ca71ccddce3852e3db040018ca0dd5ab69b217cb2ae6"
+    },
+    "screenshots/02_airflow_graph.png": {
+      "width": 2452,
+      "height": 1324,
+      "sha256": "48a94895ff007a3662a541ec1049f3a897c3eec0656c124850cd8f4283605fd7"
+    },
+    "screenshots/06_langgraph_live_execution.png": {
+      "width": 2048,
+      "height": 817,
+      "sha256": "c3399d69594dbb579fe8ff38098871791fff1bfc52b602aa8df71900490c1be3"
+    },
+    "screenshots/07_langgraph_conditional_retry.png": {
+      "width": 1071,
+      "height": 742,
+      "sha256": "1d28a174c2ebdf689e39d5958dcc928bac7c68d75a23a74423c0288a5b1e156c"
+    },
+    "screenshots/08_regression_evaluation.png": {
+      "width": 2048,
+      "height": 1027,
+      "sha256": "9c328ccd4a6db6efd22960147ddb53c5a5fd37c101662e7aa2095b21fdf55d57"
+    },
+    "screenshots/09_model_comparison_charts.png": {
+      "width": 2048,
+      "height": 577,
+      "sha256": "d9e12ef82053a71ba2c2c2374b7267be9bb3eaf333d9024d5824aa25c84a56e7"
+    }
+  },
+  "tests": {
+    "pipeline_unit": {
+      "tests": 39,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ml_unit": {
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "real_dag_import": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "total_tests_passed": 59,
+  "compose_default_and_ml_profiles_valid": true,
+  "saved_predictions_match_metrics": true,
+  "negative_test_predictions": 1,
+  "staged_files_observed": [],
+  "production_training_or_dag_runs_performed": false,
+  "scope": "Local checks only; no Git index mutation or push. ML tests fit synthetic fixtures."
+}

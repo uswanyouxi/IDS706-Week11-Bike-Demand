@@ -1,0 +1,82 @@
+{
+  "at_utc": "2026-11-09T03:57:11.333283+00:00",
+  "attempt": 2,
+  "candidate": {
+    "alpha": 100.0,
+    "name": "ridge"
+  },
+  "decision": "finish",
+  "error": null,
+  "from_node": null,
+  "kind": "node_completed",
+  "node": "report",
+  "routes": [
+    {
+      "after_attempt": 1,
+      "best_candidate": {
+        "alpha": 10.0,
+        "name": "ridge"
+      },
+      "best_validation_rmse": 1573.8114428802473,
+      "decision": "retry",
+      "next_candidate_reason": "stronger Ridge regularization because validation/train RMSE > 1.5",
+      "reason": "predeclared_candidate_comparison",
+      "validation_target_rmse": 2327.39279433901
+    },
+    {
+      "after_attempt": 2,
+      "best_candidate": {
+        "alpha": 10.0,
+        "name": "ridge"
+      },
+      "best_validation_rmse": 1573.8114428802473,
+      "decision": "finish",
+      "next_candidate_reason": null,
+      "reason": "validation_target_met",
+      "validation_target_rmse": 2327.39279433901
+    }
+  ],
+  "sequence": 26,
+  "status": "success",
+  "stop_reason": "validation_target_met",
+  "trials": [
+    {
+      "attempt": 1,
+      "candidate": {
+        "alpha": 10.0,
+        "name": "ridge"
+      },
+      "status": "success",
+      "train": {
+        "mae": 428.7561757078901,
+        "r2": 0.8352724787587951,
+        "rmse": 558.8226769824741
+      },
+      "validation": {
+        "mae": 1362.2482884502779,
+        "r2": 0.1610578231104831,
+        "rmse": 1573.8114428802473
+      },
+      "validation_to_train_rmse": 2.8162984569246556
+    },
+    {
+      "attempt": 2,
+      "candidate": {
+        "alpha": 100.0,
+        "name": "ridge"
+      },
+      "status": "success",
+      "train": {
+        "mae": 465.85770643401804,
+        "r2": 0.8080276869495366,
+        "rmse": 603.2679299356554
+      },
+      "validation": {
+        "mae": 1379.5454927760954,
+        "r2": 0.1174881924611525,
+        "rmse": 1614.1613592952408
+      },
+      "validation_to_train_rmse": 2.6756956224532065
+    }
+  ]
+}

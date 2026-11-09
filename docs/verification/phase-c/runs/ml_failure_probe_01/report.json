@@ -1,0 +1,23 @@
+{
+  "attempt": 0,
+  "error": "load_postgres: OperationalError",
+  "events_recorded": 4,
+  "graph_source": "compiled StateGraph.get_graph().to_json()",
+  "max_attempts": 2,
+  "metrics_claimed": false,
+  "min_attempts": 2,
+  "routes": [],
+  "run_id": "ml_failure_probe_01",
+  "status": "failed",
+  "target_improvement": 0.05,
+  "test_stage_count": 0,
+  "trials": [],
+  "versions": {
+    "langgraph": "1.0.3",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "psycopg": "3.2.12",
+    "scikit-learn": "1.7.2",
+    "streamlit": "1.50.0"
+  }
+}

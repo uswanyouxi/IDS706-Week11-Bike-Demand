@@ -1,0 +1,19 @@
+{
+  "attempt": 1,
+  "elapsed_seconds": 0.8264776270000311,
+  "finished_at_utc": "2026-11-09T02:57:43.883692+00:00",
+  "result": {
+    "charts": [
+      "/opt/project/artifacts/pipeline/3f0c5b99a18c83f3e98bc59c/eda/weekday_mean_rentals.png",
+      "/opt/project/artifacts/pipeline/3f0c5b99a18c83f3e98bc59c/eda/monthly_mean_rentals.png",
+      "/opt/project/artifacts/pipeline/3f0c5b99a18c83f3e98bc59c/eda/weather_vs_demand.png"
+    ],
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "rows": 731,
+    "summary": "/opt/project/artifacts/pipeline/3f0c5b99a18c83f3e98bc59c/eda/summary.json"
+  },
+  "run_id": "phase_b_manual_02",
+  "started_at_utc": "2026-11-09T02:57:43.056532+00:00",
+  "status": "success",
+  "task_id": "read_database_and_make_eda"
+}

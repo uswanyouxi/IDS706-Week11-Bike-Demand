@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-11-09T03:25:08.570450+00:00",
+  "dag_id": "dc_bike_weather_daily",
+  "runs": [
+    {
+      "run_id": "scheduled__2026-11-08T11:00:00+00:00",
+      "state": "success",
+      "successful_tasks": 9
+    },
+    {
+      "run_id": "phase_b_manual_01",
+      "state": "success",
+      "successful_tasks": 9
+    },
+    {
+      "run_id": "phase_b_manual_02",
+      "state": "success",
+      "successful_tasks": 9
+    }
+  ],
+  "next_execution_utc": "2026-11-09T11:00:00+00:00",
+  "method": "Live Airflow CLI; GUI helper unavailable, not a visual inspection"
+}

@@ -1,0 +1,26 @@
+{
+  "attempt": 1,
+  "elapsed_seconds": 0.020168218999970122,
+  "finished_at_utc": "2026-11-09T02:53:59.773852+00:00",
+  "result": {
+    "path": "/opt/project/data/runs/ed16b9044267dcba9617d614/clean/weather.json",
+    "report_path": "/opt/project/artifacts/pipeline/ed16b9044267dcba9617d614/validation/weather.json",
+    "rows": 731,
+    "source": {
+      "bytes": 27625,
+      "content_type": "application/json; charset=utf-8",
+      "final_url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601",
+      "http_status": 200,
+      "path": "/opt/project/data/runs/ed16b9044267dcba9617d614/raw/weather.json",
+      "requested_model": "era5",
+      "requested_timezone": "America/New_York",
+      "retrieved_at_utc": "2026-11-09T02:53:58.249048+00:00",
+      "sha256": "2b0cf7a17bd7ccab97d6eeebaae651a04ed402f2fed553d1ac4f361f88e4d733",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601"
+    }
+  },
+  "run_id": "scheduled__2026-11-08T11:00:00+00:00",
+  "started_at_utc": "2026-11-09T02:53:59.753177+00:00",
+  "status": "success",
+  "task_id": "clean_weather"
+}

@@ -1,0 +1,17 @@
+{
+  "attempt": 1,
+  "elapsed_seconds": 0.13152844400008235,
+  "finished_at_utc": "2026-11-09T02:57:41.966044+00:00",
+  "result": {
+    "database": "bike_demand",
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "distinct_dates": 731,
+    "rows": 731,
+    "run_id": "phase_b_manual_02",
+    "table": "bike_analytics.bike_daily"
+  },
+  "run_id": "phase_b_manual_02",
+  "started_at_utc": "2026-11-09T02:57:41.834171+00:00",
+  "status": "success",
+  "task_id": "load_application_postgres"
+}

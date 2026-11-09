@@ -1,0 +1,165 @@
+{
+  "checked_at_utc": "2026-11-09T03:04:10.488970+00:00",
+  "runtime_verified": true,
+  "host_tests": {
+    "passed": 39,
+    "skipped": 3
+  },
+  "linux_full_tests": {
+    "passed": 41,
+    "skipped": 1,
+    "skip_reason": "Host prior-source cache intentionally absent from container"
+  },
+  "runs": [
+    {
+      "run_id": "phase_b_manual_02",
+      "state": "success",
+      "start_date": "2026-11-09T02:57:30.779006+00:00",
+      "end_date": "2026-11-09T02:57:45.946872+00:00",
+      "rows": 731,
+      "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+      "validation": {
+        "bike_only": 0,
+        "bike_rows": 731,
+        "coverage": {
+          "expected_days": 731,
+          "max_date": "2012-12-31",
+          "min_date": "2011-01-01",
+          "rows": 731,
+          "unique_dates": 731
+        },
+        "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+        "matched": 731,
+        "merged_rows": 731,
+        "weather_only": 0,
+        "weather_rows": 731
+      },
+      "source_http_statuses": {
+        "uci": 200,
+        "open_meteo": 200
+      },
+      "source_fetch_times_utc": {
+        "uci": "2026-11-09T02:57:38.547845+00:00",
+        "open_meteo": "2026-11-09T02:57:36.558548+00:00"
+      },
+      "ingestion_task_overlap_seconds": 4.51983,
+      "cleaning_task_overlap_seconds": 0,
+      "eda_directory": "docs\\verification\\phase-b\\runtime-artifacts\\3f0c5b99a18c83f3e98bc59c\\eda",
+      "tasks_successful": 9,
+      "failed_attempt_audits": 0
+    },
+    {
+      "run_id": "phase_b_manual_01",
+      "state": "success",
+      "start_date": "2026-11-09T02:54:07.395227+00:00",
+      "end_date": "2026-11-09T02:54:18.522245+00:00",
+      "rows": 731,
+      "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+      "validation": {
+        "bike_only": 0,
+        "bike_rows": 731,
+        "coverage": {
+          "expected_days": 731,
+          "max_date": "2012-12-31",
+          "min_date": "2011-01-01",
+          "rows": 731,
+          "unique_dates": 731
+        },
+        "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+        "matched": 731,
+        "merged_rows": 731,
+        "weather_only": 0,
+        "weather_rows": 731
+      },
+      "source_http_statuses": {
+        "uci": 200,
+        "open_meteo": 200
+      },
+      "source_fetch_times_utc": {
+        "uci": "2026-11-09T02:54:09.725976+00:00",
+        "open_meteo": "2026-11-09T02:54:09.588412+00:00"
+      },
+      "ingestion_task_overlap_seconds": 1.113586,
+      "cleaning_task_overlap_seconds": 0.552582,
+      "eda_directory": "docs\\verification\\phase-b\\runtime-artifacts\\2e6003b7f6ec3ea9b43699a1\\eda",
+      "tasks_successful": 9,
+      "failed_attempt_audits": 0
+    },
+    {
+      "run_id": "scheduled__2026-11-08T11:00:00+00:00",
+      "state": "success",
+      "start_date": "2026-11-09T02:53:52.237785+00:00",
+      "end_date": "2026-11-09T02:54:06.355713+00:00",
+      "rows": 731,
+      "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+      "validation": {
+        "bike_only": 0,
+        "bike_rows": 731,
+        "coverage": {
+          "expected_days": 731,
+          "max_date": "2012-12-31",
+          "min_date": "2011-01-01",
+          "rows": 731,
+          "unique_dates": 731
+        },
+        "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+        "matched": 731,
+        "merged_rows": 731,
+        "weather_only": 0,
+        "weather_rows": 731
+      },
+      "source_http_statuses": {
+        "uci": 200,
+        "open_meteo": 200
+      },
+      "source_fetch_times_utc": {
+        "uci": "2026-11-09T02:53:58.519318+00:00",
+        "open_meteo": "2026-11-09T02:53:58.249048+00:00"
+      },
+      "ingestion_task_overlap_seconds": 4.718137,
+      "cleaning_task_overlap_seconds": 0.505396,
+      "eda_directory": "docs\\verification\\phase-b\\runtime-artifacts\\ed16b9044267dcba9617d614\\eda",
+      "tasks_successful": 9,
+      "failed_attempt_audits": 0
+    }
+  ],
+  "production_sql_before": {
+    "rows": 731,
+    "unique_dates": 731,
+    "min_date": "2011-01-01",
+    "max_date": "2012-12-31",
+    "dataset_versions": 1,
+    "total_rentals": 3292679
+  },
+  "production_sql_after": {
+    "rows": 731,
+    "unique_dates": 731,
+    "min_date": "2011-01-01",
+    "max_date": "2012-12-31",
+    "dataset_versions": 1,
+    "total_rentals": 3292679
+  },
+  "database_separation": {
+    "airflow": 0,
+    "bike_demand": 3
+  },
+  "admin_authentication": {
+    "http_status": 201,
+    "access_token_returned": true
+  },
+  "runtime_versions": {
+    "python": "3.11.18 (main, Nov  3 2026, 14:39:54) [GCC 14.2.0]",
+    "airflow": "3.4.0",
+    "pandas": "3.1.0",
+    "numpy": "2.4.6",
+    "psycopg": "3.3.6",
+    "matplotlib": "3.10.7"
+  },
+  "next_execution_utc": "2026-11-09T11:00:00+00:00",
+  "charts_per_run": 3,
+  "exported_pngs": 9,
+  "exported_actual_task_logs": 21,
+  "screenshots_captured": false,
+  "part2_implemented": false,
+  "push_or_deploy": false
+}
