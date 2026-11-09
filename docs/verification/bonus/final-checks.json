@@ -1,0 +1,176 @@
+{
+  "checked_at_utc": "2026-11-09T07:08:15.343743+00:00",
+  "branch": "bonus/adaptive-multi-agent",
+  "main_commit_unchanged": "d3a44650d4211a41ea02e824fd1781246c578e8d",
+  "original_files_checked": 317,
+  "original_files_changed": [
+    "README.md"
+  ],
+  "historical_timestamps_changed": [],
+  "database_unchanged": true,
+  "database_rows": 731,
+  "suite_executions": 27,
+  "suite_expected_passes": 27,
+  "suite_incorrect_routes": 0,
+  "runtime_runs": [
+    {
+      "run_id": "bonus_main_01",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_duplicate_date_adaptive",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_duplicate_date_fixed_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_duplicate_date_simple_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_exhaust_training_adaptive",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_exhaust_training_fixed_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_exhaust_training_simple_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_invalid_model_adaptive",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_invalid_model_fixed_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_invalid_model_simple_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_missing_weather_adaptive",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_missing_weather_fixed_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_missing_weather_simple_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_normal_adaptive",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_normal_fixed_port",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_normal_simple_port",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_permanent_database_adaptive",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_permanent_database_fixed_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_permanent_database_simple_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_transient_database_adaptive",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_transient_database_fixed_port",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_transient_database_simple_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_transient_training_adaptive",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_transient_training_fixed_port",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_transient_training_simple_port",
+      "status": "failed"
+    },
+    {
+      "run_id": "bonus_suite_01_weak_model_adaptive",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_weak_model_fixed_port",
+      "status": "success"
+    },
+    {
+      "run_id": "bonus_suite_01_weak_model_simple_port",
+      "status": "success"
+    }
+  ],
+  "tests": {
+    "bonus": {
+      "tests": 26,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "part1_unit": {
+      "tests": 39,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "part2_unit": {
+      "tests": 19,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "original_dag_import": {
+      "tests": 1,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    }
+  },
+  "tests_passed": 85,
+  "python_files_parsed": 57,
+  "local_documentation_links": 115,
+  "secret_scan_text_files": 558,
+  "secret_findings": [],
+  "dashboard": {
+    "application_exceptions": 0,
+    "compiled_graph_rendered": true,
+    "real_metrics_match": true,
+    "dynamic_event_24_verified": true,
+    "real_recovery_verified": true,
+    "evaluation_rows": 27,
+    "comparison_policies": 3,
+    "original_part2_navigation_verified": true,
+    "browser_pixels_verified": false,
+    "screenshots_created": false
+  },
+  "runtime_export_files": 202,
+  "strict_classroom_airflow_comparison_complete": false,
+  "limitation": "Native Airflow DAG not executed; native classification results and regression ports are distinct.",
+  "staged_files": []
+}

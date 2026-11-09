@@ -1,0 +1,2 @@
+# Preserve genuine Docker progress output; only ignore end-of-line blanks in Bonus logs.
+*.log whitespace=-blank-at-eol

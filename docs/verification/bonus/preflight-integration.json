@@ -1,0 +1,6 @@
+{
+  "host_free_kib": 1247796,
+  "wsl_available_kib": 5733012,
+  "checked_utc": "2026-11-09T06:42:36.508525+00:00",
+  "order": "One serial worker; dashboard starts after all workers exit"
+}

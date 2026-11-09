@@ -1,0 +1,85 @@
+{
+  "suite_id": "bonus_suite_01",
+  "cases": 9,
+  "executions": 27,
+  "passed": 27,
+  "failed": 0,
+  "summary": [
+    {
+      "policy": "adaptive",
+      "cases": 9,
+      "completion_rate": 0.4444444444444444,
+      "expected_behavior_pass_rate": 1.0,
+      "incorrect_routing_rate": 0.0,
+      "total_wall_seconds": 0.7961650359993655,
+      "total_cpu_seconds": 0.7862597730000012,
+      "total_attempts": 16,
+      "total_recoveries": 4,
+      "normal_test": {
+        "dummy": {
+          "mae": 2452.6403008504894,
+          "r2": -1.3945793319422521,
+          "rmse": 2694.302463599049
+        },
+        "selected": {
+          "mae": 904.7064645271217,
+          "r2": 0.5231228475591951,
+          "rmse": 1202.3613050409385
+        }
+      },
+      "baseline_scope": "Original adaptive system"
+    },
+    {
+      "policy": "fixed_port",
+      "cases": 9,
+      "completion_rate": 0.4444444444444444,
+      "expected_behavior_pass_rate": 1.0,
+      "incorrect_routing_rate": 0.0,
+      "total_wall_seconds": 0.29993949700110534,
+      "total_cpu_seconds": 0.29569115400000046,
+      "total_attempts": 9,
+      "total_recoveries": 4,
+      "normal_test": {
+        "dummy": {
+          "mae": 2452.6403008504894,
+          "r2": -1.3945793319422521,
+          "rmse": 2694.302463599049
+        },
+        "selected": {
+          "mae": 904.7064645271217,
+          "r2": 0.5231228475591951,
+          "rmse": 1202.3613050409385
+        }
+      },
+      "baseline_scope": "Explicit regression workflow port; not an unmodified classroom execution"
+    },
+    {
+      "policy": "simple_port",
+      "cases": 9,
+      "completion_rate": 0.2222222222222222,
+      "expected_behavior_pass_rate": 1.0,
+      "incorrect_routing_rate": 0.0,
+      "total_wall_seconds": 0.28869184399809455,
+      "total_cpu_seconds": 0.2857797980000001,
+      "total_attempts": 7,
+      "total_recoveries": 0,
+      "normal_test": {
+        "dummy": {
+          "mae": 2452.6403008504894,
+          "r2": -1.3945793319422521,
+          "rmse": 2694.302463599049
+        },
+        "selected": {
+          "mae": 904.7064645271217,
+          "r2": 0.5231228475591951,
+          "rmse": 1202.3613050409385
+        }
+      },
+      "baseline_scope": "Explicit regression workflow port; not an unmodified classroom execution"
+    }
+  ]
+}
+ Container ids706-bike-demand-bonus-runner-run-af832a11fcda Creating 
+ Container ids706-bike-demand-bonus-runner-run-af832a11fcda Created 
+/usr/local/lib/python3.11/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer

@@ -1,0 +1,137 @@
+{
+  "agent_metrics": {
+    "coordinator": {
+      "calls": 2,
+      "errors": 0,
+      "seconds": 1.3884999134461395e-05
+    },
+    "data_loader": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 0.0005073250013083452
+    },
+    "data_quality": {
+      "calls": 1,
+      "errors": 1,
+      "seconds": 0.0005330000003596069
+    },
+    "failure_report": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 0.00016781299927970394
+    }
+  },
+  "attempt": 0,
+  "baseline": null,
+  "best": null,
+  "cpu_seconds": 0.00614553200000012,
+  "dataset_hash": null,
+  "diagnostics": null,
+  "features": null,
+  "final_metrics": null,
+  "graph_source": "compiled StateGraph.get_graph().to_json()",
+  "issue": {
+    "recoverable": false,
+    "stage": "data_quality",
+    "type": "ContractError"
+  },
+  "load_attempts": 1,
+  "max_attempts": 3,
+  "max_loads": 2,
+  "max_recoveries": 2,
+  "memory_scope": "Linux worker process lifetime high-water RSS, not isolated per-run peak",
+  "metrics_claimed": false,
+  "node_operations": 5,
+  "policy": "fixed_port",
+  "provenance": {
+    "database": "bike_demand",
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "origin": "isolated_evaluation_fixture",
+    "parent_origin": "application_postgresql",
+    "pipeline_run_id": "phase_b_manual_02",
+    "query": "SELECT date, cnt, yr, mnth, weekday, season, holiday, workingday, temperature_2m_mean, temperature_2m_max, temperature_2m_min, precipitation_sum, wind_speed_10m_max FROM bike_analytics.bike_daily ORDER BY date",
+    "rows": 731,
+    "scenario": "duplicate_date",
+    "snapshot_isolation": "repeatable read",
+    "sources": {
+      "open_meteo": {
+        "bytes": 27626,
+        "content_type": "application/json; charset=utf-8",
+        "final_url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601",
+        "http_status": 200,
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/weather.json",
+        "requested_model": "era5",
+        "requested_timezone": "America/New_York",
+        "retrieved_at_utc": "2026-11-09T02:57:36.558548+00:00",
+        "sha256": "3000a04e8aa276da506f844d46f4e4c3e91cbc1770ee707b070c68b7e5aaaf49",
+        "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601"
+      },
+      "uci": {
+        "bytes": 279992,
+        "content_type": null,
+        "day_csv_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+        "final_url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+        "http_status": 200,
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/day.csv",
+        "raw_path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/uci.zip",
+        "retrieved_at_utc": "2026-11-09T02:57:38.547845+00:00",
+        "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+        "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip"
+      }
+    },
+    "table": "bike_analytics.bike_daily",
+    "transaction_read_only": "on"
+  },
+  "quality": null,
+  "reason": "unrecoverable_or_retry_exhausted",
+  "recoveries": 0,
+  "refined": false,
+  "routes": [
+    {
+      "attempt": 0,
+      "destination": "data_quality",
+      "from_phase": "loaded",
+      "has_collinear_weather": false,
+      "issue_stage": null,
+      "issue_type": null,
+      "last_gap": null,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "validated_loaded",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": false
+    },
+    {
+      "attempt": 0,
+      "destination": "failure_report",
+      "from_phase": "loaded",
+      "has_collinear_weather": false,
+      "issue_stage": "data_quality",
+      "issue_type": "ContractError",
+      "last_gap": null,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "unrecoverable_or_retry_exhausted",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": false
+    }
+  ],
+  "run_id": "bonus_suite_01_duplicate_date_fixed_port",
+  "scenario": "duplicate_date",
+  "status": "failed",
+  "test_stage_count": 0,
+  "trials": [],
+  "tried": [],
+  "wall_seconds": 0.006159632001072168,
+  "worker_rss_high_water_kib": 248948
+}

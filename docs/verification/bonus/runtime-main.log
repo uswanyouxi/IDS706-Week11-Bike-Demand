@@ -1,0 +1,48 @@
+{
+  "run_id": "bonus_main_01",
+  "status": "success",
+  "attempt": 3,
+  "recoveries": 0,
+  "best": {
+    "features": [
+      "weekday",
+      "season",
+      "temperature_2m_mean",
+      "temperature_2m_max",
+      "temperature_2m_min",
+      "precipitation_sum",
+      "wind_speed_10m_max",
+      "month_sin",
+      "month_cos",
+      "holiday",
+      "workingday",
+      "elapsed_day"
+    ],
+    "spec": {
+      "alpha": 10.0,
+      "name": "ridge"
+    },
+    "validation": {
+      "mae": 1362.2482884502779,
+      "r2": 0.1610578231104831,
+      "rmse": 1573.8114428802473
+    }
+  },
+  "final_metrics": {
+    "dummy": {
+      "mae": 2452.6403008504894,
+      "r2": -1.3945793319422521,
+      "rmse": 2694.302463599049
+    },
+    "selected": {
+      "mae": 904.7064645271217,
+      "r2": 0.5231228475591951,
+      "rmse": 1202.3613050409385
+    }
+  },
+  "issue": null
+}
+ Container ids706-bike-demand-bonus-runner-run-c410131bbce2 Creating 
+ Container ids706-bike-demand-bonus-runner-run-c410131bbce2 Created 
+/usr/local/lib/python3.11/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer

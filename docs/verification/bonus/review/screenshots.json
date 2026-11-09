@@ -1,0 +1,34 @@
+{
+  "reviewed_present": {
+    "10_bonus_adaptive_graph.png": {
+      "bytes": 218130,
+      "sha256": "93a564a318ba51f882ce9ad7a7fe81ea14dfbe02973472544166d4cd206a8620"
+    },
+    "11_bonus_routing_recovery.png": {
+      "bytes": 235775,
+      "sha256": "1d5fcd77a56e9254ad9dd828df5340b365e2a82ced71c32b9c7b9b85861b2078"
+    },
+    "11b_bonus_recovery_events.png": {
+      "bytes": 161100,
+      "sha256": "bb9172cc01d777b2a4424db07220e386f6462c98c7980ffbce7c77c45a5477fd"
+    },
+    "12_bonus_evaluation_suite.png": {
+      "bytes": 346735,
+      "sha256": "169a7e83be3e5e5e677525c1c95aa0b011079b962db76645e387d1469ca0da46"
+    },
+    "12b_bonus_evaluation_criteria.png": {
+      "bytes": 238269,
+      "sha256": "3b17dd65df54ebfa8ac2448f8c3559f9a17b43b99d426bb03e36d45cacee7fd1"
+    },
+    "13_bonus_baseline_comparison.png": {
+      "bytes": 376182,
+      "sha256": "03d13c0c45b83e93a0e58c2861c965b46e76a388231e927c152624880c785a08"
+    },
+    "14_bonus_agent_metrics.png": {
+      "bytes": 63685,
+      "sha256": "a10f18d561ed058f2f40dbe4bc3462a34d54e30c36f640bd7c8418b19ded4657"
+    }
+  },
+  "missing_not_allowlisted": [],
+  "published_six_byte_unchanged": true
+}

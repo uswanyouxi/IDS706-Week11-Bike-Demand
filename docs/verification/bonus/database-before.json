@@ -1,0 +1,44 @@
+{
+  "rows": 731,
+  "unique_dates": 731,
+  "total_rentals": 3292679,
+  "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+  "readonly": "on",
+  "provenance": {
+    "origin": "application_postgresql",
+    "database": "bike_demand",
+    "table": "bike_analytics.bike_daily",
+    "query": "SELECT date, cnt, yr, mnth, weekday, season, holiday, workingday, temperature_2m_mean, temperature_2m_max, temperature_2m_min, precipitation_sum, wind_speed_10m_max FROM bike_analytics.bike_daily ORDER BY date",
+    "transaction_read_only": "on",
+    "rows": 731,
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "pipeline_run_id": "phase_b_manual_02",
+    "sources": {
+      "uci": {
+        "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/day.csv",
+        "bytes": 279992,
+        "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+        "raw_path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/uci.zip",
+        "final_url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+        "http_status": 200,
+        "content_type": null,
+        "day_csv_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+        "retrieved_at_utc": "2026-11-09T02:57:38.547845+00:00"
+      },
+      "open_meteo": {
+        "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601",
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/weather.json",
+        "bytes": 27626,
+        "sha256": "3000a04e8aa276da506f844d46f4e4c3e91cbc1770ee707b070c68b7e5aaaf49",
+        "final_url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601",
+        "http_status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "requested_model": "era5",
+        "retrieved_at_utc": "2026-11-09T02:57:36.558548+00:00",
+        "requested_timezone": "America/New_York"
+      }
+    },
+    "snapshot_isolation": "repeatable read"
+  }
+}

@@ -1,0 +1,9 @@
+..............................................................           [100%]
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.11/site-packages/langgraph/cache/base/__init__.py:8
+  /usr/local/lib/python3.11/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+    from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+----- generated xml file: /tmp/bonus-submission-tests-1eif6by9/results.xml -----
+62 passed, 1 warning in 11.60s

@@ -1,0 +1,75 @@
+{
+  "agent_metrics": {
+    "coordinator": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 6.520998795167543e-06
+    },
+    "data_loader": {
+      "calls": 1,
+      "errors": 1,
+      "seconds": 6.4040013967314735e-06
+    },
+    "failure_report": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 8.637000064481981e-05
+    }
+  },
+  "attempt": 0,
+  "baseline": null,
+  "best": null,
+  "cpu_seconds": 0.0031632380000004012,
+  "dataset_hash": null,
+  "diagnostics": null,
+  "features": null,
+  "final_metrics": null,
+  "graph_source": "compiled StateGraph.get_graph().to_json()",
+  "issue": {
+    "recoverable": false,
+    "stage": "data_loader",
+    "type": "PermissionError"
+  },
+  "load_attempts": 1,
+  "max_attempts": 3,
+  "max_loads": 2,
+  "max_recoveries": 2,
+  "memory_scope": "Linux worker process lifetime high-water RSS, not isolated per-run peak",
+  "metrics_claimed": false,
+  "node_operations": 3,
+  "policy": "fixed_port",
+  "provenance": null,
+  "quality": null,
+  "reason": "unrecoverable_or_retry_exhausted",
+  "recoveries": 0,
+  "refined": false,
+  "routes": [
+    {
+      "attempt": 0,
+      "destination": "failure_report",
+      "from_phase": null,
+      "has_collinear_weather": false,
+      "issue_stage": "data_loader",
+      "issue_type": "PermissionError",
+      "last_gap": null,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "unrecoverable_or_retry_exhausted",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": false
+    }
+  ],
+  "run_id": "bonus_suite_01_permanent_database_fixed_port",
+  "scenario": "permanent_database",
+  "status": "failed",
+  "test_stage_count": 0,
+  "trials": [],
+  "tried": [],
+  "wall_seconds": 0.003194811999492231,
+  "worker_rss_high_water_kib": 249108
+}

@@ -1,0 +1,126 @@
+[
+  {
+    "system": "Classroom fixed prep CLI helper",
+    "status": "success",
+    "seconds": 0.4082038249998732,
+    "metrics": {
+      "baseline_spec": {
+        "experiment_id": "baseline-lr",
+        "model_family": "logistic_regression",
+        "hyperparameters": {
+          "C": 1.0,
+          "max_iter": 500,
+          "class_weight": "balanced"
+        },
+        "drop_columns": [
+          "transaction_id",
+          "customer_id",
+          "merchant_id",
+          "timestamp",
+          "IP_country",
+          "fraud_probability"
+        ],
+        "rationale": "Airflow A-baseline on customer\u2a1dtransaction fraud table"
+      },
+      "baseline_validation_metrics": {
+        "f1": 0.06060606060606061,
+        "accuracy": 0.535
+      },
+      "n_train": 1200,
+      "n_val": 400,
+      "n_holdout": 400,
+      "duration_sec": 0.109,
+      "seed": 42,
+      "holdout_frac": 0.2,
+      "holdout_scored": false
+    },
+    "scope": "Unmodified documented CLI helper; original Airflow DAG was inspected, not scheduled/executed",
+    "same_bike_problem": false
+  },
+  {
+    "system": "Classroom simple agent graph",
+    "status": "success",
+    "seconds": 0.3470223830008763,
+    "metrics": {
+      "f1": 0.08536585365853659,
+      "accuracy": 0.625,
+      "n_holdout": 400
+    },
+    "cycles": 2,
+    "same_bike_problem": false,
+    "scope": "Unmodified graph with documented no-key heuristic fallback"
+  },
+  {
+    "system": "classroom_fixed_on_cnt",
+    "status": "incompatible_or_failed",
+    "seconds": 0.4762407650014211,
+    "error_type": "ValueError",
+    "comparable_regression_metrics": false
+  },
+  {
+    "system": "classroom_simple_on_cnt",
+    "status": "incompatible_or_failed",
+    "seconds": 0.021399590999862994,
+    "error_type": "ValueError",
+    "comparable_regression_metrics": false
+  }
+]
+ Container ids706-bike-demand-bonus-runner-run-fb28c0cefeb4 Creating 
+ Container ids706-bike-demand-bonus-runner-run-fb28c0cefeb4 Created 
+/usr/local/lib/python3.11/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+/usr/local/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 500 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=500).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/usr/local/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/usr/local/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/usr/local/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/usr/local/lib/python3.11/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/usr/local/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/usr/local/lib/python3.11/site-packages/sklearn/metrics/_classification.py:98: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_true = type_of_target(y_true, input_name="y_true")
+/usr/local/lib/python3.11/site-packages/sklearn/metrics/_classification.py:99: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(y_pred, input_name="y_pred")
+/usr/local/lib/python3.11/site-packages/sklearn/utils/multiclass.py:79: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  ys_types = set(type_of_target(x) for x in ys)
+/usr/local/lib/python3.11/site-packages/sklearn/utils/multiclass.py:79: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  ys_types = set(type_of_target(x) for x in ys)

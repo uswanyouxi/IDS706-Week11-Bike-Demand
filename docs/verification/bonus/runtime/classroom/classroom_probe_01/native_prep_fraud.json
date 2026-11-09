@@ -1,0 +1,191 @@
+{
+  "baseline": {
+    "baseline_spec": {
+      "drop_columns": [
+        "transaction_id",
+        "customer_id",
+        "merchant_id",
+        "timestamp",
+        "IP_country",
+        "fraud_probability"
+      ],
+      "experiment_id": "baseline-lr",
+      "hyperparameters": {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "max_iter": 500
+      },
+      "model_family": "logistic_regression",
+      "rationale": "Airflow A-baseline on customer\u2a1dtransaction fraud table"
+    },
+    "baseline_validation_metrics": {
+      "accuracy": 0.535,
+      "f1": 0.06060606060606061
+    },
+    "duration_sec": 0.109,
+    "holdout_frac": 0.2,
+    "holdout_scored": false,
+    "n_holdout": 400,
+    "n_train": 1200,
+    "n_val": 400,
+    "seed": 42
+  },
+  "left": {
+    "columns": [
+      "customer_id",
+      "age",
+      "gender",
+      "country",
+      "state",
+      "city",
+      "occupation",
+      "annual_income",
+      "credit_score",
+      "customer_since",
+      "account_type",
+      "risk_level",
+      "total_accounts",
+      "avg_monthly_balance",
+      "loan_status"
+    ],
+    "filename": "customers.csv",
+    "n_rows_est": 1000,
+    "path": "/tmp/ids706-classroom-u3t5fusg/reference/datasets/airflow/customers.csv",
+    "require_columns": [
+      "customer_id"
+    ]
+  },
+  "merge": {
+    "how": "left",
+    "join_key": "customer_id",
+    "merged_path": "/tmp/ids706-classroom-u3t5fusg/reference/artifacts/airflow/runs/reference/merged.csv",
+    "n_left": 1000,
+    "n_merged": 10000,
+    "n_right": 10000,
+    "target_column": "is_fraud",
+    "target_rate": 0.0306
+  },
+  "profile": {
+    "categorical_features": [
+      "currency",
+      "payment_method",
+      "transaction_type",
+      "merchant_category",
+      "device_type",
+      "operating_system",
+      "browser",
+      "day_of_week",
+      "weekend",
+      "international",
+      "customer_risk",
+      "gender",
+      "country",
+      "state",
+      "city",
+      "occupation",
+      "customer_since",
+      "account_type",
+      "risk_level",
+      "loan_status"
+    ],
+    "leakage_suspects": [
+      "transaction_id",
+      "customer_id",
+      "merchant_id",
+      "timestamp",
+      "IP_country",
+      "fraud_probability"
+    ],
+    "n_columns": 43,
+    "n_rows": 2000,
+    "notes": [
+      "Light profile for Airflow baseline (no LLM).",
+      "Drop id-like columns and fraud_probability before modeling."
+    ],
+    "numeric_features": [
+      "amount",
+      "geo_latitude",
+      "geo_longitude",
+      "distance_from_home",
+      "login_duration",
+      "transaction_hour",
+      "failed_login_attempts",
+      "previous_transactions_24h",
+      "average_spending_30d",
+      "spending_change",
+      "merchant_risk",
+      "fraud_probability",
+      "age",
+      "annual_income",
+      "credit_score",
+      "total_accounts",
+      "avg_monthly_balance"
+    ],
+    "recommended_drops": [
+      "transaction_id",
+      "customer_id",
+      "merchant_id",
+      "timestamp",
+      "IP_country",
+      "fraud_probability"
+    ],
+    "target": "is_fraud",
+    "target_rate": 0.0305
+  },
+  "published": {
+    "baseline_val_f1": 0.06060606060606061,
+    "merged_dataset_path": "/tmp/ids706-classroom-u3t5fusg/reference/artifacts/airflow/runs/reference/subset.csv",
+    "published_latest": "/tmp/ids706-classroom-u3t5fusg/reference/datasets/airflow/merged_latest.csv",
+    "run_id": "reference",
+    "target_column": "is_fraud"
+  },
+  "right": {
+    "columns": [
+      "transaction_id",
+      "customer_id",
+      "merchant_id",
+      "timestamp",
+      "amount",
+      "currency",
+      "payment_method",
+      "transaction_type",
+      "merchant_category",
+      "device_type",
+      "operating_system",
+      "browser",
+      "IP_country",
+      "geo_latitude",
+      "geo_longitude",
+      "distance_from_home",
+      "login_duration",
+      "transaction_hour",
+      "day_of_week",
+      "weekend",
+      "international",
+      "failed_login_attempts",
+      "previous_transactions_24h",
+      "average_spending_30d",
+      "spending_change",
+      "merchant_risk",
+      "customer_risk",
+      "fraud_probability",
+      "is_fraud"
+    ],
+    "filename": "transactions.csv",
+    "n_rows_est": 10000,
+    "path": "/tmp/ids706-classroom-u3t5fusg/reference/datasets/airflow/transactions.csv",
+    "require_columns": [
+      "customer_id",
+      "is_fraud"
+    ]
+  },
+  "subset": {
+    "full_merged_path": "/tmp/ids706-classroom-u3t5fusg/reference/artifacts/airflow/runs/reference/merged.csv",
+    "merged_path": "/tmp/ids706-classroom-u3t5fusg/reference/artifacts/airflow/runs/reference/subset.csv",
+    "n_source": 10000,
+    "n_subset": 2000,
+    "subset_path": "/tmp/ids706-classroom-u3t5fusg/reference/artifacts/airflow/runs/reference/subset.csv",
+    "target_column": "is_fraud",
+    "target_rate": 0.0305
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "at_unix": 1794206546.1877792,
+  "attempt": 0,
+  "diagnostics": null,
+  "duration_seconds": 8.637000064481981e-05,
+  "final_metrics": null,
+  "from_node": null,
+  "issue": {
+    "recoverable": false,
+    "stage": "data_loader",
+    "type": "PermissionError"
+  },
+  "kind": "node_completed",
+  "load_attempts": 1,
+  "max_attempts": 3,
+  "next_node": "failure_report",
+  "node": "failure_report",
+  "phase": null,
+  "quality": null,
+  "reason": "unrecoverable_or_retry_exhausted",
+  "recoveries": 0,
+  "routes": [
+    {
+      "attempt": 0,
+      "destination": "failure_report",
+      "from_phase": null,
+      "has_collinear_weather": false,
+      "issue_stage": "data_loader",
+      "issue_type": "PermissionError",
+      "last_gap": null,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "unrecoverable_or_retry_exhausted",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": false
+    }
+  ],
+  "sequence": 6,
+  "spec": null,
+  "status": "failed",
+  "test_stage_count": 0,
+  "trials": []
+}

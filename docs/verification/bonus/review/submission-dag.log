@@ -1,0 +1,9 @@
+.                                                                        [100%]
+=============================== warnings summary ===============================
+../../tmp/bonus-submission-dag-ypo5l13r/tests/integration/test_dag.py:5
+  /tmp/bonus-submission-dag-ypo5l13r/tests/integration/test_dag.py:5: PytestUnknownMarkWarning: Unknown pytest.mark.airflow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark=pytest.mark.airflow
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+------ generated xml file: /tmp/bonus-submission-dag-ypo5l13r/results.xml ------
+1 passed, 1 warning in 1.54s

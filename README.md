@@ -97,3 +97,11 @@ Final submission checks passed **39 pipeline unit tests, 19 ML tests and one rea
 
 The repository includes the source code, Docker setup, tests, documentation, and screenshots for Parts 1 and 2. Both workflows have been implemented and successfully tested. Detailed execution logs and verification results are available in the `docs/verification/` directory.
 
+
+## Optional Part 3 - separate bonus branch
+
+The local bonus/adaptive-multi-agent branch adds an original adaptive specialist graph, bounded recovery, a PostgreSQL-fed runtime, and 27 isolated evaluation executions. It preserves the verified Parts 1 and 2 above. Strict classroom-baseline comparison remains partial: native classification probes and explicit bike-demand regression ports are reported separately, and the original classroom Airflow DAG was not executed. Seven reviewed Bonus screenshots are present. The image named 14_bonus_agent_metrics.png shows policy completion/pass rates; per-agent calls and timings are retained in the runtime reports. No full bonus-points claim is made.
+
+See the [bonus guide](bonus/README.md), [actual comparison](bonus/COMPARISON.md), [requirement-by-requirement verification](docs/verification/bonus/status.md), and [screenshot instructions](docs/verification/bonus/screenshot-guide.md). These bonus changes remain local; they have not been committed, merged into main, or pushed.
+
+The [final independent-review report](docs/verification/bonus/review/README.md) lists the actual Bonus screenshots, evaluator weaknesses and independent artifact checks, exact staging manifest, and remaining strict-baseline risk.

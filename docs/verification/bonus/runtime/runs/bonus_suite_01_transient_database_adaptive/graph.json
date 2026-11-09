@@ -1,0 +1,281 @@
+{
+  "edges": [
+    {
+      "source": "__start__",
+      "target": "data_loader"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "data_loader"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "data_quality"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "evaluation"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "failure_report"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "feature_analysis"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "feature_refinement"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "final_test"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "model_selection"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "recovery"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "reporting"
+    },
+    {
+      "conditional": true,
+      "source": "coordinator",
+      "target": "training"
+    },
+    {
+      "source": "data_loader",
+      "target": "coordinator"
+    },
+    {
+      "source": "data_quality",
+      "target": "coordinator"
+    },
+    {
+      "source": "evaluation",
+      "target": "coordinator"
+    },
+    {
+      "source": "feature_analysis",
+      "target": "coordinator"
+    },
+    {
+      "source": "feature_refinement",
+      "target": "coordinator"
+    },
+    {
+      "source": "final_test",
+      "target": "coordinator"
+    },
+    {
+      "source": "model_selection",
+      "target": "coordinator"
+    },
+    {
+      "source": "recovery",
+      "target": "coordinator"
+    },
+    {
+      "source": "training",
+      "target": "coordinator"
+    },
+    {
+      "source": "failure_report",
+      "target": "__end__"
+    },
+    {
+      "source": "reporting",
+      "target": "__end__"
+    }
+  ],
+  "nodes": [
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "__start__"
+      },
+      "id": "__start__",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "data_loader"
+      },
+      "id": "data_loader",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "data_quality"
+      },
+      "id": "data_quality",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "feature_analysis"
+      },
+      "id": "feature_analysis",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "feature_refinement"
+      },
+      "id": "feature_refinement",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "model_selection"
+      },
+      "id": "model_selection",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "training"
+      },
+      "id": "training",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "evaluation"
+      },
+      "id": "evaluation",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "coordinator"
+      },
+      "id": "coordinator",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "recovery"
+      },
+      "id": "recovery",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "final_test"
+      },
+      "id": "final_test",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "reporting"
+      },
+      "id": "reporting",
+      "type": "runnable"
+    },
+    {
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "failure_report"
+      },
+      "id": "failure_report",
+      "type": "runnable"
+    },
+    {
+      "id": "__end__"
+    }
+  ]
+}

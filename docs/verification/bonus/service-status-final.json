@@ -1,0 +1,65 @@
+[
+  {
+    "Service": "airflow-apiserver",
+    "ID": "c41e3cb7874a",
+    "State": "running",
+    "Health": "healthy",
+    "CreatedAt": "2026-11-08 21:56:11 -0500 EST"
+  },
+  {
+    "Service": "airflow-dag-processor",
+    "ID": "d31de710ff8e",
+    "State": "running",
+    "Health": "healthy",
+    "CreatedAt": "2026-11-08 21:56:11 -0500 EST"
+  },
+  {
+    "Service": "airflow-db",
+    "ID": "98a0796d6df3",
+    "State": "running",
+    "Health": "healthy",
+    "CreatedAt": "2026-11-08 21:47:41 -0500 EST"
+  },
+  {
+    "Service": "airflow-init",
+    "ID": "0fbaca915e0c",
+    "State": "exited",
+    "Health": "",
+    "CreatedAt": "2026-11-08 21:56:10 -0500 EST"
+  },
+  {
+    "Service": "airflow-scheduler",
+    "ID": "61af316559d3",
+    "State": "running",
+    "Health": "healthy",
+    "CreatedAt": "2026-11-08 21:56:15 -0500 EST"
+  },
+  {
+    "Service": "app-db",
+    "ID": "067be0d68e89",
+    "State": "running",
+    "Health": "healthy",
+    "CreatedAt": "2026-11-08 21:47:41 -0500 EST"
+  },
+  {
+    "Service": "bonus-dashboard",
+    "ID": "fd3748d063ce",
+    "State": "running",
+    "Health": "",
+    "CreatedAt": "2026-11-09 01:42:47 -0500 EST"
+  },
+  {
+    "Service": "dashboard",
+    "ID": "4459a5c6252b",
+    "State": "running",
+    "Health": "",
+    "CreatedAt": "2026-11-08 22:59:35 -0500 EST"
+  },
+  {
+    "Service": "storage-init",
+    "ID": "f39d7894489c",
+    "State": "exited",
+    "Health": "",
+    "CreatedAt": "2026-11-08 21:56:09 -0500 EST"
+  }
+]

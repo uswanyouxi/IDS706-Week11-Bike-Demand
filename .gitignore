@@ -85,7 +85,7 @@ Thumbs.db
 # Keep the small, frozen verified model as reproducibility evidence.
 !/docs/verification/phase-c/runs/ml_main_01/selected_model.joblib
 
-# Only these six reviewed submission screenshots are publishable.
+# Explicitly reviewed Parts 1-2 and Bonus captures only.
 /screenshots/*
 !/screenshots/README.md
 !/screenshots/01_airflow_dag_success.png
@@ -94,6 +94,13 @@ Thumbs.db
 !/screenshots/07_langgraph_conditional_retry.png
 !/screenshots/08_regression_evaluation.png
 !/screenshots/09_model_comparison_charts.png
+!/screenshots/10_bonus_adaptive_graph.png
+!/screenshots/11_bonus_routing_recovery.png
+!/screenshots/11b_bonus_recovery_events.png
+!/screenshots/12_bonus_evaluation_suite.png
+!/screenshots/12b_bonus_evaluation_criteria.png
+!/screenshots/13_bonus_baseline_comparison.png
+!/screenshots/14_bonus_agent_metrics.png
 
 # Downloaded resolver/reference scratch files and original authoring prompts
 /docs/verification/official-airflow-compose.yaml

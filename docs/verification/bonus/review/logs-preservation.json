@@ -1,0 +1,495 @@
+{
+  "scope": "Pre-cleanup log bytes and original modification timestamps; no logs edited",
+  "files": {
+    "docs/verification/bonus/dashboard-apptest-initial.log": {
+      "sha256": "1a1785798b51268a3e7058574fb2f2ea6825e74ebbf4dba0831588896138b14e",
+      "mtime_ns": 1794206762623984000,
+      "bytes": 5124
+    },
+    "docs/verification/bonus/dashboard-startup.log": {
+      "sha256": "e1b3a5227b6b62fee6b6538f0e7b6dbb6574c35e04b5929116c7d5a1d68992f6",
+      "mtime_ns": 1794206567698046600,
+      "bytes": 234
+    },
+    "docs/verification/bonus/export.log": {
+      "sha256": "72f906441d9b4b2ba503bdccd1d2892187c3b5a5283c4f9f931e3a0acee0d160",
+      "mtime_ns": 1794206568217478400,
+      "bytes": 385
+    },
+    "docs/verification/bonus/final-bonus-tests.log": {
+      "sha256": "0fe2055b90ee80f306137ac723cff3dee8e7e56fc475647cac638d752e4fb951",
+      "mtime_ns": 1794206979516623300,
+      "bytes": 2558
+    },
+    "docs/verification/bonus/original-dag-import.log": {
+      "sha256": "c91919a15327d3d6e08e2ef2a103a0cf966a06dd97f4b1194d52f2e52788288b",
+      "mtime_ns": 1794207214666214700,
+      "bytes": 366
+    },
+    "docs/verification/bonus/original-ml-regression.log": {
+      "sha256": "dbdcc38c2b099905c31f3f54a848ace7d3d6ecf3556ad3f2cd3f0e2bcbae1e95",
+      "mtime_ns": 1794207138939661900,
+      "bytes": 1604
+    },
+    "docs/verification/bonus/original-pipeline-regression.log": {
+      "sha256": "334c41074f77891d3293ac7790fd40ecd8b2dd88288483a9784dd607d1ae8044",
+      "mtime_ns": 1794206981254853100,
+      "bytes": 448
+    },
+    "docs/verification/bonus/part2-navigation-check.log": {
+      "sha256": "34339b84404c7c699053bc48ab59a8eef2f9dc70f3cb7debe9e458f98ed34631",
+      "mtime_ns": 1794206829741645300,
+      "bytes": 1198
+    },
+    "docs/verification/bonus/resume-unit-tests.log": {
+      "sha256": "9c76e362d5f566395ecbead92b09ac591ef5d5ad62496e5a71b01a2de2eb714c",
+      "mtime_ns": 1794206416959018300,
+      "bytes": 2002
+    },
+    "docs/verification/bonus/runtime-classroom.log": {
+      "sha256": "25a4f2f88badd060a7e14051cf853bbf64c28d2d3be22da9b54272894641ece9",
+      "mtime_ns": 1794206555093520600,
+      "bytes": 6814
+    },
+    "docs/verification/bonus/runtime-main.log": {
+      "sha256": "33d880c580ab42308fd2f3e597861db60abe523bfa7c3da33a2b6387ac2e1351",
+      "mtime_ns": 1794206540180646700,
+      "bytes": 1422
+    },
+    "docs/verification/bonus/runtime-suite.log": {
+      "sha256": "38120a95cd6f4516f0d6a468104ae41bdfe9d3ea02edbda4ef0267957fed900f",
+      "mtime_ns": 1794206548323149800,
+      "bytes": 2905
+    },
+    "docs/verification/bonus/runtime-tests.log": {
+      "sha256": "6879dca19dab9b5aa64a5aa50eb04d335d6f63e3d7ec3736b221ae4a237d39e9",
+      "mtime_ns": 1794206564590846000,
+      "bytes": 942
+    },
+    "docs/verification/bonus/unit-tests-final.log": {
+      "sha256": "20cef7c5f35075c293cfd4f8679b090e11b3ab19e933abc14adee4e143314472",
+      "mtime_ns": 1794205909106638700,
+      "bytes": 2002
+    },
+    "docs/verification/bonus/unit-tests-initial.log": {
+      "sha256": "94038ed1efba524457669f0724fc6d165df40859731a013fd6219838377387c4",
+      "mtime_ns": 1794205743145771000,
+      "bytes": 3404
+    },
+    "docs/verification/bonus/review/bonus-ml-final.log": {
+      "sha256": "4a2bc43541d506ef1886096685014c98cd994adf3b6a43d58f371d961f589ad4",
+      "mtime_ns": 1794210831223668600,
+      "bytes": 1606
+    },
+    "docs/verification/bonus/review/bonus-tests-final.log": {
+      "sha256": "513f0180a0052158f43086abcbdfeb7c72b4b923c7f822c9207bdc5f418ccd30",
+      "mtime_ns": 1794210592596827400,
+      "bytes": 1604
+    },
+    "docs/verification/bonus/review/bonus-tests.log": {
+      "sha256": "627160da88589ff972459ad8a165fa4ddd0e168bcc5f953135476c94697037a5",
+      "mtime_ns": 1794210404818465900,
+      "bytes": 25888
+    },
+    "docs/verification/bonus/review/dag-final.log": {
+      "sha256": "b2838cb0ecf3403650e1c9a2df0dc5bd3058d0cbdba594d6e797a509a50a0c4e",
+      "mtime_ns": 1794211004382664100,
+      "bytes": 366
+    },
+    "docs/verification/bonus/review/pipeline-final.log": {
+      "sha256": "017bd817f52f2f91dbceabf05d09d03944fe9b69be394dbdedffd85400697846",
+      "mtime_ns": 1794210820771177300,
+      "bytes": 434
+    },
+    "docs/verification/final-submission/dag-import.log": {
+      "sha256": "8e4bbd60763edb154445425e5dbe544d37d16fd34123786e9e5912d5d4512b21",
+      "mtime_ns": 1794201278951412900,
+      "bytes": 366
+    },
+    "docs/verification/final-submission/host-unit-tests.log": {
+      "sha256": "b6a9b0c8f52272782aab25c2ff9a8919e945570374221e4ce65e7f8cbc20d5d9",
+      "mtime_ns": 1794201276927795700,
+      "bytes": 444
+    },
+    "docs/verification/final-submission/ml-tests.log": {
+      "sha256": "e8fbb5659f51352eb0da0e9175edfd16ba3f8c599fcb1917e720352c814433ed",
+      "mtime_ns": 1794201280577930800,
+      "bytes": 1604
+    },
+    "docs/verification/phase-b/dag-list.log": {
+      "sha256": "3b0f079083087df5653ec2d9f012b2dfdde51477be243850d804c4b2556a5241",
+      "mtime_ns": 1794192891385529800,
+      "bytes": 189
+    },
+    "docs/verification/phase-b/dag-parse-final.log": {
+      "sha256": "fe1ef69dcdcca7d58be9104fa814fd149117728da1608e55f608dae57a88a67b",
+      "mtime_ns": 1794193041427886500,
+      "bytes": 1508
+    },
+    "docs/verification/phase-b/dag-parse-initial.log": {
+      "sha256": "8bf998a04431411ce683b6b417897769f184efa56dc86179baf02731435e556a",
+      "mtime_ns": 1794192533580112900,
+      "bytes": 1942
+    },
+    "docs/verification/phase-b/dag-parse-timetable.log": {
+      "sha256": "c9bf678a6b14c5c56586935d20d348b2c876976cf497c517e1178eb98251e929",
+      "mtime_ns": 1794192675440983600,
+      "bytes": 1468
+    },
+    "docs/verification/phase-b/dag-parse.log": {
+      "sha256": "0794e5653751f1830cf145b95e6f694cf11977809267f11a63d3e900aa625fbc",
+      "mtime_ns": 1794192738535448200,
+      "bytes": 3018
+    },
+    "docs/verification/phase-b/docker-build-final.log": {
+      "sha256": "12814f652ab7e3e037dc56235c62923ebe1cb2a1c3711a6f706523572577f725",
+      "mtime_ns": 1794192969203985600,
+      "bytes": 6270
+    },
+    "docs/verification/phase-b/docker-build.log": {
+      "sha256": "2f02d38ab6d86c4c109315cb960e54a7b414ef4bb590c8bec1b7d8fef520ca6e",
+      "mtime_ns": 1794192372889095600,
+      "bytes": 108166
+    },
+    "docs/verification/phase-b/host-tests.log": {
+      "sha256": "f17e6057df63ce480c92ec203796be936b32cc3c027d6c841c74a91ac9c159e0",
+      "mtime_ns": 1794192139901831800,
+      "bytes": 656
+    },
+    "docs/verification/phase-b/imports-final.log": {
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "mtime_ns": 1794192829387846800,
+      "bytes": 4
+    },
+    "docs/verification/phase-b/initialization-repeat.log": {
+      "sha256": "8f804eceaf2470668ce232f017b28ee5767a373b164a4511cbceba04afb4ba7a",
+      "mtime_ns": 1794192657412950100,
+      "bytes": 608
+    },
+    "docs/verification/phase-b/initialization.log": {
+      "sha256": "9a3ce54a406bc17e5a596a5176c0aff23d7c9691d4f03e02ccd5dc5ed6e21b03",
+      "mtime_ns": 1794192439458545900,
+      "bytes": 17446
+    },
+    "docs/verification/phase-b/linux-full-tests.log": {
+      "sha256": "f721d0777092b920614c5c9a17529edbfbcb871f2a6b95efcf9d7b82e6593a78",
+      "mtime_ns": 1794193047693513600,
+      "bytes": 382
+    },
+    "docs/verification/phase-b/linux-pip-check-initial.log": {
+      "sha256": "79c487e72f0ca4dbb4d44f3c2340d2dc664ad06504b6d4e146c1341108aee54e",
+      "mtime_ns": 1794192739418569500,
+      "bytes": 738
+    },
+    "docs/verification/phase-b/linux-pip-check.log": {
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "mtime_ns": 1794193042389916400,
+      "bytes": 31
+    },
+    "docs/verification/phase-b/linux-tests.log": {
+      "sha256": "a2d44b76fad8fb6acadb445ee0e178be5a7cb8a7c792a4e0fbefea20eac2e65e",
+      "mtime_ns": 1794192765559929700,
+      "bytes": 850
+    },
+    "docs/verification/phase-b/next-execution.log": {
+      "sha256": "8f9e6a48a5ab85eaaa838cb81b41c745b92c34e26fee5cc8e3bed921ed2eedd9",
+      "mtime_ns": 1794193150519835500,
+      "bytes": 27
+    },
+    "docs/verification/phase-b/postgres-tests.log": {
+      "sha256": "98f9ab21b73ebfb59b2dfec925c97394ec606f4b4f30b0ce4953f4497f0ace5f",
+      "mtime_ns": 1794192916264863600,
+      "bytes": 182
+    },
+    "docs/verification/phase-b/runs-01.json.log": {
+      "sha256": "add11b7e826366ae2d0bb34ded69b97ac311500ecebf6bfd6cbc7d4849658feb",
+      "mtime_ns": 1794192885624662800,
+      "bytes": 549
+    },
+    "docs/verification/phase-b/runs-final.json.log": {
+      "sha256": "d0dd78fd2091f16c935493b87b0e5f94bfcf41e46f40af3139fe25ac70a6c626",
+      "mtime_ns": 1794193143597666200,
+      "bytes": 804
+    },
+    "docs/verification/phase-b/startup-final.log": {
+      "sha256": "6d9d0a30be7bd0d1aed480ecb4ad5ee0777cad80bf5d96863604d2200531d524",
+      "mtime_ns": 1794193010242611700,
+      "bytes": 4574
+    },
+    "docs/verification/phase-b/startup.log": {
+      "sha256": "3560154076ec0e692f3d565fee9145cedb819f3ea86f34e11e7d2cbbb9fcfc67",
+      "mtime_ns": 1794192503599071800,
+      "bytes": 5136
+    },
+    "docs/verification/phase-b/tasks-01.json.log": {
+      "sha256": "3fa93510b2f55c45b97c34be5852c352784013aa009363b738429535dfb3bc0c",
+      "mtime_ns": 1794192888399917900,
+      "bytes": 1848
+    },
+    "docs/verification/phase-b/tasks-02.json.log": {
+      "sha256": "1ed703f56021a9dd617d37f665ce9b1ecb9fedd314df7978c6795b82c661f1dd",
+      "mtime_ns": 1794193147361834200,
+      "bytes": 1848
+    },
+    "docs/verification/phase-b/tasks-scheduled.json.log": {
+      "sha256": "0a5379b87beee4ec708c749ea92212f82e4aa8cf7291630ca7957a1f8a06c161",
+      "mtime_ns": 1794193391087327500,
+      "bytes": 2073
+    },
+    "docs/verification/phase-b/test-db-creation.log": {
+      "sha256": "95795bc08c5a27891a0ec26c370d8da7507c0c2589042e015f7de870d811e234",
+      "mtime_ns": 1794192914606485700,
+      "bytes": 10
+    },
+    "docs/verification/phase-b/trigger-01.log": {
+      "sha256": "f7910dbb2dcfeeca36d58f425a17678aefaf0738f7ee69a1eb06d980786d6a4a",
+      "mtime_ns": 1794192835231102000,
+      "bytes": 585
+    },
+    "docs/verification/phase-b/trigger-02.log": {
+      "sha256": "3725cd23b011f097c3c7803d889b0228aa62caa470f5d5112d0de5bc31156e38",
+      "mtime_ns": 1794193051204123700,
+      "bytes": 585
+    },
+    "docs/verification/phase-b/unpause.log": {
+      "sha256": "b37c9a09439324cb5039ef2d934a4e191429bb9a41f52192a1dc4363eb1d62ff",
+      "mtime_ns": 1794192832139029200,
+      "bytes": 140
+    },
+    "docs/verification/phase-b/volume-permissions.log": {
+      "sha256": "3d95e0fcc15a98f836b4a7677fdafe12eeb801e4309eacb10cd60b394e000c76",
+      "mtime_ns": 1794192857872864900,
+      "bytes": 163
+    },
+    "docs/verification/phase-b/airflow-task-logs/2e6003b7f6ec3ea9b43699a1/task_id=clean_bike/attempt=1.log": {
+      "sha256": "72db77359b1ecbb5d0807629a5c890a7d2277d625283a987ec243edf632370d8",
+      "mtime_ns": 1794193340027288800,
+      "bytes": 4593
+    },
+    "docs/verification/phase-b/airflow-task-logs/2e6003b7f6ec3ea9b43699a1/task_id=clean_weather/attempt=1.log": {
+      "sha256": "0a293ef01e0f5dcab22fd3edb356fe19a666d68af68b8f0a54f1c14414605444",
+      "mtime_ns": 1794193340028288900,
+      "bytes": 5130
+    },
+    "docs/verification/phase-b/airflow-task-logs/2e6003b7f6ec3ea9b43699a1/task_id=download_uci/attempt=1.log": {
+      "sha256": "df65451b56c4a7163a6cf0fa88d5d68f671e09dae4ff99949612bd9eb991f63f",
+      "mtime_ns": 1794193340029290000,
+      "bytes": 4416
+    },
+    "docs/verification/phase-b/airflow-task-logs/2e6003b7f6ec3ea9b43699a1/task_id=fetch_era5_weather/attempt=1.log": {
+      "sha256": "9f2558845e3e4c6fd62fd217073f24716d9d7733d7d040522b0636462e0f5ca0",
+      "mtime_ns": 1794193340030308400,
+      "bytes": 4977
+    },
+    "docs/verification/phase-b/airflow-task-logs/2e6003b7f6ec3ea9b43699a1/task_id=load_application_postgres/attempt=1.log": {
+      "sha256": "54f5a754a73ee204c22417a0f2981321f527b6d3fec2530b7a4939759878dc9f",
+      "mtime_ns": 1794193340030308400,
+      "bytes": 4170
+    },
+    "docs/verification/phase-b/airflow-task-logs/2e6003b7f6ec3ea9b43699a1/task_id=read_database_and_make_eda/attempt=1.log": {
+      "sha256": "10317cbf0417aae6080fd7db84c5b6f4dfb7a6b4437ff7a8924f06ea7f44600d",
+      "mtime_ns": 1794193340031313500,
+      "bytes": 6453
+    },
+    "docs/verification/phase-b/airflow-task-logs/2e6003b7f6ec3ea9b43699a1/task_id=validate_and_merge_dates/attempt=1.log": {
+      "sha256": "781bbf94ebdaa04352e77e6f678e9a07127fe1eb1b036a95c246f10992f6aed7",
+      "mtime_ns": 1794193340032313000,
+      "bytes": 5857
+    },
+    "docs/verification/phase-b/airflow-task-logs/3f0c5b99a18c83f3e98bc59c/task_id=clean_bike/attempt=1.log": {
+      "sha256": "6756d75376753f29fdafbef0cbd07a665d9c8d8dc0a15ad54afa6a192bb2df86",
+      "mtime_ns": 1794193340033314300,
+      "bytes": 4593
+    },
+    "docs/verification/phase-b/airflow-task-logs/3f0c5b99a18c83f3e98bc59c/task_id=clean_weather/attempt=1.log": {
+      "sha256": "0d3adba329b1a7d43060240caadcf30348a8cd3523daa8a2371125b593749dd7",
+      "mtime_ns": 1794193340034822200,
+      "bytes": 5130
+    },
+    "docs/verification/phase-b/airflow-task-logs/3f0c5b99a18c83f3e98bc59c/task_id=download_uci/attempt=1.log": {
+      "sha256": "d486603e406ee7dcf7f245196174dcb13a6e0f7a51adaa3d6d830a8d32b57019",
+      "mtime_ns": 1794193340034822200,
+      "bytes": 4417
+    },
+    "docs/verification/phase-b/airflow-task-logs/3f0c5b99a18c83f3e98bc59c/task_id=fetch_era5_weather/attempt=1.log": {
+      "sha256": "173046ac1973421cc2585634d04ca3c35243f2c3ed8c041e42024040f647023e",
+      "mtime_ns": 1794193340035829700,
+      "bytes": 4978
+    },
+    "docs/verification/phase-b/airflow-task-logs/3f0c5b99a18c83f3e98bc59c/task_id=load_application_postgres/attempt=1.log": {
+      "sha256": "8b99ef36756c2c39e763f921dbfd6161cb0678e08cb657f595aa49e651c3a636",
+      "mtime_ns": 1794193340036828200,
+      "bytes": 4170
+    },
+    "docs/verification/phase-b/airflow-task-logs/3f0c5b99a18c83f3e98bc59c/task_id=read_database_and_make_eda/attempt=1.log": {
+      "sha256": "88091393a0e0a6c4d84a7c0aca241439bac65ce5733ca95c48883e5f59fd07d5",
+      "mtime_ns": 1794193340037828700,
+      "bytes": 6805
+    },
+    "docs/verification/phase-b/airflow-task-logs/3f0c5b99a18c83f3e98bc59c/task_id=validate_and_merge_dates/attempt=1.log": {
+      "sha256": "aa57c1ae8b0319d2059a3d13ad096d472073c7042b952ceb8a271cae3fdfa59b",
+      "mtime_ns": 1794193340037828700,
+      "bytes": 5857
+    },
+    "docs/verification/phase-b/airflow-task-logs/ed16b9044267dcba9617d614/task_id=clean_bike/attempt=1.log": {
+      "sha256": "9a23b7064f540aa6f7a4cbb48adeed45e4cbf31d6c72c701e44ed50ee75fd5c0",
+      "mtime_ns": 1794193340039331000,
+      "bytes": 4764
+    },
+    "docs/verification/phase-b/airflow-task-logs/ed16b9044267dcba9617d614/task_id=clean_weather/attempt=1.log": {
+      "sha256": "b53d6c1f4210db645544176bd64768b8e2e948e0025dc53ad9aa51756240b766",
+      "mtime_ns": 1794193340040336600,
+      "bytes": 5301
+    },
+    "docs/verification/phase-b/airflow-task-logs/ed16b9044267dcba9617d614/task_id=download_uci/attempt=1.log": {
+      "sha256": "4869d96e0c2a1bfdf18c1591f706ab8a5108fedcbed2113178b26e0540174d4f",
+      "mtime_ns": 1794193340041336400,
+      "bytes": 4588
+    },
+    "docs/verification/phase-b/airflow-task-logs/ed16b9044267dcba9617d614/task_id=fetch_era5_weather/attempt=1.log": {
+      "sha256": "254bbba8b7575e39f3c0b5e7b8656a7e735a0832c6b7247a4b6887e1f3349026",
+      "mtime_ns": 1794193340042336600,
+      "bytes": 5149
+    },
+    "docs/verification/phase-b/airflow-task-logs/ed16b9044267dcba9617d614/task_id=load_application_postgres/attempt=1.log": {
+      "sha256": "4d591651ba85f48290a9b10f3afa2117908dc1cf023ba23623db340253f170f8",
+      "mtime_ns": 1794193340042336600,
+      "bytes": 4359
+    },
+    "docs/verification/phase-b/airflow-task-logs/ed16b9044267dcba9617d614/task_id=read_database_and_make_eda/attempt=1.log": {
+      "sha256": "fe8ca6ba2f685364e4b408268bbe9145cbabfecc8b8f087ab8c37803082c747e",
+      "mtime_ns": 1794193340042336600,
+      "bytes": 7070
+    },
+    "docs/verification/phase-b/airflow-task-logs/ed16b9044267dcba9617d614/task_id=validate_and_merge_dates/attempt=1.log": {
+      "sha256": "b8145d13e00a5a65f45864cca337bb530f56ccd65d1a572279e7f5914b3f75c3",
+      "mtime_ns": 1794193340043840800,
+      "bytes": 6027
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_01/task_id=clean_bike/attempt=1.log": {
+      "sha256": "4d2f191aed94b53969067c1e9ee221b6d56eb410c0044689e32a7b5ac5a6ef57",
+      "mtime_ns": 1794192852000000000,
+      "bytes": 4584
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_01/task_id=clean_weather/attempt=1.log": {
+      "sha256": "87a91aaa2c84a7a806b5d6ec4bca089588a442a3bdb4cdfa1d905630e4ba9991",
+      "mtime_ns": 1794192852000000000,
+      "bytes": 5121
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_01/task_id=download_uci/attempt=1.log": {
+      "sha256": "ce69f13b0d181fae6f4a31aed2be7a36dfda3034b3234e26008da2398c7947d3",
+      "mtime_ns": 1794192849000000000,
+      "bytes": 4407
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_01/task_id=fetch_era5_weather/attempt=1.log": {
+      "sha256": "f1ca9dd697dfa3dbc30e344808dd92eb9ff162225668338cd661f68d689c4fb6",
+      "mtime_ns": 1794192849000000000,
+      "bytes": 4968
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_01/task_id=load_application_postgres/attempt=1.log": {
+      "sha256": "72f2fd6107398aeba259c6d0b3e5cdd677a2e7c2c9dae57ab1b10d1e920f07e5",
+      "mtime_ns": 1794192855000000000,
+      "bytes": 4161
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_01/task_id=read_database_and_make_eda/attempt=1.log": {
+      "sha256": "7a9fd4929102e0a89ac35333e205815af548ebb29b97fc9c6a60739cf4f11fdd",
+      "mtime_ns": 1794192856000000000,
+      "bytes": 6440
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_01/task_id=validate_and_merge_dates/attempt=1.log": {
+      "sha256": "02c87266fa037b82bf4327835a341e5420bf8bf361ba479a2908807c3917b329",
+      "mtime_ns": 1794192853000000000,
+      "bytes": 5848
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_02/task_id=clean_bike/attempt=1.log": {
+      "sha256": "48d064437e423084bd886a9495db714e9bcd03e492881bf73a37bd6eea23c98c",
+      "mtime_ns": 1794193059000000000,
+      "bytes": 4584
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_02/task_id=clean_weather/attempt=1.log": {
+      "sha256": "71dae6a5363a283339c79b554dfbc2e9fa223729aa2cf0d5b88e38757351a9b8",
+      "mtime_ns": 1794193058000000000,
+      "bytes": 5121
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_02/task_id=download_uci/attempt=1.log": {
+      "sha256": "1c627b12328579ba91b02e3f9cc90f10f163ee5d01c68232b5d225b12e0804ee",
+      "mtime_ns": 1794193058000000000,
+      "bytes": 4408
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_02/task_id=fetch_era5_weather/attempt=1.log": {
+      "sha256": "732c69d1e4a1adc4562bfaaf30d8fcfcbcf3084726a3dd638e81f286875b6d86",
+      "mtime_ns": 1794193056000000000,
+      "bytes": 4969
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_02/task_id=load_application_postgres/attempt=1.log": {
+      "sha256": "e8a54faa32c5b57320a4aa9298a810f237eeaff37ec0a255894bd2dda65932ef",
+      "mtime_ns": 1794193062000000000,
+      "bytes": 4161
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_02/task_id=read_database_and_make_eda/attempt=1.log": {
+      "sha256": "cda32fe96528cc6c7735fc224274f655efd4bfd11bdd674867ae51085abce476",
+      "mtime_ns": 1794193063000000000,
+      "bytes": 6791
+    },
+    "docs/verification/phase-b/airflow-task-logs/run_id=phase_b_manual_02/task_id=validate_and_merge_dates/attempt=1.log": {
+      "sha256": "4335dc015082d661f6358413e62b8998d252039bced80eba0ed4eaa5ffc38e87",
+      "mtime_ns": 1794193060000000000,
+      "bytes": 5848
+    },
+    "docs/verification/phase-c/dashboard-apptest.log": {
+      "sha256": "53c319c329f5fe8cfaf1d511a5c4fba2436ae0a511d944cab03de54c9cd4359f",
+      "mtime_ns": 1794196662106816100,
+      "bytes": 2067
+    },
+    "docs/verification/phase-c/dashboard-startup-final.log": {
+      "sha256": "dddbdada4372bb6db2dcf6d0f02bf68dab06290654e22bd1a55e914d947a18e0",
+      "mtime_ns": 1794196776609382600,
+      "bytes": 1076
+    },
+    "docs/verification/phase-c/dashboard-startup.log": {
+      "sha256": "62a471f69a55f6f240a383421a7aa272125c71264f2a3526613abe7073e987dc",
+      "mtime_ns": 1794196627746568200,
+      "bytes": 1072
+    },
+    "docs/verification/phase-c/docker-build-final.log": {
+      "sha256": "06828e2dcafc1c6ed976d91af750197064eee8fe9fca48bbead835e9aed2e817",
+      "mtime_ns": 1794196775145975100,
+      "bytes": 5396
+    },
+    "docs/verification/phase-c/docker-build.log": {
+      "sha256": "318f14728dd6d96c3d29cf19cac571ea027f94ef15c6c7255dcdceffe2904c77",
+      "mtime_ns": 1794196570431738500,
+      "bytes": 80408
+    },
+    "docs/verification/phase-c/evidence-check.log": {
+      "sha256": "d44ada94e5920e14ad30062763af2ea32bd81f3f7a597e5168b5d9942d595907",
+      "mtime_ns": 1794197151092014600,
+      "bytes": 1598
+    },
+    "docs/verification/phase-c/pip-check-final.log": {
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "mtime_ns": 1794197150532105100,
+      "bytes": 31
+    },
+    "docs/verification/phase-c/tests-final.log": {
+      "sha256": "f26c1a26e1f37258be4c6f0a3e0f45c90044ad26805fc743aaff6807e6919bb6",
+      "mtime_ns": 1794196782425129500,
+      "bytes": 2548
+    },
+    "docs/verification/phase-c/tests-initial.log": {
+      "sha256": "8d1ace185b40fba4e6b132a3a104ddfc8a6fcdf5aadfce3c1a7f46795fa78cde",
+      "mtime_ns": 1794196599454341000,
+      "bytes": 3314
+    },
+    "docs/verification/phase-c/workflow-failure-probe.log": {
+      "sha256": "c6d15fb467def51a21d5744979985b300b2c1889ff4a6d54c33a18a63470073d",
+      "mtime_ns": 1794197079289569000,
+      "bytes": 2086
+    },
+    "docs/verification/phase-c/workflow-main.log": {
+      "sha256": "ea59b8a3aa7a84ff92d682c424b78686f224ecdf27c9feb8219ba5ce0a03205a",
+      "mtime_ns": 1794196631549941100,
+      "bytes": 2658
+    }
+  }
+}

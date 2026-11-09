@@ -1,0 +1,7 @@
+{
+  "existing_service_definitions_unchanged": true,
+  "additional_services": [
+    "bonus-dashboard",
+    "bonus-runner"
+  ]
+}

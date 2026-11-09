@@ -1,0 +1,381 @@
+{
+  "agent_metrics": {
+    "coordinator": {
+      "calls": 7,
+      "errors": 0,
+      "seconds": 5.910500112804584e-05
+    },
+    "data_loader": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 0.000266222999925958
+    },
+    "data_quality": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 0.06875916399985726
+    },
+    "evaluation": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 0.005863849000888877
+    },
+    "feature_analysis": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 0.01114624699948763
+    },
+    "final_test": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 0.010880460000407766
+    },
+    "model_selection": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 6.424999810406007e-06
+    },
+    "reporting": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 0.004977113001586986
+    },
+    "training": {
+      "calls": 1,
+      "errors": 0,
+      "seconds": 0.005599105999863241
+    }
+  },
+  "attempt": 1,
+  "baseline": {
+    "mae": 2052.4352702092424,
+    "r2": -1.0329129927112528,
+    "rmse": 2449.8871519358
+  },
+  "best": {
+    "features": [
+      "weekday",
+      "season",
+      "temperature_2m_mean",
+      "temperature_2m_max",
+      "temperature_2m_min",
+      "precipitation_sum",
+      "wind_speed_10m_max",
+      "month_sin",
+      "month_cos",
+      "holiday",
+      "workingday",
+      "elapsed_day"
+    ],
+    "spec": {
+      "alpha": 10.0,
+      "name": "ridge"
+    },
+    "validation": {
+      "mae": 1362.2482884502779,
+      "r2": 0.1610578231104831,
+      "rmse": 1573.8114428802473
+    }
+  },
+  "cpu_seconds": 0.12598306999999975,
+  "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+  "diagnostics": {
+    "collinear_weather": [
+      "temperature_2m_max",
+      "temperature_2m_min"
+    ],
+    "constant_features": [],
+    "maximum_target_correlation": 0.7707850077060927,
+    "scope": "2011 training partition only",
+    "test_rows": 184,
+    "train_rows": 365,
+    "validation_rows": 182
+  },
+  "features": [
+    "weekday",
+    "season",
+    "temperature_2m_mean",
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "precipitation_sum",
+    "wind_speed_10m_max",
+    "month_sin",
+    "month_cos",
+    "holiday",
+    "workingday",
+    "elapsed_day"
+  ],
+  "final_metrics": {
+    "dummy": {
+      "mae": 2452.6403008504894,
+      "r2": -1.3945793319422521,
+      "rmse": 2694.302463599049
+    },
+    "selected": {
+      "mae": 904.7064645271217,
+      "r2": 0.5231228475591951,
+      "rmse": 1202.3613050409385
+    }
+  },
+  "final_refit_rows": 547,
+  "framing": "Retrospective observed-weather backtest",
+  "graph_source": "compiled StateGraph.get_graph().to_json()",
+  "heldout_rows": 184,
+  "issue": null,
+  "load_attempts": 1,
+  "max_attempts": 3,
+  "max_loads": 2,
+  "max_recoveries": 2,
+  "memory_scope": "Linux worker process lifetime high-water RSS, not isolated per-run peak",
+  "negative_predictions": 1,
+  "node_operations": 15,
+  "policy": "simple_port",
+  "provenance": {
+    "database": "bike_demand",
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "origin": "isolated_evaluation_fixture",
+    "parent_origin": "application_postgresql",
+    "pipeline_run_id": "phase_b_manual_02",
+    "query": "SELECT date, cnt, yr, mnth, weekday, season, holiday, workingday, temperature_2m_mean, temperature_2m_max, temperature_2m_min, precipitation_sum, wind_speed_10m_max FROM bike_analytics.bike_daily ORDER BY date",
+    "rows": 731,
+    "scenario": "normal",
+    "snapshot_isolation": "repeatable read",
+    "sources": {
+      "open_meteo": {
+        "bytes": 27626,
+        "content_type": "application/json; charset=utf-8",
+        "final_url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601",
+        "http_status": 200,
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/weather.json",
+        "requested_model": "era5",
+        "requested_timezone": "America/New_York",
+        "retrieved_at_utc": "2026-11-09T02:57:36.558548+00:00",
+        "sha256": "3000a04e8aa276da506f844d46f4e4c3e91cbc1770ee707b070c68b7e5aaaf49",
+        "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.9072&longitude=-77.0369&start_date=2011-01-01&end_date=2012-12-31&daily=temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=America%2FNew_York&models=era5&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timeformat=iso8601"
+      },
+      "uci": {
+        "bytes": 279992,
+        "content_type": null,
+        "day_csv_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+        "final_url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+        "http_status": 200,
+        "path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/day.csv",
+        "raw_path": "/opt/project/data/runs/3f0c5b99a18c83f3e98bc59c/raw/uci.zip",
+        "retrieved_at_utc": "2026-11-09T02:57:38.547845+00:00",
+        "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+        "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip"
+      }
+    },
+    "table": "bike_analytics.bike_daily",
+    "transaction_read_only": "on"
+  },
+  "quality": {
+    "contract_valid": true,
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "end": "2012-12-31",
+    "rows": 731,
+    "start": "2011-01-01",
+    "unique_dates": 731
+  },
+  "reason": "validated_tested",
+  "recoveries": 0,
+  "refined": false,
+  "routes": [
+    {
+      "attempt": 0,
+      "destination": "data_quality",
+      "from_phase": "loaded",
+      "has_collinear_weather": false,
+      "issue_stage": null,
+      "issue_type": null,
+      "last_gap": null,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "validated_loaded",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": false
+    },
+    {
+      "attempt": 0,
+      "destination": "feature_analysis",
+      "from_phase": "quality_checked",
+      "has_collinear_weather": false,
+      "issue_stage": null,
+      "issue_type": null,
+      "last_gap": null,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "validated_quality_checked",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": false
+    },
+    {
+      "attempt": 0,
+      "destination": "model_selection",
+      "from_phase": "features_ready",
+      "has_collinear_weather": true,
+      "issue_stage": null,
+      "issue_type": null,
+      "last_gap": null,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "validated_features_ready",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": false
+    },
+    {
+      "attempt": 1,
+      "destination": "training",
+      "from_phase": "candidate_selected",
+      "has_collinear_weather": true,
+      "issue_stage": null,
+      "issue_type": null,
+      "last_gap": null,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "validated_candidate_selected",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": false
+    },
+    {
+      "attempt": 1,
+      "destination": "evaluation",
+      "from_phase": "trained",
+      "has_collinear_weather": true,
+      "issue_stage": null,
+      "issue_type": null,
+      "last_gap": null,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "validated_trained",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": false
+    },
+    {
+      "attempt": 1,
+      "destination": "final_test",
+      "from_phase": "evaluated",
+      "has_collinear_weather": true,
+      "issue_stage": null,
+      "issue_type": null,
+      "last_gap": 2.8162984569246556,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "validation_target_met",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": true
+    },
+    {
+      "attempt": 1,
+      "destination": "reporting",
+      "from_phase": "tested",
+      "has_collinear_weather": true,
+      "issue_stage": null,
+      "issue_type": null,
+      "last_gap": 2.8162984569246556,
+      "load_attempts": 1,
+      "max_attempts": 3,
+      "max_loads": 2,
+      "max_recoveries": 2,
+      "reason": "validated_tested",
+      "recoverable": false,
+      "recoveries": 0,
+      "refined": false,
+      "uses_heldout_metrics": false,
+      "validation_target_met": true
+    }
+  ],
+  "run_id": "bonus_suite_01_normal_simple_port",
+  "scenario": "normal",
+  "status": "success",
+  "test_stage_count": 1,
+  "trials": [
+    {
+      "attempt": 1,
+      "features": [
+        "weekday",
+        "season",
+        "temperature_2m_mean",
+        "temperature_2m_max",
+        "temperature_2m_min",
+        "precipitation_sum",
+        "wind_speed_10m_max",
+        "month_sin",
+        "month_cos",
+        "holiday",
+        "workingday",
+        "elapsed_day"
+      ],
+      "gap": 2.8162984569246556,
+      "spec": {
+        "alpha": 10.0,
+        "name": "ridge"
+      },
+      "status": "success",
+      "train": {
+        "mae": 428.7561757078901,
+        "r2": 0.8352724787587951,
+        "rmse": 558.8226769824741
+      },
+      "validation": {
+        "mae": 1362.2482884502779,
+        "r2": 0.1610578231104831,
+        "rmse": 1573.8114428802473
+      }
+    }
+  ],
+  "tried": [
+    {
+      "features": [
+        "weekday",
+        "season",
+        "temperature_2m_mean",
+        "temperature_2m_max",
+        "temperature_2m_min",
+        "precipitation_sum",
+        "wind_speed_10m_max",
+        "month_sin",
+        "month_cos",
+        "holiday",
+        "workingday",
+        "elapsed_day"
+      ],
+      "spec": {
+        "alpha": 10.0,
+        "name": "ridge"
+      }
+    }
+  ],
+  "wall_seconds": 0.12639132799995423,
+  "worker_rss_high_water_kib": 248948
+}

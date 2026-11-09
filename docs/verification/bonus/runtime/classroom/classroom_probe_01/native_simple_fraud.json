@@ -1,0 +1,440 @@
+{
+  "best_spec": {
+    "drop_columns": [
+      "transaction_id",
+      "customer_id",
+      "merchant_id",
+      "timestamp",
+      "fraud_probability"
+    ],
+    "experiment_id": "exp-1",
+    "hyperparameters": {
+      "C": 0.25,
+      "max_iter": 300
+    },
+    "model_family": "logistic_regression",
+    "rationale": "heuristic HPT from plan focus=baseline_then_iterate: logistic_regression"
+  },
+  "best_val_f1": 0.06930693069306931,
+  "cycles": 2,
+  "dataset_path": "/tmp/ids706-classroom-u3t5fusg/reference/datasets/airflow/merged_latest.csv",
+  "holdout_metrics": {
+    "accuracy": 0.625,
+    "f1": 0.08536585365853659,
+    "n_holdout": 400
+  },
+  "memory": {
+    "findings": [],
+    "history": [
+      {
+        "cycle": 1,
+        "f1": 0.06930693069306931,
+        "hypothesis": {
+          "avoid_repeats": [],
+          "direction": "Start with a simple linear baseline, drop leakage-prone columns, then iterate.",
+          "focus": "baseline_then_iterate",
+          "respect_drops": [
+            "transaction_id",
+            "customer_id",
+            "merchant_id",
+            "timestamp",
+            "fraud_probability"
+          ],
+          "why": "Heuristic profile (OpenRouter unavailable)."
+        },
+        "model_family": "logistic_regression",
+        "spec": {
+          "drop_columns": [
+            "transaction_id",
+            "customer_id",
+            "merchant_id",
+            "timestamp",
+            "fraud_probability"
+          ],
+          "experiment_id": "exp-1",
+          "hyperparameters": {
+            "C": 0.25,
+            "max_iter": 300
+          },
+          "model_family": "logistic_regression",
+          "rationale": "heuristic HPT from plan focus=baseline_then_iterate: logistic_regression"
+        },
+        "verdict": {
+          "action": "revise",
+          "next_action": "propose next experiment",
+          "observation": "val f1 0.069 below target 0.80"
+        }
+      }
+    ],
+    "lessons": [
+      "val f1 0.069 below target 0.80"
+    ]
+  },
+  "model": "nvidia/nemotron-3.5-lightning:free",
+  "profile": {
+    "categorical_features": [
+      "currency",
+      "payment_method",
+      "transaction_type",
+      "merchant_category",
+      "device_type",
+      "operating_system",
+      "browser",
+      "IP_country",
+      "day_of_week",
+      "weekend",
+      "international",
+      "customer_risk",
+      "gender",
+      "country",
+      "state",
+      "city",
+      "occupation",
+      "customer_since",
+      "account_type",
+      "risk_level",
+      "loan_status"
+    ],
+    "leakage_suspects": [
+      "transaction_id",
+      "customer_id",
+      "merchant_id",
+      "timestamp",
+      "fraud_probability"
+    ],
+    "n_columns": 43,
+    "n_rows": 2000,
+    "notes": [
+      "Heuristic profile (OpenRouter unavailable).",
+      "Drop id-like / high-cardinality text before modeling."
+    ],
+    "numeric_features": [
+      "amount",
+      "geo_latitude",
+      "geo_longitude",
+      "distance_from_home",
+      "login_duration",
+      "transaction_hour",
+      "failed_login_attempts",
+      "previous_transactions_24h",
+      "average_spending_30d",
+      "spending_change",
+      "merchant_risk",
+      "age",
+      "annual_income",
+      "credit_score",
+      "total_accounts",
+      "avg_monthly_balance"
+    ],
+    "recommended_drops": [
+      "transaction_id",
+      "customer_id",
+      "merchant_id",
+      "timestamp",
+      "fraud_probability"
+    ],
+    "target": "is_fraud",
+    "target_rate": 0.0305
+  },
+  "steps": [
+    {
+      "model": null,
+      "node": "data_scientist",
+      "note": "heuristic",
+      "output": {
+        "categorical_features": [
+          "currency",
+          "payment_method",
+          "transaction_type",
+          "merchant_category",
+          "device_type",
+          "operating_system",
+          "browser",
+          "IP_country",
+          "day_of_week",
+          "weekend",
+          "international",
+          "customer_risk",
+          "gender",
+          "country",
+          "state",
+          "city",
+          "occupation",
+          "customer_since",
+          "account_type",
+          "risk_level",
+          "loan_status"
+        ],
+        "leakage_suspects": [
+          "transaction_id",
+          "customer_id",
+          "merchant_id",
+          "timestamp",
+          "fraud_probability"
+        ],
+        "n_columns": 43,
+        "n_rows": 2000,
+        "notes": [
+          "Heuristic profile (OpenRouter unavailable).",
+          "Drop id-like / high-cardinality text before modeling."
+        ],
+        "numeric_features": [
+          "amount",
+          "geo_latitude",
+          "geo_longitude",
+          "distance_from_home",
+          "login_duration",
+          "transaction_hour",
+          "failed_login_attempts",
+          "previous_transactions_24h",
+          "average_spending_30d",
+          "spending_change",
+          "merchant_risk",
+          "age",
+          "annual_income",
+          "credit_score",
+          "total_accounts",
+          "avg_monthly_balance"
+        ],
+        "recommended_drops": [
+          "transaction_id",
+          "customer_id",
+          "merchant_id",
+          "timestamp",
+          "fraud_probability"
+        ],
+        "target": "is_fraud",
+        "target_rate": 0.0305
+      },
+      "used_llm": false
+    },
+    {
+      "hypothesis": {
+        "avoid_repeats": [],
+        "direction": "Start with a simple linear baseline, drop leakage-prone columns, then iterate.",
+        "focus": "baseline_then_iterate",
+        "respect_drops": [
+          "transaction_id",
+          "customer_id",
+          "merchant_id",
+          "timestamp",
+          "fraud_probability"
+        ],
+        "why": "Heuristic profile (OpenRouter unavailable)."
+      },
+      "model": null,
+      "node": "hypothesis_generator",
+      "note": "heuristic plan",
+      "output": {
+        "avoid_repeats": [],
+        "direction": "Start with a simple linear baseline, drop leakage-prone columns, then iterate.",
+        "focus": "baseline_then_iterate",
+        "respect_drops": [
+          "transaction_id",
+          "customer_id",
+          "merchant_id",
+          "timestamp",
+          "fraud_probability"
+        ],
+        "why": "Heuristic profile (OpenRouter unavailable)."
+      },
+      "used_llm": false
+    },
+    {
+      "duration_seconds": 0.098,
+      "experiment_id": "exp-1",
+      "f1": 0.06930693069306931,
+      "model_family": "logistic_regression",
+      "node": "ml_engineer",
+      "note": "heuristic HPT \u00b7 f1=0.069",
+      "output": {
+        "execution_result": {
+          "error": null,
+          "status": "succeeded",
+          "validation_metrics": {
+            "accuracy": 0.53,
+            "f1": 0.06930693069306931
+          }
+        },
+        "experiment_spec": {
+          "drop_columns": [
+            "transaction_id",
+            "customer_id",
+            "merchant_id",
+            "timestamp",
+            "fraud_probability"
+          ],
+          "experiment_id": "exp-1",
+          "hyperparameters": {
+            "C": 0.25,
+            "max_iter": 300
+          },
+          "model_family": "logistic_regression",
+          "rationale": "heuristic HPT from plan focus=baseline_then_iterate: logistic_regression"
+        }
+      },
+      "repaired": false,
+      "spec": {
+        "drop_columns": [
+          "transaction_id",
+          "customer_id",
+          "merchant_id",
+          "timestamp",
+          "fraud_probability"
+        ],
+        "experiment_id": "exp-1",
+        "hyperparameters": {
+          "C": 0.25,
+          "max_iter": 300
+        },
+        "model_family": "logistic_regression",
+        "rationale": "heuristic HPT from plan focus=baseline_then_iterate: logistic_regression"
+      },
+      "status": "succeeded",
+      "used_llm": false,
+      "validation_metrics": {
+        "accuracy": 0.53,
+        "f1": 0.06930693069306931
+      }
+    },
+    {
+      "model": null,
+      "node": "judge",
+      "note": "heuristic",
+      "used_llm": false,
+      "verdict": {
+        "action": "revise",
+        "next_action": "propose next experiment",
+        "observation": "val f1 0.069 below target 0.80"
+      }
+    },
+    {
+      "node": "memory_writer",
+      "note": "filed lesson"
+    },
+    {
+      "node": "context_builder",
+      "note": "next brief"
+    },
+    {
+      "hypothesis": {
+        "avoid_repeats": [
+          "logistic_regression"
+        ],
+        "direction": "Increase model capacity or relax regularization; prior val F1 was under target.",
+        "focus": "capacity_or_regularization",
+        "respect_drops": [
+          "transaction_id",
+          "customer_id",
+          "merchant_id",
+          "timestamp",
+          "fraud_probability"
+        ],
+        "why": "val f1 0.069 below target 0.80"
+      },
+      "model": null,
+      "node": "hypothesis_generator",
+      "note": "heuristic plan",
+      "output": {
+        "avoid_repeats": [
+          "logistic_regression"
+        ],
+        "direction": "Increase model capacity or relax regularization; prior val F1 was under target.",
+        "focus": "capacity_or_regularization",
+        "respect_drops": [
+          "transaction_id",
+          "customer_id",
+          "merchant_id",
+          "timestamp",
+          "fraud_probability"
+        ],
+        "why": "val f1 0.069 below target 0.80"
+      },
+      "used_llm": false
+    },
+    {
+      "duration_seconds": 0.083,
+      "experiment_id": "exp-2",
+      "f1": 0.05970149253731343,
+      "model_family": "logistic_regression",
+      "node": "ml_engineer",
+      "note": "heuristic HPT \u00b7 f1=0.060",
+      "output": {
+        "execution_result": {
+          "error": null,
+          "status": "succeeded",
+          "validation_metrics": {
+            "accuracy": 0.5275,
+            "f1": 0.05970149253731343
+          }
+        },
+        "experiment_spec": {
+          "drop_columns": [
+            "transaction_id",
+            "customer_id",
+            "merchant_id",
+            "timestamp",
+            "fraud_probability"
+          ],
+          "experiment_id": "exp-2",
+          "hyperparameters": {
+            "C": 0.5,
+            "max_iter": 300
+          },
+          "model_family": "logistic_regression",
+          "rationale": "heuristic HPT from plan focus=capacity_or_regularization: logistic_regression"
+        }
+      },
+      "repaired": false,
+      "spec": {
+        "drop_columns": [
+          "transaction_id",
+          "customer_id",
+          "merchant_id",
+          "timestamp",
+          "fraud_probability"
+        ],
+        "experiment_id": "exp-2",
+        "hyperparameters": {
+          "C": 0.5,
+          "max_iter": 300
+        },
+        "model_family": "logistic_regression",
+        "rationale": "heuristic HPT from plan focus=capacity_or_regularization: logistic_regression"
+      },
+      "status": "succeeded",
+      "used_llm": false,
+      "validation_metrics": {
+        "accuracy": 0.5275,
+        "f1": 0.05970149253731343
+      }
+    },
+    {
+      "model": null,
+      "node": "judge",
+      "note": "heuristic",
+      "used_llm": false,
+      "verdict": {
+        "action": "revise",
+        "next_action": "propose next experiment",
+        "observation": "val f1 0.060 below target 0.80"
+      }
+    },
+    {
+      "metrics": {
+        "accuracy": 0.625,
+        "f1": 0.08536585365853659,
+        "n_holdout": 400
+      },
+      "node": "holdout_eval",
+      "note": "sealed holdout"
+    }
+  ],
+  "stop_reason": "finalize",
+  "target_column": "is_fraud",
+  "verdict": {
+    "action": "revise",
+    "next_action": "propose next experiment",
+    "observation": "val f1 0.060 below target 0.80"
+  }
+}

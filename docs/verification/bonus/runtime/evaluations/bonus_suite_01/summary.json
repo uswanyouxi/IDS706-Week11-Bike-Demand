@@ -1,0 +1,74 @@
+[
+  {
+    "baseline_scope": "Original adaptive system",
+    "cases": 9,
+    "completion_rate": 0.4444444444444444,
+    "expected_behavior_pass_rate": 1.0,
+    "incorrect_routing_rate": 0.0,
+    "normal_test": {
+      "dummy": {
+        "mae": 2452.6403008504894,
+        "r2": -1.3945793319422521,
+        "rmse": 2694.302463599049
+      },
+      "selected": {
+        "mae": 904.7064645271217,
+        "r2": 0.5231228475591951,
+        "rmse": 1202.3613050409385
+      }
+    },
+    "policy": "adaptive",
+    "total_attempts": 16,
+    "total_cpu_seconds": 0.7862597730000012,
+    "total_recoveries": 4,
+    "total_wall_seconds": 0.7961650359993655
+  },
+  {
+    "baseline_scope": "Explicit regression workflow port; not an unmodified classroom execution",
+    "cases": 9,
+    "completion_rate": 0.4444444444444444,
+    "expected_behavior_pass_rate": 1.0,
+    "incorrect_routing_rate": 0.0,
+    "normal_test": {
+      "dummy": {
+        "mae": 2452.6403008504894,
+        "r2": -1.3945793319422521,
+        "rmse": 2694.302463599049
+      },
+      "selected": {
+        "mae": 904.7064645271217,
+        "r2": 0.5231228475591951,
+        "rmse": 1202.3613050409385
+      }
+    },
+    "policy": "fixed_port",
+    "total_attempts": 9,
+    "total_cpu_seconds": 0.29569115400000046,
+    "total_recoveries": 4,
+    "total_wall_seconds": 0.29993949700110534
+  },
+  {
+    "baseline_scope": "Explicit regression workflow port; not an unmodified classroom execution",
+    "cases": 9,
+    "completion_rate": 0.2222222222222222,
+    "expected_behavior_pass_rate": 1.0,
+    "incorrect_routing_rate": 0.0,
+    "normal_test": {
+      "dummy": {
+        "mae": 2452.6403008504894,
+        "r2": -1.3945793319422521,
+        "rmse": 2694.302463599049
+      },
+      "selected": {
+        "mae": 904.7064645271217,
+        "r2": 0.5231228475591951,
+        "rmse": 1202.3613050409385
+      }
+    },
+    "policy": "simple_port",
+    "total_attempts": 7,
+    "total_cpu_seconds": 0.2857797980000001,
+    "total_recoveries": 0,
+    "total_wall_seconds": 0.28869184399809455
+  }
+]

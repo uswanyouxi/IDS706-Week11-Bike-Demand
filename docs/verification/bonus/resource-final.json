@@ -1,0 +1,87 @@
+{
+  "checked_at_utc": "2026-11-09T07:08:00.396220+00:00",
+  "host_free_kib": 1396064,
+  "docker_stats": [
+    {
+      "BlockIO": "12.3kB / 0B",
+      "CPUPerc": "0.00%",
+      "Container": "fd3748d063ce954817763fa425ce7294cf5ce80fac173d8f069673356fdbf8f4",
+      "ID": "fd3748d063ce",
+      "MemPerc": "11.53%",
+      "MemUsage": "59.03MiB / 512MiB",
+      "Name": "ids706-bike-demand-bonus-dashboard-1",
+      "NetIO": "2.27kB / 1.68kB",
+      "PIDs": "1"
+    },
+    {
+      "BlockIO": "53.2kB / 36.4MB",
+      "CPUPerc": "0.00%",
+      "Container": "4459a5c6252b15d8423d534147691bf77ff55a1a29b2929528dba13316ea7d00",
+      "ID": "4459a5c6252b",
+      "MemPerc": "1.52%",
+      "MemUsage": "119.2MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-dashboard-1",
+      "NetIO": "2.28MB / 23.6MB",
+      "PIDs": "7"
+    },
+    {
+      "BlockIO": "13.2MB / 60.7MB",
+      "CPUPerc": "2.59%",
+      "Container": "61af316559d30b3093c88ba3981ae57e35b786f7ec62011d67d7fd5f30a13bf6",
+      "ID": "61af316559d3",
+      "MemPerc": "5.53%",
+      "MemUsage": "432.9MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-airflow-scheduler-1",
+      "NetIO": "239MB / 368MB",
+      "PIDs": "10"
+    },
+    {
+      "BlockIO": "6.32MB / 51.9MB",
+      "CPUPerc": "0.14%",
+      "Container": "c41e3cb7874a003e2d4571d056509565983a81af6bfdd92839fec541c57a2691",
+      "ID": "c41e3cb7874a",
+      "MemPerc": "4.48%",
+      "MemUsage": "350.7MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-airflow-apiserver-1",
+      "NetIO": "3.72MB / 5.37MB",
+      "PIDs": "7"
+    },
+    {
+      "BlockIO": "13MB / 52.6MB",
+      "CPUPerc": "1.25%",
+      "Container": "d31de710ff8e197639d22659336603ad4454384205f811a613f1b978c73ffdea",
+      "ID": "d31de710ff8e",
+      "MemPerc": "3.30%",
+      "MemUsage": "258.9MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-airflow-dag-processor-1",
+      "NetIO": "58.7MB / 73.9MB",
+      "PIDs": "3"
+    },
+    {
+      "BlockIO": "229kB / 237MB",
+      "CPUPerc": "1.23%",
+      "Container": "98a0796d6df3d71dec69f8df7ee5f22315929b7c12e5544037dea02003251931",
+      "ID": "98a0796d6df3",
+      "MemPerc": "0.60%",
+      "MemUsage": "47.25MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-airflow-db-1",
+      "NetIO": "457MB / 312MB",
+      "PIDs": "15"
+    },
+    {
+      "BlockIO": "4.1kB / 100MB",
+      "CPUPerc": "0.00%",
+      "Container": "067be0d68e894e7e499a7224a81cbf5cc9af776d29506416c86a65633cb26e80",
+      "ID": "067be0d68e89",
+      "MemPerc": "0.67%",
+      "MemUsage": "52.82MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-app-db-1",
+      "NetIO": "2.52MB / 2.17MB",
+      "PIDs": "6"
+    }
+  ],
+  "bonus_dashboard_memory_limit_bytes": 536870912,
+  "bonus_dashboard_nano_cpus": 500000000,
+  "bonus_dashboard_oom_killed": false,
+  "scope": "Instantaneous final sample, not whole-stack peak memory"
+}

@@ -1,0 +1,506 @@
+[
+  {
+    "run_id": "bonus_suite_01_normal_adaptive",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 14,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_normal_fixed_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 7,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_normal_simple_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 7,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_duplicate_date_adaptive",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "reject_before_training": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 2,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_duplicate_date_fixed_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "reject_before_training": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 2,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_duplicate_date_simple_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "reject_before_training": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 2,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_missing_weather_adaptive",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "reject_before_training": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 2,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_missing_weather_fixed_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "reject_before_training": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 2,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_missing_weather_simple_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "reject_before_training": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 2,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_transient_database_adaptive",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true,
+      "recovery_success": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 16,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_transient_database_fixed_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true,
+      "recovery_success": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 9,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_transient_database_simple_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 1,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_permanent_database_adaptive",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "no_invalid_recovery": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 1,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_permanent_database_fixed_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "no_invalid_recovery": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 1,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_permanent_database_simple_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "no_invalid_recovery": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 1,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_transient_training_adaptive",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true,
+      "recovery_success": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 14,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_transient_training_fixed_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true,
+      "recovery_success": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 10,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_transient_training_simple_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 5,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_exhaust_training_adaptive",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 11,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_exhaust_training_fixed_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 11,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_exhaust_training_simple_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 5,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_weak_model_adaptive",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true,
+      "bounded_weak_search": true,
+      "honest_weak_model": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 14,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_weak_model_fixed_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true,
+      "bounded_weak_search": true,
+      "honest_weak_model": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 7,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_weak_model_simple_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "data_quality": true,
+      "feature_quality": true,
+      "split_quality": true,
+      "single_final_test": true,
+      "validation_selection": true,
+      "final_metrics": true,
+      "bounded_weak_search": true,
+      "honest_weak_model": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 13,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_invalid_model_adaptive",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "no_invalid_recovery": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 5,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_invalid_model_fixed_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "no_invalid_recovery": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 5,
+    "incorrect_routes": 0
+  },
+  {
+    "run_id": "bonus_suite_01_invalid_model_simple_port",
+    "assertions": {
+      "expected_status": true,
+      "termination": true,
+      "route_explanations": true,
+      "legal_routes": true,
+      "report_complete": true,
+      "no_test_metrics": true,
+      "no_invalid_recovery": true
+    },
+    "score": 1.0,
+    "threshold": 1.0,
+    "passed": true,
+    "route_decisions": 5,
+    "incorrect_routes": 0
+  }
+]

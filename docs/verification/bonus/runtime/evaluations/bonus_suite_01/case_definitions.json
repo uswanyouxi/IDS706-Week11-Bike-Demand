@@ -1,0 +1,65 @@
+[
+  {
+    "criteria": "success, valid data/features, finite metrics, bounded routes, complete report",
+    "expected": "All complete with sealed test evaluation",
+    "id": "normal",
+    "input": "Unmodified validated PostgreSQL snapshot",
+    "threshold": "all assertions true"
+  },
+  {
+    "criteria": "failed, attempt=0, no test metrics",
+    "expected": "All reject before training",
+    "id": "duplicate_date",
+    "input": "Isolated copy with date[1]=date[0]",
+    "threshold": "all assertions true"
+  },
+  {
+    "criteria": "failed, attempt=0, no test metrics",
+    "expected": "All reject before training",
+    "id": "missing_weather",
+    "input": "Isolated copy without precipitation_sum",
+    "threshold": "all assertions true"
+  },
+  {
+    "criteria": "expected status; successful recovery exactly once where supported",
+    "expected": "Adaptive/fixed recover; simple port fails without DB recovery",
+    "id": "transient_database",
+    "input": "One injected OperationalError before snapshot delivery",
+    "threshold": "all assertions true"
+  },
+  {
+    "criteria": "failed, recoveries=0, no test metrics",
+    "expected": "All fail without retry",
+    "id": "permanent_database",
+    "input": "Injected PermissionError, no database mutation",
+    "threshold": "all assertions true"
+  },
+  {
+    "criteria": "expected status; one recovery where supported",
+    "expected": "Adaptive/fixed recover; simple port fails",
+    "id": "transient_training",
+    "input": "One TrainingInterrupted on first candidate",
+    "threshold": "all assertions true"
+  },
+  {
+    "criteria": "failed; <=3 attempts, <=2 recoveries; no test metrics",
+    "expected": "All fail within budgets",
+    "id": "exhaust_training",
+    "input": "Every candidate raises TrainingInterrupted",
+    "threshold": "all assertions true"
+  },
+  {
+    "criteria": "success; adaptive/simple 3 attempts, fixed 1; no improvement claimed",
+    "expected": "Bounded termination with unmet quality; best Dummy retained",
+    "id": "weak_model",
+    "input": "All candidate operations intentionally use Dummy; real predictions scored",
+    "threshold": "all assertions true"
+  },
+  {
+    "criteria": "failed; attempt=1, recoveries=0, no test metrics",
+    "expected": "All abort unsupported fit, without recovery",
+    "id": "invalid_model",
+    "input": "Unsupported model family in isolated candidate fixture",
+    "threshold": "all assertions true"
+  }
+]

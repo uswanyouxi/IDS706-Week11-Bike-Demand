@@ -1,0 +1,50 @@
+# Additive only: verified Part 1/2 service definitions are unchanged.
+services:
+  bonus-runner:
+    profiles: [bonus]
+    image: ids706-ml:1.0.0
+    user: '10001:0'
+    command: ['/bin/sh', '-c', 'umask 0002; exec python -m bike_demand_bonus.cli run']
+    environment:
+      APP_DB_HOST: app-db
+      APP_DB_PORT: '5432'
+      APP_DB_NAME: bike_demand
+      APP_DB_USER: bike_app
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:?Existing .env required}
+      PROJECT_ARTIFACT_DIR: /opt/project/artifacts
+      CLASSROOM_ROOT: /opt/project/classroom-reference
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      MPLCONFIGDIR: /tmp/matplotlib
+      LANGCHAIN_TRACING_V2: 'false'
+    volumes:
+      - ./src/bike_demand_bonus:/opt/project/src/bike_demand_bonus:ro
+      - ./bonus:/opt/project/bonus:ro
+      - ./tests/bonus:/opt/project/tests/bonus:ro
+      - ./artifacts/classroom-reference:/opt/project/classroom-reference:ro
+      - project-artifacts:/opt/project/artifacts
+    cpus: 1.0
+    mem_limit: 1g
+    restart: 'no'
+
+  bonus-dashboard:
+    profiles: [bonus]
+    image: ids706-ml:1.0.0
+    user: '10001:0'
+    command: ['python', '-m', 'streamlit', 'run', 'bonus/dashboard.py', '--server.address=0.0.0.0', '--server.port=8502', '--browser.gatherUsageStats=false']
+    environment:
+      PROJECT_ARTIFACT_DIR: /opt/project/artifacts
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MPLCONFIGDIR: /tmp/matplotlib
+    volumes:
+      - ./src/bike_demand_bonus:/opt/project/src/bike_demand_bonus:ro
+      - ./bonus:/opt/project/bonus:ro
+      - project-artifacts:/opt/project/artifacts:ro
+    ports:
+      - '127.0.0.1:8502:8502'
+    cpus: 0.5
+    mem_limit: 512m
+    restart: unless-stopped

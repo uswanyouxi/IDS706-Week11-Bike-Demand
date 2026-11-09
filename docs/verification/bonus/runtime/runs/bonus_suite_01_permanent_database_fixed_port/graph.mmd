@@ -1,0 +1,46 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	data_loader(data_loader)
+	data_quality(data_quality)
+	feature_analysis(feature_analysis)
+	feature_refinement(feature_refinement)
+	model_selection(model_selection)
+	training(training)
+	evaluation(evaluation)
+	coordinator(coordinator)
+	recovery(recovery)
+	final_test(final_test)
+	reporting(reporting)
+	failure_report(failure_report)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> data_loader;
+	coordinator -.-> data_loader;
+	coordinator -.-> data_quality;
+	coordinator -.-> evaluation;
+	coordinator -.-> failure_report;
+	coordinator -.-> feature_analysis;
+	coordinator -.-> feature_refinement;
+	coordinator -.-> final_test;
+	coordinator -.-> model_selection;
+	coordinator -.-> recovery;
+	coordinator -.-> reporting;
+	coordinator -.-> training;
+	data_loader --> coordinator;
+	data_quality --> coordinator;
+	evaluation --> coordinator;
+	feature_analysis --> coordinator;
+	feature_refinement --> coordinator;
+	final_test --> coordinator;
+	model_selection --> coordinator;
+	recovery --> coordinator;
+	training --> coordinator;
+	failure_report --> __end__;
+	reporting --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

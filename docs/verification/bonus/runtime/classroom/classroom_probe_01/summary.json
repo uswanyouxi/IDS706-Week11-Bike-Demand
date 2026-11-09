@@ -1,0 +1,72 @@
+{
+  "exact_airflow_dag_executed": false,
+  "limitation": "Native classification/random-split baselines do not implement chronological cnt regression. Regression ports are reported separately.",
+  "observations": [
+    {
+      "metrics": {
+        "baseline_spec": {
+          "drop_columns": [
+            "transaction_id",
+            "customer_id",
+            "merchant_id",
+            "timestamp",
+            "IP_country",
+            "fraud_probability"
+          ],
+          "experiment_id": "baseline-lr",
+          "hyperparameters": {
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 500
+          },
+          "model_family": "logistic_regression",
+          "rationale": "Airflow A-baseline on customer\u2a1dtransaction fraud table"
+        },
+        "baseline_validation_metrics": {
+          "accuracy": 0.535,
+          "f1": 0.06060606060606061
+        },
+        "duration_sec": 0.109,
+        "holdout_frac": 0.2,
+        "holdout_scored": false,
+        "n_holdout": 400,
+        "n_train": 1200,
+        "n_val": 400,
+        "seed": 42
+      },
+      "same_bike_problem": false,
+      "scope": "Unmodified documented CLI helper; original Airflow DAG was inspected, not scheduled/executed",
+      "seconds": 0.4082038249998732,
+      "status": "success",
+      "system": "Classroom fixed prep CLI helper"
+    },
+    {
+      "cycles": 2,
+      "metrics": {
+        "accuracy": 0.625,
+        "f1": 0.08536585365853659,
+        "n_holdout": 400
+      },
+      "same_bike_problem": false,
+      "scope": "Unmodified graph with documented no-key heuristic fallback",
+      "seconds": 0.3470223830008763,
+      "status": "success",
+      "system": "Classroom simple agent graph"
+    },
+    {
+      "comparable_regression_metrics": false,
+      "error_type": "ValueError",
+      "seconds": 0.4762407650014211,
+      "status": "incompatible_or_failed",
+      "system": "classroom_fixed_on_cnt"
+    },
+    {
+      "comparable_regression_metrics": false,
+      "error_type": "ValueError",
+      "seconds": 0.021399590999862994,
+      "status": "incompatible_or_failed",
+      "system": "classroom_simple_on_cnt"
+    }
+  ],
+  "source_commit": "a294145ea9aa4225908ce701c06160c33213335d"
+}
