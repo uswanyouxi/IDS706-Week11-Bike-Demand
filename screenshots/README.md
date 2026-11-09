@@ -21,4 +21,4 @@ The completed agent-graph screenshot reflects recorded execution, rather than cl
 - [Part 2 page/capture details](../docs/verification/phase-c/capture-guide.md)
 - [Exact recommended staging process](../docs/submission.md)
 
-The six image bytes are preserved. Screenshot SHA-256 values and final source/evidence preservation checks are recorded under docs/verification/final-submission/. No credentials, .env contents or login token is visible in the reviewed images. No Git staging/commit/push has occurred.
+The six image bytes are preserved. Screenshot SHA-256 values and final source/evidence preservation checks are recorded under docs/verification/final-submission/. No credentials, .env contents or login token is visible in the reviewed images. All six screenshots are committed and published on the repository's [main branch](https://github.com/uswanyouxi/IDS706-Week11-Bike-Demand/tree/main/screenshots). Historical verification records retain their original timestamps.

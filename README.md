@@ -1,6 +1,8 @@
 # DC Bike Demand & Weather Intelligence
 
-Duke IDS 706 Week 11: an original Airflow data pipeline and an original LangGraph regression workflow. **Parts 1 and 2 passed real runtime verification; all six real application screenshots are captured.** Optional Part 3 is not implemented or claimed.
+Duke IDS 706 Week 11: an original Airflow data pipeline and an original LangGraph regression workflow. **Required Parts 1 and 2 are completed, runtime-verified, committed and published on [GitHub main](https://github.com/uswanyouxi/IDS706-Week11-Bike-Demand/tree/main), with six real application screenshots.** Part 3 is optional and is not part of the verified main branch.
+
+The project asks how weather and calendar factors relate to daily Washington DC bike demand, and how well a lightweight model predicts historical daily rentals.
 
 ## Pipeline and results
 
@@ -26,7 +28,7 @@ Errors → failure report → END
 
 Training input comes from a validated **READ ONLY PostgreSQL snapshot**, with no raw-file fallback. Calendar and five Open-Meteo features predict cnt. Inputs exclude cnt itself, casual, registered, row identifiers and UCI weather. Preprocessing fits on training data during selection.
 
-Chronological partitions are 2011 training (365 days), January–June 2012 validation (182), and July–December 2012 held-out test (184). The original loop has a hard cap of two attempts. It first tries Ridge alpha=10; a validation/train RMSE ratio above 1.5 chooses stronger regularization (alpha=100), otherwise a small seeded RandomForest. Default minimum two compares candidates; the router stops on the validation quality target or exhausted budget.
+Chronological partitions are 2011 training (365 days), January–June 2012 validation (182), and July–December 2012 held-out test (184). The original loop has a hard cap of two attempts. It first tries Ridge alpha=10; a validation/train RMSE ratio above 1.5 chooses stronger regularization (alpha=100), otherwise a small seeded RandomForest. Default minimum two compares candidates; the router stops on a 5% validation-RMSE improvement over Dummy or an exhausted budget.
 
 Real run **ml_main_01** retried with alpha=100, retained alpha=10 by validation RMSE (1,573.81 versus 1,614.16), then refit selected/Dummy estimators on 547 train+validation rows. One final test stage scored both, without a tuning back edge. RandomForest was not trained in this production run.
 
@@ -39,11 +41,13 @@ Real run **ml_main_01** retried with alpha=100, retained alpha=10 by validation 
 
 ## Setup and execution
 
-Use PowerShell at the repository root, Python 3.11 and Docker Desktop Linux containers/WSL2. The tested host has 16 GB RAM with ~7.65 GiB assigned to Docker; allow disk/memory headroom. Airflow 3.4.0/Python 3.11 and the isolated ML image use [pinned dependencies](requirements/ml.txt). Keep existing .env passwords when retaining database volumes.
+Use PowerShell, Python 3.11 and Docker Desktop Linux containers/WSL2. After cloning, run project commands from the repository root. The tested host has 16 GB RAM with ~7.65 GiB assigned to Docker; allow disk/memory headroom. Airflow 3.4.0/Python 3.11 uses [pinned Airflow dependencies](requirements/airflow.txt) and [official constraints](requirements/airflow-constraints-3.11.txt); the isolated ML image has [separate pins](requirements/ml.txt). Keep existing .env passwords when retaining database volumes.
 
 **Fresh checkout only** (do not regenerate an existing .env):
 
 ~~~powershell
+git clone https://github.com/uswanyouxi/IDS706-Week11-Bike-Demand.git
+Set-Location IDS706-Week11-Bike-Demand
 py -3.11 scripts/new_local_env.py
 docker compose config --quiet
 docker compose --progress plain build airflow-init
@@ -91,4 +95,5 @@ All six files below exist and were visually reviewed; none is an AI-generated UI
 
 Final submission checks passed **39 pipeline unit tests, 19 ML tests and one real DAG-import test**. Synthetic ML test fits did not rerun production training. No production DAG/model run was repeated for submission preparation. See [final checks and exact commit list](docs/submission.md).
 
-Only the six reviewed screenshots are allowlisted in Git. Source, setup, tests, documentation and frozen verification evidence are listed in [submission/commit-files.txt](submission/commit-files.txt). Nothing has been staged, committed or pushed. Canvas deadline/timezone and AI-use requirements still need your own course confirmation.
+The repository includes the source code, Docker setup, tests, documentation, and screenshots for Parts 1 and 2. Both workflows have been implemented and successfully tested. Detailed execution logs and verification results are available in the `docs/verification/` directory.
+
