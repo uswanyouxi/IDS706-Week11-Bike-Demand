@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-11-10T00:20:18.899919+00:00",
+  "phase": "Approved implementation; runtime blocked on host memory",
+  "lightweight_isolation_tests": {
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0,
+    "log": "isolation-tests-verified.log"
+  },
+  "python_ast_files": 69,
+  "markdown_targets": 231,
+  "broken_links": [],
+  "excluded_links": [],
+  "secret_findings": [],
+  "native_credential_scan": "passed",
+  "preserved_existing_file_bytes_and_mtime": 616,
+  "existing_service_identity_and_start_times_unchanged": true,
+  "production_readonly_snapshot_unchanged": {
+    "rows": 731,
+    "unique_dates": 731,
+    "total_rentals": 3292679,
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "readonly": "on"
+  },
+  "build_and_pip_check": "passed",
+  "new_native_runtime_containers_or_volumes": 0,
+  "full_regression_tests": "pending resources; not run",
+  "native_dag_run": "not run",
+  "native_langgraph_run": "not run",
+  "viewer": "not started",
+  "staged_files": [],
+  "known_corrected_preflight_issues": [
+    "Initial hostname escaping warning corrected before any runtime start",
+    "Captured process stdout closed to resolve a ResourceWarning; final 16 tests pass without it"
+  ],
+  "remaining_native_baseline_gap": "Actual native Airflow execution remains unverified; no new F1/accuracy results claimed"
+}

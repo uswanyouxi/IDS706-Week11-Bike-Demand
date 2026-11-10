@@ -1,0 +1,119 @@
+{
+  "reviewed_present": {
+    "01_airflow_dag_success.png": {
+      "sha256": "77fe5e40da57c0385b64ca71ccddce3852e3db040018ca0dd5ab69b217cb2ae6",
+      "bytes": 284909,
+      "width": 2048,
+      "height": 999
+    },
+    "02_airflow_graph.png": {
+      "sha256": "48a94895ff007a3662a541ec1049f3a897c3eec0656c124850cd8f4283605fd7",
+      "bytes": 242191,
+      "width": 2452,
+      "height": 1324
+    },
+    "06_langgraph_live_execution.png": {
+      "sha256": "c3399d69594dbb579fe8ff38098871791fff1bfc52b602aa8df71900490c1be3",
+      "bytes": 225491,
+      "width": 2048,
+      "height": 817
+    },
+    "07_langgraph_conditional_retry.png": {
+      "sha256": "1d28a174c2ebdf689e39d5958dcc928bac7c68d75a23a74423c0288a5b1e156c",
+      "bytes": 144568,
+      "width": 1071,
+      "height": 742
+    },
+    "08_regression_evaluation.png": {
+      "sha256": "9c328ccd4a6db6efd22960147ddb53c5a5fd37c101662e7aa2095b21fdf55d57",
+      "bytes": 229410,
+      "width": 2048,
+      "height": 1027
+    },
+    "09_model_comparison_charts.png": {
+      "sha256": "d9e12ef82053a71ba2c2c2374b7267be9bb3eaf333d9024d5824aa25c84a56e7",
+      "bytes": 153375,
+      "width": 2048,
+      "height": 577
+    },
+    "10_bonus_adaptive_graph.png": {
+      "sha256": "93a564a318ba51f882ce9ad7a7fe81ea14dfbe02973472544166d4cd206a8620",
+      "bytes": 218130,
+      "width": 1854,
+      "height": 1549
+    },
+    "11_bonus_routing_recovery.png": {
+      "sha256": "1d5fcd77a56e9254ad9dd828df5340b365e2a82ced71c32b9c7b9b85861b2078",
+      "bytes": 235775,
+      "width": 1849,
+      "height": 1587
+    },
+    "11b_bonus_recovery_events.png": {
+      "sha256": "bb9172cc01d777b2a4424db07220e386f6462c98c7980ffbce7c77c45a5477fd",
+      "bytes": 161100,
+      "width": 792,
+      "height": 1384
+    },
+    "12_bonus_evaluation_suite.png": {
+      "sha256": "169a7e83be3e5e5e677525c1c95aa0b011079b962db76645e387d1469ca0da46",
+      "bytes": 346735,
+      "width": 1876,
+      "height": 1420
+    },
+    "12b_bonus_evaluation_criteria.png": {
+      "sha256": "3b17dd65df54ebfa8ac2448f8c3559f9a17b43b99d426bb03e36d45cacee7fd1",
+      "bytes": 238269,
+      "width": 1815,
+      "height": 1846
+    },
+    "13_bonus_baseline_comparison.png": {
+      "sha256": "03d13c0c45b83e93a0e58c2861c965b46e76a388231e927c152624880c785a08",
+      "bytes": 376182,
+      "width": 1876,
+      "height": 1420
+    },
+    "14_bonus_policy_comparison.png": {
+      "sha256": "a10f18d561ed058f2f40dbe4bc3462a34d54e30c36f640bd7c8418b19ded4657",
+      "bytes": 63685,
+      "width": 1903,
+      "height": 802
+    },
+    "15_native_airflow_success.png": {
+      "sha256": "eb8faaab52b2bbf0e7e73f8d830a0fe8bbfd1c10ebf696637bcc5c02e5f60e4e",
+      "bytes": 325381,
+      "width": 2048,
+      "height": 1092
+    },
+    "16_native_airflow_graph.png": {
+      "sha256": "2131ff3153a912c5b85a807e6238bebcfb9d48c417e2ca60049e8162177615f2",
+      "bytes": 84260,
+      "width": 1888,
+      "height": 469
+    },
+    "17_native_airflow_metrics.png": {
+      "sha256": "e2b73be27f4ed13900fc19b3a227c9f6dee1aa9e730a632f9f87c4fd149ca8fc",
+      "bytes": 432299,
+      "width": 2048,
+      "height": 951
+    },
+    "18_native_langgraph_execution.png": {
+      "sha256": "42ea9f9f8c8b354978e49ed65da0f1a0a7ac328dc64bd829a373b3214125508c",
+      "bytes": 251382,
+      "width": 2048,
+      "height": 809
+    },
+    "19_native_classification_results.png": {
+      "sha256": "c9d002f5ac1f749ba58587b4734fdcd3d7cd4729b5bf60975026a9993cd00918",
+      "bytes": 213647,
+      "width": 2048,
+      "height": 757
+    },
+    "20_native_and_regression_scopes.png": {
+      "sha256": "c3f7411e76f2adaf3715a88dd79b0fcda40a1fbb45af579181cde53f604504be",
+      "bytes": 349096,
+      "width": 2048,
+      "height": 1128
+    }
+  },
+  "content_qualification": "19 shows node execution records and per-cycle validation F1; final classification cards are in 18 and 20. 16 shows topology; 15/17 show actual success/run evidence."
+}

@@ -1,0 +1,288 @@
+{
+  "checked_at_utc": "2026-11-10T00:00:30.043247+00:00",
+  "host": {
+    "TotalVisibleMemorySize": 16564728,
+    "FreePhysicalMemory": 2963552
+  },
+  "host_available_gib": 2.826263427734375,
+  "docker": {
+    "version": "29.7.2",
+    "cpus": 20,
+    "memory_bytes": 8215244800,
+    "os": "linux"
+  },
+  "guest_memory": {
+    "MemTotal": 8215244800,
+    "MemFree": 3766009856,
+    "MemAvailable": 6094286848
+  },
+  "guest_available_gib": 5.675746917724609,
+  "disks": [
+    {
+      "DeviceID": "C:",
+      "Size": 214749409280,
+      "FreeSpace": 12551909376
+    },
+    {
+      "DeviceID": "D:",
+      "Size": 294972813312,
+      "FreeSpace": 56046661632
+    }
+  ],
+  "docker_vhdx_files": [
+    {
+      "FullName": "D:\\DockerData\\DockerDesktopWSL\\disk\\docker_data.vhdx",
+      "Length": 12201230336
+    },
+    {
+      "FullName": "D:\\DockerData\\DockerDesktopWSL\\main\\ext4.vhdx",
+      "Length": 100663296
+    }
+  ],
+  "virtual_disk_internal_free_space": "not measured; approved preflight required",
+  "running_containers": [
+    {
+      "Command": "\"python -m streamlit\u2026\"",
+      "CreatedAt": "2026-11-09 01:42:47 -0500 EST",
+      "HealthStatus": "none",
+      "ID": "fd3748d063ce",
+      "Image": "ids706-ml:1.0.0",
+      "Labels": "com.docker.compose.config-hash=f06537294b24984759780e53b59864ff65f075cd8517dc45d5f3af9994677aa2,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:486c2bce74473bb67deea17cd728127ae1a409e28d1e42e3b65c90c94ed7562d,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\compose.yaml,D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\compose.bonus.yaml,com.docker.compose.project.working_dir=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand,com.docker.compose.project=ids706-bike-demand,com.docker.compose.service=bonus-dashboard,com.docker.compose.version=5.4.0,desktop.docker.io/binds/0/Source=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\src\\bike_demand_bonus,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/opt/project/src/bike_demand_bonus,desktop.docker.io/binds/1/Source=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus,desktop.docker.io/binds/1/SourceKind=hostFile,desktop.docker.io/binds/1/Target=/opt/project/bonus,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/8502/tcp=127.0.0.1:8502",
+      "LocalVolumes": "1",
+      "Mounts": "ids706-bike-de\u2026,/run/desktop/m\u2026,/run/desktop/m\u2026",
+      "Names": "ids706-bike-demand-bonus-dashboard-1",
+      "Networks": "ids706-bike-demand_default",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "127.0.0.1:8502->8502/tcp",
+      "RunningFor": "17 hours ago",
+      "Size": "49.2kB (virtual 1.12GB)",
+      "State": "running",
+      "Status": "Up 41 minutes"
+    },
+    {
+      "Command": "\"python -m streamlit\u2026\"",
+      "CreatedAt": "2026-11-08 22:59:35 -0500 EST",
+      "HealthStatus": "none",
+      "ID": "4459a5c6252b",
+      "Image": "ids706-ml:1.0.0",
+      "Labels": "com.docker.compose.config-hash=dd23e5c328a165312b4a9f0a882179aa042a1ca8d204fd8398b9dc4ab18cd1d6,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:486c2bce74473bb67deea17cd728127ae1a409e28d1e42e3b65c90c94ed7562d,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\compose.yaml,com.docker.compose.project.working_dir=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand,com.docker.compose.project=ids706-bike-demand,com.docker.compose.replace=dashboard-1,com.docker.compose.service=dashboard,com.docker.compose.version=5.4.0,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/8501/tcp=127.0.0.1:8501",
+      "LocalVolumes": "1",
+      "Mounts": "ids706-bike-de\u2026",
+      "Names": "ids706-bike-demand-dashboard-1",
+      "Networks": "ids706-bike-demand_default",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "127.0.0.1:8501->8501/tcp",
+      "RunningFor": "20 hours ago",
+      "Size": "48.7MB (virtual 1.16GB)",
+      "State": "running",
+      "Status": "Up 41 minutes"
+    },
+    {
+      "Command": "\"/usr/bin/dumb-init \u2026\"",
+      "CreatedAt": "2026-11-08 21:56:15 -0500 EST",
+      "HealthStatus": "healthy",
+      "ID": "61af316559d3",
+      "Image": "ids706-airflow:3.4.0-py3.11",
+      "Labels": "com.docker.compose.config-hash=d0e156c647845a0383c96853d47ce7f96d2621803758b622ac6f751b3a576782,com.docker.compose.container-number=1,com.docker.compose.depends_on=airflow-apiserver:service_healthy:false,app-db:service_healthy:false,com.docker.compose.image=sha256:9a29833e959a2f9cb5f7bcb7aa9a88161b687e778e32daecf172f4cb02d55d35,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\compose.yaml,com.docker.compose.project.working_dir=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand,com.docker.compose.project=ids706-bike-demand,com.docker.compose.replace=airflow-scheduler-1,com.docker.compose.service=airflow-scheduler,com.docker.compose.version=5.4.0,com.docker.dhi.chain-id=sha256:90f395001577e8186f826fd357e37c0c9d7005f8da39a0da32c7ccdd0b3a34e3,com.docker.dhi.compliance=cis,com.docker.dhi.created=2026-11-04T09:15:08Z,com.docker.dhi.date.end-of-life=2027-10-31,com.docker.dhi.date.release=2022-10-24,com.docker.dhi.definition=image/python/debian-13/3.11-dev,com.docker.dhi.distro=debian-13,com.docker.dhi.entitlement=public,com.docker.dhi.flavor=,com.docker.dhi.name=dhi/python,com.docker.dhi.package-manager=apt,com.docker.dhi.shell=bash,com.docker.dhi.title=Python 3.11.x (dev),com.docker.dhi.url=https://dhi.io/catalog/python,com.docker.dhi.variant=dev,com.docker.dhi.version=3.11.18-debian13-dev,desktop.docker.io/binds/3/Source=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\dags,desktop.docker.io/binds/3/SourceKind=hostFile,desktop.docker.io/binds/3/Target=/opt/airflow/dags,desktop.docker.io/binds/4/Source=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\src,desktop.docker.io/binds/4/SourceKind=hostFile,desktop.docker.io/binds/4/Target=/opt/project/src,desktop.docker.io/ports.scheme=v2,org.apache.airflow.component=airflow,org.apache.airflow.distro=debian,org.apache.airflow.image.flavor=hardened,org.apache.airflow.image=airflow,org.apache.airflow.main-image.build-id=,org.apache.airflow.main-image.commit-sha=619a787ac81e8b7c8a9102fc78e3f0b00625d04e,org.apache.airflow.module=airflow,org.apache.airflow.python.version=3.11.18,org.apache.airflow.uid=50000,org.apache.airflow.version=3.4.0,org.opencontainers.image.authors=dev@airflow.apache.org,org.opencontainers.image.created=,org.opencontainers.image.description=Reference, production-ready Apache Airflow image,org.opencontainers.image.documentation=https://airflow.apache.org/docs/docker-stack/index.html,org.opencontainers.image.licenses=Apache-2.0,org.opencontainers.image.ref.name=airflow,org.opencontainers.image.revision=619a787ac81e8b7c8a9102fc78e3f0b00625d04e,org.opencontainers.image.source=https://github.com/apache/airflow,org.opencontainers.image.title=Production Airflow Image,org.opencontainers.image.url=https://airflow.apache.org,org.opencontainers.image.vendor=Apache Software Foundation,org.opencontainers.image.version=3.4.0",
+      "LocalVolumes": "3",
+      "Mounts": "ids706-bike-de\u2026,ids706-bike-de\u2026,/run/desktop/m\u2026,/run/desktop/m\u2026,ids706-bike-de\u2026",
+      "Names": "ids706-bike-demand-airflow-scheduler-1",
+      "Networks": "ids706-bike-demand_default",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "8080/tcp",
+      "RunningFor": "21 hours ago",
+      "Size": "59.2MB (virtual 2.75GB)",
+      "State": "running",
+      "Status": "Up 41 minutes (healthy)"
+    },
+    {
+      "Command": "\"/usr/bin/dumb-init \u2026\"",
+      "CreatedAt": "2026-11-08 21:56:11 -0500 EST",
+      "HealthStatus": "healthy",
+      "ID": "c41e3cb7874a",
+      "Image": "ids706-airflow:3.4.0-py3.11",
+      "Labels": "com.docker.compose.config-hash=85496b31273d34ebac69017bc2720e43a649aa55d077198a88559832ff8a0696,com.docker.compose.container-number=1,com.docker.compose.depends_on=airflow-init:service_completed_successfully:false,com.docker.compose.image=sha256:9a29833e959a2f9cb5f7bcb7aa9a88161b687e778e32daecf172f4cb02d55d35,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\compose.yaml,com.docker.compose.project.working_dir=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand,com.docker.compose.project=ids706-bike-demand,com.docker.compose.replace=airflow-apiserver-1,com.docker.compose.service=airflow-apiserver,com.docker.compose.version=5.4.0,com.docker.dhi.chain-id=sha256:90f395001577e8186f826fd357e37c0c9d7005f8da39a0da32c7ccdd0b3a34e3,com.docker.dhi.compliance=cis,com.docker.dhi.created=2026-11-04T09:15:08Z,com.docker.dhi.date.end-of-life=2027-10-31,com.docker.dhi.date.release=2022-10-24,com.docker.dhi.definition=image/python/debian-13/3.11-dev,com.docker.dhi.distro=debian-13,com.docker.dhi.entitlement=public,com.docker.dhi.flavor=,com.docker.dhi.name=dhi/python,com.docker.dhi.package-manager=apt,com.docker.dhi.shell=bash,com.docker.dhi.title=Python 3.11.x (dev),com.docker.dhi.url=https://dhi.io/catalog/python,com.docker.dhi.variant=dev,com.docker.dhi.version=3.11.18-debian13-dev,desktop.docker.io/binds/0/Source=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\src,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/opt/project/src,desktop.docker.io/binds/4/Source=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\dags,desktop.docker.io/binds/4/SourceKind=hostFile,desktop.docker.io/binds/4/Target=/opt/airflow/dags,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/8080/tcp=127.0.0.1:8080,org.apache.airflow.component=airflow,org.apache.airflow.distro=debian,org.apache.airflow.image.flavor=hardened,org.apache.airflow.image=airflow,org.apache.airflow.main-image.build-id=,org.apache.airflow.main-image.commit-sha=619a787ac81e8b7c8a9102fc78e3f0b00625d04e,org.apache.airflow.module=airflow,org.apache.airflow.python.version=3.11.18,org.apache.airflow.uid=50000,org.apache.airflow.version=3.4.0,org.opencontainers.image.authors=dev@airflow.apache.org,org.opencontainers.image.created=,org.opencontainers.image.description=Reference, production-ready Apache Airflow image,org.opencontainers.image.documentation=https://airflow.apache.org/docs/docker-stack/index.html,org.opencontainers.image.licenses=Apache-2.0,org.opencontainers.image.ref.name=airflow,org.opencontainers.image.revision=619a787ac81e8b7c8a9102fc78e3f0b00625d04e,org.opencontainers.image.source=https://github.com/apache/airflow,org.opencontainers.image.title=Production Airflow Image,org.opencontainers.image.url=https://airflow.apache.org,org.opencontainers.image.vendor=Apache Software Foundation,org.opencontainers.image.version=3.4.0",
+      "LocalVolumes": "3",
+      "Mounts": "/run/desktop/m\u2026,ids706-bike-de\u2026,ids706-bike-de\u2026,ids706-bike-de\u2026,/run/desktop/m\u2026",
+      "Names": "ids706-bike-demand-airflow-apiserver-1",
+      "Networks": "ids706-bike-demand_default",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "127.0.0.1:8080->8080/tcp",
+      "RunningFor": "21 hours ago",
+      "Size": "56.4MB (virtual 2.74GB)",
+      "State": "running",
+      "Status": "Up 41 minutes (healthy)"
+    },
+    {
+      "Command": "\"/usr/bin/dumb-init \u2026\"",
+      "CreatedAt": "2026-11-08 21:56:11 -0500 EST",
+      "HealthStatus": "healthy",
+      "ID": "d31de710ff8e",
+      "Image": "ids706-airflow:3.4.0-py3.11",
+      "Labels": "com.docker.compose.config-hash=62882a16d22d59336f2454f598d341314d62ca9d5037ddf4ee87f3ffb2ce1397,com.docker.compose.container-number=1,com.docker.compose.depends_on=airflow-init:service_completed_successfully:false,com.docker.compose.image=sha256:9a29833e959a2f9cb5f7bcb7aa9a88161b687e778e32daecf172f4cb02d55d35,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\compose.yaml,com.docker.compose.project.working_dir=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand,com.docker.compose.project=ids706-bike-demand,com.docker.compose.replace=airflow-dag-processor-1,com.docker.compose.service=airflow-dag-processor,com.docker.compose.version=5.4.0,com.docker.dhi.chain-id=sha256:90f395001577e8186f826fd357e37c0c9d7005f8da39a0da32c7ccdd0b3a34e3,com.docker.dhi.compliance=cis,com.docker.dhi.created=2026-11-04T09:15:08Z,com.docker.dhi.date.end-of-life=2027-10-31,com.docker.dhi.date.release=2022-10-24,com.docker.dhi.definition=image/python/debian-13/3.11-dev,com.docker.dhi.distro=debian-13,com.docker.dhi.entitlement=public,com.docker.dhi.flavor=,com.docker.dhi.name=dhi/python,com.docker.dhi.package-manager=apt,com.docker.dhi.shell=bash,com.docker.dhi.title=Python 3.11.x (dev),com.docker.dhi.url=https://dhi.io/catalog/python,com.docker.dhi.variant=dev,com.docker.dhi.version=3.11.18-debian13-dev,desktop.docker.io/binds/2/Source=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\dags,desktop.docker.io/binds/2/SourceKind=hostFile,desktop.docker.io/binds/2/Target=/opt/airflow/dags,desktop.docker.io/binds/3/Source=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\src,desktop.docker.io/binds/3/SourceKind=hostFile,desktop.docker.io/binds/3/Target=/opt/project/src,desktop.docker.io/ports.scheme=v2,org.apache.airflow.component=airflow,org.apache.airflow.distro=debian,org.apache.airflow.image.flavor=hardened,org.apache.airflow.image=airflow,org.apache.airflow.main-image.build-id=,org.apache.airflow.main-image.commit-sha=619a787ac81e8b7c8a9102fc78e3f0b00625d04e,org.apache.airflow.module=airflow,org.apache.airflow.python.version=3.11.18,org.apache.airflow.uid=50000,org.apache.airflow.version=3.4.0,org.opencontainers.image.authors=dev@airflow.apache.org,org.opencontainers.image.created=,org.opencontainers.image.description=Reference, production-ready Apache Airflow image,org.opencontainers.image.documentation=https://airflow.apache.org/docs/docker-stack/index.html,org.opencontainers.image.licenses=Apache-2.0,org.opencontainers.image.ref.name=airflow,org.opencontainers.image.revision=619a787ac81e8b7c8a9102fc78e3f0b00625d04e,org.opencontainers.image.source=https://github.com/apache/airflow,org.opencontainers.image.title=Production Airflow Image,org.opencontainers.image.url=https://airflow.apache.org,org.opencontainers.image.vendor=Apache Software Foundation,org.opencontainers.image.version=3.4.0",
+      "LocalVolumes": "3",
+      "Mounts": "/run/desktop/m\u2026,ids706-bike-de\u2026,ids706-bike-de\u2026,ids706-bike-de\u2026,/run/desktop/m\u2026",
+      "Names": "ids706-bike-demand-airflow-dag-processor-1",
+      "Networks": "ids706-bike-demand_default",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "8080/tcp",
+      "RunningFor": "21 hours ago",
+      "Size": "54MB (virtual 2.74GB)",
+      "State": "running",
+      "Status": "Up 41 minutes (healthy)"
+    },
+    {
+      "Command": "\"docker-entrypoint.s\u2026\"",
+      "CreatedAt": "2026-11-08 21:47:41 -0500 EST",
+      "HealthStatus": "healthy",
+      "ID": "98a0796d6df3",
+      "Image": "postgres:16.11-bookworm",
+      "Labels": "com.docker.compose.config-hash=5ca6aa983523f6c660f4025139961cb25c460d3f617efc477442aec3e0146796,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:8d5f8486c9be456cedd25c7acff28cb9ed8f3f23bf9c865a5f899d6ea8efadf0,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\compose.yaml,com.docker.compose.project.working_dir=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand,com.docker.compose.project=ids706-bike-demand,com.docker.compose.replace=airflow-db-1,com.docker.compose.service=airflow-db,com.docker.compose.version=5.4.0,desktop.docker.io/ports.scheme=v2",
+      "LocalVolumes": "1",
+      "Mounts": "ids706-bike-de\u2026",
+      "Names": "ids706-bike-demand-airflow-db-1",
+      "Networks": "ids706-bike-demand_default",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "5432/tcp",
+      "RunningFor": "21 hours ago",
+      "Size": "20.5kB (virtual 461MB)",
+      "State": "running",
+      "Status": "Up 41 minutes (healthy)"
+    },
+    {
+      "Command": "\"docker-entrypoint.s\u2026\"",
+      "CreatedAt": "2026-11-08 21:47:41 -0500 EST",
+      "HealthStatus": "healthy",
+      "ID": "067be0d68e89",
+      "Image": "postgres:16.11-bookworm",
+      "Labels": "com.docker.compose.config-hash=363dca5d5f9d1e47664f90cb3ea5991704c8179d1a0d7f6db9a49d8c9c87c026,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:8d5f8486c9be456cedd25c7acff28cb9ed8f3f23bf9c865a5f899d6ea8efadf0,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\compose.yaml,com.docker.compose.project.working_dir=D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand,com.docker.compose.project=ids706-bike-demand,com.docker.compose.service=app-db,com.docker.compose.version=5.4.0,desktop.docker.io/ports.scheme=v2",
+      "LocalVolumes": "1",
+      "Mounts": "ids706-bike-de\u2026",
+      "Names": "ids706-bike-demand-app-db-1",
+      "Networks": "ids706-bike-demand_default",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "5432/tcp",
+      "RunningFor": "21 hours ago",
+      "Size": "20.5kB (virtual 461MB)",
+      "State": "running",
+      "Status": "Up 41 minutes (healthy)"
+    }
+  ],
+  "container_stats": [
+    {
+      "BlockIO": "293MB / 0B",
+      "CPUPerc": "0.00%",
+      "Container": "fd3748d063ce954817763fa425ce7294cf5ce80fac173d8f069673356fdbf8f4",
+      "ID": "fd3748d063ce",
+      "MemPerc": "34.98%",
+      "MemUsage": "179.1MiB / 512MiB",
+      "Name": "ids706-bike-demand-bonus-dashboard-1",
+      "NetIO": "3.62kB / 1.68kB",
+      "PIDs": "1"
+    },
+    {
+      "BlockIO": "101MB / 38.4MB",
+      "CPUPerc": "0.00%",
+      "Container": "4459a5c6252b15d8423d534147691bf77ff55a1a29b2929528dba13316ea7d00",
+      "ID": "4459a5c6252b",
+      "MemPerc": "1.52%",
+      "MemUsage": "119.4MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-dashboard-1",
+      "NetIO": "451kB / 16.6kB",
+      "PIDs": "1"
+    },
+    {
+      "BlockIO": "89.3MB / 0B",
+      "CPUPerc": "1.96%",
+      "Container": "61af316559d30b3093c88ba3981ae57e35b786f7ec62011d67d7fd5f30a13bf6",
+      "ID": "61af316559d3",
+      "MemPerc": "4.42%",
+      "MemUsage": "346.7MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-airflow-scheduler-1",
+      "NetIO": "39.9MB / 61.5MB",
+      "PIDs": "10"
+    },
+    {
+      "BlockIO": "124MB / 0B",
+      "CPUPerc": "0.12%",
+      "Container": "c41e3cb7874a003e2d4571d056509565983a81af6bfdd92839fec541c57a2691",
+      "ID": "c41e3cb7874a",
+      "MemPerc": "4.06%",
+      "MemUsage": "318.5MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-airflow-apiserver-1",
+      "NetIO": "535kB / 321kB",
+      "PIDs": "7"
+    },
+    {
+      "BlockIO": "99.3MB / 352kB",
+      "CPUPerc": "0.87%",
+      "Container": "d31de710ff8e197639d22659336603ad4454384205f811a613f1b978c73ffdea",
+      "ID": "d31de710ff8e",
+      "MemPerc": "3.41%",
+      "MemUsage": "267.3MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-airflow-dag-processor-1",
+      "NetIO": "9.77MB / 12.2MB",
+      "PIDs": "3"
+    },
+    {
+      "BlockIO": "28.6MB / 36.9MB",
+      "CPUPerc": "6.12%",
+      "Container": "98a0796d6df3d71dec69f8df7ee5f22315929b7c12e5544037dea02003251931",
+      "ID": "98a0796d6df3",
+      "MemPerc": "0.62%",
+      "MemUsage": "48.67MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-airflow-db-1",
+      "NetIO": "74MB / 50.2MB",
+      "PIDs": "10"
+    },
+    {
+      "BlockIO": "49MB / 414kB",
+      "CPUPerc": "0.00%",
+      "Container": "067be0d68e894e7e499a7224a81cbf5cc9af776d29506416c86a65633cb26e80",
+      "ID": "067be0d68e89",
+      "MemPerc": "0.57%",
+      "MemUsage": "44.79MiB / 7.651GiB",
+      "Name": "ids706-bike-demand-app-db-1",
+      "NetIO": "19kB / 449kB",
+      "PIDs": "6"
+    }
+  ],
+  "planned_project": "ids706-classroom-native-v1",
+  "project_has_existing_containers_or_volumes": false,
+  "planned_ui_ports_not_listening": [
+    8088,
+    8503
+  ],
+  "planned_new_steady_airflow_caps_mib": 2048,
+  "planned_max_new_concurrent_caps_mib": 3072,
+  "gates": {
+    "host_free_gib_min": 2.5,
+    "guest_available_gib_before_stack_min": 4,
+    "docker_host_drive_free_gib_min": 25
+  },
+  "instantaneous_gates_pass": true,
+  "container_start_stop_change_performed": false,
+  "image_build_or_pull_performed": false,
+  "model_fit_or_dag_execution_performed": false
+}

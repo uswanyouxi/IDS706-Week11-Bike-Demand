@@ -1,0 +1,67 @@
+{
+  "checked_at_utc": "2026-11-10T02:07:15.109740+00:00",
+  "branch": "bonus/adaptive-multi-agent",
+  "preservation": {
+    "original_main_files": 309,
+    "pre_native_workspace": 601,
+    "frozen_bonus_runtime": 202,
+    "historical_logs": 98,
+    "native_runtime": 148,
+    "audit_start_files": 786
+  },
+  "docker_engine": "29.7.2",
+  "fresh_readonly_review_completed": true,
+  "production": {
+    "rows": 731,
+    "unique_dates": 731,
+    "total_rentals": 3292679,
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "readonly": "on"
+  },
+  "independent_saved_case_passes": 27,
+  "native_classroom": {
+    "status": "verified",
+    "native_airflow_run": "native_prep_01",
+    "native_airflow_task_successes": 7,
+    "native_airflow_validation": {
+      "f1": 0.05,
+      "n_train": 1600,
+      "n_val": 400
+    },
+    "native_airflow_holdout": null,
+    "native_langgraph_run": "native_simple_02",
+    "native_langgraph_cycles": 3,
+    "native_langgraph_validation_f1": 0.05660377358490566,
+    "native_langgraph_holdout": {
+      "f1": 0.059113300492610835,
+      "accuracy": 0.5225,
+      "n_holdout": 400
+    },
+    "same_published_fraud_sample": true,
+    "sample_sha256": "0d41b894cba0ee45619075f629c242ef2b4c2e1c5e928464737de2fc305f9e68",
+    "no_paid_llm": true,
+    "scores_recomputed_by_verifier": false,
+    "scope": "Actual native classifier outputs; consistency checks, not independent classifier refits"
+  },
+  "screenshots_reviewed": 19,
+  "screenshot_19_qualification": "Execution table; final metrics supported by 18 and 20",
+  "python_files_parsed": 72,
+  "markdown_targets_checked": 291,
+  "secret_scan_text_files": 775,
+  "secret_findings": [],
+  "ignore_probes_passed": 13,
+  "compose_valid": true,
+  "whitespace_checks_passed": true,
+  "existing_file_candidates": 506,
+  "pending_deletions": 1,
+  "total_staging_paths": 507,
+  "staged_file_count": 0,
+  "dry_run_passed": true,
+  "scope": "Read-only review; no fits, DAG runs, service starts/stops, SQL writes, index changes or publication",
+  "limits": [
+    "Classification scores checked against original records, not independently refit",
+    "Native F1 target not met; LLM path untested; overlapping native evaluation cohorts",
+    "Regression ports remain adaptations; final scores equal across all policies",
+    "Candidate validation predictions were not saved"
+  ]
+}

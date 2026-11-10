@@ -1,0 +1,4 @@
+.                                                                        [100%]
+----- generated xml file: /tmp/final-submission-audit-0jqji4yo/result.xml ------
+1 passed in 0.38s
+@@XML@@<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.377" timestamp="2026-11-10T02:09:05.515753+00:00" hostname="4459a5c6252b"><testcase classname="test_postgres" name="test_real_postgres_snapshot_is_unchanged" time="0.368" /></testsuite></testsuites>@@END@@

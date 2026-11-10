@@ -1,0 +1,18 @@
+{
+  "at_utc": "2026-11-10T01:03:15.290969+00:00",
+  "command": [
+    "docker",
+    "compose",
+    "--project-name",
+    "ids706-classroom-native-v1",
+    "--env-file",
+    "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-local\\.env",
+    "-f",
+    "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom\\compose.yaml",
+    "up",
+    "-d",
+    "--no-deps",
+    "native-viewer"
+  ],
+  "scope": "Native project only"
+}

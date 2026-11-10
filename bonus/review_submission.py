@@ -1,137 +1,306 @@
-"""Final Bonus review only: no model fits, DAG runs, container starts or Git writes."""
-import ast,hashlib,importlib.util,json,subprocess,sys
-from datetime import datetime,timezone
+"""Read-only submission review; never fit models, start services, or alter Git."""
+import argparse
+import ast
+import hashlib
+import importlib.util
+import json
+from datetime import datetime, timezone
 from pathlib import Path
+import subprocess
+import sys
 import urllib.request
-import xml.etree.ElementTree as ET
-ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/"docs/verification/bonus/review"
-COMPOSE=["docker","compose","-f","compose.yaml","-f","compose.bonus.yaml"]
-EXPECTED=["10_bonus_adaptive_graph.png","11_bonus_routing_recovery.png","11b_bonus_recovery_events.png",
-"12_bonus_evaluation_suite.png","12b_bonus_evaluation_criteria.png","13_bonus_baseline_comparison.png","14_bonus_agent_metrics.png"]
-ALLOWED={"README.md",".gitignore","screenshots/README.md"}
-sys.dont_write_bytecode=True
-def run(args,code=None):
-    r=subprocess.run(args,cwd=ROOT,input=code,text=True,encoding="utf-8",errors="replace",capture_output=True)
-    if r.returncode:raise RuntimeError("Read-only review command failed: "+r.stderr[-500:])
-    return r.stdout
-def git(*args):return run(["git","-c","safe.directory="+ROOT.as_posix(),*args])
-def save(name,obj):(OUT/name).write_bytes((json.dumps(obj,indent=2,ensure_ascii=False)+"\n").encode("utf-8"))
-def suite(name):
-    r=ET.parse(OUT/name).getroot();items=r.findall("testsuite") if r.tag=="testsuites" else [r]
-    return {k:sum(int(s.get(k,0)) for s in items) for k in ["tests","errors","failures","skipped"]}
+
+ROOT = Path(__file__).resolve().parents[1]
+OLD = ROOT / "docs/verification/bonus/review"
+NATIVE = ROOT / "docs/verification/bonus/native-classroom/runtime/native_classroom_01"
+COMPOSE = ["docker", "compose", "-f", "compose.yaml", "-f", "compose.bonus.yaml"]
+# Explicit authorized documentation edits; no source/test/config wildcard exemptions.
+DOCUMENTS = {
+    "README.md", "agents/README.md", "bonus/README.md", "bonus/COMPARISON.md",
+    "docs/checklist.md", "docs/running.md", "docs/submission.md",
+    "docs/verification/bonus/review/README.md",
+    "docs/verification/bonus/review/bonus-staging.txt",
+    "docs/verification/bonus/review/submission-preparation.md",
+    "docs/verification/bonus/screenshot-guide.md", "screenshots/README.md",
+    "submission/part1/README.md",
+    "docs/verification/bonus/native-classroom/results.md",
+    "docs/verification/bonus/native-classroom/capture-guide.md",
+    "docs/verification/bonus/native-classroom/final-staging.txt",
+}
+AUTHORIZED = DOCUMENTS | {".gitignore", "bonus/review_submission.py"}
+RENAMED = {"screenshots/14_bonus_agent_metrics.png": "screenshots/14_bonus_policy_comparison.png"}
+SCREENSHOTS = [
+    "01_airflow_dag_success.png", "02_airflow_graph.png",
+    "06_langgraph_live_execution.png", "07_langgraph_conditional_retry.png",
+    "08_regression_evaluation.png", "09_model_comparison_charts.png",
+    "10_bonus_adaptive_graph.png", "11_bonus_routing_recovery.png",
+    "11b_bonus_recovery_events.png", "12_bonus_evaluation_suite.png",
+    "12b_bonus_evaluation_criteria.png", "13_bonus_baseline_comparison.png",
+    "14_bonus_policy_comparison.png", "15_native_airflow_success.png",
+    "16_native_airflow_graph.png", "17_native_airflow_metrics.png",
+    "18_native_langgraph_execution.png", "19_native_classification_results.png",
+    "20_native_and_regression_scopes.png",
+]
+SCRATCH = {"docs/verification/bonus/review/audit-initial.json",
+           "docs/verification/bonus/review/audit-rerun.json"}
+sys.dont_write_bytecode = True
+
+
+def digest(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def load(path):
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+def run(args, code=None):
+    result = subprocess.run(args, cwd=ROOT, input=code, text=True,
+                            encoding="utf-8", errors="replace", capture_output=True)
+    if result.returncode:
+        # Do not echo arbitrary command stderr, which could contain credentials.
+        raise RuntimeError("Read-only command failed: " + str(args[0]) +
+                           " (exit " + str(result.returncode) + ")")
+    return result.stdout
+
+
+def git(*args):
+    return run(["git", "-c", "safe.directory=" + ROOT.as_posix(), *args])
+
+
+def save(path, obj):
+    with Path(path).open("x", encoding="utf-8", newline="\n") as handle:
+        json.dump(obj, handle, indent=2, ensure_ascii=True)
+        handle.write("\n")
+
+
+def check_preservation(root, snapshot, allowed=frozenset(), renames=None):
+    """Compare bytes AND mtimes; exemptions are exact paths, never directories."""
+    renames = renames or {}
+    verified = 0
+    for name, record in snapshot.items():
+        if name in allowed:
+            continue
+        path = root / renames.get(name, name)
+        expected = record["sha256"] if isinstance(record, dict) else record
+        assert path.is_file(), "Protected file missing: " + name
+        assert digest(path) == expected, "Protected bytes changed: " + name
+        if isinstance(record, dict) and "mtime_ns" in record:
+            assert path.stat().st_mtime_ns == record["mtime_ns"], "Protected timestamp changed: " + name
+        verified += 1
+    return verified
+
+
+def forbidden(paths):
+    bad = []
+    for name in paths:
+        path = Path(name)
+        if ((path.name.startswith(".env") and path.name != ".env.example")
+            or any(p in {".venv", "venv", "__pycache__", ".aws", ".ssh", "volumes",
+                         "pgdata", "node_modules", "build", "dist", ".pytest_cache"} for p in path.parts)
+            or name.startswith(("artifacts/", "data/raw/")) and not name.endswith(("README.md", ".gitkeep"))
+            or name.endswith((".pyc", ".pem", ".key", ".pfx", ".p12", ".vhdx", ".sqlite", ".dump"))):
+            if name not in {"artifacts/README.md", "artifacts/eda/.gitkeep", "artifacts/ml/.gitkeep", "data/raw/.gitkeep"}:
+                bad.append(name)
+    return bad
+
+
+def screenshot_allowlist(text, names):
+    actual = [line.removeprefix("!/screenshots/") for line in text.splitlines()
+              if line.startswith("!/screenshots/") and line.endswith(".png")]
+    assert len(actual) == len(set(actual)), "Duplicate screenshot exemption"
+    assert set(actual) == set(names), "Reviewed screenshot allowlist mismatch"
+
+
 def ignored(name):
-    r=subprocess.run(["git","-c","safe.directory="+ROOT.as_posix(),"check-ignore","--no-index","-q","--",name],cwd=ROOT,capture_output=True)
-    return r.returncode==0
+    proc = subprocess.run(["git", "-c", "safe.directory=" + ROOT.as_posix(),
+                           "check-ignore", "--no-index", "-q", "--", name],
+                          cwd=ROOT, capture_output=True)
+    assert proc.returncode in (0, 1), "Git ignore check failed"
+    return proc.returncode == 0
+
+
+def native_module(name):
+    directory = ROOT / "bonus/native-classroom"
+    sys.path.insert(0, str(directory))
+    spec = importlib.util.spec_from_file_location(name, directory / (name + ".py"))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def main():
-    OUT.mkdir(exist_ok=True)
-    for name in ["checks.json","bonus-staging.txt"]:
-        if not (OUT/name).exists():(OUT/name).write_text("{}\n" if name.endswith(".json") else "",encoding="utf-8")
-    assert git("branch","--show-current").strip()=="bonus/adaptive-multi-agent"
-    before=json.loads((OUT.parent/"preservation-before.json").read_text())
-    assert git("rev-parse","main").strip()==before["main_commit"]
-    changed=[p for p,d in before["files"].items() if not (ROOT/p).is_file() or hashlib.sha256((ROOT/p).read_bytes()).hexdigest()!=d]
-    assert set(changed)<=ALLOWED,changed
-    assert (ROOT/"README.md").read_text(encoding="utf-8").startswith(git("show","main:README.md"))
-    mtime=[p for p,t in before["modification_time_ns"].items() if p not in ALLOWED and (ROOT/p).stat().st_mtime_ns!=t]
-    assert not mtime,mtime
-    old_hashes=json.loads((OUT.parent/"runtime-export-sha256.json").read_text())
-    for name,digest in old_hashes.items():
-        assert hashlib.sha256((OUT.parent/"runtime"/name).read_bytes()).hexdigest()==digest,name
-    # An unreachable engine is a blocker, never a fresh runtime success.
-    engine=json.loads(run(["docker","info","--format",'{{json .ServerVersion}}']))
-    logs=json.loads((OUT/"logs-preservation.json").read_text())["files"]
-    for name,record in logs.items():
-        path=ROOT/name
-        assert hashlib.sha256(path.read_bytes()).hexdigest()==record["sha256"],name
-        assert path.stat().st_mtime_ns==record["mtime_ns"],name
-    # Audit actual volume records; never refit, rewrite or rescore the frozen original files.
-    actual=json.loads(run(COMPOSE+["exec","-T","bonus-dashboard","python","-"],code="""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", help="New repository-relative directory; must not exist")
+    args = parser.parse_args()
+    relative = args.output or ("docs/verification/final-bonus/audit-" +
+                               datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ"))
+    out = ROOT / relative
+    assert out.resolve().is_relative_to(ROOT / "docs/verification/final-bonus")
+    out.mkdir(parents=True, exist_ok=False)  # Never overwrite a historical report.
+    assert git("branch", "--show-current").strip() == "bonus/adaptive-multi-agent"
+    original = load(OLD.parent / "preservation-before.json")
+    assert git("rev-parse", "main").strip() == original["main_commit"]
+    preserved = {}
+    preserved["original_main_files"] = check_preservation(ROOT, {
+        p: {"sha256": h, "mtime_ns": original["modification_time_ns"][p]}
+        for p, h in original["files"].items()
+    }, AUTHORIZED)
+    preserved["pre_native_workspace"] = check_preservation(
+        ROOT, load(NATIVE / "workspace-before.json"), AUTHORIZED, RENAMED)
+    protected = load(OLD.parent / "runtime-export-sha256.json")
+    preserved["frozen_bonus_runtime"] = check_preservation(OLD.parent / "runtime", protected)
+    preserved["historical_logs"] = check_preservation(ROOT, load(OLD / "logs-preservation.json")["files"])
+    preserved["native_runtime"] = check_preservation(NATIVE, load(NATIVE / "native-evidence-sha256.json")["files"])
+    # Local audit-start snapshot additionally protects the new harness and ignored credentials.
+    local_before = ROOT / "artifacts/final-submission-audit/before.json"
+    if local_before.exists():
+        preserved["audit_start_files"] = check_preservation(ROOT, load(local_before), AUTHORIZED)
+
+    engine = json.loads(run(["docker", "info", "--format", "{{json .ServerVersion}}"]))
+    control = native_module("control")
+    assert control.inspect_existing() == load(NATIVE / "existing-services-before.json"), "Existing services changed"
+    production = control.production()
+    assert production == load(NATIVE / "production-before.json")
+    assert production["readonly"] == "on"
+    save(out / "production-readonly.json", production)
+    actual = json.loads(run(COMPOSE + ["exec", "-T", "bonus-dashboard", "python", "-"], """
 import json
 from pathlib import Path
 from bike_demand_bonus.audit import audit_saved_run
-root=Path('/opt/project/artifacts/bonus')
-rows=json.loads((root/'evaluations/bonus_suite_01/results.json').read_text())
+root = Path('/opt/project/artifacts/bonus')
+rows = json.loads((root/'evaluations/bonus_suite_01/results.json').read_text())
 print(json.dumps([audit_saved_run(root/'runs'/r['run_id'],r['case'],r['policy']) for r in rows]))
 """))
-    save("evaluation-audit.json",actual)
-    assert len(actual)==27 and all(r["passed"] for r in actual)
-    # Fresh server-enforced read-only production snapshot.
-    live=json.loads(run(["docker","compose","exec","-T","dashboard","python","-"],code="""
-import json
-from bike_demand_ml.db import load_postgres_snapshot
-f,p=load_postgres_snapshot()
-print(json.dumps({'rows':len(f),'unique_dates':int(f.date.nunique()),'total_rentals':int(f.cnt.sum()),
- 'dataset_hash':p['dataset_hash'],'readonly':p['transaction_read_only']}))
-"""))
-    initial=json.loads((OUT.parent/"database-before.json").read_text())
-    assert all(live[k]==initial[k] for k in live)
-    save("production-readonly.json",live)
-    captures={};missing=[]
-    for name in EXPECTED:
-        path=ROOT/"screenshots"/name
-        if not path.exists():missing.append(name);assert ignored("screenshots/"+name);continue
-        assert not ignored("screenshots/"+name),name
-        raw=path.read_bytes();assert raw.startswith(b"\x89PNG\r\n\x1a\n")
-        captures[name]={"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest()}
-    assert set(captures)==set(EXPECTED) and not missing
-    screenshot_exceptions=[line[len("!/screenshots/"):] for line in (ROOT/".gitignore").read_text().splitlines()
-                           if line.startswith("!/screenshots/") and line.endswith(".png")]
-    original_images=[Path(p).name for p in before["files"] if p.startswith("screenshots") and p.endswith(".png")]
-    assert set(screenshot_exceptions)==set(original_images)|set(captures)
-    probes=[".env",".env.production",".venv/example.py","src/__pycache__/secret.pyc",
-            ".aws/credentials","credentials.json","private.key","volumes/postgres/PG_VERSION",
-            "artifacts/classroom-reference/loop_runtime.py","build/temp.bin","screenshots/not-reviewed.png"]
+    assert len(actual) == 27 and all(r["passed"] for r in actual)
+    save(out / "evaluation-audit.json", actual)
+    native = native_module("verify_native").verify_native(NATIVE / "artifacts")
+    save(out / "native-verification.json", native)
+    live_run = control.api("dags/solution_baseline_prep/dagRuns/native_prep_01")
+    live_tasks = control.api("dags/solution_baseline_prep/dagRuns/native_prep_01/taskInstances")["task_instances"]
+    assert live_run["state"] == "success" and len(live_tasks) == 7
+    assert all(t["state"] == "success" for t in live_tasks)
+    save(out / "native-ui-api.json", {"run_id": live_run["dag_run_id"], "state": live_run["state"],
+                                    "tasks": {t["task_id"]: t["state"] for t in live_tasks}})
+    for port in (8502, 8503):
+        with urllib.request.urlopen(f"http://localhost:{port}/_stcore/health", timeout=10) as response:
+            assert response.status == 200 and response.read() == b"ok"
+
+    screenshot_allowlist((ROOT / ".gitignore").read_text(encoding="utf-8"), SCREENSHOTS)
+    images = {}
+    import struct
+    for name in SCREENSHOTS:
+        path = ROOT / "screenshots" / name
+        assert path.is_file() and not ignored("screenshots/" + name)
+        raw = path.read_bytes()
+        assert raw.startswith(b"\x89PNG\r\n\x1a\n")
+        width, height = struct.unpack(">II", raw[16:24])
+        assert width > 100 and height > 100
+        images[name] = {"sha256": digest(path), "bytes": len(raw), "width": width, "height": height}
+    prior_images = load(OLD / "screenshots.json")["reviewed_present"]
+    for name, record in prior_images.items():
+        actual_name = Path(RENAMED.get("screenshots/" + name, "screenshots/" + name)).name
+        assert images[actual_name]["sha256"] == record["sha256"]
+    save(out / "screenshots.json", {"reviewed_present": images,
+        "content_qualification": "19 shows node execution records and per-cycle validation F1; final classification cards are in 18 and 20. 16 shows topology; 15/17 show actual success/run evidence."})
+    probes = [".env", ".env.production", "artifacts/native-classroom-local/.env",
+              ".venv/example.py", "src/__pycache__/x.pyc", ".aws/credentials",
+              "credentials.json", "private.key", "volumes/postgres/PG_VERSION",
+              "artifacts/native-classroom-reference/loop_runtime.py", "build/temp.bin",
+              "screenshots/not-reviewed.png", "screenshots/14_bonus_agent_metrics.png"]
     assert all(ignored(p) for p in probes)
-    save("screenshots.json",{"reviewed_present":captures,"missing_not_allowlisted":missing,
-                            "published_six_byte_unchanged":True})
-    spec=importlib.util.spec_from_file_location("submission_helpers",ROOT/"scripts/check_submission.py")
-    helpers=importlib.util.module_from_spec(spec);spec.loader.exec_module(helpers)
-    eligible=helpers.eligible()
-    links,broken,excluded=helpers.local_links(eligible)
-    assert not broken and not excluded,(broken,excluded)
-    scanned,findings=helpers.secrets_check(eligible);assert not findings,findings
-    files=[p for p in eligible if p.endswith(".py")]
-    for name in files:ast.parse((ROOT/name).read_text(encoding="utf-8-sig"),filename=name)
-    subprocess.run(["docker","compose","-f","compose.yaml","-f","compose.bonus.yaml","--profile","bonus","config","--quiet"],cwd=ROOT,check=True,capture_output=True)
-    with urllib.request.urlopen("http://localhost:8502/_stcore/health",timeout=10) as response:assert response.status==200 and response.read()==b"ok"
-    tests={k:suite(v) for k,v in {"bonus_and_part2":"submission-bonus-ml.xml","pipeline":"submission-pipeline.xml","dag":"submission-dag.xml"}.items()}
-    assert all(not t["errors"] and not t["failures"] and not t["skipped"] for t in tests.values())
-    # Exact branch-only recommendation; nothing is added to the index.
-    changed_paths={p for p in git("diff","main","--name-only","--diff-filter=ACMR","-z").split("\0") if p}
-    new_paths={p for p in git("ls-files","--others","--exclude-standard","-z").split("\0") if p}
-    local_scratch={"docs/verification/bonus/review/audit-initial.json","docs/verification/bonus/review/audit-rerun.json"}
-    paths=sorted((changed_paths|new_paths)-local_scratch)
-    (OUT/"bonus-staging.txt").write_bytes(("\n".join(paths)+"\n").encode("utf-8"))
-    preview=git("--literal-pathspecs","add","--dry-run","--pathspec-from-file=docs/verification/bonus/review/bonus-staging.txt")
-    # Git dry-run prints only paths requiring an index refresh, not all staged paths.
-    staged=[p for p in git("diff","--cached","--name-only").splitlines() if p]
-    assert set(staged)<=set(paths),"Unexpected staged paths outside the reviewed manifest"
-    git("diff","--check")
-    git("diff","--cached","--check")
-    forbidden=[p for p in eligible if
-        (Path(p).name.startswith(".env") and p!=".env.example") or
-        any(part in {".venv","venv","__pycache__",".aws",".ssh","volumes","pgdata","node_modules","build","dist"} for part in Path(p).parts)]
-    assert not forbidden,forbidden
-    result={"checked_at_utc":datetime.now(timezone.utc).isoformat(),"branch":"bonus/adaptive-multi-agent",
-        "main_commit_unchanged":before["main_commit"],"original_authorized_documentation_changes":changed,
-        "other_original_files_byte_unchanged":len(before["files"])-len(changed),
-        "historical_mtime_changes":mtime,"historical_logs_byte_and_mtime_unchanged":len(logs),
-        "docker_engine_version":engine,"fresh_readonly_review_completed":True,"whitespace_checks_passed":True,"frozen_bonus_runtime_files_unchanged":len(old_hashes),
-        "production":live,"reviewed_bonus_images":list(captures),"missing_bonus_images":missing,
-        "original_published_images_unchanged":original_images,
-        "independently_audited_executions":27,"independent_expected_behavior_passes":27,
-        "tests":tests,"tests_passed":sum(t["tests"] for t in tests.values()),
-        "python_files_parsed":len(files),"local_markdown_links":links,"secret_scan_text_files":scanned,
-        "secret_findings":findings,"ignore_probes_passed":len(probes)+len(EXPECTED),
-        "compose_valid":True,"recommended_stage_files":len(paths),"dry_run_exact_list_passed":True,
-        "local_scratch_excluded":sorted(local_scratch),"staged_files":staged,"staged_file_count":len(staged),"staged_set_matches_manifest":set(staged)==set(paths),
-        "native_classroom_airflow_dag_executed":False,
-        "remaining_risks":["Strict two-native-baseline equivalence is incomplete","Validation predictions were not saved",
-                           "Designed fault coverage is limited","Image 14 shows policy rates, not per-agent metrics"],
-        "scope":"No production training/DAG run, new container, Docker deletion, commit, merge or push"}
-    save("checks.json",result)
-    print(json.dumps({k:result[k] for k in ["other_original_files_byte_unchanged","frozen_bonus_runtime_files_unchanged",
-        "reviewed_bonus_images","missing_bonus_images","tests_passed","independently_audited_executions",
-        "python_files_parsed","local_markdown_links","secret_findings","recommended_stage_files","staged_file_count","staged_set_matches_manifest"]},indent=2))
-if __name__=="__main__":main()
+
+    helper_spec = importlib.util.spec_from_file_location("submission_helpers", ROOT / "scripts/check_submission.py")
+    helpers = importlib.util.module_from_spec(helper_spec)
+    helper_spec.loader.exec_module(helpers)
+    eligible = [p for p in helpers.eligible() if (ROOT / p).is_file() and p not in SCRATCH]
+    assert not forbidden(eligible), forbidden(eligible)
+    links, broken, excluded = helpers.local_links(eligible)
+    assert not broken and not excluded, (broken, excluded)
+    scanned, findings = helpers.secrets_check(eligible)
+    # Include native credentials in private exact-value scans, including binary files.
+    private_values = [v.strip().strip("'\"") for k, v in control.values().items()
+                      if any(s in k for s in ("PASSWORD", "SECRET", "KEY"))]
+    for p in eligible:
+        raw = (ROOT / p).read_bytes()
+        if any(len(v) >= 12 and (v.encode() in raw or v.encode("utf-16-le") in raw) for v in private_values):
+            findings.append({"file": p, "kind": "native_local_credential"})
+    assert not findings, findings  # Never include matched values.
+    python_files = [p for p in eligible if p.endswith(".py")]
+    for p in python_files:
+        ast.parse((ROOT / p).read_text(encoding="utf-8-sig"), filename=p)
+    run(COMPOSE + ["--profile", "bonus", "config", "--quiet"])
+    run(["docker", "compose", "--profile", "ml", "config", "--quiet"])
+    config = json.loads(run(control.compose("config", "--format", "json")))
+    native_module("isolation").validate_config(config, ROOT)
+    git("diff", "--check")
+    git("diff", "--cached", "--check")
+    final_tests = load(ROOT / "docs/verification/final-bonus/test-summary.json")
+    assert final_tests["total_final_tests_passed"] == 128
+    assert final_tests["final_failures"] == final_tests["final_skips"] == 0
+    for name, expected in [("regression-tests", 100), ("dag-import", 1), ("postgres-integration-corrected", 1)]:
+        import xml.etree.ElementTree as ET
+        tree = ET.parse(ROOT / ("docs/verification/final-bonus/" + name + ".xml")).getroot()
+        suites = tree.findall("testsuite") if tree.tag == "testsuites" else [tree]
+        assert sum(int(t.get("tests", 0)) for t in suites) == expected
+        assert all(all(int(t.get(k, 0)) == 0 for k in ("failures", "errors", "skipped")) for t in suites)
+    assert not load(ROOT / "docs/verification/final-bonus/untracked-whitespace-corrected.json")["git_no_index_whitespace_findings"]
+    pins = load(ROOT / "bonus/native-classroom/source-pins.json")
+    for name, record in pins["source_files"].items():
+        assert digest(ROOT / "artifacts/native-classroom-reference" / name) == record["sha256"]
+    # Exact candidate inventory relative to verified main; separate pending deletions.
+    changed = set(filter(None, git("diff", "main", "--name-only", "--diff-filter=ACMR", "-z").split("\0")))
+    untracked = set(filter(None, git("ls-files", "--others", "--exclude-standard", "-z").split("\0")))
+    paths = sorted(p for p in changed | untracked if p not in SCRATCH and (ROOT / p).is_file())
+    deletions = sorted(filter(None, git("ls-files", "--deleted", "-z").split("\0")))
+    assert set(deletions) <= set(RENAMED), "Unexpected deleted tracked files"
+    for name in deletions:
+        assert (ROOT / RENAMED[name]).is_file()
+    for name, values in [("staging-files.txt", paths), ("staging-deletions.txt", deletions)]:
+        (out / name).write_bytes(("\n".join(values) + "\n").encode())
+    # Include the new reports/manifests in their own final inventory.
+    placeholders = {"checks.json": {}, "file-status.json": {}}
+    for name, value in placeholders.items():
+        save(out / name, value)
+    (out / "pending-staging-files.txt").write_bytes(b"")
+    (out / "changed-files.txt").write_bytes(git("-c", "core.quotepath=false", "status", "--short", "--untracked-files=all").encode())
+    paths = sorted(set(paths) | {p.relative_to(ROOT).as_posix() for p in out.iterdir()})
+    pending_changed = set(filter(None, git("diff", "HEAD", "--name-only", "--diff-filter=ACMR", "-z").split("\0")))
+    pending = sorted((pending_changed | untracked | {p.relative_to(ROOT).as_posix() for p in out.iterdir()}) & set(paths))
+    (out / "pending-staging-files.txt").write_bytes(("\n".join(pending) + "\n").encode())
+    (out / "staging-files.txt").write_bytes(("\n".join(paths) + "\n").encode())
+    preview = git("--literal-pathspecs", "add", "--dry-run", "--pathspec-from-file=" + relative + "/staging-files.txt")
+    if deletions:
+        git("--literal-pathspecs", "add", "--dry-run", "-u", "--pathspec-from-file=" + relative + "/staging-deletions.txt")
+    staged = list(filter(None, git("diff", "--cached", "--name-only", "-z").split("\0")))
+    assert set(staged) <= set(paths) | set(deletions)
+    status = [{"path": p, "action": "add" if p in untracked or p.startswith(relative + "/") else ("modify" if p in pending_changed else "already_committed_bonus")}
+              for p in paths] + [{"path": p, "action": "delete_old_renamed_path"} for p in deletions]
+    (out / "file-status.json").write_bytes((json.dumps(status, indent=2) + "\n").encode())
+    result = {"checked_at_utc": datetime.now(timezone.utc).isoformat(),
+              "branch": "bonus/adaptive-multi-agent", "preservation": preserved,
+              "docker_engine": engine, "fresh_readonly_review_completed": True,
+              "production": production, "independent_saved_case_passes": 27,
+              "native_classroom": native, "screenshots_reviewed": len(images),
+              "screenshot_19_qualification": "Execution table; final metrics supported by 18 and 20",
+              "final_tests_passed": final_tests["total_final_tests_passed"],
+              "final_test_failures": 0, "final_test_skips": 0,
+              "python_files_parsed": len(python_files), "markdown_targets_checked": links,
+              "secret_scan_text_files": scanned, "secret_findings": findings,
+              "ignore_probes_passed": len(probes), "compose_valid": True,
+              "whitespace_checks_passed": True, "existing_file_candidates": len(paths),
+              "pending_existing_files": len(pending),
+              "pending_deletions": len(deletions),
+              "total_pending_staging_paths": len(pending) + len(deletions), "total_staging_paths": len(paths) + len(deletions),
+              "staged_file_count": len(staged), "dry_run_passed": True,
+              "scope": "Read-only review; no fits, DAG runs, service starts/stops, SQL writes, index changes or publication",
+              "limits": ["Classification scores checked against original records, not independently refit",
+                         "Native F1 target not met; LLM path untested; overlapping native evaluation cohorts",
+                         "Regression ports remain adaptations; final scores equal across all policies",
+                         "Candidate validation predictions were not saved"]}
+    (out / "checks.json").write_bytes((json.dumps(result, indent=2) + "\n").encode())
+    print(json.dumps({"report": relative + "/checks.json", **result}, indent=2))
+
+
+if __name__ == "__main__":
+    main()

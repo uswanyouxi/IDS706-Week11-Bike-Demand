@@ -1,0 +1,7 @@
+{
+  "at_utc": "2026-11-10T00:49:16.322445+00:00",
+  "stage": "airflow",
+  "host_available_gib": 2.4091033935546875,
+  "guest_available_gib": 5.198570251464844,
+  "drive_available_gib": 49.63459014892578
+}

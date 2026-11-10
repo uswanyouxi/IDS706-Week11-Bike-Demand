@@ -1,0 +1,15 @@
+test_authorization_is_exact_not_directory_wide (__main__.ReviewGuardTests.test_authorization_is_exact_not_directory_wide) ... ok
+test_authorized_readme_rewrite (__main__.ReviewGuardTests.test_authorized_readme_rewrite) ... ok
+test_exact_rename_preserves_bytes_and_timestamp (__main__.ReviewGuardTests.test_exact_rename_preserves_bytes_and_timestamp) ... ok
+test_frozen_log_change_rejected (__main__.ReviewGuardTests.test_frozen_log_change_rejected) ... ok
+test_missing_evidence_rejected (__main__.ReviewGuardTests.test_missing_evidence_rejected) ... ok
+test_only_reviewed_image_names_allowed (__main__.ReviewGuardTests.test_only_reviewed_image_names_allowed) ... ok
+test_rename_does_not_allow_substitution (__main__.ReviewGuardTests.test_rename_does_not_allow_substitution) ... ok
+test_secret_cache_and_volume_paths_rejected (__main__.ReviewGuardTests.test_secret_cache_and_volume_paths_rejected) ... ok
+test_source_changes_rejected (__main__.ReviewGuardTests.test_source_changes_rejected) ... ok
+test_timestamp_change_rejected (__main__.ReviewGuardTests.test_timestamp_change_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.112s
+
+OK

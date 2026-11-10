@@ -1,0 +1,155 @@
+name: ids706-classroom-native-v1
+x-env: &env
+  AIRFLOW__CORE__EXECUTOR: LocalExecutor
+  AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+  AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+  AIRFLOW__CORE__PARALLELISM: '1'
+  AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG: '1'
+  AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG: '1'
+  AIRFLOW__CORE__DEFAULT_TIMEZONE: UTC
+  AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://native_airflow:${NATIVE_DB_PASSWORD:?Native env required}@native-db:5432/native_airflow
+  AIRFLOW__CORE__FERNET_KEY: ${NATIVE_FERNET_KEY:?Native env required}
+  AIRFLOW__WEBSERVER__SECRET_KEY: ${NATIVE_WEB_SECRET:?Native env required}
+  AIRFLOW__WEBSERVER__WORKERS: '1'
+  AIRFLOW__WEBSERVER__BASE_URL: http://localhost:8088
+  AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'false'
+  AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session
+  AIRFLOW__SCHEDULER__PARSING_PROCESSES: '1'
+  AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: '300'
+  AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: '300'
+  AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'false'
+  PYTHONDONTWRITEBYTECODE: '1'
+  PYTHONPATH: /repo
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  NUMEXPR_NUM_THREADS: '1'
+x-airflow: &airflow
+  image: ids706-native-airflow:2.10.4-py3.11
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
+  user: '50000:0'
+  environment: *env
+  volumes:
+    - ../../artifacts/native-classroom-reference/solution/airflow/dags/solution_baseline_prep.py:/opt/airflow/dags/solution_baseline_prep.py:ro
+    - ../../artifacts/native-classroom-reference:/reference:ro
+    - .:/harness:ro
+    - native-repository:/repo
+    - native-logs:/opt/airflow/logs
+    - native-evidence:/evidence
+    - ../../artifacts/native-classroom-reference/datasets/airflow/customers.csv:/repo/datasets/airflow/customers.csv:ro
+    - ../../artifacts/native-classroom-reference/datasets/airflow/transactions.csv:/repo/datasets/airflow/transactions.csv:ro
+  restart: 'no'
+services:
+  native-storage-init:
+    image: ids706-native-airflow:2.10.4-py3.11
+    user: '0:0'
+    entrypoint: ['python','/harness/storage_init.py']
+    volumes:
+      - .:/harness:ro
+      - native-repository:/repo
+      - native-logs:/opt/airflow/logs
+      - native-evidence:/evidence
+    mem_limit: 128m
+    cpus: 0.25
+    restart: 'no'
+  native-db:
+    image: postgres:16.11-bookworm
+    environment:
+      POSTGRES_USER: native_airflow
+      POSTGRES_PASSWORD: ${NATIVE_DB_PASSWORD:?Native env required}
+      POSTGRES_DB: native_airflow
+    volumes:
+      - native-metadata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL','pg_isready -U native_airflow -d native_airflow']
+      interval: 5s
+      timeout: 5s
+      retries: 15
+    mem_limit: 256m
+    cpus: 0.5
+    restart: 'no'
+  native-airflow-init:
+    <<: *airflow
+    command: ['python','/harness/init_airflow.py']
+    environment:
+      <<: *env
+      NATIVE_ADMIN_PASSWORD: ${NATIVE_ADMIN_PASSWORD:?Native env required}
+    mem_limit: 768m
+    cpus: 1
+  native-scheduler:
+    <<: *airflow
+    command: [scheduler, --skip-serve-logs]
+    healthcheck:
+      test: ['CMD-SHELL','airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"']
+      interval: 20s
+      timeout: 10s
+      retries: 12
+      start_period: 40s
+    mem_limit: 1g
+    cpus: 1
+  native-webserver:
+    <<: *airflow
+    command: webserver
+    ports: ['127.0.0.1:8088:8080']
+    healthcheck:
+      test: ['CMD','curl','--fail','http://localhost:8080/health']
+      interval: 20s
+      timeout: 10s
+      retries: 12
+      start_period: 40s
+    mem_limit: 768m
+    cpus: 0.5
+  native-loop-worker:
+    image: ids706-ml:1.0.0
+    user: '10001:0'
+    entrypoint: ['/bin/sh','-c','umask 0002; exec python /harness/run_native_loop.py']
+    network_mode: none
+    environment:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      OPENROUTER_API_KEY: ''
+      CURSOR_API_KEY: ''
+      LANGCHAIN_TRACING_V2: 'false'
+    volumes:
+      - .:/harness:ro
+      - ../../artifacts/native-classroom-reference:/reference:ro
+      - ../../src:/student/src:ro
+      - ../../tests:/student/tests:ro
+      - ../../scripts:/student/scripts:ro
+      - ../../sql:/student/sql:ro
+      - ../../requirements:/student/requirements:ro
+      - ../../dags:/student/dags:ro
+      - ../../data/raw:/student/data/raw:ro
+      - ../../pytest.ini:/student/pytest.ini:ro
+      - native-repository:/repo:ro
+      - ../../docs/verification/bonus/runtime/evaluations/bonus_suite_01:/bike-suite:ro
+      - native-evidence:/evidence
+    mem_limit: 768m
+    cpus: 1
+    restart: 'no'
+  native-viewer:
+    image: ids706-ml:1.0.0
+    user: '10001:0'
+    command: ['python','-m','streamlit','run','/harness/viewer.py','--server.address=0.0.0.0','--server.port=8503','--browser.gatherUsageStats=false']
+    environment:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    ports: ['127.0.0.1:8503:8503']
+    volumes:
+      - .:/harness:ro
+      - native-evidence:/evidence:ro
+      - ../../docs/verification/bonus/runtime/evaluations/bonus_suite_01:/bike-suite:ro
+    mem_limit: 256m
+    cpus: 0.5
+    restart: 'no'
+volumes:
+  native-metadata:
+  native-repository:
+  native-logs:
+  native-evidence:

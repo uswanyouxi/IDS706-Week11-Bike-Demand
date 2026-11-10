@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-11-10T00:23:00.169751+00:00",
+  "independent_windows_memory": {
+    "AvailableBytes": 886214656,
+    "AvailableMBytes": 845,
+    "CommittedBytes": 33143988224
+  },
+  "available_gib": 0.8253517150878906,
+  "required_gib": 2.5,
+  "startup_allowed": false,
+  "native_containers_started": 0,
+  "approval_remains_valid": true,
+  "same_scope_resume_command": "py -3.11 bonus/native-classroom/control.py start",
+  "existing_services_unchanged": true
+}

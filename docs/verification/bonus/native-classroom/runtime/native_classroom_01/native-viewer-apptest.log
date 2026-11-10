@@ -1,0 +1,14 @@
+ Container ids706-classroom-native-v1-native-loop-worker-run-bc2e07d2e421 Creating 
+ Container ids706-classroom-native-v1-native-loop-worker-run-bc2e07d2e421 Created 
+2026-11-10 01:00:28.574 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-10 01:00:29.053 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+Traceback (most recent call last):
+  File "/harness/check_viewer.py", line 12, in <module>
+    assert len(app.dataframe)>=5
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+

@@ -1,0 +1,31 @@
+{
+  "untracked_text_files_checked": 210,
+  "git_no_index_whitespace_findings": [
+    {
+      "file": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-trigger.log",
+      "exit": 3,
+      "diagnostic_lines": 1
+    },
+    {
+      "file": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-unpause.log",
+      "exit": 3,
+      "diagnostic_lines": 1
+    },
+    {
+      "file": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-langgraph.log",
+      "exit": 3,
+      "diagnostic_lines": 1
+    },
+    {
+      "file": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-viewer-apptest.log",
+      "exit": 3,
+      "diagnostic_lines": 1
+    },
+    {
+      "file": "docs/verification/final-bonus/postgres-integration.xml",
+      "exit": 3,
+      "diagnostic_lines": 6
+    }
+  ],
+  "scope": "Actual Git whitespace checks; genuine log EOL spaces follow scoped attributes"
+}

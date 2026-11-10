@@ -12,4 +12,4 @@ Run agents/run.py through the isolated ML container using the root README comman
 
 Default run compares two candidates with a hard cap of two. Model selection never reads final test metrics. A single final stage refits selected/Dummy models on train+validation and evaluates both on held-out data. For ml_main_01, validation selected Ridge alpha=10; see the root README and actual report under docs/verification/phase-c/runs/ml_main_01.
 
-The classroom loop and UI were not copied. Optional bonus comparisons were not performed. [Root README](../README.md) is the complete setup/results guide.
+The classroom loop and UI were not copied. The separate [optional adaptive extension](../bonus/README.md) has its own specialist graph and explicitly qualified baseline comparisons. [Root README](../README.md) is the complete setup/results guide.

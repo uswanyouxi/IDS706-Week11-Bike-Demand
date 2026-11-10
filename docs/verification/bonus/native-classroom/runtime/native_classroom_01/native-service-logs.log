@@ -1,0 +1,480 @@
+native-scheduler-1  | 
+native-webserver-1  | 
+native-scheduler-1  |   ____________       _____________
+native-scheduler-1  |  ____    |__( )_________  __/__  /________      __
+native-scheduler-1  | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+native-scheduler-1  | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+native-scheduler-1  |  _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+native-webserver-1  | [2026-11-10T00:36:17.723+0000] {configuration.py:2112} INFO - Creating new FAB webserver config file in: /opt/airflow/webserver_config.py
+native-webserver-1  | /home/airflow/.local/lib/python3.11/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+native-webserver-1  | [2026-11-10T00:36:27.747+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Runs
+native-webserver-1  | [2026-11-10T00:36:27.755+0000] {override.py:1962} INFO - Added Permission can create on DAG Runs to role Admin
+native-webserver-1  | [2026-11-10T00:36:27.766+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Runs
+native-webserver-1  | [2026-11-10T00:36:27.772+0000] {override.py:1962} INFO - Added Permission can read on DAG Runs to role Admin
+native-scheduler-1  | [2026-11-10T00:47:24.834+0000] {_client.py:1026} INFO - HTTP Request: GET https://apacheairflow.gateway.scarf.sh/scheduler?version=2.10.4&python_version=3.11&platform=Linux&arch=x86_64&database=postgresql&db_version=16.11&executor=LocalExecutor "HTTP/1.1 200 OK"
+native-scheduler-1  | [2026-11-10T00:47:25.162+0000] {executor_loader.py:254} INFO - Loaded executor: LocalExecutor
+native-webserver-1  | [2026-11-10T00:36:27.779+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG Runs
+native-scheduler-1  | [2026-11-10T00:47:25.195+0000] {scheduler_job_runner.py:950} INFO - Starting the scheduler
+native-webserver-1  | [2026-11-10T00:36:27.784+0000] {override.py:1962} INFO - Added Permission can edit on DAG Runs to role Admin
+native-scheduler-1  | [2026-11-10T00:47:25.196+0000] {scheduler_job_runner.py:957} INFO - Processing each file at most -1 times
+native-webserver-1  | [2026-11-10T00:36:27.790+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Runs
+native-scheduler-1  | [2026-11-10T00:47:25.231+0000] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 36
+native-webserver-1  | [2026-11-10T00:36:27.795+0000] {override.py:1962} INFO - Added Permission can delete on DAG Runs to role Admin
+native-scheduler-1  | [2026-11-10T00:47:25.234+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+native-webserver-1  | [2026-11-10T00:36:27.802+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Runs
+native-scheduler-1  | [2026-11-10T00:47:25.245+0000] {settings.py:63} INFO - Configured default timezone UTC
+native-scheduler-1  | [2026-11-10T00:52:23.630+0000] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+native-webserver-1  | [2026-11-10T00:36:27.808+0000] {override.py:1962} INFO - Added Permission menu access on DAG Runs to role Admin
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.validate_customers native_prep_01 [scheduled]>
+native-scheduler-1  | [2026-11-10T00:52:23.631+0000] {scheduler_job_runner.py:507} INFO - DAG solution_baseline_prep has 0/1 running and queued tasks
+native-scheduler-1  | [2026-11-10T00:52:23.631+0000] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+native-webserver-1  | [2026-11-10T00:36:27.825+0000] {override.py:1911} INFO - Created Permission View: menu access on Browse
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.validate_customers native_prep_01 [scheduled]>
+native-webserver-1  | [2026-11-10T00:36:27.830+0000] {override.py:1962} INFO - Added Permission menu access on Browse to role Admin
+native-webserver-1  | [2026-11-10T00:36:27.850+0000] {override.py:1911} INFO - Created Permission View: can read on Jobs
+native-webserver-1  | [2026-11-10T00:36:27.855+0000] {override.py:1962} INFO - Added Permission can read on Jobs to role Admin
+native-webserver-1  | [2026-11-10T00:36:27.862+0000] {override.py:1911} INFO - Created Permission View: menu access on Jobs
+native-webserver-1  | [2026-11-10T00:36:27.868+0000] {override.py:1962} INFO - Added Permission menu access on Jobs to role Admin
+native-webserver-1  | [2026-11-10T00:36:27.918+0000] {override.py:1911} INFO - Created Permission View: can read on Audit Logs
+native-scheduler-1  | [2026-11-10T00:52:23.633+0000] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: solution_baseline_prep.validate_customers native_prep_01 [scheduled]>] for executor: LocalExecutor(parallelism=1)
+native-webserver-1  | [2026-11-10T00:36:27.924+0000] {override.py:1962} INFO - Added Permission can read on Audit Logs to role Admin
+native-scheduler-1  | [2026-11-10T00:52:23.633+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='solution_baseline_prep', task_id='validate_customers', run_id='native_prep_01', try_number=1, map_index=-1) to LocalExecutor with priority 6 and queue default
+native-webserver-1  | [2026-11-10T00:36:27.931+0000] {override.py:1911} INFO - Created Permission View: menu access on Audit Logs
+native-webserver-1  | [2026-11-10T00:36:27.936+0000] {override.py:1962} INFO - Added Permission menu access on Audit Logs to role Admin
+native-webserver-1  | [2026-11-10T00:36:27.963+0000] {override.py:1911} INFO - Created Permission View: can create on Variables
+native-webserver-1  | [2026-11-10T00:36:27.968+0000] {override.py:1962} INFO - Added Permission can create on Variables to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.000+0000] {override.py:1911} INFO - Created Permission View: can read on Variables
+native-webserver-1  | [2026-11-10T00:36:28.005+0000] {override.py:1962} INFO - Added Permission can read on Variables to role Admin
+native-scheduler-1  | [2026-11-10T00:52:23.633+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'validate_customers', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-scheduler-1  | [2026-11-10T00:52:23.637+0000] {local_executor.py:93} INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'validate_customers', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-scheduler-1  | [2026-11-10T00:52:23.662+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.011+0000] {override.py:1911} INFO - Created Permission View: can edit on Variables
+native-webserver-1  | [2026-11-10T00:36:28.015+0000] {override.py:1962} INFO - Added Permission can edit on Variables to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.021+0000] {override.py:1911} INFO - Created Permission View: can delete on Variables
+native-webserver-1  | [2026-11-10T00:36:28.025+0000] {override.py:1962} INFO - Added Permission can delete on Variables to role Admin
+native-scheduler-1  | [2026-11-10T00:52:23.671+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/solution_baseline_prep.py
+native-scheduler-1  | [2026-11-10T00:52:24.688+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.030+0000] {override.py:1911} INFO - Created Permission View: menu access on Variables
+native-scheduler-1  | [2026-11-10T00:52:25.290+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.034+0000] {override.py:1962} INFO - Added Permission menu access on Variables to role Admin
+native-scheduler-1  | [2026-11-10T00:52:25.346+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+native-webserver-1  | [2026-11-10T00:36:28.047+0000] {override.py:1911} INFO - Created Permission View: menu access on Admin
+native-scheduler-1  | [2026-11-10T00:52:25.469+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.051+0000] {override.py:1962} INFO - Added Permission menu access on Admin to role Admin
+native-scheduler-1  | [2026-11-10T00:52:25.863+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.068+0000] {override.py:1911} INFO - Created Permission View: can create on Task Instances
+native-webserver-1  | [2026-11-10T00:36:28.073+0000] {override.py:1962} INFO - Added Permission can create on Task Instances to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.078+0000] {override.py:1911} INFO - Created Permission View: can read on Task Instances
+native-scheduler-1  | [2026-11-10T00:52:25.975+0000] {task_command.py:467} INFO - Running <TaskInstance: solution_baseline_prep.validate_customers native_prep_01 [queued]> on host 6c848b1e6732
+native-scheduler-1  | [2026-11-10T00:52:26.349+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:27.377+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:27.378+0000] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='solution_baseline_prep', task_id='validate_customers', run_id='native_prep_01', try_number=1, map_index=-1)
+native-scheduler-1  | [2026-11-10T00:52:27.381+0000] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=solution_baseline_prep, task_id=validate_customers, run_id=native_prep_01, map_index=-1, run_start_date=2026-11-10 00:52:26.067784+00:00, run_end_date=2026-11-10 00:52:26.376646+00:00, run_duration=0.308862, state=success, executor=LocalExecutor(parallelism=1), executor_state=success, try_number=1, max_tries=2, job_id=4, pool=default_pool, queue=default, priority_weight=6, operator=_PythonDecoratedOperator, queued_dttm=2026-11-10 00:52:23.631908+00:00, queued_by_job_id=3, pid=190
+native-webserver-1  | [2026-11-10T00:36:28.084+0000] {override.py:1962} INFO - Added Permission can read on Task Instances to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.089+0000] {override.py:1911} INFO - Created Permission View: can edit on Task Instances
+native-scheduler-1  | [2026-11-10T00:52:27.659+0000] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.validate_transactions native_prep_01 [scheduled]>
+native-scheduler-1  | [2026-11-10T00:52:27.659+0000] {scheduler_job_runner.py:507} INFO - DAG solution_baseline_prep has 0/1 running and queued tasks
+native-scheduler-1  | [2026-11-10T00:52:27.660+0000] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.validate_transactions native_prep_01 [scheduled]>
+native-scheduler-1  | [2026-11-10T00:52:27.661+0000] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: solution_baseline_prep.validate_transactions native_prep_01 [scheduled]>] for executor: LocalExecutor(parallelism=1)
+native-scheduler-1  | [2026-11-10T00:52:27.661+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='solution_baseline_prep', task_id='validate_transactions', run_id='native_prep_01', try_number=1, map_index=-1) to LocalExecutor with priority 6 and queue default
+native-scheduler-1  | [2026-11-10T00:52:27.661+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'validate_transactions', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-scheduler-1  | [2026-11-10T00:52:27.664+0000] {local_executor.py:93} INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'validate_transactions', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-webserver-1  | [2026-11-10T00:36:28.093+0000] {override.py:1962} INFO - Added Permission can edit on Task Instances to role Admin
+native-scheduler-1  | [2026-11-10T00:52:27.765+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/solution_baseline_prep.py
+native-scheduler-1  | [2026-11-10T00:52:27.774+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.101+0000] {override.py:1911} INFO - Created Permission View: can delete on Task Instances
+native-scheduler-1  | [2026-11-10T00:52:28.876+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.106+0000] {override.py:1962} INFO - Added Permission can delete on Task Instances to role Admin
+native-scheduler-1  | [2026-11-10T00:52:29.969+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.111+0000] {override.py:1911} INFO - Created Permission View: menu access on Task Instances
+native-webserver-1  | [2026-11-10T00:36:28.115+0000] {override.py:1962} INFO - Added Permission menu access on Task Instances to role Admin
+native-scheduler-1  | [2026-11-10T00:52:31.065+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.139+0000] {override.py:1911} INFO - Created Permission View: can read on Task Reschedules
+native-webserver-1  | [2026-11-10T00:36:28.144+0000] {override.py:1962} INFO - Added Permission can read on Task Reschedules to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.151+0000] {override.py:1911} INFO - Created Permission View: menu access on Task Reschedules
+native-scheduler-1  | [2026-11-10T00:52:31.794+0000] {task_command.py:467} INFO - Running <TaskInstance: solution_baseline_prep.validate_transactions native_prep_01 [queued]> on host 6c848b1e6732
+native-webserver-1  | [2026-11-10T00:36:28.155+0000] {override.py:1962} INFO - Added Permission menu access on Task Reschedules to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.178+0000] {override.py:1911} INFO - Created Permission View: can read on Triggers
+native-scheduler-1  | [2026-11-10T00:52:32.096+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.183+0000] {override.py:1962} INFO - Added Permission can read on Triggers to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.203+0000] {override.py:1911} INFO - Created Permission View: menu access on Triggers
+native-webserver-1  | [2026-11-10T00:36:28.208+0000] {override.py:1962} INFO - Added Permission menu access on Triggers to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.227+0000] {override.py:1911} INFO - Created Permission View: can read on Configurations
+native-scheduler-1  | [2026-11-10T00:52:32.697+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:32.698+0000] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='solution_baseline_prep', task_id='validate_transactions', run_id='native_prep_01', try_number=1, map_index=-1)
+native-webserver-1  | [2026-11-10T00:36:28.232+0000] {override.py:1962} INFO - Added Permission can read on Configurations to role Admin
+native-scheduler-1  | [2026-11-10T00:52:32.701+0000] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=solution_baseline_prep, task_id=validate_transactions, run_id=native_prep_01, map_index=-1, run_start_date=2026-11-10 00:52:31.892077+00:00, run_end_date=2026-11-10 00:52:32.189465+00:00, run_duration=0.297388, state=success, executor=LocalExecutor(parallelism=1), executor_state=success, try_number=1, max_tries=2, job_id=5, pool=default_pool, queue=default, priority_weight=6, operator=_PythonDecoratedOperator, queued_dttm=2026-11-10 00:52:27.660384+00:00, queued_by_job_id=3, pid=201
+native-scheduler-1  | [2026-11-10T00:52:33.747+0000] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+native-webserver-1  | [2026-11-10T00:36:28.237+0000] {override.py:1911} INFO - Created Permission View: menu access on Configurations
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.merge_csvs native_prep_01 [scheduled]>
+native-webserver-1  | [2026-11-10T00:36:28.242+0000] {override.py:1962} INFO - Added Permission menu access on Configurations to role Admin
+native-scheduler-1  | [2026-11-10T00:52:33.747+0000] {scheduler_job_runner.py:507} INFO - DAG solution_baseline_prep has 0/1 running and queued tasks
+native-scheduler-1  | [2026-11-10T00:52:33.748+0000] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.merge_csvs native_prep_01 [scheduled]>
+native-webserver-1  | [2026-11-10T00:36:28.265+0000] {override.py:1911} INFO - Created Permission View: can create on Connections
+native-scheduler-1  | [2026-11-10T00:52:33.749+0000] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: solution_baseline_prep.merge_csvs native_prep_01 [scheduled]>] for executor: LocalExecutor(parallelism=1)
+native-webserver-1  | [2026-11-10T00:36:28.270+0000] {override.py:1962} INFO - Added Permission can create on Connections to role Admin
+native-scheduler-1  | [2026-11-10T00:52:33.749+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='solution_baseline_prep', task_id='merge_csvs', run_id='native_prep_01', try_number=1, map_index=-1) to LocalExecutor with priority 5 and queue default
+native-webserver-1  | [2026-11-10T00:36:28.276+0000] {override.py:1911} INFO - Created Permission View: can read on Connections
+native-webserver-1  | [2026-11-10T00:36:28.280+0000] {override.py:1962} INFO - Added Permission can read on Connections to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.300+0000] {override.py:1911} INFO - Created Permission View: can edit on Connections
+native-webserver-1  | [2026-11-10T00:36:28.305+0000] {override.py:1962} INFO - Added Permission can edit on Connections to role Admin
+native-scheduler-1  | [2026-11-10T00:52:33.749+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'merge_csvs', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-scheduler-1  | [2026-11-10T00:52:33.752+0000] {local_executor.py:93} INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'merge_csvs', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-scheduler-1  | [2026-11-10T00:52:33.779+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:33.781+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/solution_baseline_prep.py
+native-webserver-1  | [2026-11-10T00:36:28.310+0000] {override.py:1911} INFO - Created Permission View: can delete on Connections
+native-scheduler-1  | [2026-11-10T00:52:34.805+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:34.944+0000] {task_command.py:467} INFO - Running <TaskInstance: solution_baseline_prep.merge_csvs native_prep_01 [queued]> on host 6c848b1e6732
+native-webserver-1  | [2026-11-10T00:36:28.315+0000] {override.py:1962} INFO - Added Permission can delete on Connections to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.321+0000] {override.py:1911} INFO - Created Permission View: menu access on Connections
+native-webserver-1  | [2026-11-10T00:36:28.326+0000] {override.py:1962} INFO - Added Permission menu access on Connections to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.352+0000] {override.py:1911} INFO - Created Permission View: can read on SLA Misses
+native-webserver-1  | [2026-11-10T00:36:28.357+0000] {override.py:1962} INFO - Added Permission can read on SLA Misses to role Admin
+native-scheduler-1  | [2026-11-10T00:52:35.839+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:35.840+0000] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='solution_baseline_prep', task_id='merge_csvs', run_id='native_prep_01', try_number=1, map_index=-1)
+native-scheduler-1  | [2026-11-10T00:52:35.843+0000] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=solution_baseline_prep, task_id=merge_csvs, run_id=native_prep_01, map_index=-1, run_start_date=2026-11-10 00:52:34.990805+00:00, run_end_date=2026-11-10 00:52:35.393973+00:00, run_duration=0.403168, state=success, executor=LocalExecutor(parallelism=1), executor_state=success, try_number=1, max_tries=2, job_id=6, pool=default_pool, queue=default, priority_weight=5, operator=_PythonDecoratedOperator, queued_dttm=2026-11-10 00:52:33.748435+00:00, queued_by_job_id=3, pid=205
+native-webserver-1  | [2026-11-10T00:36:28.363+0000] {override.py:1911} INFO - Created Permission View: menu access on SLA Misses
+native-webserver-1  | [2026-11-10T00:36:28.369+0000] {override.py:1962} INFO - Added Permission menu access on SLA Misses to role Admin
+native-scheduler-1  | [2026-11-10T00:52:36.393+0000] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+native-webserver-1  | [2026-11-10T00:36:28.375+0000] {override.py:1911} INFO - Created Permission View: can delete on SLA Misses
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.make_subset native_prep_01 [scheduled]>
+native-webserver-1  | [2026-11-10T00:36:28.380+0000] {override.py:1962} INFO - Added Permission can delete on SLA Misses to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.386+0000] {override.py:1911} INFO - Created Permission View: can edit on SLA Misses
+native-webserver-1  | [2026-11-10T00:36:28.403+0000] {override.py:1962} INFO - Added Permission can edit on SLA Misses to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.421+0000] {override.py:1911} INFO - Created Permission View: can read on Plugins
+native-webserver-1  | [2026-11-10T00:36:28.426+0000] {override.py:1962} INFO - Added Permission can read on Plugins to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.432+0000] {override.py:1911} INFO - Created Permission View: menu access on Plugins
+native-webserver-1  | [2026-11-10T00:36:28.437+0000] {override.py:1962} INFO - Added Permission menu access on Plugins to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.456+0000] {override.py:1911} INFO - Created Permission View: can read on Providers
+native-webserver-1  | [2026-11-10T00:36:28.461+0000] {override.py:1962} INFO - Added Permission can read on Providers to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.467+0000] {override.py:1911} INFO - Created Permission View: menu access on Providers
+native-webserver-1  | [2026-11-10T00:36:28.472+0000] {override.py:1962} INFO - Added Permission menu access on Providers to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.506+0000] {override.py:1911} INFO - Created Permission View: can create on Pools
+native-webserver-1  | [2026-11-10T00:36:28.511+0000] {override.py:1962} INFO - Added Permission can create on Pools to role Admin
+native-scheduler-1  | [2026-11-10T00:52:36.393+0000] {scheduler_job_runner.py:507} INFO - DAG solution_baseline_prep has 0/1 running and queued tasks
+native-scheduler-1  | [2026-11-10T00:52:36.394+0000] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.make_subset native_prep_01 [scheduled]>
+native-scheduler-1  | [2026-11-10T00:52:36.395+0000] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: solution_baseline_prep.make_subset native_prep_01 [scheduled]>] for executor: LocalExecutor(parallelism=1)
+native-scheduler-1  | [2026-11-10T00:52:36.395+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='solution_baseline_prep', task_id='make_subset', run_id='native_prep_01', try_number=1, map_index=-1) to LocalExecutor with priority 4 and queue default
+native-scheduler-1  | [2026-11-10T00:52:36.395+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'make_subset', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-scheduler-1  | [2026-11-10T00:52:36.398+0000] {local_executor.py:93} INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'make_subset', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-webserver-1  | [2026-11-10T00:36:28.518+0000] {override.py:1911} INFO - Created Permission View: can read on Pools
+native-webserver-1  | [2026-11-10T00:36:28.523+0000] {override.py:1962} INFO - Added Permission can read on Pools to role Admin
+native-scheduler-1  | [2026-11-10T00:52:36.426+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.529+0000] {override.py:1911} INFO - Created Permission View: can edit on Pools
+native-scheduler-1  | [2026-11-10T00:52:36.428+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/solution_baseline_prep.py
+native-webserver-1  | [2026-11-10T00:36:28.534+0000] {override.py:1962} INFO - Added Permission can edit on Pools to role Admin
+native-scheduler-1  | [2026-11-10T00:52:37.467+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:37.568+0000] {task_command.py:467} INFO - Running <TaskInstance: solution_baseline_prep.make_subset native_prep_01 [queued]> on host 6c848b1e6732
+native-webserver-1  | [2026-11-10T00:36:28.539+0000] {override.py:1911} INFO - Created Permission View: can delete on Pools
+native-scheduler-1  | [2026-11-10T00:52:37.737+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:38.769+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:28.545+0000] {override.py:1962} INFO - Added Permission can delete on Pools to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.552+0000] {override.py:1911} INFO - Created Permission View: menu access on Pools
+native-webserver-1  | [2026-11-10T00:36:28.557+0000] {override.py:1962} INFO - Added Permission menu access on Pools to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.580+0000] {override.py:1911} INFO - Created Permission View: can read on XComs
+native-webserver-1  | [2026-11-10T00:36:28.600+0000] {override.py:1962} INFO - Added Permission can read on XComs to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.608+0000] {override.py:1911} INFO - Created Permission View: can delete on XComs
+native-webserver-1  | [2026-11-10T00:36:28.613+0000] {override.py:1962} INFO - Added Permission can delete on XComs to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.619+0000] {override.py:1911} INFO - Created Permission View: menu access on XComs
+native-scheduler-1  | [2026-11-10T00:52:38.770+0000] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='solution_baseline_prep', task_id='make_subset', run_id='native_prep_01', try_number=1, map_index=-1)
+native-scheduler-1  | [2026-11-10T00:52:38.772+0000] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=solution_baseline_prep, task_id=make_subset, run_id=native_prep_01, map_index=-1, run_start_date=2026-11-10 00:52:37.615518+00:00, run_end_date=2026-11-10 00:52:37.832606+00:00, run_duration=0.217088, state=success, executor=LocalExecutor(parallelism=1), executor_state=success, try_number=1, max_tries=2, job_id=7, pool=default_pool, queue=default, priority_weight=4, operator=_PythonDecoratedOperator, queued_dttm=2026-11-10 00:52:36.394353+00:00, queued_by_job_id=3, pid=209
+native-scheduler-1  | [2026-11-10T00:52:39.806+0000] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+native-webserver-1  | [2026-11-10T00:36:28.625+0000] {override.py:1962} INFO - Added Permission menu access on XComs to role Admin
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.profile_light native_prep_01 [scheduled]>
+native-webserver-1  | [2026-11-10T00:36:28.645+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Dependencies
+native-scheduler-1  | [2026-11-10T00:52:39.806+0000] {scheduler_job_runner.py:507} INFO - DAG solution_baseline_prep has 0/1 running and queued tasks
+native-scheduler-1  | [2026-11-10T00:52:39.806+0000] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.profile_light native_prep_01 [scheduled]>
+native-scheduler-1  | [2026-11-10T00:52:39.807+0000] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: solution_baseline_prep.profile_light native_prep_01 [scheduled]>] for executor: LocalExecutor(parallelism=1)
+native-scheduler-1  | [2026-11-10T00:52:39.807+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='solution_baseline_prep', task_id='profile_light', run_id='native_prep_01', try_number=1, map_index=-1) to LocalExecutor with priority 3 and queue default
+native-webserver-1  | [2026-11-10T00:36:28.651+0000] {override.py:1962} INFO - Added Permission menu access on DAG Dependencies to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.674+0000] {override.py:1911} INFO - Created Permission View: menu access on DAGs
+native-webserver-1  | [2026-11-10T00:36:28.679+0000] {override.py:1962} INFO - Added Permission menu access on DAGs to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.690+0000] {override.py:1911} INFO - Created Permission View: menu access on Cluster Activity
+native-webserver-1  | [2026-11-10T00:36:28.696+0000] {override.py:1962} INFO - Added Permission menu access on Cluster Activity to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.709+0000] {override.py:1911} INFO - Created Permission View: menu access on Datasets
+native-webserver-1  | [2026-11-10T00:36:28.714+0000] {override.py:1962} INFO - Added Permission menu access on Datasets to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.725+0000] {override.py:1911} INFO - Created Permission View: menu access on Documentation
+native-webserver-1  | [2026-11-10T00:36:28.730+0000] {override.py:1962} INFO - Added Permission menu access on Documentation to role Admin
+native-webserver-1  | [2026-11-10T00:36:28.739+0000] {override.py:1911} INFO - Created Permission View: menu access on Docs
+native-webserver-1  | [2026-11-10T00:36:28.745+0000] {override.py:1962} INFO - Added Permission menu access on Docs to role Admin
+native-webserver-1  | [2026-11-10T00:36:30.330+0000] {override.py:1911} INFO - Created Permission View: can edit on DAGs
+native-webserver-1  | [2026-11-10T00:36:30.338+0000] {override.py:1911} INFO - Created Permission View: can delete on DAGs
+native-webserver-1  | [2026-11-10T00:36:30.345+0000] {override.py:1911} INFO - Created Permission View: can read on DAGs
+native-webserver-1  | [2026-11-10T00:36:30.546+0000] {override.py:1507} INFO - Inserted Role: Public
+native-scheduler-1  | [2026-11-10T00:52:39.807+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'profile_light', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-webserver-1  | [2026-11-10T00:36:30.551+0000] {override.py:1507} INFO - Inserted Role: Viewer
+native-scheduler-1  | [2026-11-10T00:52:39.810+0000] {local_executor.py:93} INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'profile_light', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-scheduler-1  | [2026-11-10T00:52:39.857+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:39.859+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/solution_baseline_prep.py
+native-webserver-1  | [2026-11-10T00:36:30.600+0000] {override.py:1962} INFO - Added Permission can read on DAGs to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:40.886+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.607+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Dependencies
+native-scheduler-1  | [2026-11-10T00:52:42.046+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.611+0000] {override.py:1962} INFO - Added Permission can read on DAG Dependencies to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.619+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Code
+native-scheduler-1  | [2026-11-10T00:52:42.674+0000] {task_command.py:467} INFO - Running <TaskInstance: solution_baseline_prep.profile_light native_prep_01 [queued]> on host 6c848b1e6732
+native-webserver-1  | [2026-11-10T00:36:30.624+0000] {override.py:1962} INFO - Added Permission can read on DAG Code to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.628+0000] {override.py:1962} INFO - Added Permission can read on DAG Runs to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:42.846+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.634+0000] {override.py:1911} INFO - Created Permission View: can read on Datasets
+native-scheduler-1  | [2026-11-10T00:52:43.881+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.637+0000] {override.py:1962} INFO - Added Permission can read on Datasets to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.645+0000] {override.py:1911} INFO - Created Permission View: can read on Cluster Activity
+native-scheduler-1  | [2026-11-10T00:52:43.882+0000] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='solution_baseline_prep', task_id='profile_light', run_id='native_prep_01', try_number=1, map_index=-1)
+native-webserver-1  | [2026-11-10T00:36:30.649+0000] {override.py:1962} INFO - Added Permission can read on Cluster Activity to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:43.885+0000] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=solution_baseline_prep, task_id=profile_light, run_id=native_prep_01, map_index=-1, run_start_date=2026-11-10 00:52:42.868699+00:00, run_end_date=2026-11-10 00:52:43.372698+00:00, run_duration=0.503999, state=success, executor=LocalExecutor(parallelism=1), executor_state=success, try_number=1, max_tries=2, job_id=8, pool=default_pool, queue=default, priority_weight=3, operator=_PythonDecoratedOperator, queued_dttm=2026-11-10 00:52:39.806749+00:00, queued_by_job_id=3, pid=227
+native-scheduler-1  | [2026-11-10T00:52:45.044+0000] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.train_baseline native_prep_01 [scheduled]>
+native-webserver-1  | [2026-11-10T00:36:30.653+0000] {override.py:1962} INFO - Added Permission can read on Pools to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.665+0000] {override.py:1911} INFO - Created Permission View: can read on ImportError
+native-webserver-1  | [2026-11-10T00:36:30.669+0000] {override.py:1962} INFO - Added Permission can read on ImportError to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:45.045+0000] {scheduler_job_runner.py:507} INFO - DAG solution_baseline_prep has 0/1 running and queued tasks
+native-scheduler-1  | [2026-11-10T00:52:45.045+0000] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+native-webserver-1  | [2026-11-10T00:36:30.677+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Warnings
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.train_baseline native_prep_01 [scheduled]>
+native-webserver-1  | [2026-11-10T00:36:30.681+0000] {override.py:1962} INFO - Added Permission can read on DAG Warnings to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.685+0000] {override.py:1962} INFO - Added Permission can read on Jobs to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.690+0000] {override.py:1962} INFO - Added Permission can read on My Password to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:45.048+0000] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: solution_baseline_prep.train_baseline native_prep_01 [scheduled]>] for executor: LocalExecutor(parallelism=1)
+native-webserver-1  | [2026-11-10T00:36:30.694+0000] {override.py:1962} INFO - Added Permission can edit on My Password to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.697+0000] {override.py:1962} INFO - Added Permission can read on My Profile to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.700+0000] {override.py:1962} INFO - Added Permission can edit on My Profile to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.703+0000] {override.py:1962} INFO - Added Permission can read on SLA Misses to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.706+0000] {override.py:1962} INFO - Added Permission can read on Task Instances to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.714+0000] {override.py:1911} INFO - Created Permission View: can read on Task Logs
+native-webserver-1  | [2026-11-10T00:36:30.718+0000] {override.py:1962} INFO - Added Permission can read on Task Logs to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.721+0000] {override.py:1962} INFO - Added Permission can read on XComs to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.729+0000] {override.py:1911} INFO - Created Permission View: can read on Website
+native-webserver-1  | [2026-11-10T00:36:30.733+0000] {override.py:1962} INFO - Added Permission can read on Website to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.735+0000] {override.py:1962} INFO - Added Permission menu access on Browse to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:45.048+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='solution_baseline_prep', task_id='train_baseline', run_id='native_prep_01', try_number=1, map_index=-1) to LocalExecutor with priority 2 and queue default
+native-scheduler-1  | [2026-11-10T00:52:45.049+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'train_baseline', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-webserver-1  | [2026-11-10T00:36:30.738+0000] {override.py:1962} INFO - Added Permission menu access on DAGs to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:45.054+0000] {local_executor.py:93} INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'train_baseline', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-scheduler-1  | [2026-11-10T00:52:45.160+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:45.157+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/solution_baseline_prep.py
+native-webserver-1  | [2026-11-10T00:36:30.742+0000] {override.py:1962} INFO - Added Permission menu access on DAG Dependencies to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.745+0000] {override.py:1962} INFO - Added Permission menu access on DAG Runs to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.748+0000] {override.py:1962} INFO - Added Permission menu access on Datasets to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.751+0000] {override.py:1962} INFO - Added Permission menu access on Cluster Activity to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.755+0000] {override.py:1962} INFO - Added Permission menu access on Documentation to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:46.246+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:46.462+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.759+0000] {override.py:1962} INFO - Added Permission menu access on Docs to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:47.558+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.763+0000] {override.py:1962} INFO - Added Permission menu access on Jobs to role Viewer
+native-scheduler-1  | [2026-11-10T00:52:47.953+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.766+0000] {override.py:1962} INFO - Added Permission menu access on SLA Misses to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.769+0000] {override.py:1962} INFO - Added Permission menu access on Task Instances to role Viewer
+native-webserver-1  | [2026-11-10T00:36:30.772+0000] {override.py:1507} INFO - Inserted Role: User
+native-webserver-1  | [2026-11-10T00:36:30.776+0000] {override.py:1962} INFO - Added Permission can read on DAGs to role User
+native-webserver-1  | [2026-11-10T00:36:30.781+0000] {override.py:1962} INFO - Added Permission can read on DAG Dependencies to role User
+native-scheduler-1  | [2026-11-10T00:52:48.163+0000] {task_command.py:467} INFO - Running <TaskInstance: solution_baseline_prep.train_baseline native_prep_01 [queued]> on host 6c848b1e6732
+native-webserver-1  | [2026-11-10T00:36:30.786+0000] {override.py:1962} INFO - Added Permission can read on DAG Code to role User
+native-scheduler-1  | [2026-11-10T00:52:48.992+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.789+0000] {override.py:1962} INFO - Added Permission can read on DAG Runs to role User
+native-scheduler-1  | [2026-11-10T00:52:50.026+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.795+0000] {override.py:1962} INFO - Added Permission can read on Datasets to role User
+native-scheduler-1  | [2026-11-10T00:52:50.027+0000] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='solution_baseline_prep', task_id='train_baseline', run_id='native_prep_01', try_number=1, map_index=-1)
+native-webserver-1  | [2026-11-10T00:36:30.800+0000] {override.py:1962} INFO - Added Permission can read on Cluster Activity to role User
+native-scheduler-1  | [2026-11-10T00:52:50.030+0000] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=solution_baseline_prep, task_id=train_baseline, run_id=native_prep_01, map_index=-1, run_start_date=2026-11-10 00:52:48.288937+00:00, run_end_date=2026-11-10 00:52:48.960251+00:00, run_duration=0.671314, state=success, executor=LocalExecutor(parallelism=1), executor_state=success, try_number=1, max_tries=2, job_id=9, pool=default_pool, queue=default, priority_weight=2, operator=_PythonDecoratedOperator, queued_dttm=2026-11-10 00:52:45.046338+00:00, queued_by_job_id=3, pid=232
+native-scheduler-1  | [2026-11-10T00:52:51.075+0000] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.publish_merged native_prep_01 [scheduled]>
+native-scheduler-1  | [2026-11-10T00:52:51.075+0000] {scheduler_job_runner.py:507} INFO - DAG solution_baseline_prep has 0/1 running and queued tasks
+native-scheduler-1  | [2026-11-10T00:52:51.076+0000] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+native-scheduler-1  | 	<TaskInstance: solution_baseline_prep.publish_merged native_prep_01 [scheduled]>
+native-scheduler-1  | [2026-11-10T00:52:51.077+0000] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: solution_baseline_prep.publish_merged native_prep_01 [scheduled]>] for executor: LocalExecutor(parallelism=1)
+native-webserver-1  | [2026-11-10T00:36:30.803+0000] {override.py:1962} INFO - Added Permission can read on Pools to role User
+native-webserver-1  | [2026-11-10T00:36:30.807+0000] {override.py:1962} INFO - Added Permission can read on ImportError to role User
+native-scheduler-1  | [2026-11-10T00:52:51.077+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='solution_baseline_prep', task_id='publish_merged', run_id='native_prep_01', try_number=1, map_index=-1) to LocalExecutor with priority 1 and queue default
+native-scheduler-1  | [2026-11-10T00:52:51.078+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'publish_merged', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-webserver-1  | [2026-11-10T00:36:30.811+0000] {override.py:1962} INFO - Added Permission can read on DAG Warnings to role User
+native-webserver-1  | [2026-11-10T00:36:30.814+0000] {override.py:1962} INFO - Added Permission can read on Jobs to role User
+native-scheduler-1  | [2026-11-10T00:52:51.082+0000] {local_executor.py:93} INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'publish_merged', 'native_prep_01', '--local', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py']
+native-webserver-1  | [2026-11-10T00:36:30.817+0000] {override.py:1962} INFO - Added Permission can read on My Password to role User
+native-scheduler-1  | [2026-11-10T00:52:51.115+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:51.123+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/solution_baseline_prep.py
+native-webserver-1  | [2026-11-10T00:36:30.821+0000] {override.py:1962} INFO - Added Permission can edit on My Password to role User
+native-scheduler-1  | [2026-11-10T00:52:52.173+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-webserver-1  | [2026-11-10T00:36:30.825+0000] {override.py:1962} INFO - Added Permission can read on My Profile to role User
+native-webserver-1  | [2026-11-10T00:36:30.828+0000] {override.py:1962} INFO - Added Permission can edit on My Profile to role User
+native-webserver-1  | [2026-11-10T00:36:30.831+0000] {override.py:1962} INFO - Added Permission can read on SLA Misses to role User
+native-scheduler-1  | [2026-11-10T00:52:53.044+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:53.367+0000] {task_command.py:467} INFO - Running <TaskInstance: solution_baseline_prep.publish_merged native_prep_01 [queued]> on host 6c848b1e6732
+native-scheduler-1  | [2026-11-10T00:52:54.075+0000] {dagrun.py:854} INFO - Marking run <DagRun solution_baseline_prep @ 2026-11-10 00:52:23+00:00: native_prep_01, state:running, queued_at: 2026-11-10 00:52:23.154016+00:00. externally triggered: True> successful
+native-webserver-1  | [2026-11-10T00:36:30.834+0000] {override.py:1962} INFO - Added Permission can read on Task Instances to role User
+native-webserver-1  | [2026-11-10T00:36:30.839+0000] {override.py:1962} INFO - Added Permission can read on Task Logs to role User
+native-scheduler-1  | [2026-11-10T00:52:54.075+0000] {dagrun.py:905} INFO - DagRun Finished: dag_id=solution_baseline_prep, execution_date=2026-11-10 00:52:23+00:00, run_id=native_prep_01, run_start_date=2026-11-10 00:52:23.599141+00:00, run_end_date=2026-11-10 00:52:54.075809+00:00, run_duration=30.476668, state=success, external_trigger=True, run_type=manual, data_interval_start=2026-11-10 00:52:23+00:00, data_interval_end=2026-11-10 00:52:23+00:00, dag_hash=7223e4c7323a6766deb8639e552cfdab
+native-webserver-1  | [2026-11-10T00:36:30.842+0000] {override.py:1962} INFO - Added Permission can read on XComs to role User
+native-webserver-1  | [2026-11-10T00:36:30.847+0000] {override.py:1962} INFO - Added Permission can read on Website to role User
+native-webserver-1  | [2026-11-10T00:36:30.850+0000] {override.py:1962} INFO - Added Permission menu access on Browse to role User
+native-scheduler-1  | [2026-11-10T00:52:54.079+0000] {base_executor.py:293} INFO - Executor parallelism limit reached. 0 open slots.
+native-scheduler-1  | [2026-11-10T00:52:54.080+0000] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='solution_baseline_prep', task_id='publish_merged', run_id='native_prep_01', try_number=1, map_index=-1)
+native-scheduler-1  | [2026-11-10T00:52:54.083+0000] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=solution_baseline_prep, task_id=publish_merged, run_id=native_prep_01, map_index=-1, run_start_date=2026-11-10 00:52:53.464948+00:00, run_end_date=2026-11-10 00:52:53.750754+00:00, run_duration=0.285806, state=success, executor=LocalExecutor(parallelism=1), executor_state=success, try_number=1, max_tries=2, job_id=10, pool=default_pool, queue=default, priority_weight=1, operator=_PythonDecoratedOperator, queued_dttm=2026-11-10 00:52:51.076480+00:00, queued_by_job_id=3, pid=244
+native-scheduler-1  | [2026-11-10T00:53:33.483+0000] {scheduler_job_runner.py:272} INFO - Exiting gracefully upon receiving signal 15
+native-webserver-1  | [2026-11-10T00:36:30.853+0000] {override.py:1962} INFO - Added Permission menu access on DAGs to role User
+native-scheduler-1  | [2026-11-10T00:53:34.485+0000] {process_utils.py:132} INFO - Sending 15 to group 36. PIDs of all processes in the group: [36]
+native-webserver-1  | [2026-11-10T00:36:30.856+0000] {override.py:1962} INFO - Added Permission menu access on DAG Dependencies to role User
+native-scheduler-1  | [2026-11-10T00:53:34.486+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 36
+native-webserver-1  | [2026-11-10T00:36:30.859+0000] {override.py:1962} INFO - Added Permission menu access on DAG Runs to role User
+native-webserver-1  | [2026-11-10T00:36:30.862+0000] {override.py:1962} INFO - Added Permission menu access on Datasets to role User
+native-webserver-1  | [2026-11-10T00:36:30.865+0000] {override.py:1962} INFO - Added Permission menu access on Cluster Activity to role User
+native-webserver-1  | [2026-11-10T00:36:30.869+0000] {override.py:1962} INFO - Added Permission menu access on Documentation to role User
+native-scheduler-1  | [2026-11-10T00:53:34.659+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=36, status='terminated', exitcode=0, started='00:47:24') (36) terminated with exit code 0
+native-webserver-1  | [2026-11-10T00:36:30.872+0000] {override.py:1962} INFO - Added Permission menu access on Docs to role User
+native-scheduler-1  | [2026-11-10T00:53:34.660+0000] {local_executor.py:423} INFO - Shutting down LocalExecutor; waiting for running tasks to finish.  Signal again if you don't want to wait.
+native-webserver-1  | [2026-11-10T00:36:30.876+0000] {override.py:1962} INFO - Added Permission menu access on Jobs to role User
+native-webserver-1  | [2026-11-10T00:36:30.879+0000] {override.py:1962} INFO - Added Permission menu access on SLA Misses to role User
+native-webserver-1  | [2026-11-10T00:36:30.883+0000] {override.py:1962} INFO - Added Permission menu access on Task Instances to role User
+native-scheduler-1  | [2026-11-10T00:53:34.660+0000] {scheduler_job_runner.py:1023} ERROR - Exception when executing Executor.end on LocalExecutor(parallelism=1)
+native-webserver-1  | [2026-11-10T00:36:30.886+0000] {override.py:1962} INFO - Added Permission can edit on DAGs to role User
+native-webserver-1  | [2026-11-10T00:36:30.891+0000] {override.py:1962} INFO - Added Permission can delete on DAGs to role User
+native-scheduler-1  | Traceback (most recent call last):
+native-scheduler-1  |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/scheduler_job_runner.py", line 999, in _execute
+native-webserver-1  | [2026-11-10T00:36:30.895+0000] {override.py:1962} INFO - Added Permission can create on Task Instances to role User
+native-scheduler-1  |     self._run_scheduler_loop()
+native-webserver-1  | [2026-11-10T00:36:30.898+0000] {override.py:1962} INFO - Added Permission can edit on Task Instances to role User
+native-scheduler-1  |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/scheduler_job_runner.py", line 1189, in _run_scheduler_loop
+native-webserver-1  | [2026-11-10T00:36:30.902+0000] {override.py:1962} INFO - Added Permission can delete on Task Instances to role User
+native-scheduler-1  |     time.sleep(min(self._scheduler_idle_sleep_time, next_event or 0))
+native-webserver-1  | [2026-11-10T00:36:30.905+0000] {override.py:1962} INFO - Added Permission can create on DAG Runs to role User
+native-scheduler-1  |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/scheduler_job_runner.py", line 275, in _exit_gracefully
+native-webserver-1  | [2026-11-10T00:36:30.909+0000] {override.py:1962} INFO - Added Permission can edit on DAG Runs to role User
+native-scheduler-1  |     sys.exit(os.EX_OK)
+native-scheduler-1  | SystemExit: 0
+native-webserver-1  | [2026-11-10T00:36:30.912+0000] {override.py:1962} INFO - Added Permission can delete on DAG Runs to role User
+native-scheduler-1  | 
+native-scheduler-1  | During handling of the above exception, another exception occurred:
+native-scheduler-1  | 
+native-scheduler-1  | Traceback (most recent call last):
+native-webserver-1  | [2026-11-10T00:36:30.919+0000] {override.py:1911} INFO - Created Permission View: can create on Datasets
+native-scheduler-1  |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/jobs/scheduler_job_runner.py", line 1021, in _execute
+native-scheduler-1  |     executor.end()
+native-webserver-1  | [2026-11-10T00:36:30.922+0000] {override.py:1962} INFO - Added Permission can create on Datasets to role User
+native-webserver-1  | [2026-11-10T00:36:30.926+0000] {override.py:1507} INFO - Inserted Role: Op
+native-webserver-1  | [2026-11-10T00:36:30.930+0000] {override.py:1962} INFO - Added Permission can read on DAGs to role Op
+native-scheduler-1  |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/executors/local_executor.py", line 427, in end
+native-scheduler-1  |     self.impl.end()
+native-webserver-1  | [2026-11-10T00:36:30.934+0000] {override.py:1962} INFO - Added Permission can read on DAG Dependencies to role Op
+native-webserver-1  | [2026-11-10T00:36:30.939+0000] {override.py:1962} INFO - Added Permission can read on DAG Code to role Op
+native-webserver-1  | [2026-11-10T00:36:30.942+0000] {override.py:1962} INFO - Added Permission can read on DAG Runs to role Op
+native-scheduler-1  |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/executors/local_executor.py", line 370, in end
+native-scheduler-1  |     self.queue.put((None, None))
+native-scheduler-1  |   File "<string>", line 2, in put
+native-webserver-1  | [2026-11-10T00:36:30.946+0000] {override.py:1962} INFO - Added Permission can read on Datasets to role Op
+native-webserver-1  | [2026-11-10T00:36:30.950+0000] {override.py:1962} INFO - Added Permission can read on Cluster Activity to role Op
+native-scheduler-1  |   File "/usr/local/lib/python3.11/multiprocessing/managers.py", line 821, in _callmethod
+native-webserver-1  | [2026-11-10T00:36:30.954+0000] {override.py:1962} INFO - Added Permission can read on Pools to role Op
+native-webserver-1  | [2026-11-10T00:36:30.959+0000] {override.py:1962} INFO - Added Permission can read on ImportError to role Op
+native-webserver-1  | [2026-11-10T00:36:30.964+0000] {override.py:1962} INFO - Added Permission can read on DAG Warnings to role Op
+native-scheduler-1  |     conn.send((self._id, methodname, args, kwds))
+native-webserver-1  | [2026-11-10T00:36:30.967+0000] {override.py:1962} INFO - Added Permission can read on Jobs to role Op
+native-scheduler-1  |   File "/usr/local/lib/python3.11/multiprocessing/connection.py", line 206, in send
+native-scheduler-1  |     self._send_bytes(_ForkingPickler.dumps(obj))
+native-scheduler-1  |   File "/usr/local/lib/python3.11/multiprocessing/connection.py", line 427, in _send_bytes
+native-webserver-1  | [2026-11-10T00:36:30.970+0000] {override.py:1962} INFO - Added Permission can read on My Password to role Op
+native-scheduler-1  |     self._send(header + buf)
+native-scheduler-1  |   File "/usr/local/lib/python3.11/multiprocessing/connection.py", line 384, in _send
+native-webserver-1  | [2026-11-10T00:36:30.973+0000] {override.py:1962} INFO - Added Permission can edit on My Password to role Op
+native-scheduler-1  |     n = write(self._handle, buf)
+native-webserver-1  | [2026-11-10T00:36:30.976+0000] {override.py:1962} INFO - Added Permission can read on My Profile to role Op
+native-scheduler-1  |         ^^^^^^^^^^^^^^^^^^^^^^^^
+native-webserver-1  | [2026-11-10T00:36:30.979+0000] {override.py:1962} INFO - Added Permission can edit on My Profile to role Op
+native-scheduler-1  | BrokenPipeError: [Errno 32] Broken pipe
+native-webserver-1  | [2026-11-10T00:36:30.982+0000] {override.py:1962} INFO - Added Permission can read on SLA Misses to role Op
+native-scheduler-1  | [2026-11-10T00:53:34.662+0000] {process_utils.py:132} INFO - Sending 15 to group 36. PIDs of all processes in the group: []
+native-scheduler-1  | [2026-11-10T00:53:34.662+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 36
+native-scheduler-1  | [2026-11-10T00:53:34.662+0000] {process_utils.py:101} INFO - Sending the signal 15 to process 36 as process group is missing.
+native-scheduler-1  | [2026-11-10T00:53:34.662+0000] {scheduler_job_runner.py:1029} INFO - Exited execute loop
+native-webserver-1  | [2026-11-10T00:36:30.987+0000] {override.py:1962} INFO - Added Permission can read on Task Instances to role Op
+native-webserver-1  | [2026-11-10T00:36:30.994+0000] {override.py:1962} INFO - Added Permission can read on Task Logs to role Op
+native-webserver-1  | [2026-11-10T00:36:30.999+0000] {override.py:1962} INFO - Added Permission can read on XComs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.004+0000] {override.py:1962} INFO - Added Permission can read on Website to role Op
+native-webserver-1  | [2026-11-10T00:36:31.007+0000] {override.py:1962} INFO - Added Permission menu access on Browse to role Op
+native-webserver-1  | [2026-11-10T00:36:31.010+0000] {override.py:1962} INFO - Added Permission menu access on DAGs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.014+0000] {override.py:1962} INFO - Added Permission menu access on DAG Dependencies to role Op
+native-webserver-1  | [2026-11-10T00:36:31.018+0000] {override.py:1962} INFO - Added Permission menu access on DAG Runs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.021+0000] {override.py:1962} INFO - Added Permission menu access on Datasets to role Op
+native-webserver-1  | [2026-11-10T00:36:31.024+0000] {override.py:1962} INFO - Added Permission menu access on Cluster Activity to role Op
+native-webserver-1  | [2026-11-10T00:36:31.029+0000] {override.py:1962} INFO - Added Permission menu access on Documentation to role Op
+native-webserver-1  | [2026-11-10T00:36:31.033+0000] {override.py:1962} INFO - Added Permission menu access on Docs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.036+0000] {override.py:1962} INFO - Added Permission menu access on Jobs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.039+0000] {override.py:1962} INFO - Added Permission menu access on SLA Misses to role Op
+native-webserver-1  | [2026-11-10T00:36:31.042+0000] {override.py:1962} INFO - Added Permission menu access on Task Instances to role Op
+native-webserver-1  | [2026-11-10T00:36:31.045+0000] {override.py:1962} INFO - Added Permission can edit on DAGs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.049+0000] {override.py:1962} INFO - Added Permission can delete on DAGs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.052+0000] {override.py:1962} INFO - Added Permission can create on Task Instances to role Op
+native-webserver-1  | [2026-11-10T00:36:31.055+0000] {override.py:1962} INFO - Added Permission can edit on Task Instances to role Op
+native-webserver-1  | [2026-11-10T00:36:31.058+0000] {override.py:1962} INFO - Added Permission can delete on Task Instances to role Op
+native-webserver-1  | [2026-11-10T00:36:31.062+0000] {override.py:1962} INFO - Added Permission can create on DAG Runs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.065+0000] {override.py:1962} INFO - Added Permission can edit on DAG Runs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.068+0000] {override.py:1962} INFO - Added Permission can delete on DAG Runs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.074+0000] {override.py:1962} INFO - Added Permission can create on Datasets to role Op
+native-webserver-1  | [2026-11-10T00:36:31.078+0000] {override.py:1962} INFO - Added Permission can read on Configurations to role Op
+native-webserver-1  | [2026-11-10T00:36:31.080+0000] {override.py:1962} INFO - Added Permission menu access on Admin to role Op
+native-webserver-1  | [2026-11-10T00:36:31.084+0000] {override.py:1962} INFO - Added Permission menu access on Configurations to role Op
+native-webserver-1  | [2026-11-10T00:36:31.089+0000] {override.py:1962} INFO - Added Permission menu access on Connections to role Op
+native-webserver-1  | [2026-11-10T00:36:31.094+0000] {override.py:1962} INFO - Added Permission menu access on Pools to role Op
+native-webserver-1  | [2026-11-10T00:36:31.097+0000] {override.py:1962} INFO - Added Permission menu access on Plugins to role Op
+native-webserver-1  | [2026-11-10T00:36:31.100+0000] {override.py:1962} INFO - Added Permission menu access on Variables to role Op
+native-webserver-1  | [2026-11-10T00:36:31.103+0000] {override.py:1962} INFO - Added Permission menu access on Providers to role Op
+native-webserver-1  | [2026-11-10T00:36:31.106+0000] {override.py:1962} INFO - Added Permission menu access on XComs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.109+0000] {override.py:1962} INFO - Added Permission can create on Connections to role Op
+native-webserver-1  | [2026-11-10T00:36:31.112+0000] {override.py:1962} INFO - Added Permission can read on Connections to role Op
+native-webserver-1  | [2026-11-10T00:36:31.115+0000] {override.py:1962} INFO - Added Permission can edit on Connections to role Op
+native-webserver-1  | [2026-11-10T00:36:31.118+0000] {override.py:1962} INFO - Added Permission can delete on Connections to role Op
+native-webserver-1  | [2026-11-10T00:36:31.121+0000] {override.py:1962} INFO - Added Permission can create on Pools to role Op
+native-webserver-1  | [2026-11-10T00:36:31.124+0000] {override.py:1962} INFO - Added Permission can edit on Pools to role Op
+native-webserver-1  | [2026-11-10T00:36:31.128+0000] {override.py:1962} INFO - Added Permission can delete on Pools to role Op
+native-webserver-1  | [2026-11-10T00:36:31.132+0000] {override.py:1962} INFO - Added Permission can read on Plugins to role Op
+native-webserver-1  | [2026-11-10T00:36:31.134+0000] {override.py:1962} INFO - Added Permission can read on Providers to role Op
+native-webserver-1  | [2026-11-10T00:36:31.138+0000] {override.py:1962} INFO - Added Permission can create on Variables to role Op
+native-webserver-1  | [2026-11-10T00:36:31.141+0000] {override.py:1962} INFO - Added Permission can read on Variables to role Op
+native-webserver-1  | [2026-11-10T00:36:31.145+0000] {override.py:1962} INFO - Added Permission can edit on Variables to role Op
+native-webserver-1  | [2026-11-10T00:36:31.148+0000] {override.py:1962} INFO - Added Permission can delete on Variables to role Op
+native-webserver-1  | [2026-11-10T00:36:31.152+0000] {override.py:1962} INFO - Added Permission can delete on XComs to role Op
+native-webserver-1  | [2026-11-10T00:36:31.158+0000] {override.py:1911} INFO - Created Permission View: can delete on Datasets
+native-webserver-1  | [2026-11-10T00:36:31.161+0000] {override.py:1962} INFO - Added Permission can delete on Datasets to role Op
+native-webserver-1  | [2026-11-10T00:36:31.166+0000] {override.py:1962} INFO - Added Permission can read on DAGs to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.171+0000] {override.py:1962} INFO - Added Permission can read on DAG Dependencies to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.176+0000] {override.py:1962} INFO - Added Permission can read on DAG Code to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.182+0000] {override.py:1962} INFO - Added Permission can read on Datasets to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.188+0000] {override.py:1962} INFO - Added Permission can read on Cluster Activity to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.192+0000] {override.py:1962} INFO - Added Permission can read on ImportError to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.198+0000] {override.py:1962} INFO - Added Permission can read on DAG Warnings to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.204+0000] {override.py:1962} INFO - Added Permission can read on Task Logs to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.209+0000] {override.py:1962} INFO - Added Permission can read on Website to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.212+0000] {override.py:1962} INFO - Added Permission can edit on DAGs to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.216+0000] {override.py:1962} INFO - Added Permission can delete on DAGs to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.221+0000] {override.py:1962} INFO - Added Permission can create on Datasets to role Admin
+native-webserver-1  | [2026-11-10T00:36:31.226+0000] {override.py:1962} INFO - Added Permission can delete on Datasets to role Admin
+native-webserver-1  | [2026-11-10 00:36:31 +0000] [33] [INFO] Starting gunicorn 23.0.0
+native-webserver-1  | [2026-11-10T00:36:42.331+0000] {providers_manager.py:287} INFO - Optional provider feature disabled when importing 'airflow.providers.google.leveldb.hooks.leveldb.LevelDBHook' from 'apache-airflow-providers-google' package
+native-webserver-1  | [2026-11-10 00:36:47 +0000] [33] [INFO] Listening at: http://0.0.0.0:8080 (33)
+native-webserver-1  | [2026-11-10 00:36:47 +0000] [33] [INFO] Using worker: sync
+native-webserver-1  | [2026-11-10 00:36:47 +0000] [73] [INFO] Booting worker with pid: 73
+native-webserver-1  | 127.0.0.1 - - [10/Nov/2026:00:37:02 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+native-webserver-1  | 127.0.0.1 - - [10/Nov/2026:00:37:22 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+native-webserver-1  | 127.0.0.1 - - [10/Nov/2026:00:37:42 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+native-webserver-1  | 127.0.0.1 - - [10/Nov/2026:00:38:02 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+native-webserver-1  | 127.0.0.1 - - [10/Nov/2026:00:38:22 +0000] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+native-webserver-1  | [2026-11-10 00:38:28 +0000] [73] [INFO] Worker exiting (pid: 73)
+native-webserver-1  |   ____________       _____________
+native-webserver-1  |  ____    |__( )_________  __/__  /________      __
+native-webserver-1  | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+native-webserver-1  | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+native-webserver-1  |  _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+native-webserver-1  | Running the Gunicorn Server with:
+native-webserver-1  | Workers: 1 sync
+native-webserver-1  | Host: 0.0.0.0:8080
+native-webserver-1  | Timeout: 120
+native-webserver-1  | Logfiles: - -
+native-webserver-1  | Access Logformat: 
+native-webserver-1  | =================================================================
+native-webserver-1  | [2026-11-10T00:38:28.113+0000] {webserver_command.py:430} INFO - Received signal: 15. Closing gunicorn.
+native-webserver-1  | [2026-11-10 00:38:28 +0000] [33] [INFO] Handling signal: term

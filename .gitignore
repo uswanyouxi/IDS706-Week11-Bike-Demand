@@ -85,7 +85,7 @@ Thumbs.db
 # Keep the small, frozen verified model as reproducibility evidence.
 !/docs/verification/phase-c/runs/ml_main_01/selected_model.joblib
 
-# Explicitly reviewed Parts 1-2 and Bonus captures only.
+# Explicitly reviewed Parts 1-2, adaptive Bonus and native classroom captures only.
 /screenshots/*
 !/screenshots/README.md
 !/screenshots/01_airflow_dag_success.png
@@ -100,7 +100,13 @@ Thumbs.db
 !/screenshots/12_bonus_evaluation_suite.png
 !/screenshots/12b_bonus_evaluation_criteria.png
 !/screenshots/13_bonus_baseline_comparison.png
-!/screenshots/14_bonus_agent_metrics.png
+!/screenshots/14_bonus_policy_comparison.png
+!/screenshots/20_native_and_regression_scopes.png
+!/screenshots/19_native_classification_results.png
+!/screenshots/18_native_langgraph_execution.png
+!/screenshots/17_native_airflow_metrics.png
+!/screenshots/16_native_airflow_graph.png
+!/screenshots/15_native_airflow_success.png
 
 # Downloaded resolver/reference scratch files and original authoring prompts
 /docs/verification/official-airflow-compose.yaml

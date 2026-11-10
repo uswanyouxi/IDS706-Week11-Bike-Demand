@@ -1,83 +1,39 @@
-> Historical Part 1 evidence bundle: statements below describe its original export scope before Part 2. Final update November 9, 2026: both parts are verified and all six real screenshots are captured. See [the root README](../../README.md) and [current screenshot index](../../screenshots/README.md). The original data, machine-readable records and chart bytes remain unchanged.
+# Part 1: PostgreSQL and EDA evidence
 
-# Part 1 submission evidence
+The original Airflow pipeline downloads UCI daily bike counts and Open-Meteo ERA5 weather, cleans each source independently, validates a one-to-one date merge, loads application PostgreSQL and queries it back for analysis. See the [root README](../../README.md) for architecture and running instructions.
 
-This bundle is sourced from real, successful Part 1 executions. It contains no
-invented screenshots or model/evaluation results. Successful pipeline logic was
-not modified. No new DAG was triggered, database data changed, service stopped,
-Part 2 started, or Git push performed.
+## Verified results
 
-## Reviewed requirements
-
-The project-supplied assignment/requirements.md and assignment/ta_clarifications.md
-were read completely. They require an original scheduled Airflow pipeline, two
-distinct related sources cleaned separately and merged, database persistence,
-database-fed analysis, setup/README documentation and genuine DAG-success/graph
-screenshots. They require an original agent loop for Part 2, which is deferred.
-The TA demo pipeline/loop was not reused.
-
-The assignment file is a transcription from the user's screenshots; Canvas's
-original wording/deadline and course AI-use policy were not independently accessed.
-
-## Verified current evidence
-
-- DAG: dc_bike_weather_daily.
-- All three original successful runs remain in live Airflow.
-- Each run still has all nine task instances in success state.
-- Current read-only PostgreSQL snapshot: 731 rows, 731 unique dates,
-  2011-01-01–2012-12-31, 3,292,679 rentals and one dataset hash.
-- Prior before/after refresh snapshots match current totals; all three persisted
-  loads use the same hash and have EDA recorded.
-- Genuine chart/validation exports match source-container SHA-256 hashes.
-- GUI inspection could not start because of the sandbox helper failure; no visual
-  observation or screenshot capture is claimed. Use the manual guide.
-
-## Bundle contents
-
-| Location | Purpose |
+| Measure | Recorded result |
 | --- | --- |
-| eda/weekday_mean_rentals.png | Actual PostgreSQL-fed weekday means |
-| eda/monthly_mean_rentals.png | Actual PostgreSQL-fed monthly means |
-| eda/weather_vs_demand.png | Actual PostgreSQL-fed demand/ERA5 temperature, colored by precipitation |
-| eda/summary.json, summary.txt | Findings, exact SELECT, source provenance, run ID and dataset hash |
-| validation/bike.json, weather.json, merged.json | Real cleaning coverage/date/timezone and merge diagnostics |
-| validation/load-receipt.json | Actual committed row count/hash receipt |
-| postgres_report.md / .txt | Human-readable read-only DB and historical idempotence report |
-| postgres_live_snapshot.json | Fresh server-enforced READ ONLY query output |
-| postgres_verify.sql | Exact read-only verification query |
-| idempotence_before.json, idempotence_after.json | Preserved original controlled-run snapshots; not a new experiment |
-| airflow/live-runs.json and *-tasks.json | Fresh native Airflow run/task states |
-| airflow/live-check.json | Recheck time, 9/9 task verification and next schedule |
-| airflow/ui-link-checks.json | HTML route reachability only, not a visual UI check |
-| manifest.json | Export origin/run, hash comparisons and no-write/no-screenshot scope |
-| repository-state.json | Read-only local Git submission-state check |
-| capture-guide.md | Exact pages, manual screenshot filenames and capture instructions |
+| DAG | dc_bike_weather_daily; daily 06:00 America/New_York |
+| Successful executions | Three recorded runs, nine successful tasks each |
+| Date coverage | 2011-01-01 through 2012-12-31 |
+| Final rows / unique dates | 731 / 731 |
+| Date merge | 731 matches; zero bike-only or weather-only dates |
+| Total rentals | 3,292,679 |
+| Repeated loads | Same row count, unique dates and dataset hash; no duplicates |
 
-The source run for these three EDA charts is phase_b_manual_02. They are copied
-unchanged from the live project-artifacts named volume, not recomputed from host
-raw CSVs. mean daily rentals=4,504.35; temperature Pearson r=0.607441 and
-precipitation Pearson r=-0.280501. These are retrospective, confounded associations,
-not a trained model, causal claim or future forecast.
+The [read-only PostgreSQL report](postgres_report.md) records the query time, totals and load history. [Before](idempotence_before.json) and [after](idempotence_after.json) snapshots document the controlled idempotence test. These are recorded observations, not a claim that this page continuously queries live services.
 
-## Remaining submission gaps
+## Three database-fed EDA charts
 
-1. Capture the two required real Airflow UI screenshots (successful run and graph).
-   Four supporting screenshots are specified in capture-guide.md.
-2. Review and include source/setup/README/evidence and captured PNGs in the final
-   repository. Screenshots are ignored by default and require deliberate inclusion.
-   The live Git check found no HEAD commit and zero tracked files. No staging/commit/
-   push was performed; repository-state.json records that state.
-3. Check Canvas's exact submission instructions/deadline and any required AI-use
-   disclosure. The full Parts 1–2 submission still needs Part 2 later.
+Charts were exported unchanged from the verified phase_b_manual_02 artifacts. The analysis opens a fresh application-database connection after loading; it does not analyze the in-memory merge or a host CSV.
 
-No Part 1 pipeline/runtime gap was found in this evidence recheck. Services remain
-running; credentials/tokens are not copied into this bundle.
+| Chart | Content |
+| --- | --- |
+| [Weekday mean rentals](eda/weekday_mean_rentals.png) | Average daily rentals by weekday |
+| [Monthly mean rentals](eda/monthly_mean_rentals.png) | Average daily rentals by calendar month |
+| [Weather and demand](eda/weather_vs_demand.png) | Rental count versus temperature, with precipitation shown by color |
 
-To refresh the read-only evidence after reviewing its scope:
+Mean demand is **4,504.35 rentals/day**. Pearson correlations are **0.607441** for temperature and **-0.280501** for precipitation. These are descriptive historical associations, not causal effects or a future forecast. The [EDA summary](eda/summary.json) retains the actual query, run ID, provenance and dataset hash.
 
-~~~powershell
-py -3.11 scripts/prepare_part1_evidence.py
-~~~
+## Validation and reproducibility
 
-The script reads Airflow and app PostgreSQL and copies existing files. It does not
-run ingestion, mutate data or test new idempotence through a DAG rerun.
+- [Bike cleaning](validation/bike.json), [weather cleaning](validation/weather.json), [date merge](validation/merged.json) and [committed load receipt](validation/load-receipt.json).
+- [Recorded PostgreSQL snapshot](postgres_live_snapshot.json) and [read-only SQL](postgres_verify.sql).
+- [Airflow task/run verification](airflow/live-check.json) and [export hashes/origin](manifest.json).
+- [Real application screenshots](../../screenshots/README.md): successful Airflow Grid and parallel graph.
+- [Part 1 runtime report](../../docs/verification/phase-b/status.md).
+
+Machine-readable exports, image bytes and historical logs retain their original contents and timestamps. Parts 1 and 2 are complete; the separate [optional adaptive extension](../../bonus/README.md) documents its own results and baseline limitations.

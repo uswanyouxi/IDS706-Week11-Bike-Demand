@@ -1,0 +1,84 @@
+{
+  "repository": "Kedar-V/automl-research-lab",
+  "commit": "a294145ea9aa4225908ce701c06160c33213335d",
+  "source_files": {
+    "README.md": {
+      "git_blob_sha1": "1ba8da64734df72bf006a40a2844e3d0d0fc205b",
+      "sha256": "bd7965a9673d3e6180ab53ed62c19247135901152e6f77e79ad882bb79557872",
+      "bytes": 11382
+    },
+    "datasets/airflow/ATTRIBUTION.md": {
+      "git_blob_sha1": "3e3748f93b05dd9c2057fcea2c93ace4bf720ea6",
+      "sha256": "744658acc65562ad78d26032a93a6c315985cbfb63b456ac4a18f98f9244fb9f",
+      "bytes": 932
+    },
+    "datasets/airflow/customers.csv": {
+      "git_blob_sha1": "62efafca176af7e4511b5f2d272d6eb0ce478e2f",
+      "sha256": "1ba421bc631ce866d1a4c35ecd87b11e7dc97e17f66a984b64ca463407739cd8",
+      "bytes": 101313
+    },
+    "datasets/airflow/transactions.csv": {
+      "git_blob_sha1": "6c57e607cbf1ca066b0ab2208b811328905c71b9",
+      "sha256": "fcf34c384f5f414471cb4b587148132ab528d701c6e64d2ec716c0c01b6b5f91",
+      "bytes": 1960241
+    },
+    "lab/airflow/dags/lab_baseline_prep.py": {
+      "git_blob_sha1": "ce7e879f695fde6a5dc82e30de125de227481f73",
+      "sha256": "15d63597ccc27b19a79ca0401bb9a472722ff1df920cf36d813bb15d35ccacd0",
+      "bytes": 5258
+    },
+    "lab/langgraph/graph.py": {
+      "git_blob_sha1": "2bc4ff33eb26df966fdb4aa2520350fb0ddabc36",
+      "sha256": "989d3e1252dcf6f5ddf78c50960a581ac52ad9c4be8539090743dd1c6511deff",
+      "bytes": 15593
+    },
+    "loop_runtime.py": {
+      "git_blob_sha1": "28d9db6a288fc466ffb59391baba11ffcc2fc59f",
+      "sha256": "c62be74c2a56dc2f164f2c661fc3bf94527558aeeb730a24737483e142373231",
+      "bytes": 18924
+    },
+    "scripts/eval_baselines.py": {
+      "git_blob_sha1": "e57f78d99aa332eb6619784c1b29c3acc0ab2e48",
+      "sha256": "2720c3b5fb9e88aa61454068840acc33fa7fe8ba4000bd390d9dfddf607dc50e",
+      "bytes": 5974
+    },
+    "solution/airflow/dags/solution_baseline_prep.py": {
+      "git_blob_sha1": "a457532a7cf3e29ff4e326705bed64aa8aa988f5",
+      "sha256": "18a300dfa413782fa554eccbcdd85b822e914f9a5fa4bbcb9d7f96a0667b9a63",
+      "bytes": 7794
+    },
+    "solution/langgraph/baseline.py": {
+      "git_blob_sha1": "94638dc25f1be23e68271814b2ea197048d7801f",
+      "sha256": "9509e0388af917f238ab5bed52012056de7cf4152dd76bc5dd6078b4390410ee",
+      "bytes": 15584
+    },
+    "solution/langgraph/graph.py": {
+      "git_blob_sha1": "209dd049b8be73efdee5fb2a2f34799800686bdd",
+      "sha256": "f9d24d22c9366d7a7d5ab497880f0b37d5928f9a24894f58b8d2bbd14741dee5",
+      "bytes": 29754
+    },
+    "solution/airflow/dags/solution_baseline_and_trigger.py": {
+      "git_blob_sha1": "805a6734f85d921c4c86008cf3722b1d6123a995",
+      "sha256": "0994888854c49969af2490834670041b11f6fa4671c112895ad08d6cf28bef5a",
+      "bytes": 6578
+    },
+    "infra/Dockerfile.airflow": {
+      "git_blob_sha1": "fd9f094a47a42b227356af8e36b1d9b4120a9e6b",
+      "sha256": "4f24268390bac524551278bbff75dcd0df131de280fb978ece51d9da4862e533",
+      "bytes": 354
+    },
+    "infra/docker-compose.yml": {
+      "git_blob_sha1": "12bb3fb2203657a1a11de6ce30e861fa3ecd0cc0",
+      "sha256": "e6be79c0fb13ee5d230ba1ab52f35eacd8e1d930f8d95cf65d20864b737864bc",
+      "bytes": 12422
+    }
+  },
+  "ignored_reference_cache": "artifacts/native-classroom-reference",
+  "official_constraints": {
+    "url": "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.4/constraints-3.11.txt",
+    "git_blob_sha1": "fa933ff3cc54f7804bad3c70e3f5d140ebf46d7e",
+    "sha256": "0f1325b37c63bc5f616edc58571960c760d6836a0799f0956855fc3320526f83"
+  },
+  "inspection_only": true,
+  "native_dag_execution_performed": false
+}

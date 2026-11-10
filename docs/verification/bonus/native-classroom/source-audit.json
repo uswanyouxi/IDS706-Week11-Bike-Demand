@@ -1,0 +1,111 @@
+{
+  "checked_at_utc": "2026-11-10T00:00:30.043247+00:00",
+  "commit": "a294145ea9aa4225908ce701c06160c33213335d",
+  "verified_source_files": 14,
+  "paths": {
+    "README.md": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/README.md",
+    "datasets/airflow/ATTRIBUTION.md": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/datasets/airflow/ATTRIBUTION.md",
+    "datasets/airflow/customers.csv": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/datasets/airflow/customers.csv",
+    "datasets/airflow/transactions.csv": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/datasets/airflow/transactions.csv",
+    "lab/airflow/dags/lab_baseline_prep.py": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/lab/airflow/dags/lab_baseline_prep.py",
+    "lab/langgraph/graph.py": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/lab/langgraph/graph.py",
+    "loop_runtime.py": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/loop_runtime.py",
+    "scripts/eval_baselines.py": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/scripts/eval_baselines.py",
+    "solution/airflow/dags/solution_baseline_prep.py": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/solution/airflow/dags/solution_baseline_prep.py",
+    "solution/langgraph/baseline.py": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/solution/langgraph/baseline.py",
+    "solution/langgraph/graph.py": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/solution/langgraph/graph.py",
+    "solution/airflow/dags/solution_baseline_and_trigger.py": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/solution/airflow/dags/solution_baseline_and_trigger.py",
+    "infra/Dockerfile.airflow": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/infra/Dockerfile.airflow",
+    "infra/docker-compose.yml": "https://github.com/Kedar-V/automl-research-lab/blob/a294145ea9aa4225908ce701c06160c33213335d/infra/docker-compose.yml"
+  },
+  "executable_native_dag": {
+    "id": "solution_baseline_prep",
+    "tasks": [
+      "validate_customers",
+      "validate_transactions",
+      "merge_csvs",
+      "make_subset",
+      "profile_light",
+      "train_baseline",
+      "publish_merged"
+    ],
+    "schedule": null,
+    "subset_rows": 2000,
+    "sample_stratified": false,
+    "split_train_validation": [
+      0.8,
+      0.2
+    ],
+    "estimator": "LogisticRegression(max_iter=500,class_weight=balanced)",
+    "features": "numeric only after native profile drops; fillna(0)",
+    "metrics_emitted": [
+      "f1",
+      "n_train",
+      "n_val"
+    ],
+    "heldout_test": false,
+    "executed": false
+  },
+  "stub_trigger_dag": "solution_baseline_and_trigger has real prep plus an explicit trigger stub",
+  "student_stubs": [
+    "lab/airflow/dags/lab_baseline_prep.py",
+    "lab/langgraph/graph.py"
+  ],
+  "native_graph": {
+    "path": "solution/langgraph/graph.py",
+    "complete": true,
+    "agents": [
+      "data_scientist",
+      "hypothesis_generator",
+      "ml_engineer",
+      "judge",
+      "memory_writer",
+      "context_builder",
+      "holdout_eval"
+    ],
+    "no_key_path": "native heuristic profile/plan/spec/verdict, with one-pass fit repair",
+    "selection_train_val_holdout": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "final_fit_fraction": 0.8,
+    "native_target_score": 0.8,
+    "proposed_max_cycles": 3,
+    "seed": 42,
+    "new_execution_performed": false
+  },
+  "cli_helper_is_not_dag_equivalent": {
+    "file": "solution/langgraph/baseline.py",
+    "differences": [
+      "Proportional class sampling rather than the DAG random sample",
+      "Numeric/categorical preprocessing rather than numeric-only fillna(0)",
+      "60/20/20 partitions rather than 80/20 train/validation"
+    ],
+    "consequence": "Earlier CLI F1 is not the unexecuted native DAG F1"
+  },
+  "data": {
+    "customers_rows": 1000,
+    "transactions_rows": 10000,
+    "fraud_class_counts": {
+      "0": 9694,
+      "1": 306
+    },
+    "target": "is_fraud",
+    "attribution": "Pinned classroom ATTRIBUTION.md: synthetic educational Kaggle data, CC BY-NC-SA 4.0"
+  },
+  "environment": {
+    "native_airflow": "2.10.4-python3.11",
+    "proposed_data_pins": {
+      "numpy": "1.26.4",
+      "pandas": "2.1.4",
+      "scikit-learn": "1.5.2",
+      "scipy": "1.14.1"
+    },
+    "official_constraints_download_verified": true,
+    "dependency_resolution_and_build_verified": false,
+    "native_loop_image": "ids706-ml:1.0.0",
+    "source_edits": null
+  },
+  "no_new_metrics_claimed": true
+}

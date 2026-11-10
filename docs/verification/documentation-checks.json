@@ -1,0 +1,129 @@
+{
+  "checked_at_utc": "2026-11-09T23:48:16.887914+00:00",
+  "branch": "bonus/adaptive-multi-agent",
+  "head_commit": "a8715ad027e7f6740bbe4be987f60d93ee252842",
+  "published_refs_verified": "GitHub connector read confirmed main and bonus/adaptive-multi-agent; published Bonus README blob matches HEAD",
+  "docker": "Server=29.7.2 OS=linux",
+  "fresh_saved_execution_audits": {
+    "passed": 27,
+    "total": 27,
+    "no_training": true
+  },
+  "fresh_readonly_postgres": {
+    "rows": 731,
+    "unique_dates": 731,
+    "total_rentals": 3292679,
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "readonly": "on"
+  },
+  "python_syntax_files": 60,
+  "markdown_targets_checked": 224,
+  "broken_links": [],
+  "linked_files_excluded": [],
+  "secret_scan_text_files": 589,
+  "secret_findings": [],
+  "ignore_probes_passed": 17,
+  "png_files_validated": 13,
+  "screenshots": {
+    "01_airflow_dag_success.png": {
+      "width": 2048,
+      "height": 999,
+      "sha256": "77fe5e40da57c0385b64ca71ccddce3852e3db040018ca0dd5ab69b217cb2ae6"
+    },
+    "02_airflow_graph.png": {
+      "width": 2452,
+      "height": 1324,
+      "sha256": "48a94895ff007a3662a541ec1049f3a897c3eec0656c124850cd8f4283605fd7"
+    },
+    "06_langgraph_live_execution.png": {
+      "width": 2048,
+      "height": 817,
+      "sha256": "c3399d69594dbb579fe8ff38098871791fff1bfc52b602aa8df71900490c1be3"
+    },
+    "07_langgraph_conditional_retry.png": {
+      "width": 1071,
+      "height": 742,
+      "sha256": "1d28a174c2ebdf689e39d5958dcc928bac7c68d75a23a74423c0288a5b1e156c"
+    },
+    "08_regression_evaluation.png": {
+      "width": 2048,
+      "height": 1027,
+      "sha256": "9c328ccd4a6db6efd22960147ddb53c5a5fd37c101662e7aa2095b21fdf55d57"
+    },
+    "09_model_comparison_charts.png": {
+      "width": 2048,
+      "height": 577,
+      "sha256": "d9e12ef82053a71ba2c2c2374b7267be9bb3eaf333d9024d5824aa25c84a56e7"
+    },
+    "10_bonus_adaptive_graph.png": {
+      "width": 1854,
+      "height": 1549,
+      "sha256": "93a564a318ba51f882ce9ad7a7fe81ea14dfbe02973472544166d4cd206a8620"
+    },
+    "11_bonus_routing_recovery.png": {
+      "width": 1849,
+      "height": 1587,
+      "sha256": "1d5fcd77a56e9254ad9dd828df5340b365e2a82ced71c32b9c7b9b85861b2078"
+    },
+    "11b_bonus_recovery_events.png": {
+      "width": 792,
+      "height": 1384,
+      "sha256": "bb9172cc01d777b2a4424db07220e386f6462c98c7980ffbce7c77c45a5477fd"
+    },
+    "12_bonus_evaluation_suite.png": {
+      "width": 1876,
+      "height": 1420,
+      "sha256": "169a7e83be3e5e5e677525c1c95aa0b011079b962db76645e387d1469ca0da46"
+    },
+    "12b_bonus_evaluation_criteria.png": {
+      "width": 1815,
+      "height": 1846,
+      "sha256": "3b17dd65df54ebfa8ac2448f8c3559f9a17b43b99d426bb03e36d45cacee7fd1"
+    },
+    "13_bonus_baseline_comparison.png": {
+      "width": 1876,
+      "height": 1420,
+      "sha256": "03d13c0c45b83e93a0e58c2861c965b46e76a388231e927c152624880c785a08"
+    },
+    "14_bonus_policy_comparison.png": {
+      "width": 1903,
+      "height": 802,
+      "sha256": "a10f18d561ed058f2f40dbe4bc3462a34d54e30c36f640bd7c8418b19ded4657"
+    }
+  },
+  "rename": {
+    "old": "screenshots/14_bonus_agent_metrics.png",
+    "new": "screenshots/14_bonus_policy_comparison.png",
+    "identical_bytes": true,
+    "old_file_absent": true
+  },
+  "source_algorithms_tests_compose_requirements_unchanged": true,
+  "secrets_unchanged": true,
+  "historical_logs_bytes_and_mtime_unchanged": 101,
+  "other_preserved_files": 601,
+  "historical_reports_not_overwritten": true,
+  "git_diff_check": "passed",
+  "git_cached_diff_check": "passed",
+  "compose_config": "passed",
+  "current_bonus_inventory_files": 308,
+  "staged_files": [],
+  "existing_reviewer": {
+    "exit_code": 1,
+    "result": "FAILED: historical preservation assumptions reject authorized documentation changes",
+    "stderr": "Traceback (most recent call last):\n  File \"D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\review_submission.py\", line 137, in <module>\n    if __name__==\"__main__\":main()\n                            ^^^^^^\n  File \"D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\review_submission.py\", line 34, in main\n    assert set(changed)<=ALLOWED,changed\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ['.gitignore', 'README.md', 'agents/README.md', 'docs/checklist.md', 'docs/running.md', 'docs/submission.md', 'screenshots/README.md', 'submission/part1/README.md']\n",
+    "additional_known_assumptions": [
+      "Root README must retain the entire original main README as a prefix",
+      "Permitted original changes limited to README.md, .gitignore and screenshots/README.md"
+    ],
+    "validation_logic_unchanged": true,
+    "only_reviewer_edit": "Expected screenshot filename metadata"
+  },
+  "test_results": "Historical 102 passed retained; no tests, DAGs or production models rerun for documentation cleanup",
+  "remaining_grading_issues": [
+    "Strict native classroom Airflow baseline not executed",
+    "Regression ports are simplified adaptations",
+    "Candidate validation predictions not saved",
+    "Policy chart does not show per-agent timings; values retained in run reports"
+  ],
+  "scope": "Documentation, current filename inventory and one reviewer screenshot metadata string only; no Git index mutation, commit, push, merge, container startup or SQL writes"
+}

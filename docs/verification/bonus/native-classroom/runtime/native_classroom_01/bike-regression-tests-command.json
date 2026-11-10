@@ -1,0 +1,24 @@
+{
+  "at_utc": "2026-11-10T00:58:13.978667+00:00",
+  "command": [
+    "docker",
+    "compose",
+    "--project-name",
+    "ids706-classroom-native-v1",
+    "--env-file",
+    "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-local\\.env",
+    "-f",
+    "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom\\compose.yaml",
+    "run",
+    "--rm",
+    "--no-deps",
+    "-e",
+    "PYTHONPATH=/student/src",
+    "--entrypoint",
+    "/bin/sh",
+    "native-loop-worker",
+    "-c",
+    "umask 0002; mkdir -p /evidence/native_classroom_01/tests; exec python -m pytest /student/tests/unit /student/tests/ml /student/tests/bonus --ignore=/student/tests/bonus/test_postgres.py -c /student/pytest.ini -p no:cacheprovider -q -ra --junitxml=/evidence/native_classroom_01/tests/bike-regression.xml"
+  ],
+  "scope": "Native project only"
+}

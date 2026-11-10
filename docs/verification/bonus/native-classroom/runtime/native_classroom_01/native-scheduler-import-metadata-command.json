@@ -1,0 +1,24 @@
+{
+  "at_utc": "2026-11-10T00:46:55.923429+00:00",
+  "command": [
+    "docker",
+    "compose",
+    "--project-name",
+    "ids706-classroom-native-v1",
+    "--env-file",
+    "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-local\\.env",
+    "-f",
+    "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom\\compose.yaml",
+    "exec",
+    "-T",
+    "native-db",
+    "psql",
+    "-U",
+    "native_airflow",
+    "-d",
+    "native_airflow",
+    "-c",
+    "BEGIN READ ONLY; SELECT dag_id,is_paused,has_import_errors FROM dag WHERE dag_id='solution_baseline_prep'; SELECT count(*) AS native_run_count FROM dag_run WHERE dag_id='solution_baseline_prep'; COMMIT;"
+  ],
+  "scope": "Native project only"
+}

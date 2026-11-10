@@ -1,0 +1,392 @@
+{
+  "name": "ids706-classroom-native-v1",
+  "network_mode": "none",
+  "services": {
+    "native-airflow-init": {
+      "image": "ids706-native-airflow:2.10.4-py3.11",
+      "mem_limit": "805306368",
+      "cpus": 1,
+      "ports": null,
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference\\solution\\airflow\\dags\\solution_baseline_prep.py",
+          "target": "/opt/airflow/dags/solution_baseline_prep.py",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference",
+          "target": "/reference",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom",
+          "target": "/harness",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-repository",
+          "target": "/repo",
+          "volume": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-logs",
+          "target": "/opt/airflow/logs",
+          "volume": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-evidence",
+          "target": "/evidence",
+          "volume": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference\\datasets\\airflow\\customers.csv",
+          "target": "/repo/datasets/airflow/customers.csv",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference\\datasets\\airflow\\transactions.csv",
+          "target": "/repo/datasets/airflow/transactions.csv",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "native-db": {
+      "image": "postgres:16.11-bookworm",
+      "mem_limit": "268435456",
+      "cpus": 0.5,
+      "ports": null,
+      "volumes": [
+        {
+          "type": "volume",
+          "source": "native-metadata",
+          "target": "/var/lib/postgresql/data",
+          "volume": {}
+        }
+      ]
+    },
+    "native-loop-worker": {
+      "image": "ids706-ml:1.0.0",
+      "mem_limit": "805306368",
+      "cpus": 1,
+      "ports": null,
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom",
+          "target": "/harness",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference",
+          "target": "/reference",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\src",
+          "target": "/student/src",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\tests",
+          "target": "/student/tests",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\scripts",
+          "target": "/student/scripts",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\sql",
+          "target": "/student/sql",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\requirements",
+          "target": "/student/requirements",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\dags",
+          "target": "/student/dags",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\data\\raw",
+          "target": "/student/data/raw",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\pytest.ini",
+          "target": "/student/pytest.ini",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-repository",
+          "target": "/repo",
+          "read_only": true,
+          "volume": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-evidence",
+          "target": "/evidence",
+          "volume": {}
+        }
+      ]
+    },
+    "native-scheduler": {
+      "image": "ids706-native-airflow:2.10.4-py3.11",
+      "mem_limit": "1073741824",
+      "cpus": 1,
+      "ports": null,
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference\\solution\\airflow\\dags\\solution_baseline_prep.py",
+          "target": "/opt/airflow/dags/solution_baseline_prep.py",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference",
+          "target": "/reference",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom",
+          "target": "/harness",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-repository",
+          "target": "/repo",
+          "volume": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-logs",
+          "target": "/opt/airflow/logs",
+          "volume": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-evidence",
+          "target": "/evidence",
+          "volume": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference\\datasets\\airflow\\customers.csv",
+          "target": "/repo/datasets/airflow/customers.csv",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference\\datasets\\airflow\\transactions.csv",
+          "target": "/repo/datasets/airflow/transactions.csv",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "native-storage-init": {
+      "image": "ids706-native-airflow:2.10.4-py3.11",
+      "mem_limit": "134217728",
+      "cpus": 0.25,
+      "ports": null,
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom",
+          "target": "/harness",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-repository",
+          "target": "/repo",
+          "volume": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-logs",
+          "target": "/opt/airflow/logs",
+          "volume": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-evidence",
+          "target": "/evidence",
+          "volume": {}
+        }
+      ]
+    },
+    "native-viewer": {
+      "image": "ids706-ml:1.0.0",
+      "mem_limit": "268435456",
+      "cpus": 0.5,
+      "ports": [
+        {
+          "mode": "ingress",
+          "host_ip": "127.0.0.1",
+          "target": 8503,
+          "published": "8503",
+          "protocol": "tcp"
+        }
+      ],
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom",
+          "target": "/harness",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-evidence",
+          "target": "/evidence",
+          "read_only": true,
+          "volume": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\docs\\verification\\bonus\\runtime\\evaluations\\bonus_suite_01",
+          "target": "/bike-suite",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "native-webserver": {
+      "image": "ids706-native-airflow:2.10.4-py3.11",
+      "mem_limit": "805306368",
+      "cpus": 0.5,
+      "ports": [
+        {
+          "mode": "ingress",
+          "host_ip": "127.0.0.1",
+          "target": 8080,
+          "published": "8088",
+          "protocol": "tcp"
+        }
+      ],
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference\\solution\\airflow\\dags\\solution_baseline_prep.py",
+          "target": "/opt/airflow/dags/solution_baseline_prep.py",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference",
+          "target": "/reference",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom",
+          "target": "/harness",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-repository",
+          "target": "/repo",
+          "volume": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-logs",
+          "target": "/opt/airflow/logs",
+          "volume": {}
+        },
+        {
+          "type": "volume",
+          "source": "native-evidence",
+          "target": "/evidence",
+          "volume": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference\\datasets\\airflow\\customers.csv",
+          "target": "/repo/datasets/airflow/customers.csv",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-reference\\datasets\\airflow\\transactions.csv",
+          "target": "/repo/datasets/airflow/transactions.csv",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    }
+  },
+  "volumes": {
+    "native-evidence": {
+      "name": "ids706-classroom-native-v1_native-evidence"
+    },
+    "native-logs": {
+      "name": "ids706-classroom-native-v1_native-logs"
+    },
+    "native-metadata": {
+      "name": "ids706-classroom-native-v1_native-metadata"
+    },
+    "native-repository": {
+      "name": "ids706-classroom-native-v1_native-repository"
+    }
+  },
+  "networks": {
+    "default": {
+      "name": "ids706-classroom-native-v1_default",
+      "ipam": {}
+    }
+  }
+}

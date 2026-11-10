@@ -1,0 +1,13 @@
+{
+  "at_utc": "2026-11-10T00:40:42.734793+00:00",
+  "reason": "Host memory fell below the unchanged 2.5 GiB training gate after native service warmup",
+  "only_new_native_services_stopped": [
+    "native-webserver",
+    "native-scheduler"
+  ],
+  "native_local_executor_task_slots": 1,
+  "native_source_code_changes": false,
+  "production_services_changed": false,
+  "timing_comparison_limit": "Serialized resource-constrained native environment; no cross-environment speed ranking",
+  "windows_gate_gib": 2.5
+}

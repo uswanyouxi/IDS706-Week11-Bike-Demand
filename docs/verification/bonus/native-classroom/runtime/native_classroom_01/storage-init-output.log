@@ -1,0 +1,1 @@
+native-storage-init-1  | {"initialized": ["/repo", "/repo/datasets", "/repo/datasets/airflow", "/repo/artifacts", "/repo/artifacts/airflow", "/repo/artifacts/airflow/runs", "/opt/airflow/logs", "/evidence"], "filesystem_available_bytes": 1012332052480}

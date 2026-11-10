@@ -1,0 +1,18 @@
+native-airflow-init-1  | 
+native-airflow-init-1  | DB: postgresql+psycopg2://native_airflow:***@native-db:5432/native_airflow
+native-airflow-init-1  | Performing upgrade to the metadata database postgresql+psycopg2://native_airflow:***@native-db:5432/native_airflow
+native-airflow-init-1  | [2026-11-10T00:35:41.528+0000] {migration.py:207} INFO - Context impl PostgresqlImpl.
+native-airflow-init-1  | [2026-11-10T00:35:41.528+0000] {migration.py:210} INFO - Will assume transactional DDL.
+native-airflow-init-1  | [2026-11-10T00:35:41.529+0000] {migration.py:207} INFO - Context impl PostgresqlImpl.
+native-airflow-init-1  | [2026-11-10T00:35:41.530+0000] {migration.py:210} INFO - Will assume transactional DDL.
+native-airflow-init-1  | Database migrating done!
+native-airflow-init-1  | INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+native-airflow-init-1  | INFO  [alembic.runtime.migration] Will assume transactional DDL.
+native-airflow-init-1  | INFO  [alembic.runtime.migration] Running stamp_revision  -> 5f2621c13b39
+native-airflow-init-1  | [2026-11-10T00:35:46.496+0000] {db.py:1812} INFO - Connection successful.
+native-airflow-init-1  | []
+native-airflow-init-1  | [2026-11-10T00:35:56.158+0000] {override.py:964} WARNING - No user yet created, use flask fab command to do it.
+native-airflow-init-1  | [2026-11-10T00:35:56.762+0000] {override.py:1596} INFO - Added user native_admin
+native-airflow-init-1  | User "native_admin" created with role "Admin"
+native-airflow-init-1  | /home/airflow/.local/lib/python3.11/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+native-airflow-init-1  | Native metadata and administrator initialized; credentials are not printed.

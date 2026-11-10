@@ -1,42 +1,53 @@
-# Real submission screenshots - required Parts 1-2 and optional Bonus
+# Application screenshots
 
-All six screenshots have been captured from the real Airflow/Streamlit applications, supplied by the user, and visually reviewed on November 9, 2026 (America/New_York). No image was fabricated, generated, edited or renamed during final preparation.
+Nineteen genuine Airflow/Streamlit captures document the required workflows and optional adaptive extension. Graph colors, traces and metrics reflect recorded execution. Some captures crop long reasons; complete events and reports are retained in the verification artifacts.
 
-| Existing file | What the image actually shows |
+## Parts 1 and 2
+
+| File | Visible evidence |
 | --- | --- |
-| [01_airflow_dag_success.png](01_airflow_dag_success.png) | Airflow DAG dc_bike_weather_daily; Grid with all nine task rows green across three runs, successful-run summary and daily cron |
-| [02_airflow_graph.png](02_airflow_graph.png) | Airflow graph with independent UCI/weather branches, separate cleaning, date merge, PostgreSQL load and EDA |
-| [06_langgraph_live_execution.png](06_langgraph_live_execution.png) | Original compiled agent graph with actual completed execution, two attempts, finish route and recorded event trace |
-| [07_langgraph_conditional_retry.png](07_langgraph_conditional_retry.png) | Actual trace rows showing retry at event 14 after attempt one, second attempt, then finish at event 22 |
-| [08_regression_evaluation.png](08_regression_evaluation.png) | Held-out selected/Dummy MAE, RMSE, R²; Ridge alpha=10; both validation trials and route reasons |
-| [09_model_comparison_charts.png](09_model_comparison_charts.png) | Dashboard's real held-out predictions chart and validation RMSE comparison |
+| [01_airflow_dag_success.png](01_airflow_dag_success.png) | dc_bike_weather_daily Grid: nine green task rows across three successful runs, with daily cron |
+| [02_airflow_graph.png](02_airflow_graph.png) | Independent UCI/weather ingestion and cleaning, date merge, PostgreSQL load and database-fed EDA |
+| [06_langgraph_live_execution.png](06_langgraph_live_execution.png) | Original compiled graph and completed execution: two attempts and finish route |
+| [07_langgraph_conditional_retry.png](07_langgraph_conditional_retry.png) | Actual first-attempt retry and second-attempt finish trace |
+| [08_regression_evaluation.png](08_regression_evaluation.png) | Selected/Dummy held-out metrics, Ridge alpha=10, validation trials and routing reasons |
+| [09_model_comparison_charts.png](09_model_comparison_charts.png) | Real held-out predictions and validation RMSE chart |
 
-The assignment requests successful Airflow-run, DAG-graph, agent-graph and model-evaluation images. Files 01, 02, 06 and 08 cover those categories; 07 and 09 provide supporting submission evidence. All six are explicitly allowlisted by .gitignore; the seven reviewed Bonus additions below are also allowlisted. All other screenshot files remain ignored.
+These cover the required successful DAG, DAG graph, agent graph and model-evaluation categories. The graph/retry captures show recorded completed execution, not an independently claimed in-flight event. The six original image bytes are unchanged.
 
-The Airflow graph capture is named **02_airflow_graph.png**. There is no separate schedule/SQL/EDA/Grid screenshot in this six-file set. File 01 already includes Grid and cron information; SQL and EDA have their own real exported reports/charts.
+## Optional Part 3
 
-The completed agent-graph screenshot reflects recorded execution, rather than claiming an in-flight capture. The retry image shows the completed run's trace, not a replay slider positioned at event 14. Some reason text is horizontally truncated there; the full routing table is readable in file 08 and the report JSON.
-
-- [Airflow page locations](../submission/part1/capture-guide.md)
-- [Part 2 page/capture details](../docs/verification/phase-c/capture-guide.md)
-- [Exact recommended staging process](../docs/submission.md)
-
-The six image bytes are preserved. Screenshot SHA-256 values and final source/evidence preservation checks are recorded under docs/verification/final-submission/. No credentials, .env contents or login token is visible in the reviewed images. All six screenshots are committed and published on the repository's [main branch](https://github.com/uswanyouxi/IDS706-Week11-Bike-Demand/tree/main/screenshots). Historical verification records retain their original timestamps.
-
-## Optional Part 3 - seven reviewed captures on the bonus branch
-
-These real Bonus files are present and reviewed; the six published images above remain byte-for-byte unchanged.
-
-| Actual image | Evidence |
+| File | Visible evidence |
 | --- | --- |
-| [10_bonus_adaptive_graph.png](10_bonus_adaptive_graph.png) | bonus_main_01, original graph, three attempts and refinement |
-| [11_bonus_routing_recovery.png](11_bonus_routing_recovery.png) | Completed transient-training run, recovery path visited and recovery count one |
-| [11b_bonus_recovery_events.png](11b_bonus_recovery_events.png) | Actual trace from recovery to model_selection/attempt two; cropped reasons |
-| [12_bonus_evaluation_suite.png](12_bonus_evaluation_suite.png) | Real comparison table and observed case scores/statuses for bonus_suite_01 |
-| [12b_bonus_evaluation_criteria.png](12b_bonus_evaluation_criteria.png) | Expanded declared inputs, expected outcomes, criteria and thresholds |
-| [13_bonus_baseline_comparison.png](13_bonus_baseline_comparison.png) | Actual bonus_suite_01 adaptive/fixed_port/simple_port metrics, completion/pass rates and case results; native-reference warning is outside the crop |
-| [14_bonus_agent_metrics.png](14_bonus_agent_metrics.png) | Policy-level completion and expected-behavior pass-rate bar chart, with criteria expander; despite its filename, no per-agent calls/timings are visible |
+| [10_bonus_adaptive_graph.png](10_bonus_adaptive_graph.png) | bonus_main_01 coordinator/specialist graph, three attempts and feature refinement |
+| [11_bonus_routing_recovery.png](11_bonus_routing_recovery.png) | Completed transient-training run with recovery visited and recovery count one |
+| [11b_bonus_recovery_events.png](11b_bonus_recovery_events.png) | Trace from recovery to model_selection and attempt two; some reason text is cropped |
+| [12_bonus_evaluation_suite.png](12_bonus_evaluation_suite.png) | bonus_suite_01 policy table and actual case statuses, scores and passes |
+| [12b_bonus_evaluation_criteria.png](12b_bonus_evaluation_criteria.png) | Expanded case inputs, expected outcomes, criteria and thresholds |
+| [13_bonus_baseline_comparison.png](13_bonus_baseline_comparison.png) | Adapted regression-policy metrics, completion/pass rates and scenario outcomes |
+| [14_bonus_policy_comparison.png](14_bonus_policy_comparison.png) | Policy-level completion and expected-behavior pass-rate bars |
 
-Both additional PNGs were visually reviewed as genuine application captures. Image 14 is accurately described by its content. A readable per-agent calls/timings capture would still strengthen the evidence; the actual values are preserved in run reports. No screenshot was generated, edited or renamed.
+Image 14 is a policy chart, not a per-agent timing/call table. Measured per-agent values are in the [Bonus run report](../docs/verification/bonus/runtime/runs/bonus_main_01/report.json). Image 13 shows the original regression-port comparison. The [updated comparison](../bonus/COMPARISON.md) separately documents actual native Airflow and LangGraph classification runs. Six additional reviewed captures document the separately executed native baselines below.
 
-See the [current Bonus index/capture details](../docs/verification/bonus/screenshot-guide.md) and [independent review](../docs/verification/bonus/review/README.md). These are bonus-branch additions, not a claim of publication or of a native classroom Airflow DAG execution. Only the seven actual reviewed Bonus names were added to .gitignore.
+## Native classroom references
+
+| File | Visible evidence |
+| --- | --- |
+| [15_native_airflow_success.png](15_native_airflow_success.png) | Real solution_baseline_prep Grid: successful run and seven green task rows |
+| [16_native_airflow_graph.png](16_native_airflow_graph.png) | Original seven-task topology; this cropped graph alone does not show run ID or success states |
+| [17_native_airflow_metrics.png](17_native_airflow_metrics.png) | Real XCom records identify native_prep_01 and show validation F1 0.05, 1,600 training and 400 validation rows, and publication |
+| [18_native_langgraph_execution.png](18_native_langgraph_execution.png) | Original graph, native_simple_02, three no-key cycles, final classification metrics and unmet 0.8 target |
+| [19_native_classification_results.png](19_native_classification_results.png) | Agent execution table, per-cycle validation F1, memory/context revisions and no LLM calls; despite its filename, this capture is not the final metric-card view |
+| [20_native_and_regression_scopes.png](20_native_and_regression_scopes.png) | Separate native F1/accuracy and adapted Bike Demand regression-policy tables with scope qualifications |
+
+Images 15 and 17 jointly establish the native DAG run and success; 16 shows its topology. Final native metrics are visible in 18 and 20. No optional extra node/event captures are required. See the [native evidence guide](../docs/verification/bonus/native-classroom/capture-guide.md).
+
+## Evidence and navigation
+
+- Airflow: http://localhost:8080; select dc_bike_weather_daily, a successful run, then Grid or Graph.
+- Part 2: http://localhost:8501; select ml_main_01 for graph, trace, evaluation and charts.
+- Bonus: http://localhost:8502; select Optional Part 3, a recorded run, or suite bonus_suite_01.
+- Native Airflow: http://localhost:8088; solution_baseline_prep, native_prep_01. Native viewer: http://localhost:8503; Native LangGraph and Comparison scopes tabs.
+- [PostgreSQL report](../submission/part1/postgres_report.md), [three EDA charts](../submission/part1/README.md), [verification index](../docs/submission.md).
+
+Only these nineteen reviewed PNG names and this README are allowlisted in .gitignore. Historical screenshot hashes retain the filenames used when each verification was recorded.

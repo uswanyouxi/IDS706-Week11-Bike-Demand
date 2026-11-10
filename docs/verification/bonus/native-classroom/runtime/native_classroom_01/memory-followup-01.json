@@ -1,0 +1,47 @@
+{
+  "checked_at_utc": "2026-11-10T00:25:37.908763+00:00",
+  "windows_memory": {
+    "AvailableBytes": 878669824,
+    "AvailableMBytes": 837,
+    "CommittedBytes": 33255976960
+  },
+  "available_gib": 0.8183250427246094,
+  "required_gib": 2.5,
+  "largest_process_groups": [
+    {
+      "Process": "vmmemWSL",
+      "WorkingSetGiB": 4.29
+    },
+    {
+      "Process": "chrome",
+      "WorkingSetGiB": 2.03
+    },
+    {
+      "Process": "Code",
+      "WorkingSetGiB": 1.82
+    },
+    {
+      "Process": "svchost",
+      "WorkingSetGiB": 1.39
+    },
+    {
+      "Process": "ChatGPT",
+      "WorkingSetGiB": 1.08
+    },
+    {
+      "Process": "Docker Desktop",
+      "WorkingSetGiB": 0.43
+    },
+    {
+      "Process": "MsMpEng",
+      "WorkingSetGiB": 0.31
+    },
+    {
+      "Process": "WeChatAppEx",
+      "WorkingSetGiB": 0.29
+    }
+  ],
+  "working_set_note": "Grouped working sets can include shared pages and are not guaranteed reclaimable memory.",
+  "existing_services_unchanged": true,
+  "native_runtime_containers": []
+}

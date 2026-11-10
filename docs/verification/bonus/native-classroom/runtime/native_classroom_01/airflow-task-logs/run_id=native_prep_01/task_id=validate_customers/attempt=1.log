@@ -1,0 +1,17 @@
+[2026-11-10T00:52:26.056+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-10T00:52:26.067+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solution_baseline_prep.validate_customers native_prep_01 [queued]>
+[2026-11-10T00:52:26.072+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solution_baseline_prep.validate_customers native_prep_01 [queued]>
+[2026-11-10T00:52:26.072+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2026-11-10T00:52:26.082+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): validate_customers> on 2026-11-10 00:52:23+00:00
+[2026-11-10T00:52:26.088+0000] {standard_task_runner.py:72} INFO - Started process 190 to run task
+[2026-11-10T00:52:26.090+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'validate_customers', 'native_prep_01', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py', '--cfg-path', '/tmp/tmpzyk388uj']
+[2026-11-10T00:52:26.092+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask validate_customers
+[2026-11-10T00:52:26.180+0000] {task_command.py:467} INFO - Running <TaskInstance: solution_baseline_prep.validate_customers native_prep_01 [running]> on host 6c848b1e6732
+[2026-11-10T00:52:26.293+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='solution_baseline_prep' AIRFLOW_CTX_TASK_ID='validate_customers' AIRFLOW_CTX_EXECUTION_DATE='2026-11-10T00:52:23+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='native_prep_01'
+[2026-11-10T00:52:26.294+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-11-10T00:52:26.357+0000] {python.py:240} INFO - Done. Returned value was: {'path': '/repo/datasets/airflow/customers.csv'}
+[2026-11-10T00:52:26.376+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-11-10T00:52:26.376+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=solution_baseline_prep, task_id=validate_customers, run_id=native_prep_01, execution_date=20261110T005223, start_date=20261110T005226, end_date=20261110T005226
+[2026-11-10T00:52:26.425+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-11-10T00:52:26.461+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-11-10T00:52:26.464+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

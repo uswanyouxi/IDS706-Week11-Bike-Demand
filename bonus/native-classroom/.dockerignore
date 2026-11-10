@@ -1,0 +1,4 @@
+**
+!Dockerfile.airflow
+!requirements-airflow.txt
+!airflow-constraints-3.11.txt

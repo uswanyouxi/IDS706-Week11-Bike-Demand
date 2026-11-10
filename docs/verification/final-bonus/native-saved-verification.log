@@ -1,0 +1,24 @@
+{
+  "status": "verified",
+  "native_airflow_run": "native_prep_01",
+  "native_airflow_task_successes": 7,
+  "native_airflow_validation": {
+    "f1": 0.05,
+    "n_train": 1600,
+    "n_val": 400
+  },
+  "native_airflow_holdout": null,
+  "native_langgraph_run": "native_simple_02",
+  "native_langgraph_cycles": 3,
+  "native_langgraph_validation_f1": 0.05660377358490566,
+  "native_langgraph_holdout": {
+    "f1": 0.059113300492610835,
+    "accuracy": 0.5225,
+    "n_holdout": 400
+  },
+  "same_published_fraud_sample": true,
+  "sample_sha256": "0d41b894cba0ee45619075f629c242ef2b4c2e1c5e928464737de2fc305f9e68",
+  "no_paid_llm": true,
+  "scores_recomputed_by_verifier": false,
+  "scope": "Actual native classifier outputs; consistency checks, not independent classifier refits"
+}

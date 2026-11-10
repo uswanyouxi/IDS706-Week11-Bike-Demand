@@ -1,0 +1,34 @@
+ Container ids706-classroom-native-v1-native-loop-worker-run-38a11c850609 Creating 
+ Container ids706-classroom-native-v1-native-loop-worker-run-38a11c850609 Created 
+/usr/local/lib/python3.11/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+Traceback (most recent call last):
+  File "/harness/run_native_loop.py", line 57, in <module>
+    try:main()
+        ^^^^^^
+  File "/harness/run_native_loop.py", line 27, in main
+    graph=module.build_graph();dump("graph.json",graph.get_graph().to_json())
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/reference/solution/langgraph/graph.py", line 542, in build_graph
+    g = StateGraph(SimpleLoopState)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/langgraph/graph/state.py", line 245, in __init__
+    self._add_schema(self.state_schema)
+  File "/usr/local/lib/python3.11/site-packages/langgraph/graph/state.py", line 258, in _add_schema
+    channels, managed, type_hints = _get_channels(schema)
+                                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/langgraph/graph/state.py", line 1324, in _get_channels
+    type_hints = get_type_hints(schema, include_extras=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/typing.py", line 2377, in get_type_hints
+    value = _eval_type(value, base_globals, base_locals)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/typing.py", line 395, in _eval_type
+    return t._evaluate(globalns, localns, recursive_guard)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/typing.py", line 905, in _evaluate
+    eval(self.__forward_code__, globalns, localns),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 1, in <module>
+NameError: name 'Annotated' is not defined
+

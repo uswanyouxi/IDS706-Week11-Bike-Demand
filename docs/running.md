@@ -1,6 +1,6 @@
 # Detailed operating and test commands
 
-[Root README](../README.md) is the primary guide. Commands below are for intentional reproduction; final submission preparation did not rerun ingestion or production training.
+[Root README](../README.md) is the primary guide. This reference provides detailed reproduction and read-only verification commands.
 
 ## Fresh environment
 
@@ -73,12 +73,11 @@ With already-running services, DAG parsing and isolated synthetic ML tests:
 ~~~powershell
 docker compose exec -T airflow-scheduler python -m pytest /opt/project/tests/integration/test_dag.py -p no:cacheprovider -q -ra
 docker compose exec -T dashboard python -m pytest tests/ml -p no:cacheprovider -q -ra
-py -3.11 scripts/check_submission.py
 ~~~
 
 These commands do not trigger the DAG, retrain the production model, or mutate production SQL. ML unit tests fit synthetic fixtures in temporary directories. Separate real SQL integration tests are described in [tests documentation](../tests/README.md); they require an explicitly named disposable *_test database.
 
-Historical scripts/check_phase_b.py writes its original Phase B report paths. scripts/verify_phase_c_evidence.py checks a historical 182-file snapshot that includes documentation since intentionally updated for final submission. Use the new submission checker for final source/evidence preservation; keep historical reports intact.
+Historical check_phase_b.py and submission/evidence reviewers encode earlier file inventories and documentation-preservation baselines. They can reject intentional final documentation changes. See [current documentation validation](verification/documentation-checks.json) for explicit check results; historical report writers should not be used to overwrite frozen evidence.
 
 ## Evidence locations
 
@@ -87,6 +86,6 @@ Historical scripts/check_phase_b.py writes its original Phase B report paths. sc
 - Named project-artifacts: pipeline audits/EDA and ML event streams/reports/models.
 - [submission/part1](../submission/part1/README.md): frozen PostgreSQL/idempotence/EDA evidence.
 - [docs/verification/phase-c](verification/phase-c/status.md): frozen ML success/failure runs and metrics.
-- [Final submission checks](submission.md): current files, links, secret scan, tests and staging plan.
+- [Final submission checks](submission.md): source, test records, links, screenshots and reproducibility evidence.
 
-No deletion/prune, service stop, system setting changes, external deployment or Git push is needed to prepare the submission.
+The optional extension has separate [Bonus execution and suite commands](../bonus/README.md).

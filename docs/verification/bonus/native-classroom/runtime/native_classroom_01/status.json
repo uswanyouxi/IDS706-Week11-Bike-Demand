@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-11-10T00:20:15.209444+00:00",
+  "state": "blocked_on_host_memory",
+  "approval_received": true,
+  "image_build_passed": true,
+  "pip_check_passed": true,
+  "native_runtime_containers_started": 0,
+  "native_dag_executed": false,
+  "native_langgraph_executed": false,
+  "native_classification_metrics": null,
+  "host_available_gib": 1.1204872131347656,
+  "host_gate_gib": 2.5,
+  "blocker": "Insufficient free Windows RAM. Startup refused before Docker Compose up.",
+  "next_stage": "py -3.11 bonus/native-classroom/control.py start",
+  "approval_still_valid_for_agreed_scope": true,
+  "no_system_changes_or_existing_service_stops": true,
+  "pending": [
+    "Native DB initialization and service health",
+    "Actual Airflow DAG import/run/task/XCom verification",
+    "Native LangGraph classification run",
+    "Viewer and full regression tests",
+    "Final comparison results and genuine UI captures"
+  ]
+}

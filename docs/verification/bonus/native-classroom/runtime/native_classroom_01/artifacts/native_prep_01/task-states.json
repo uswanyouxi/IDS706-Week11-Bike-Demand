@@ -1,0 +1,65 @@
+[
+  {
+    "task_id": "make_subset",
+    "state": "success",
+    "try_number": 1,
+    "start_date": "2026-11-10 00:52:37.615518+00:00",
+    "end_date": "2026-11-10 00:52:37.832606+00:00",
+    "duration": 0.217088,
+    "hostname": "6c848b1e6732"
+  },
+  {
+    "task_id": "merge_csvs",
+    "state": "success",
+    "try_number": 1,
+    "start_date": "2026-11-10 00:52:34.990805+00:00",
+    "end_date": "2026-11-10 00:52:35.393973+00:00",
+    "duration": 0.403168,
+    "hostname": "6c848b1e6732"
+  },
+  {
+    "task_id": "profile_light",
+    "state": "success",
+    "try_number": 1,
+    "start_date": "2026-11-10 00:52:42.868699+00:00",
+    "end_date": "2026-11-10 00:52:43.372698+00:00",
+    "duration": 0.503999,
+    "hostname": "6c848b1e6732"
+  },
+  {
+    "task_id": "publish_merged",
+    "state": "success",
+    "try_number": 1,
+    "start_date": "2026-11-10 00:52:53.464948+00:00",
+    "end_date": "2026-11-10 00:52:53.750754+00:00",
+    "duration": 0.285806,
+    "hostname": "6c848b1e6732"
+  },
+  {
+    "task_id": "train_baseline",
+    "state": "success",
+    "try_number": 1,
+    "start_date": "2026-11-10 00:52:48.288937+00:00",
+    "end_date": "2026-11-10 00:52:48.960251+00:00",
+    "duration": 0.671314,
+    "hostname": "6c848b1e6732"
+  },
+  {
+    "task_id": "validate_customers",
+    "state": "success",
+    "try_number": 1,
+    "start_date": "2026-11-10 00:52:26.067784+00:00",
+    "end_date": "2026-11-10 00:52:26.376646+00:00",
+    "duration": 0.308862,
+    "hostname": "6c848b1e6732"
+  },
+  {
+    "task_id": "validate_transactions",
+    "state": "success",
+    "try_number": 1,
+    "start_date": "2026-11-10 00:52:31.892077+00:00",
+    "end_date": "2026-11-10 00:52:32.189465+00:00",
+    "duration": 0.297388,
+    "hostname": "6c848b1e6732"
+  }
+]

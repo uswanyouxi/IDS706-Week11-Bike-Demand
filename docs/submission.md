@@ -1,72 +1,48 @@
-# Submission status and verification — November 9, 2026
+# Submission and reproducibility evidence
 
-**Required Parts 1 and 2 are completed, runtime-verified, committed and pushed to [GitHub main](https://github.com/uswanyouxi/IDS706-Week11-Bike-Demand/tree/main).** The published baseline is [4d4d65f](https://github.com/uswanyouxi/IDS706-Week11-Bike-Demand/commit/4d4d65f0a6efba1d6b56d2b982963434ffefc713): 317 files and six real screenshots. Part 3 is optional and is not part of the verified main branch.
+Required Parts 1 and 2 are completed and runtime-verified on [GitHub main](https://github.com/uswanyouxi/IDS706-Week11-Bike-Demand/tree/main). The optional adaptive extension is published on [bonus/adaptive-multi-agent](https://github.com/uswanyouxi/IDS706-Week11-Bike-Demand/tree/bonus/adaptive-multi-agent). The [root README](../README.md) is the primary project and setup guide.
 
-The earlier preparation checks did not stage, commit or push; publication happened afterward. That historical scope remains accurate in the frozen logs. This documentation cleanup changes no pipeline, ML, Docker, database or credential logic, and repeats no production execution.
+## Requirement coverage
 
-## What belongs in Git
-
-The published 317-file inventory is [submission/commit-files.txt](../submission/commit-files.txt), one project-relative path per line. It was checked for secrets, required files and ignored dependencies. The categories below explain what is included; subsequent updates should stage only their intended files.
-
-| Category | Include / rationale |
+| Requirement | Implementation / evidence |
 | --- | --- |
-| Root setup | README, Dockerfiles, compose.yaml, .env.example, .dockerignore, .gitignore, .gitattributes, pytest.ini |
-| src/, dags/, agents/, dashboard/, sql/ | Original executable pipeline and agent workflow, UI, migrations and SQL verification |
-| requirements/, scripts/, tests/ | Pinned requirements/constraints, setup/check/export utilities, meaningful unit/integration tests |
-| assignment/ | User-supplied assignment/TA/project specification for traceability |
-| docs/ and submission/part1/ | Setup/architecture/source documentation and frozen runtime/SQL/idempotence evidence |
-| docs/verification/phase-c/runs/ | Frozen database provenance, features/splits, candidates, routing/events, actual metrics/predictions/plots, small selected model and controlled failure evidence |
-| docs/verification/final-submission/ | Current source/evidence hashes, test logs/JUnit and final link/secret/ignore checks |
-| screenshots/ | README and exactly the six reviewed PNG files |
-| data/raw/.gitkeep, artifacts instructions/.gitkeep | Empty directory scaffolding only |
+| Original scheduled, parallel pipeline | [Airflow DAG](../dags/dc_bike_weather.py), [successful runs](../screenshots/01_airflow_dag_success.png), [DAG graph](../screenshots/02_airflow_graph.png) |
+| Two real sources, separate cleaning and merge | UCI day.csv and Open-Meteo ERA5; [source verification](verification/sources.md), [merge validation](../submission/part1/validation/merged.json) |
+| Database persistence and rerun idempotence | Separate application PostgreSQL, 731 unique dates, 3,292,679 rentals; [SQL report](../submission/part1/postgres_report.md) |
+| Database-fed analysis | [Three EDA charts and summaries](../submission/part1/README.md) |
+| Original agent graph and bounded loop | [Part 2 graph](../src/bike_demand_ml/graph.py), [execution](../screenshots/06_langgraph_live_execution.png), [retry](../screenshots/07_langgraph_conditional_retry.png) |
+| Appropriate evaluation | [Ridge/Dummy report](verification/phase-c/runs/ml_main_01/report.json), [held-out metrics](../screenshots/08_regression_evaluation.png) |
+| Container setup and instructions | [Compose](../compose.yaml), Dockerfiles, pinned requirements, [operating guide](running.md) |
+| Optional adaptive coordination and evaluation | [Bonus guide](../bonus/README.md), [27-case results](verification/bonus/runtime/evaluations/bonus_suite_01/results.json), [screenshots](../screenshots/README.md) |
+| Strict two-native-classroom-baseline comparison | Native seven-task DAG and original LangGraph executed separately; same-problem regression ports remain adaptations. [Details](../bonus/COMPARISON.md) |
 
-Recorded build/task logs are verification evidence, not build products. They remain included alongside their reports/manifests to preserve auditability. The small frozen selected_model.joblib is intentionally retained because the run manifest hashes it. Other generated models remain ignored.
+## Recorded verification
 
-Keep these local and ignored: .env and other non-example environment files, credentials/keys, virtual environments/caches, local raw downloads and regenerated artifacts, Docker/database directories/disks/dumps, build/dist/node_modules, and unreviewed screenshots. The original README_FIRST.md/prompts/ authoring archive is preserved locally but excluded from submission. Git ignore rules apply to ordinary staging; never force-add secrets or bulk-add ignored files.
+The original recorded combined suite passed **102 tests**: 39 pipeline unit tests, 19 Part 2 tests, 43 Bonus tests including read-only PostgreSQL integration, and one real Airflow DAG-import test. [Bonus verification](verification/bonus/review/README.md) links the original JUnit/log records. These counts describe the saved test run, not automatic reruns when reading this document.
 
-## Recorded runtime and submission checks
+Frozen evidence includes:
 
-[Machine-readable checks](verification/final-submission/checks.json) preserve the original pre-publication counts, results and timestamp. They are historical evidence, not a live Git-status report.
+- [Part 1 runtime results](verification/phase-b/runtime-results.json), SQL/idempotence reports, source/merge validation and actual EDA PNGs.
+- [Part 2 run ml_main_01](verification/phase-c/runs/ml_main_01/report.json): database provenance, features/splits, trials, routes, metrics, held-out predictions and selected model.
+- [Bonus run bonus_main_01](verification/bonus/runtime/runs/bonus_main_01/report.json): compiled topology, real events, agent metrics and final predictions.
+- [Regression suite](verification/bonus/runtime/evaluations/bonus_suite_01/summary.json), [native classification probes](verification/bonus/runtime/classroom/classroom_probe_01/summary.json), and [independent artifact audit](verification/bonus/review/evaluation-audit.json).
+- [Current documentation checks](verification/documentation-checks.json): recorded screenshot-rename cleanup, syntax and preservation.
+- [Actual native classroom reproduction](verification/bonus/native-classroom/results.md): native task/run metrics, fresh regression tests, UI evidence and qualifications.
 
-- Pipeline unit tests: **39 passed**.
-- ML unit tests in the existing dashboard container: **19 passed**, one upstream pending-deprecation warning.
-- Real Airflow DAG-import/configuration test: **1 passed**.
-- Tests used synthetic ML fixtures and temporary directories; no production retraining or DAG run occurred.
-- Source AST parsing, local Markdown targets, six PNG files/hashes, both Compose profiles, candidate-file secret scan and ignore-rule probes are checked.
-- Saved predictions independently reproduce actual MAE/RMSE. One selected-model test prediction is negative; it remains unchanged.
-- Implementation/configuration and original binary/machine-readable/log evidence must match the before snapshot. Only authorized documentation and .gitignore are amended.
+Historical reports retain their original filenames, timestamps and scope. Their recorded Git status/file counts are snapshots, not current repository inventories.
 
-Logs/JUnit XML live in docs/verification/final-submission/. Prior phase evidence is retained in place. Historical phase preservation baselines include documentation that has now intentionally changed; the final checker provides a new explicit boundary without rewriting those original baselines.
+## Repository contents
 
-## Historical preparation changes
+Source lives in src/, dags/, agents/, dashboard/ and sql/. requirements/, scripts/ and tests/ supply pinned dependencies and reproducibility checks. bonus/ and compose.bonus.yaml contain the optional extension. assignment/ records the supplied rubric and clarifications. docs/, submission/ and screenshots/ contain documentation and genuine evidence.
 
-Existing files updated: .gitignore, README.md, screenshots/README.md, docs/checklist.md, dashboard/README.md, docs/verification/phase-c/capture-guide.md and submission/part1/capture-guide.md. Historical-status banners were added to docs/verification/phase-b/status.md, docs/verification/phase-c/status.md and submission/part1/README.md; original runtime narratives/results remain underneath.
+The [final audit and explicit inventory](verification/final-bonus/README.md) record current verification and submission files relative to the verified main baseline. The older [317-file Parts 1-2 manifest](../submission/commit-files.txt) remains a historical publication inventory.
 
-New files: docs/running.md, docs/submission.md, scripts/check_submission.py, submission/commit-files.txt and the final-submission verification directory (before hashes, fresh test logs/JUnit XML and checks.json). No existing algorithm, test, dependency pin, Dockerfile or Compose setting changed.
+Only nineteen reviewed PNGs are allowlisted. Local .env files, credentials, virtual environments, caches, raw downloads, regenerated artifacts, Docker storage/database dumps and build products remain ignored. The small frozen selected_model.joblib is retained as hashed reproducibility evidence; other generated models are excluded.
 
-The published manifest contains **317 files**. The only screenshot files eligible for normal staging are the six reviewed PNGs plus their README. Original authoring prompts, starter instructions and local runtime/build storage remain present locally and ignored.
+The six reviewed native captures are linked in the [screenshot index](../screenshots/README.md). Image 19 shows execution records; final native metrics are in 18 and 20. Optional extra agent-event images are not required.
 
-## Documentation-only follow-up for review
+## Findings and limits
 
-This cleanup updates only README.md, screenshots/README.md and docs/submission.md. The published baseline, source, Docker configuration, database logic, screenshots and historical runtime evidence remain unchanged.
+Selected Ridge alpha=10 achieved held-out MAE 904.71, RMSE 1,202.36 and R2 0.5231. One of 184 predictions is negative and remains unclipped. This is a retrospective observed-weather backtest; demand trends, one temporal split and weather day-boundary differences limit generalization.
 
-Proposed commit message: **docs: clarify published Parts 1 and 2 submission status**.
-
-Review/staging commands below are for a later approved action; this cleanup does not create a commit or push:
-
-~~~powershell
-git -c "safe.directory=$PWD" diff -- README.md screenshots/README.md docs/submission.md
-git -c "safe.directory=$PWD" add -- README.md screenshots/README.md docs/submission.md
-git -c "safe.directory=$PWD" diff --cached --check
-git -c "safe.directory=$PWD" diff --cached --stat
-~~~
-
-The project-scoped safe.directory option handles the local sandbox-account ownership difference without changing global Git settings. Do not force-add ignored files. Obtain approval before committing or pushing these documentation changes. Preserve existing verification logs and timestamps; do not rerun historical report writers solely to refresh publication wording.
-
-## Remaining issues
-
-No required screenshot category is missing. Optional schedule/SQL/EDA screenshots are not claimed; their existing reports and actual EDA PNGs are sufficient supporting evidence. Screenshot 07 truncates some reason text horizontally; screenshot 08 and the original JSON show the full routing decisions.
-
-This is an observed-weather retrospective backtest. Ridge produced one negative prediction among 184 held-out dates; no post-test clipping/tuning was applied. Optional Part 3 is not part of the verified main branch; no bonus comparison or evaluation is claimed.
-
-Canvas's deadline/timezone and course AI-use/submission instructions require your own confirmation. The required project is already published; any further documentation commit and push require user approval.
+Adaptive and both regression-port normal runs have equal test metrics. Expected-failure passes are distinct from completion. Designed fault cases, unsaved candidate validation predictions, adapted regression ports and no-key-only native execution constrain Bonus conclusions. Native classification stages share their 400 evaluation rows.

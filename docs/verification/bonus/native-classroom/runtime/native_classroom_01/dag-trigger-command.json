@@ -1,0 +1,23 @@
+{
+  "at_utc": "2026-11-10T00:52:15.000425+00:00",
+  "command": [
+    "docker",
+    "compose",
+    "--project-name",
+    "ids706-classroom-native-v1",
+    "--env-file",
+    "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\artifacts\\native-classroom-local\\.env",
+    "-f",
+    "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom\\compose.yaml",
+    "exec",
+    "-T",
+    "native-scheduler",
+    "airflow",
+    "dags",
+    "trigger",
+    "solution_baseline_prep",
+    "--run-id",
+    "native_prep_01"
+  ],
+  "scope": "Native project only"
+}

@@ -1,0 +1,8 @@
+{
+  "dataset_path": "/repo/datasets/airflow/merged_latest.csv",
+  "target_column": "is_fraud",
+  "target_score": 0.8,
+  "max_cycles": 3,
+  "seed": 42,
+  "holdout_frac": 0.2
+}

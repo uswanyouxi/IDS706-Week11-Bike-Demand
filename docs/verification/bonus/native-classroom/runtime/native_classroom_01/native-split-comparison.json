@@ -1,0 +1,8 @@
+{
+  "derivation": "Split indices recalculated without fitting, using each native environment and the actual published sample",
+  "dag_validation_rows": 400,
+  "loop_holdout_rows": 400,
+  "overlap_rows": 400,
+  "evaluation_indices_identical": true,
+  "scope": "The native DAG calls this validation; the native graph seals the same 20% for its final stage. No distinct independent test populations are claimed."
+}

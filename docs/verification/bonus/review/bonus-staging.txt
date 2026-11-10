@@ -1,5 +1,6 @@
 .gitignore
 README.md
+agents/README.md
 bonus/COMPARISON.md
 bonus/README.md
 bonus/classroom_sources.json
@@ -10,6 +11,9 @@ bonus/review_submission.py
 bonus/verify_evidence.py
 bonus/view.py
 compose.bonus.yaml
+docs/checklist.md
+docs/running.md
+docs/submission.md
 docs/verification/bonus/.gitattributes
 docs/verification/bonus/changed-files.txt
 docs/verification/bonus/compose-isolation.json
@@ -278,13 +282,14 @@ docs/verification/bonus/unit-tests-final.log
 docs/verification/bonus/unit-tests-final.xml
 docs/verification/bonus/unit-tests-initial.log
 docs/verification/bonus/unit-tests-initial.xml
+docs/verification/documentation-checks.json
 screenshots/10_bonus_adaptive_graph.png
 screenshots/11_bonus_routing_recovery.png
 screenshots/11b_bonus_recovery_events.png
 screenshots/12_bonus_evaluation_suite.png
 screenshots/12b_bonus_evaluation_criteria.png
 screenshots/13_bonus_baseline_comparison.png
-screenshots/14_bonus_agent_metrics.png
+screenshots/14_bonus_policy_comparison.png
 screenshots/README.md
 src/bike_demand_bonus/__init__.py
 src/bike_demand_bonus/agents.py
@@ -296,6 +301,7 @@ src/bike_demand_bonus/graph.py
 src/bike_demand_bonus/models.py
 src/bike_demand_bonus/runner.py
 src/bike_demand_bonus/state.py
+submission/part1/README.md
 tests/bonus/conftest.py
 tests/bonus/test_adaptive.py
 tests/bonus/test_audit.py

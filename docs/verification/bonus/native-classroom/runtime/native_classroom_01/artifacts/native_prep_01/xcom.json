@@ -1,0 +1,37 @@
+{
+  "make_subset": {
+    "merged_path": "/repo/artifacts/airflow/runs/20261110T005223/subset.csv",
+    "n_subset": 2000
+  },
+  "profile_light": {
+    "recommended_drops": [
+      "transaction_id",
+      "customer_id",
+      "merchant_id",
+      "timestamp",
+      "fraud_probability"
+    ],
+    "n_rows": 2000
+  },
+  "merge_csvs": {
+    "merged_path": "/repo/artifacts/airflow/runs/20261110T005223/merged.csv",
+    "n_merged": 10000
+  },
+  "publish_merged": {
+    "published_latest": "/repo/datasets/airflow/merged_latest.csv",
+    "merged_dataset_path": "/repo/artifacts/airflow/runs/20261110T005223/subset.csv",
+    "baseline_val_f1": 0.05,
+    "target_column": "is_fraud"
+  },
+  "validate_transactions": {
+    "path": "/repo/datasets/airflow/transactions.csv"
+  },
+  "train_baseline": {
+    "f1": 0.05,
+    "n_train": 1600,
+    "n_val": 400
+  },
+  "validate_customers": {
+    "path": "/repo/datasets/airflow/customers.csv"
+  }
+}

@@ -1,0 +1,2030 @@
+[
+  {
+    "path": ".gitignore",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "README.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "agents/README.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "bonus/COMPARISON.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "bonus/README.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "bonus/classroom_sources.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "bonus/controlled_runtime.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "bonus/dashboard.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "bonus/fetch_classroom.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "bonus/native-classroom/.dockerignore",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/ATTRIBUTION.md",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/Dockerfile.airflow",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/README.md",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/airflow-constraints-3.11.txt",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/capture_airflow.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/check_viewer.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/compose.yaml",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/control.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/init_airflow.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/inspect_split.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/isolation.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/requirements-airflow.txt",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/run_native_loop.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/source-pins.json",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/storage_init.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/test_isolation.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/verify_native.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/native-classroom/viewer.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/review_submission.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "bonus/test_submission_review.py",
+    "action": "add"
+  },
+  {
+    "path": "bonus/verify_evidence.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "bonus/view.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "compose.bonus.yaml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/checklist.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/running.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/submission.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/.gitattributes",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/changed-files.txt",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/compose-isolation.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/dashboard-apptest-initial.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/dashboard-checks.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/dashboard-startup.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/database-after.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/database-before.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/evaluation-cases.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/evaluation-reassessment.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/export.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/final-bonus-tests.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/final-bonus-tests.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/final-checks.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/linux-freeze.txt",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/capture-guide.md",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/final-staging.txt",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/inspection-checks.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/new-files.txt",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/plan.md",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/resource-assessment.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/results.md",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/airflow-init-output-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/airflow-init-output.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/airflow-task-logs/run_id=native_prep_01/task_id=make_subset/attempt=1.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/airflow-task-logs/run_id=native_prep_01/task_id=merge_csvs/attempt=1.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/airflow-task-logs/run_id=native_prep_01/task_id=profile_light/attempt=1.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/airflow-task-logs/run_id=native_prep_01/task_id=publish_merged/attempt=1.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/airflow-task-logs/run_id=native_prep_01/task_id=train_baseline/attempt=1.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/airflow-task-logs/run_id=native_prep_01/task_id=validate_customers/attempt=1.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/airflow-task-logs/run_id=native_prep_01/task_id=validate_transactions/attempt=1.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/dag-import.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_prep_01/merged.csv",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_prep_01/published.csv",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_prep_01/report.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_prep_01/subset.csv",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_prep_01/task-states.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_prep_01/xcom.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_simple_01/error.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_simple_02/events.jsonl",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_simple_02/graph.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_simple_02/graph.mmd",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_simple_02/parameters.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/artifacts/native_simple_02/report.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/bike-regression-tests-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/bike-regression-tests.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/built-image.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/compose-isolation-current.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/compose-isolation-final-verified.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/compose-isolation-final.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/compose-isolation.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-capture-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-capture.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-import-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-import.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-poll-000.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-poll-001.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-poll-002.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-trigger-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-trigger.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-unpause-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/dag-unpause.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/existing-services-before.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-derived-dag-split-json-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-derived-dag-split-json.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-derived-loop-split-json-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-derived-loop-split-json.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-native-artifacts-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-native-artifacts.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-native-task-logs-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-native-task-logs.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-tests-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-tests.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-viewer-apptest-json-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/export-viewer-apptest-json.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/file-review-summary.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/final-checks.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/git-before.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/image-build-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/image-build.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/isolation-tests-final-complete.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/isolation-tests-final.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/isolation-tests-headless.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/isolation-tests-verified.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/isolation-tests.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/memory-followup-01.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-containers.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-dag-split-inspection-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-dag-split-inspection.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-evidence-sha256.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-langgraph-attempt2-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-langgraph-attempt2.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-langgraph-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-langgraph.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-loop-split-inspection-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-loop-split-inspection.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-resource-adjustment-02.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-resource-adjustment.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-scheduler-import-metadata-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-scheduler-import-metadata.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-scheduler-resource-retune-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-scheduler-resource-retune.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-service-logs-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-service-logs.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-shared-evidence-group-permission-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-shared-evidence-group-permission.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-split-comparison.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-stop-scheduler-after-success-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-stop-scheduler-after-success.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-ui-api-check.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-verification.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-viewer-apptest-attempt2-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-viewer-apptest-attempt2.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-viewer-apptest-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-viewer-apptest.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-webserver-for-evidence-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/native-webserver-for-evidence.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/original-dag-regression.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/original-dag-regression.xml",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/original-mounted-dag-verification-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/original-mounted-dag-verification.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/original-readonly-db-integration.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/paired-regression-prediction-check.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/production-after.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/production-before.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/production-recheck-while-blocked.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/readiness-checks.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resource-pause-native-scheduler-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resource-pause-native-scheduler.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resource-pause-native-web-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resource-pause-native-web.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-00-prepare.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-01-build.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-02-start.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-03-start.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-04-start.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-05-start.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-06-start.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-07-airflow.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-08-start.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-09-airflow.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-10-airflow.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-11-airflow.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-12-loop.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-13-loop.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-14-tests.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-15-tests.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-16-tests.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-17-tests.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-18-viewer.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resources-19-viewer.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resume-native-scheduler-attempt2-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resume-native-scheduler-attempt2.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resume-native-scheduler-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/resume-native-scheduler.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/start-airflow-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/start-airflow.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/start-initializer-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/start-initializer.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/start-storage-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/start-storage.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/start-viewer-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/start-viewer.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/status.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/storage-init-output-command.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/storage-init-output.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/verification-artifacts/derived-dag-split.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/verification-artifacts/derived-loop-split.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/verification-artifacts/tests/bike-regression.xml",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/verification-artifacts/viewer-apptest.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/windows-memory-recheck.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/runtime/native_classroom_01/workspace-before.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/native-classroom/source-audit.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/bonus/original-dag-import.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/original-dag-import.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/original-ml-regression.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/original-ml-regression.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/original-pipeline-regression.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/original-pipeline-regression.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/part2-navigation-check.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/preflight-integration.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/preflight-runtime-classroom.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/preflight-runtime-main.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/preflight-runtime-suite.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/preservation-before.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/resource-final.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/resume-unit-tests.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/resume-unit-tests.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/README.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/bonus-ml-final.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/bonus-ml-final.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/bonus-staging.txt",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/bonus-tests-final.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/bonus-tests-final.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/bonus-tests.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/bonus-tests.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/checks.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/dag-final.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/dag-final.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/evaluation-audit.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/logs-preservation.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/pipeline-final.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/pipeline-final.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/production-readonly.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/screenshots.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/submission-bonus-ml.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/submission-bonus-ml.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/submission-dag.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/submission-dag.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/submission-pipeline.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/submission-pipeline.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/review/submission-preparation.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime-classroom.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime-export-sha256.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime-main.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime-suite.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime-tests.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/bonus-final-tests.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/bonus-integration-tests.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/classroom/classroom_probe_01/bike_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/classroom/classroom_probe_01/input_provenance.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/classroom/classroom_probe_01/native_prep_fraud.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/classroom/classroom_probe_01/native_simple_fraud.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/classroom/classroom_probe_01/summary.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/evaluations/bonus_suite_01/case_definitions.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/evaluations/bonus_suite_01/input_provenance.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/evaluations/bonus_suite_01/results.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/evaluations/bonus_suite_01/results.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/evaluations/bonus_suite_01/summary.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_main_01/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_main_01/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_main_01/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_main_01/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_main_01/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_main_01/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_main_01/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_main_01/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_adaptive/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_adaptive/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_adaptive/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_adaptive/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_adaptive/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_adaptive/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_fixed_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_fixed_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_fixed_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_fixed_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_fixed_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_fixed_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_simple_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_simple_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_simple_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_simple_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_simple_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_duplicate_date_simple_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_adaptive/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_adaptive/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_adaptive/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_adaptive/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_adaptive/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_adaptive/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_fixed_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_fixed_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_fixed_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_fixed_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_fixed_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_fixed_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_simple_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_simple_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_simple_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_simple_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_simple_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_exhaust_training_simple_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_adaptive/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_adaptive/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_adaptive/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_adaptive/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_adaptive/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_adaptive/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_fixed_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_fixed_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_fixed_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_fixed_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_fixed_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_fixed_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_simple_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_simple_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_simple_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_simple_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_simple_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_invalid_model_simple_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_adaptive/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_adaptive/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_adaptive/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_adaptive/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_adaptive/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_adaptive/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_fixed_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_fixed_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_fixed_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_fixed_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_fixed_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_fixed_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_simple_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_simple_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_simple_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_simple_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_simple_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_missing_weather_simple_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_adaptive/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_adaptive/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_adaptive/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_adaptive/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_adaptive/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_adaptive/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_adaptive/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_adaptive/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_fixed_port/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_fixed_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_fixed_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_fixed_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_fixed_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_fixed_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_fixed_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_fixed_port/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_simple_port/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_simple_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_simple_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_simple_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_simple_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_simple_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_simple_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_normal_simple_port/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_adaptive/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_adaptive/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_adaptive/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_adaptive/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_adaptive/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_adaptive/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_fixed_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_fixed_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_fixed_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_fixed_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_fixed_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_fixed_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_simple_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_simple_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_simple_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_simple_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_simple_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_permanent_database_simple_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_adaptive/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_adaptive/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_adaptive/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_adaptive/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_adaptive/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_adaptive/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_adaptive/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_adaptive/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_fixed_port/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_fixed_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_fixed_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_fixed_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_fixed_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_fixed_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_fixed_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_fixed_port/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_simple_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_simple_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_simple_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_simple_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_simple_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_database_simple_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_adaptive/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_adaptive/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_adaptive/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_adaptive/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_adaptive/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_adaptive/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_adaptive/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_adaptive/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_fixed_port/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_fixed_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_fixed_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_fixed_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_fixed_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_fixed_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_fixed_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_fixed_port/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_simple_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_simple_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_simple_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_simple_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_simple_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_transient_training_simple_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_adaptive/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_adaptive/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_adaptive/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_adaptive/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_adaptive/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_adaptive/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_adaptive/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_adaptive/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_fixed_port/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_fixed_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_fixed_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_fixed_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_fixed_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_fixed_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_fixed_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_fixed_port/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_simple_port/database_snapshot.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_simple_port/events.jsonl",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_simple_port/graph.dot",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_simple_port/graph.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_simple_port/graph.mmd",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_simple_port/progress.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_simple_port/report.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/runtime/runs/bonus_suite_01_weak_model_simple_port/test_predictions.csv",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/screenshot-guide.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/service-status-final.json",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/status.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/unit-tests-final.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/unit-tests-final.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/unit-tests-initial.log",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/bonus/unit-tests-initial.xml",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "docs/verification/documentation-checks.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/README.md",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/audit-initial/checks.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/audit-initial/evaluation-audit.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/audit-initial/file-status.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/audit-initial/native-ui-api.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/audit-initial/native-verification.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/audit-initial/production-readonly.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/audit-initial/screenshots.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/audit-initial/staging-deletions.txt",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/audit-initial/staging-files.txt",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/native-isolation.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/native-saved-verification.log",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/resources-00-tests.json",
+    "action": "add"
+  },
+  {
+    "path": "docs/verification/final-bonus/reviewer-guards.log",
+    "action": "add"
+  },
+  {
+    "path": "screenshots/10_bonus_adaptive_graph.png",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "screenshots/11_bonus_routing_recovery.png",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "screenshots/11b_bonus_recovery_events.png",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "screenshots/12_bonus_evaluation_suite.png",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "screenshots/12b_bonus_evaluation_criteria.png",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "screenshots/13_bonus_baseline_comparison.png",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "screenshots/14_bonus_policy_comparison.png",
+    "action": "add"
+  },
+  {
+    "path": "screenshots/15_native_airflow_success.png",
+    "action": "add"
+  },
+  {
+    "path": "screenshots/16_native_airflow_graph.png",
+    "action": "add"
+  },
+  {
+    "path": "screenshots/17_native_airflow_metrics.png",
+    "action": "add"
+  },
+  {
+    "path": "screenshots/18_native_langgraph_execution.png",
+    "action": "add"
+  },
+  {
+    "path": "screenshots/19_native_classification_results.png",
+    "action": "add"
+  },
+  {
+    "path": "screenshots/20_native_and_regression_scopes.png",
+    "action": "add"
+  },
+  {
+    "path": "screenshots/README.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/__init__.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/agents.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/audit.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/classroom.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/cli.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/evaluation.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/graph.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/models.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/runner.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "src/bike_demand_bonus/state.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "submission/part1/README.md",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "tests/bonus/conftest.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "tests/bonus/test_adaptive.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "tests/bonus/test_audit.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "tests/bonus/test_postgres.py",
+    "action": "modify_or_already_committed_bonus"
+  },
+  {
+    "path": "screenshots/14_bonus_agent_metrics.png",
+    "action": "delete_old_renamed_path"
+  }
+]

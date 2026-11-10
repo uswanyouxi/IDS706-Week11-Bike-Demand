@@ -1,0 +1,17 @@
+{
+  "recommended_branch_files": 485,
+  "native_harness_and_evidence_files": 177,
+  "authorized_existing_documentation_files_updated": [
+    "README.md",
+    "bonus/COMPARISON.md",
+    "bonus/README.md",
+    "docs/checklist.md",
+    "docs/submission.md",
+    "docs/verification/bonus/review/README.md",
+    "docs/verification/bonus/review/submission-preparation.md",
+    "docs/verification/bonus/screenshot-guide.md",
+    "screenshots/README.md"
+  ],
+  "manifest": "docs/verification/bonus/native-classroom/final-staging.txt",
+  "staging_performed": false
+}

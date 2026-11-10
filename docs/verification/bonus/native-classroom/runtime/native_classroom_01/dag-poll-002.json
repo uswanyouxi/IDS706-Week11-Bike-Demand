@@ -1,0 +1,38 @@
+{
+  "run": {
+    "dag_id": "solution_baseline_prep",
+    "dag_run_id": "native_prep_01",
+    "state": "success",
+    "logical_date": "2026-11-10 00:52:23+00:00"
+  },
+  "tasks": [
+    {
+      "task_id": "make_subset",
+      "state": "success"
+    },
+    {
+      "task_id": "merge_csvs",
+      "state": "success"
+    },
+    {
+      "task_id": "profile_light",
+      "state": "success"
+    },
+    {
+      "task_id": "publish_merged",
+      "state": "success"
+    },
+    {
+      "task_id": "train_baseline",
+      "state": "success"
+    },
+    {
+      "task_id": "validate_customers",
+      "state": "success"
+    },
+    {
+      "task_id": "validate_transactions",
+      "state": "success"
+    }
+  ]
+}

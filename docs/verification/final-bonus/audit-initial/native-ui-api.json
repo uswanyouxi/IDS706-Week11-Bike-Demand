@@ -1,0 +1,13 @@
+{
+  "run_id": "native_prep_01",
+  "state": "success",
+  "tasks": {
+    "make_subset": "success",
+    "merge_csvs": "success",
+    "profile_light": "success",
+    "publish_merged": "success",
+    "train_baseline": "success",
+    "validate_customers": "success",
+    "validate_transactions": "success"
+  }
+}

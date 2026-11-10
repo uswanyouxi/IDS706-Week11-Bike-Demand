@@ -1,0 +1,179 @@
+{
+  "verified_at_utc": "2026-11-10T01:17:19.657118+00:00",
+  "native_execution_verified": true,
+  "native": {
+    "status": "verified",
+    "native_airflow_run": "native_prep_01",
+    "native_airflow_task_successes": 7,
+    "native_airflow_validation": {
+      "f1": 0.05,
+      "n_train": 1600,
+      "n_val": 400
+    },
+    "native_airflow_holdout": null,
+    "native_langgraph_run": "native_simple_02",
+    "native_langgraph_cycles": 3,
+    "native_langgraph_validation_f1": 0.05660377358490566,
+    "native_langgraph_holdout": {
+      "f1": 0.059113300492610835,
+      "accuracy": 0.5225,
+      "n_holdout": 400
+    },
+    "same_published_fraud_sample": true,
+    "sample_sha256": "0d41b894cba0ee45619075f629c242ef2b4c2e1c5e928464737de2fc305f9e68",
+    "no_paid_llm": true,
+    "scores_recomputed_by_verifier": false,
+    "scope": "Actual native classifier outputs; consistency checks, not independent classifier refits"
+  },
+  "source_commit": "a294145ea9aa4225908ce701c06160c33213335d",
+  "source_files_byte_verified": 14,
+  "instructor_dag_graph_runtime_source_edits": false,
+  "original_protected_files_bytes_and_mtime_unchanged": 607,
+  "authorized_final_documentation_changes": [
+    "README.md",
+    "bonus/COMPARISON.md",
+    "bonus/README.md",
+    "docs/checklist.md",
+    "docs/submission.md",
+    "docs/verification/bonus/review/README.md",
+    "docs/verification/bonus/review/submission-preparation.md",
+    "docs/verification/bonus/screenshot-guide.md",
+    "screenshots/README.md"
+  ],
+  "historical_original_logs_bytes_and_mtime_unchanged": 101,
+  "frozen_bonus_exports_unchanged": 202,
+  "original_images_unchanged": 13,
+  "new_native_screenshots_present": 0,
+  "existing_services_id_start_and_restart_counts_unchanged": true,
+  "production_readonly_snapshot_unchanged": {
+    "rows": 731,
+    "unique_dates": 731,
+    "total_rentals": 3292679,
+    "dataset_hash": "99123ac3758014b572f0ac290b1cfcba3896a8fae47896055eb1cc9d89579a33",
+    "readonly": "on"
+  },
+  "native_containers": {
+    "/ids706-classroom-native-v1-native-webserver-1": {
+      "id": "94c8800639af4cd6533f60ff19c940401952d365ba0306cff8c30cdf49d1c749",
+      "state": "running",
+      "oom_killed": false,
+      "health": "healthy",
+      "memory_cap": 805306368
+    },
+    "/ids706-classroom-native-v1-native-viewer-1": {
+      "id": "0adba312384d5315c0352dc2e4e4c9d818ec42f1c90cdbc900ffd6da32c7a5da",
+      "state": "running",
+      "oom_killed": false,
+      "health": null,
+      "memory_cap": 268435456
+    },
+    "/ids706-classroom-native-v1-native-scheduler-1": {
+      "id": "6c848b1e67328ac3f585033e1a27aca4caf76cd60f1ed22955e893af96a48b7b",
+      "state": "exited",
+      "oom_killed": false,
+      "health": "unhealthy",
+      "memory_cap": 1073741824
+    },
+    "/ids706-classroom-native-v1-native-airflow-init-1": {
+      "id": "14a2618250cd02df734fc83abc3516648ca5ed2a948ef87798678bc28476381b",
+      "state": "exited",
+      "oom_killed": false,
+      "health": null,
+      "memory_cap": 805306368
+    },
+    "/ids706-classroom-native-v1-native-db-1": {
+      "id": "60b101af12eadaa3ccee44a05d16d8cd4ef4bf12a851c78ef22b4c000570db77",
+      "state": "running",
+      "oom_killed": false,
+      "health": "healthy",
+      "memory_cap": 268435456
+    },
+    "/ids706-classroom-native-v1-native-storage-init-1": {
+      "id": "07293b7f438d1c9b200f84f82e831c45b82c5ffe2dd931ba3a29f20ba0a946ca",
+      "state": "exited",
+      "oom_killed": false,
+      "health": null,
+      "memory_cap": 134217728
+    }
+  },
+  "web_health": {
+    "dag_processor": {
+      "latest_dag_processor_heartbeat": null,
+      "status": null
+    },
+    "metadatabase": {
+      "status": "healthy"
+    },
+    "scheduler": {
+      "latest_scheduler_heartbeat": "2026-11-10T00:53:33.379497+00:00",
+      "status": "unhealthy"
+    },
+    "triggerer": {
+      "latest_triggerer_heartbeat": null,
+      "status": null
+    }
+  },
+  "native_scheduler_stopped_intentionally": true,
+  "native_viewer_healthy": true,
+  "windows_available_gib_final": 2.8322410583496094,
+  "tests": {
+    "regression": {
+      "tests": 100,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "original_real_dag": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "isolation": {
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "automated_tests_passed": 117,
+  "original_readonly_db_test_function": "passed; two server-enforced read-only snapshots",
+  "native_viewer_apptest": "passed; 5 dataframes, actual metrics and compiled graph; no screenshots",
+  "native_artifact_validation": "passed; no extra classifier refits",
+  "derived_native_eval_indices_overlap": 400,
+  "paired_regression_predictions": "identical across 184 dates for all three normal policies",
+  "python_sources_ast_parsed": 71,
+  "markdown_targets_checked": 267,
+  "broken_links": [],
+  "linked_files_excluded": [],
+  "secret_findings": [],
+  "native_credential_scan": "passed",
+  "ignore_probes_passed": 15,
+  "compose_isolation_valid": true,
+  "git_diff_check": "passed",
+  "legacy_reviewer": {
+    "status": "FAILED on its historical documentation-only preservation boundary",
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\review_submission.py\", line 137, in <module>\n    if __name__==\"__main__\":main()\n                            ^^^^^^\n  File \"D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\review_submission.py\", line 34, in main\n    assert set(changed)<=ALLOWED,changed\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ['.gitignore', 'README.md', 'agents/README.md', 'docs/checklist.md', 'docs/running.md', 'docs/submission.md', 'screenshots/README.md', 'submission/part1/README.md']\n",
+    "rules_not_weakened": true
+  },
+  "native_errors_preserved": [
+    "native_simple_01 wrapper registration failure before fitting",
+    "initial AppTest worker missing the read-only regression report mount"
+  ],
+  "warnings": [
+    "Native DAG lbfgs iteration limit",
+    "Four native graph lbfgs iteration-limit warnings",
+    "Upstream LangChain pending deprecation",
+    "Streamlit AppTest/deprecation warnings"
+  ],
+  "remaining_submission_work": [
+    "Manually capture and review proposed native screenshots 15-20",
+    "Instructor decides acceptance of qualified native-vs-regression comparison"
+  ],
+  "git": {
+    "head_unchanged": true,
+    "staged": [],
+    "commit_merge_push_performed": false
+  }
+}

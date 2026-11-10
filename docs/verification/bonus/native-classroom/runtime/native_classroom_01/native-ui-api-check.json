@@ -1,0 +1,313 @@
+{
+  "at_utc": "2026-11-10T01:05:41.293065+00:00",
+  "run": {
+    "conf": {},
+    "dag_id": "solution_baseline_prep",
+    "dag_run_id": "native_prep_01",
+    "data_interval_end": "2026-11-10T00:52:23+00:00",
+    "data_interval_start": "2026-11-10T00:52:23+00:00",
+    "end_date": "2026-11-10T00:52:54.075809+00:00",
+    "execution_date": "2026-11-10T00:52:23+00:00",
+    "external_trigger": true,
+    "last_scheduling_decision": "2026-11-10T00:52:54.074179+00:00",
+    "logical_date": "2026-11-10T00:52:23+00:00",
+    "note": null,
+    "run_type": "manual",
+    "start_date": "2026-11-10T00:52:23.599141+00:00",
+    "state": "success"
+  },
+  "tasks": {
+    "task_instances": [
+      {
+        "dag_id": "solution_baseline_prep",
+        "dag_run_id": "native_prep_01",
+        "duration": 0.217088,
+        "end_date": "2026-11-10T00:52:37.832606+00:00",
+        "execution_date": "2026-11-10T00:52:23+00:00",
+        "executor": null,
+        "executor_config": "{}",
+        "hostname": "6c848b1e6732",
+        "map_index": -1,
+        "max_tries": 2,
+        "note": null,
+        "operator": "_PythonDecoratedOperator",
+        "pid": 209,
+        "pool": "default_pool",
+        "pool_slots": 1,
+        "priority_weight": 4,
+        "queue": "default",
+        "queued_when": "2026-11-10T00:52:36.394353+00:00",
+        "rendered_fields": {
+          "op_args": [
+            {
+              "merged_path": "/repo/artifacts/airflow/runs/20261110T005223/merged.csv",
+              "n_merged": 10000
+            }
+          ],
+          "op_kwargs": {},
+          "templates_dict": null
+        },
+        "rendered_map_index": null,
+        "sla_miss": null,
+        "start_date": "2026-11-10T00:52:37.615518+00:00",
+        "state": "success",
+        "task_display_name": "make_subset",
+        "task_id": "make_subset",
+        "trigger": null,
+        "triggerer_job": null,
+        "try_number": 1,
+        "unixname": "airflow"
+      },
+      {
+        "dag_id": "solution_baseline_prep",
+        "dag_run_id": "native_prep_01",
+        "duration": 0.403168,
+        "end_date": "2026-11-10T00:52:35.393973+00:00",
+        "execution_date": "2026-11-10T00:52:23+00:00",
+        "executor": null,
+        "executor_config": "{}",
+        "hostname": "6c848b1e6732",
+        "map_index": -1,
+        "max_tries": 2,
+        "note": null,
+        "operator": "_PythonDecoratedOperator",
+        "pid": 205,
+        "pool": "default_pool",
+        "pool_slots": 1,
+        "priority_weight": 5,
+        "queue": "default",
+        "queued_when": "2026-11-10T00:52:33.748435+00:00",
+        "rendered_fields": {
+          "op_args": [
+            {
+              "path": "/repo/datasets/airflow/customers.csv"
+            },
+            {
+              "path": "/repo/datasets/airflow/transactions.csv"
+            }
+          ],
+          "op_kwargs": {},
+          "templates_dict": null
+        },
+        "rendered_map_index": null,
+        "sla_miss": null,
+        "start_date": "2026-11-10T00:52:34.990805+00:00",
+        "state": "success",
+        "task_display_name": "merge_csvs",
+        "task_id": "merge_csvs",
+        "trigger": null,
+        "triggerer_job": null,
+        "try_number": 1,
+        "unixname": "airflow"
+      },
+      {
+        "dag_id": "solution_baseline_prep",
+        "dag_run_id": "native_prep_01",
+        "duration": 0.503999,
+        "end_date": "2026-11-10T00:52:43.372698+00:00",
+        "execution_date": "2026-11-10T00:52:23+00:00",
+        "executor": null,
+        "executor_config": "{}",
+        "hostname": "6c848b1e6732",
+        "map_index": -1,
+        "max_tries": 2,
+        "note": null,
+        "operator": "_PythonDecoratedOperator",
+        "pid": 227,
+        "pool": "default_pool",
+        "pool_slots": 1,
+        "priority_weight": 3,
+        "queue": "default",
+        "queued_when": "2026-11-10T00:52:39.806749+00:00",
+        "rendered_fields": {
+          "op_args": [
+            {
+              "merged_path": "/repo/artifacts/airflow/runs/20261110T005223/subset.csv",
+              "n_subset": 2000
+            }
+          ],
+          "op_kwargs": {},
+          "templates_dict": null
+        },
+        "rendered_map_index": null,
+        "sla_miss": null,
+        "start_date": "2026-11-10T00:52:42.868699+00:00",
+        "state": "success",
+        "task_display_name": "profile_light",
+        "task_id": "profile_light",
+        "trigger": null,
+        "triggerer_job": null,
+        "try_number": 1,
+        "unixname": "airflow"
+      },
+      {
+        "dag_id": "solution_baseline_prep",
+        "dag_run_id": "native_prep_01",
+        "duration": 0.285806,
+        "end_date": "2026-11-10T00:52:53.750754+00:00",
+        "execution_date": "2026-11-10T00:52:23+00:00",
+        "executor": null,
+        "executor_config": "{}",
+        "hostname": "6c848b1e6732",
+        "map_index": -1,
+        "max_tries": 2,
+        "note": null,
+        "operator": "_PythonDecoratedOperator",
+        "pid": 244,
+        "pool": "default_pool",
+        "pool_slots": 1,
+        "priority_weight": 1,
+        "queue": "default",
+        "queued_when": "2026-11-10T00:52:51.076480+00:00",
+        "rendered_fields": {
+          "op_args": [
+            {
+              "merged_path": "/repo/artifacts/airflow/runs/20261110T005223/subset.csv",
+              "n_subset": 2000
+            },
+            {
+              "f1": 0.05,
+              "n_train": 1600,
+              "n_val": 400
+            }
+          ],
+          "op_kwargs": {},
+          "templates_dict": null
+        },
+        "rendered_map_index": null,
+        "sla_miss": null,
+        "start_date": "2026-11-10T00:52:53.464948+00:00",
+        "state": "success",
+        "task_display_name": "publish_merged",
+        "task_id": "publish_merged",
+        "trigger": null,
+        "triggerer_job": null,
+        "try_number": 1,
+        "unixname": "airflow"
+      },
+      {
+        "dag_id": "solution_baseline_prep",
+        "dag_run_id": "native_prep_01",
+        "duration": 0.671314,
+        "end_date": "2026-11-10T00:52:48.960251+00:00",
+        "execution_date": "2026-11-10T00:52:23+00:00",
+        "executor": null,
+        "executor_config": "{}",
+        "hostname": "6c848b1e6732",
+        "map_index": -1,
+        "max_tries": 2,
+        "note": null,
+        "operator": "_PythonDecoratedOperator",
+        "pid": 232,
+        "pool": "default_pool",
+        "pool_slots": 1,
+        "priority_weight": 2,
+        "queue": "default",
+        "queued_when": "2026-11-10T00:52:45.046338+00:00",
+        "rendered_fields": {
+          "op_args": [
+            {
+              "merged_path": "/repo/artifacts/airflow/runs/20261110T005223/subset.csv",
+              "n_subset": 2000
+            },
+            {
+              "n_rows": 2000,
+              "recommended_drops": [
+                "transaction_id",
+                "customer_id",
+                "merchant_id",
+                "timestamp",
+                "fraud_probability"
+              ]
+            }
+          ],
+          "op_kwargs": {},
+          "templates_dict": null
+        },
+        "rendered_map_index": null,
+        "sla_miss": null,
+        "start_date": "2026-11-10T00:52:48.288937+00:00",
+        "state": "success",
+        "task_display_name": "train_baseline",
+        "task_id": "train_baseline",
+        "trigger": null,
+        "triggerer_job": null,
+        "try_number": 1,
+        "unixname": "airflow"
+      },
+      {
+        "dag_id": "solution_baseline_prep",
+        "dag_run_id": "native_prep_01",
+        "duration": 0.308862,
+        "end_date": "2026-11-10T00:52:26.376646+00:00",
+        "execution_date": "2026-11-10T00:52:23+00:00",
+        "executor": null,
+        "executor_config": "{}",
+        "hostname": "6c848b1e6732",
+        "map_index": -1,
+        "max_tries": 2,
+        "note": null,
+        "operator": "_PythonDecoratedOperator",
+        "pid": 190,
+        "pool": "default_pool",
+        "pool_slots": 1,
+        "priority_weight": 6,
+        "queue": "default",
+        "queued_when": "2026-11-10T00:52:23.631908+00:00",
+        "rendered_fields": {
+          "op_args": [],
+          "op_kwargs": {},
+          "templates_dict": null
+        },
+        "rendered_map_index": null,
+        "sla_miss": null,
+        "start_date": "2026-11-10T00:52:26.067784+00:00",
+        "state": "success",
+        "task_display_name": "validate_customers",
+        "task_id": "validate_customers",
+        "trigger": null,
+        "triggerer_job": null,
+        "try_number": 1,
+        "unixname": "airflow"
+      },
+      {
+        "dag_id": "solution_baseline_prep",
+        "dag_run_id": "native_prep_01",
+        "duration": 0.297388,
+        "end_date": "2026-11-10T00:52:32.189465+00:00",
+        "execution_date": "2026-11-10T00:52:23+00:00",
+        "executor": null,
+        "executor_config": "{}",
+        "hostname": "6c848b1e6732",
+        "map_index": -1,
+        "max_tries": 2,
+        "note": null,
+        "operator": "_PythonDecoratedOperator",
+        "pid": 201,
+        "pool": "default_pool",
+        "pool_slots": 1,
+        "priority_weight": 6,
+        "queue": "default",
+        "queued_when": "2026-11-10T00:52:27.660384+00:00",
+        "rendered_fields": {
+          "op_args": [],
+          "op_kwargs": {},
+          "templates_dict": null
+        },
+        "rendered_map_index": null,
+        "sla_miss": null,
+        "start_date": "2026-11-10T00:52:31.892077+00:00",
+        "state": "success",
+        "task_display_name": "validate_transactions",
+        "task_id": "validate_transactions",
+        "trigger": null,
+        "triggerer_job": null,
+        "try_number": 1,
+        "unixname": "airflow"
+      }
+    ],
+    "total_entries": 7
+  },
+  "all_seven_success": true,
+  "native_scheduler_intentionally_stopped_after_run": true
+}

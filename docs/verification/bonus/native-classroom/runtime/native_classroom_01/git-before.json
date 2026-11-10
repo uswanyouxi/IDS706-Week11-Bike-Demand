@@ -1,0 +1,6 @@
+{
+  "head": "a8715ad027e7f6740bbe4be987f60d93ee252842",
+  "main": "d3a44650d4211a41ea02e824fd1781246c578e8d",
+  "status": " M .gitignore\n M README.md\n M agents/README.md\n M bonus/COMPARISON.md\n M bonus/README.md\n M bonus/review_submission.py\n M docs/checklist.md\n M docs/running.md\n M docs/submission.md\n M docs/verification/bonus/review/README.md\n M docs/verification/bonus/review/bonus-staging.txt\n M docs/verification/bonus/review/submission-preparation.md\n M docs/verification/bonus/screenshot-guide.md\n D screenshots/14_bonus_agent_metrics.png\n M screenshots/README.md\n M submission/part1/README.md\n?? bonus/native-classroom/\n?? docs/verification/bonus/native-classroom/\n?? docs/verification/bonus/review/audit-initial.json\n?? docs/verification/bonus/review/audit-rerun.json\n?? docs/verification/documentation-checks.json\n?? screenshots/14_bonus_policy_comparison.png\n",
+  "staged": ""
+}

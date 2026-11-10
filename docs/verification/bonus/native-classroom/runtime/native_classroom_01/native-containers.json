@@ -1,0 +1,473 @@
+{
+  "/ids706-classroom-native-v1-native-scheduler-1": {
+    "id": "6c848b1e67328ac3f585033e1a27aca4caf76cd60f1ed22955e893af96a48b7b",
+    "image": "sha256:494127202107912dd8f6d13f5982491812a7a2a9f59189b5321bd07fd535deab",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-10T00:47:08.136679762Z",
+      "FinishedAt": "2026-11-10T00:53:35.600068386Z",
+      "Health": {
+        "Status": "unhealthy",
+        "FailingStreak": 1,
+        "Log": [
+          {
+            "Start": "2026-11-10T00:51:49.745534828Z",
+            "End": "2026-11-10T00:51:53.501908318Z",
+            "ExitCode": 0,
+            "Output": "Found one alive job.\n"
+          },
+          {
+            "Start": "2026-11-10T00:52:13.501345578Z",
+            "End": "2026-11-10T00:52:21.676756357Z",
+            "ExitCode": 0,
+            "Output": "Found one alive job.\n"
+          },
+          {
+            "Start": "2026-11-10T00:52:41.675167916Z",
+            "End": "2026-11-10T00:52:49.964085864Z",
+            "ExitCode": 0,
+            "Output": "Found one alive job.\n"
+          },
+          {
+            "Start": "2026-11-10T00:53:09.963018664Z",
+            "End": "2026-11-10T00:53:13.629085063Z",
+            "ExitCode": 0,
+            "Output": "Found one alive job.\n"
+          },
+          {
+            "Start": "2026-11-10T00:53:33.629574674Z",
+            "End": "2026-11-10T00:53:35.598758504Z",
+            "ExitCode": 137,
+            "Output": ""
+          }
+        ]
+      }
+    },
+    "memory_cap": 1073741824,
+    "nano_cpus": 1000000000,
+    "mounts": [
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference",
+        "Destination": "/reference",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/bonus/native-classroom",
+        "Destination": "/harness",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-repository",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-repository/_data",
+        "Destination": "/repo",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-logs",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-logs/_data",
+        "Destination": "/opt/airflow/logs",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-evidence",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-evidence/_data",
+        "Destination": "/evidence",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference/datasets/airflow/customers.csv",
+        "Destination": "/repo/datasets/airflow/customers.csv",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference/datasets/airflow/transactions.csv",
+        "Destination": "/repo/datasets/airflow/transactions.csv",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference/solution/airflow/dags/solution_baseline_prep.py",
+        "Destination": "/opt/airflow/dags/solution_baseline_prep.py",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ]
+  },
+  "/ids706-classroom-native-v1-native-webserver-1": {
+    "id": "f763dffefd09018ceffd07f7e501ae6d119b5d242f38d490255f340caa31c8cf",
+    "image": "sha256:494127202107912dd8f6d13f5982491812a7a2a9f59189b5321bd07fd535deab",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 137,
+      "Error": "",
+      "StartedAt": "2026-11-10T00:36:01.194032687Z",
+      "FinishedAt": "2026-11-10T00:38:31.150764483Z",
+      "Health": {
+        "Status": "unhealthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-11-10T00:37:02.22056944Z",
+            "End": "2026-11-10T00:37:02.299222628Z",
+            "ExitCode": 0,
+            "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0{\"dag_processor\": {\"latest_dag_processor_heartbeat\": null, \"status\": null}, \"metadatabase\": {\"status\": \"healthy\"}, \"scheduler\": {\"latest_scheduler_heartbeat\": \"2026-11-10T00:37:00.555623+00:00\", \"status\": \"healthy\"}, \"triggerer\": {\"latest_triggerer_heartbeat\": null, \"status\": null}}\r100   283  100   283    0     0  11003      0 --:--:-- --:--:-- --:--:-- 11320\n"
+          },
+          {
+            "Start": "2026-11-10T00:37:22.29805532Z",
+            "End": "2026-11-10T00:37:22.333874675Z",
+            "ExitCode": 0,
+            "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   283  100   283    0     0  56028      0 --:--:-- --:--:-- --:--:-- 56600\n{\"dag_processor\": {\"latest_dag_processor_heartbeat\": null, \"status\": null}, \"metadatabase\": {\"status\": \"healthy\"}, \"scheduler\": {\"latest_scheduler_heartbeat\": \"2026-11-10T00:37:20.694741+00:00\", \"status\": \"healthy\"}, \"triggerer\": {\"latest_triggerer_heartbeat\": null, \"status\": null}}"
+          },
+          {
+            "Start": "2026-11-10T00:37:42.333278772Z",
+            "End": "2026-11-10T00:37:42.380734276Z",
+            "ExitCode": 0,
+            "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   283  100   283    0     0  37256      0 --:--:-- --:--:-- --:--:-- 40428\n{\"dag_processor\": {\"latest_dag_processor_heartbeat\": null, \"status\": null}, \"metadatabase\": {\"status\": \"healthy\"}, \"scheduler\": {\"latest_scheduler_heartbeat\": \"2026-11-10T00:37:40.857132+00:00\", \"status\": \"healthy\"}, \"triggerer\": {\"latest_triggerer_heartbeat\": null, \"status\": null}}"
+          },
+          {
+            "Start": "2026-11-10T00:38:02.381512855Z",
+            "End": "2026-11-10T00:38:02.428989687Z",
+            "ExitCode": 0,
+            "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   283  100   283    0     0  42346      0 --:--:-- --:--:-- --:--:-- 47166\n{\"dag_processor\": {\"latest_dag_processor_heartbeat\": null, \"status\": null}, \"metadatabase\": {\"status\": \"healthy\"}, \"scheduler\": {\"latest_scheduler_heartbeat\": \"2026-11-10T00:38:00.992572+00:00\", \"status\": \"healthy\"}, \"triggerer\": {\"latest_triggerer_heartbeat\": null, \"status\": null}}"
+          },
+          {
+            "Start": "2026-11-10T00:38:22.428680994Z",
+            "End": "2026-11-10T00:38:22.471998164Z",
+            "ExitCode": 0,
+            "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0{\"dag_processor\": {\"latest_dag_processor_heartbeat\": null, \"status\": null}, \"metadatabase\": {\"status\": \"healthy\"}, \"scheduler\": {\"latest_scheduler_heartbeat\": \"2026-11-10T00:38:21.121346+00:00\", \"status\": \"healthy\"}, \"triggerer\": {\"latest_triggerer_heartbeat\": null, \"status\": null}}\r100   283  100   283    0     0  49251      0 --:--:-- --:--:-- --:--:-- 56600\n"
+          }
+        ]
+      }
+    },
+    "memory_cap": 805306368,
+    "nano_cpus": 500000000,
+    "mounts": [
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference/solution/airflow/dags/solution_baseline_prep.py",
+        "Destination": "/opt/airflow/dags/solution_baseline_prep.py",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference",
+        "Destination": "/reference",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/bonus/native-classroom",
+        "Destination": "/harness",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-repository",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-repository/_data",
+        "Destination": "/repo",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-logs",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-logs/_data",
+        "Destination": "/opt/airflow/logs",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-evidence",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-evidence/_data",
+        "Destination": "/evidence",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference/datasets/airflow/customers.csv",
+        "Destination": "/repo/datasets/airflow/customers.csv",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference/datasets/airflow/transactions.csv",
+        "Destination": "/repo/datasets/airflow/transactions.csv",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ]
+  },
+  "/ids706-classroom-native-v1-native-airflow-init-1": {
+    "id": "14a2618250cd02df734fc83abc3516648ca5ed2a948ef87798678bc28476381b",
+    "image": "sha256:494127202107912dd8f6d13f5982491812a7a2a9f59189b5321bd07fd535deab",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-10T00:35:33.483709349Z",
+      "FinishedAt": "2026-11-10T00:35:57.193901727Z"
+    },
+    "memory_cap": 805306368,
+    "nano_cpus": 1000000000,
+    "mounts": [
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference",
+        "Destination": "/reference",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/bonus/native-classroom",
+        "Destination": "/harness",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-repository",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-repository/_data",
+        "Destination": "/repo",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-logs",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-logs/_data",
+        "Destination": "/opt/airflow/logs",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-evidence",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-evidence/_data",
+        "Destination": "/evidence",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference/datasets/airflow/customers.csv",
+        "Destination": "/repo/datasets/airflow/customers.csv",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference/datasets/airflow/transactions.csv",
+        "Destination": "/repo/datasets/airflow/transactions.csv",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/run/desktop/mnt/host/d/\u672a\u6765/IDS706/IDS706-Week11-Bike-Demand/artifacts/native-classroom-reference/solution/airflow/dags/solution_baseline_prep.py",
+        "Destination": "/opt/airflow/dags/solution_baseline_prep.py",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ]
+  },
+  "/ids706-classroom-native-v1-native-db-1": {
+    "id": "60b101af12eadaa3ccee44a05d16d8cd4ef4bf12a851c78ef22b4c000570db77",
+    "image": "sha256:a2420e9555e2224583fe84d0bb3f0b967e69354ae3a0be55a9c14e251388c4eb",
+    "state": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 29768,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-10T00:35:26.755562995Z",
+      "FinishedAt": "0001-01-01T00:00:00Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-11-10T00:56:05.148626292Z",
+            "End": "2026-11-10T00:56:05.194982659Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          },
+          {
+            "Start": "2026-11-10T00:56:10.194801995Z",
+            "End": "2026-11-10T00:56:10.24211595Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          },
+          {
+            "Start": "2026-11-10T00:56:15.243285562Z",
+            "End": "2026-11-10T00:56:15.288773321Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          },
+          {
+            "Start": "2026-11-10T00:56:20.289413296Z",
+            "End": "2026-11-10T00:56:20.336373095Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          },
+          {
+            "Start": "2026-11-10T00:56:25.337810863Z",
+            "End": "2026-11-10T00:56:25.382442059Z",
+            "ExitCode": 0,
+            "Output": "/var/run/postgresql:5432 - accepting connections\n"
+          }
+        ]
+      }
+    },
+    "memory_cap": 268435456,
+    "nano_cpus": 500000000,
+    "mounts": [
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-metadata",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-metadata/_data",
+        "Destination": "/var/lib/postgresql/data",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      }
+    ]
+  },
+  "/ids706-classroom-native-v1-native-storage-init-1": {
+    "id": "07293b7f438d1c9b200f84f82e831c45b82c5ffe2dd931ba3a29f20ba0a946ca",
+    "image": "sha256:494127202107912dd8f6d13f5982491812a7a2a9f59189b5321bd07fd535deab",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-10T00:35:26.750820715Z",
+      "FinishedAt": "2026-11-10T00:35:27.379373281Z"
+    },
+    "memory_cap": 134217728,
+    "nano_cpus": 250000000,
+    "mounts": [
+      {
+        "Type": "bind",
+        "Source": "D:\\\u672a\u6765\\IDS706\\IDS706-Week11-Bike-Demand\\bonus\\native-classroom",
+        "Destination": "/harness",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-repository",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-repository/_data",
+        "Destination": "/repo",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-logs",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-logs/_data",
+        "Destination": "/opt/airflow/logs",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "ids706-classroom-native-v1_native-evidence",
+        "Source": "/var/lib/docker/volumes/ids706-classroom-native-v1_native-evidence/_data",
+        "Destination": "/evidence",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      }
+    ]
+  }
+}

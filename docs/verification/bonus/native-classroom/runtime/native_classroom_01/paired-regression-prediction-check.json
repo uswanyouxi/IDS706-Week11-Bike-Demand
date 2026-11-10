@@ -1,0 +1,45 @@
+{
+  "scope": "Additional fair check on existing saved Bike Demand regression predictions only; no fits or graph reruns",
+  "heldout_dates": 184,
+  "metrics_recomputed": {
+    "adaptive": {
+      "mae": 904.7064645271217,
+      "rmse": 1202.361305040938
+    },
+    "fixed_port": {
+      "mae": 904.7064645271217,
+      "rmse": 1202.361305040938
+    },
+    "simple_port": {
+      "mae": 904.7064645271217,
+      "rmse": 1202.361305040938
+    }
+  },
+  "paired_comparisons": [
+    {
+      "a": "adaptive",
+      "b": "fixed_port",
+      "aligned_dates": 184,
+      "max_abs_prediction_difference": 0.0,
+      "mae_difference": 0.0,
+      "rmse_difference": 0.0
+    },
+    {
+      "a": "adaptive",
+      "b": "simple_port",
+      "aligned_dates": 184,
+      "max_abs_prediction_difference": 0.0,
+      "mae_difference": 0.0,
+      "rmse_difference": 0.0
+    },
+    {
+      "a": "fixed_port",
+      "b": "simple_port",
+      "aligned_dates": 184,
+      "max_abs_prediction_difference": 0.0,
+      "mae_difference": 0.0,
+      "rmse_difference": 0.0
+    }
+  ],
+  "classification_metrics_not_compared": true
+}

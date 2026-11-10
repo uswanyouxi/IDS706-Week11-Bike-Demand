@@ -1,0 +1,6 @@
+FROM apache/airflow:2.10.4-python3.11
+USER airflow
+COPY airflow-constraints-3.11.txt requirements-airflow.txt /tmp/native-lock/
+RUN pip install --no-cache-dir --only-binary=:all: \
+    --constraint /tmp/native-lock/airflow-constraints-3.11.txt \
+    --requirement /tmp/native-lock/requirements-airflow.txt && pip check

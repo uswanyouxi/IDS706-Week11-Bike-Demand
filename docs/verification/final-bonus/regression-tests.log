@@ -1,0 +1,12 @@
+ Container ids706-classroom-native-v1-native-loop-worker-run-f702ffa8d05b Creating 
+ Container ids706-classroom-native-v1-native-loop-worker-run-f702ffa8d05b Created 
+........................................................................ [ 72%]
+............................                                             [100%]
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.11/site-packages/langgraph/cache/base/__init__.py:8
+  /usr/local/lib/python3.11/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+    from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /evidence/artifacts/final_audit_01/regression-tests.xml --
+100 passed, 1 warning in 19.24s

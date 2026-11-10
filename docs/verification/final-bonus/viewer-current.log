@@ -1,0 +1,7 @@
+@@JSON@@{"status": "passed", "actual_metrics_visible": ["0.050000", "1600", "400", "3", "0.056604", "0.059113", "0.522500"], "dataframe_count": 5, "compiled_graph_visible": true, "exceptions": [], "screenshot_source": "existing genuine captures; none generated"}
+2026-11-10 02:10:02.757 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-10 02:10:03.497 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.

@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-11-10T01:19:20.593382+00:00",
+  "command": [
+    "docker",
+    "compose",
+    "exec",
+    "-T",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "airflow-scheduler",
+    "python",
+    "/opt/project/scripts/verify_dag.py"
+  ],
+  "scope": "Native project only"
+}

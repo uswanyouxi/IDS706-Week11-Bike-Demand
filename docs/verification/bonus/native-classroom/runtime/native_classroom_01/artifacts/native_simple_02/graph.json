@@ -1,0 +1,153 @@
+{
+  "nodes": [
+    {
+      "id": "__start__",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "__start__"
+      }
+    },
+    {
+      "id": "data_scientist",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "data_scientist"
+      }
+    },
+    {
+      "id": "hypothesis_generator",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "hypothesis_generator"
+      }
+    },
+    {
+      "id": "ml_engineer",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "ml_engineer"
+      }
+    },
+    {
+      "id": "judge",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "judge"
+      }
+    },
+    {
+      "id": "memory_writer",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "memory_writer"
+      }
+    },
+    {
+      "id": "context_builder",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "context_builder"
+      }
+    },
+    {
+      "id": "holdout_eval",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "holdout_eval"
+      }
+    },
+    {
+      "id": "__end__"
+    }
+  ],
+  "edges": [
+    {
+      "source": "__start__",
+      "target": "data_scientist"
+    },
+    {
+      "source": "context_builder",
+      "target": "hypothesis_generator"
+    },
+    {
+      "source": "data_scientist",
+      "target": "hypothesis_generator"
+    },
+    {
+      "source": "hypothesis_generator",
+      "target": "ml_engineer"
+    },
+    {
+      "source": "judge",
+      "target": "holdout_eval",
+      "data": "holdout",
+      "conditional": true
+    },
+    {
+      "source": "judge",
+      "target": "memory_writer",
+      "data": "memory",
+      "conditional": true
+    },
+    {
+      "source": "memory_writer",
+      "target": "context_builder"
+    },
+    {
+      "source": "ml_engineer",
+      "target": "judge"
+    },
+    {
+      "source": "holdout_eval",
+      "target": "__end__"
+    }
+  ]
+}

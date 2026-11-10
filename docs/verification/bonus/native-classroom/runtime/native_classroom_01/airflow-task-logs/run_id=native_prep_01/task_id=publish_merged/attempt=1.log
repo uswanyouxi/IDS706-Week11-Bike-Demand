@@ -1,0 +1,17 @@
+[2026-11-10T00:52:53.452+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-10T00:52:53.464+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solution_baseline_prep.publish_merged native_prep_01 [queued]>
+[2026-11-10T00:52:53.469+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solution_baseline_prep.publish_merged native_prep_01 [queued]>
+[2026-11-10T00:52:53.470+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2026-11-10T00:52:53.478+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): publish_merged> on 2026-11-10 00:52:23+00:00
+[2026-11-10T00:52:53.484+0000] {standard_task_runner.py:72} INFO - Started process 244 to run task
+[2026-11-10T00:52:53.486+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'solution_baseline_prep', 'publish_merged', 'native_prep_01', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/solution_baseline_prep.py', '--cfg-path', '/tmp/tmp9xbspxkp']
+[2026-11-10T00:52:53.488+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask publish_merged
+[2026-11-10T00:52:53.568+0000] {task_command.py:467} INFO - Running <TaskInstance: solution_baseline_prep.publish_merged native_prep_01 [running]> on host 6c848b1e6732
+[2026-11-10T00:52:53.687+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='solution_baseline_prep' AIRFLOW_CTX_TASK_ID='publish_merged' AIRFLOW_CTX_EXECUTION_DATE='2026-11-10T00:52:23+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='native_prep_01'
+[2026-11-10T00:52:53.688+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-11-10T00:52:53.690+0000] {python.py:240} INFO - Done. Returned value was: {'published_latest': '/repo/datasets/airflow/merged_latest.csv', 'merged_dataset_path': '/repo/artifacts/airflow/runs/20261110T005223/subset.csv', 'baseline_val_f1': 0.05, 'target_column': 'is_fraud'}
+[2026-11-10T00:52:53.750+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-11-10T00:52:53.750+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=solution_baseline_prep, task_id=publish_merged, run_id=native_prep_01, execution_date=20261110T005223, start_date=20261110T005253, end_date=20261110T005253
+[2026-11-10T00:52:53.781+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-11-10T00:52:53.792+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-11-10T00:52:53.795+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

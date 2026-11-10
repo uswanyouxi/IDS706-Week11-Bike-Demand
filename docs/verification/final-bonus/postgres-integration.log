@@ -1,0 +1,56 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________________ test_real_postgres_snapshot_is_unchanged ___________________
+
+    @pytest.mark.integration
+    def test_real_postgres_snapshot_is_unchanged():
+        if os.environ.get("BONUS_DB_INTEGRATION")!="1":pytest.skip("Explicit real read-only database check not enabled")
+        from bike_demand_ml.db import load_postgres_snapshot
+>       first,meta=load_postgres_snapshot();second,again=load_postgres_snapshot()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+
+/tmp/final-submission-audit-xnv9guaj/tests/integration/test_check.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/bike_demand_ml/db.py:6: in load_postgres_snapshot
+    with app_connect() as connection:
+         ^^^^^^^^^^^^^
+src/bike_demand/storage.py:18: in app_connect
+    user=os.environ.get("APP_DB_USER", "bike_app"), password=os.environ["APP_DB_PASSWORD"],
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = environ({'PATH': '/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'HOSTNAME': 'fd3748d06...': '8.4.2', 'PYTEST_CURRENT_TEST': 'tests/integration/test_check.py::test_real_postgres_snapshot_is_unchanged (call)'})
+key = 'APP_DB_PASSWORD'
+
+>   ???
+E   KeyError: 'APP_DB_PASSWORD'
+
+<frozen os>:679: KeyError
+----- generated xml file: /tmp/final-submission-audit-xnv9guaj/result.xml ------
+=========================== short test summary info ============================
+FAILED ../../tmp/final-submission-audit-xnv9guaj/tests/integration/test_check.py::test_real_postgres_snapshot_is_unchanged
+1 failed in 0.80s
+@@XML@@<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.796" timestamp="2026-11-10T02:08:38.524232+00:00" hostname="fd3748d063ce"><testcase classname="tests.integration.test_check" name="test_real_postgres_snapshot_is_unchanged" time="0.706"><failure message="KeyError: 'APP_DB_PASSWORD'">@pytest.mark.integration
+    def test_real_postgres_snapshot_is_unchanged():
+        if os.environ.get("BONUS_DB_INTEGRATION")!="1":pytest.skip("Explicit real read-only database check not enabled")
+        from bike_demand_ml.db import load_postgres_snapshot
+&gt;       first,meta=load_postgres_snapshot();second,again=load_postgres_snapshot()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+
+/tmp/final-submission-audit-xnv9guaj/tests/integration/test_check.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/bike_demand_ml/db.py:6: in load_postgres_snapshot
+    with app_connect() as connection:
+         ^^^^^^^^^^^^^
+src/bike_demand/storage.py:18: in app_connect
+    user=os.environ.get("APP_DB_USER", "bike_app"), password=os.environ["APP_DB_PASSWORD"],
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = environ({'PATH': '/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'HOSTNAME': 'fd3748d06...': '8.4.2', 'PYTEST_CURRENT_TEST': 'tests/integration/test_check.py::test_real_postgres_snapshot_is_unchanged (call)'})
+key = 'APP_DB_PASSWORD'
+
+&gt;   ???
+E   KeyError: 'APP_DB_PASSWORD'
+
+&lt;frozen os&gt;:679: KeyError</failure></testcase></testsuite></testsuites>@@END@@

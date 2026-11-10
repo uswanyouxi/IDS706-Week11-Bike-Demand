@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-11-10T00:45:38.697992+00:00",
+  "native_local_executor_slots": 1,
+  "scheduler_command": [
+    "scheduler",
+    "--skip-serve-logs"
+  ],
+  "parser_interval_seconds": 300,
+  "scheduler_http_health_server": false,
+  "healthcheck": "Actual SchedulerJob heartbeat via airflow jobs check",
+  "task_logs": "Preserved in the unchanged new native-logs shared volume; no remote log server needed",
+  "native_dag_source_unchanged": true,
+  "windows_gate_gib": 2.5,
+  "existing_services_changed": false
+}

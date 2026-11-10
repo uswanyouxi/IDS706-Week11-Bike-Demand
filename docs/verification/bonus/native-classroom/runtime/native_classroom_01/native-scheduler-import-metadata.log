@@ -1,0 +1,12 @@
+BEGIN
+         dag_id         | is_paused | has_import_errors 
+------------------------+-----------+-------------------
+ solution_baseline_prep | t         | f
+(1 row)
+
+ native_run_count 
+------------------
+                0
+(1 row)
+
+COMMIT

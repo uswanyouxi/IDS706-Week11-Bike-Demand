@@ -1,0 +1,22 @@
+new observation
+test_absent_runtime_evidence_cannot_pass (__main__.IsolationTests.test_absent_runtime_evidence_cannot_pass) ... ok
+test_memory_gate_prevents_any_container_start (__main__.IsolationTests.test_memory_gate_prevents_any_container_start) ... ok
+test_native_worker_cannot_make_external_api_calls (__main__.IsolationTests.test_native_worker_cannot_make_external_api_calls) ... ok
+test_no_existing_network_name (__main__.IsolationTests.test_no_existing_network_name) ... ok
+test_no_existing_ui_port (__main__.IsolationTests.test_no_existing_ui_port) ... ok
+test_no_external_network (__main__.IsolationTests.test_no_external_network) ... ok
+test_no_external_volume_alias (__main__.IsolationTests.test_no_external_volume_alias) ... ok
+test_no_memory_cap_expansion (__main__.IsolationTests.test_no_memory_cap_expansion) ... ok
+test_no_paid_api (__main__.IsolationTests.test_no_paid_api) ... ok
+test_no_production_credentials (__main__.IsolationTests.test_no_production_credentials) ... ok
+test_no_project_root_or_env_mount (__main__.IsolationTests.test_no_project_root_or_env_mount) ... ok
+test_no_public_ui_binding (__main__.IsolationTests.test_no_public_ui_binding) ... ok
+test_no_unplanned_service (__main__.IsolationTests.test_no_unplanned_service) ... ok
+test_no_writable_reference_bind (__main__.IsolationTests.test_no_writable_reference_bind) ... ok
+test_retry_logging_preserves_original_bytes_and_timestamp (__main__.IsolationTests.test_retry_logging_preserves_original_bytes_and_timestamp) ... ok
+test_valid_native_project (__main__.IsolationTests.test_valid_native_project) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.264s
+
+OK

@@ -1,48 +1,20 @@
-# Phase checklist
+# Assignment requirement coverage
 
-## Phase A
+See the [supplied requirements](../assignment/requirements.md), [TA clarifications](../assignment/ta_clarifications.md), [root project guide](../README.md) and [evidence index](submission.md).
 
-- [x] Read requirements, TA clarifications and project specification completely.
-- [x] Probe actual UCI ZIP/day.csv schema, types, coverage and target identity.
-- [x] Probe full-range Open-Meteo ERA5 response, types, units, timezone and dates.
-- [x] Compare source date sets; distinguish probe from a persisted merge.
-- [x] Read official version-specific Airflow Docker guide/reference and constraints.
-- [x] Inspect Docker/Compose, WSL, Python/Git, RAM and disk without destructive changes.
-- [x] Create local Git repo, ignore rules, secret template and local secret generator.
-- [x] Author Compose, Dockerfiles, direct pins and isolated ML/dashboard environment.
-- [x] Design independent branches, daily schedule, date merge, app DB and DB-fed EDA.
-- [x] Design original LangGraph state, agents, conditional routing and bounded loop.
-- [x] Create tests/evidence structure and screenshot filename plan.
-- [x] Document exact setup commands, phase boundary and approvals.
-- [x] Build and smoke-test Part 1 containers with explicit user approval; see verification/phase-b/status.md.
-- [x] Complete final static configuration review; see verification/phase-a-review.md.
-- [x] Confirm Docker disk location on D: from settings and actual VHDX files.
-- [x] Recheck RAM/disk before approved runtime testing and monitor healthy service memory.
-- [ ] Confirm deadline/timezone and AI-use rules in Canvas (not connected/verified).
+| Requirement | Status / evidence |
+| --- | --- |
+| Original scheduled Airflow pipeline | Complete: daily 06:00 America/New_York, catchup=False, nine tasks |
+| Two distinct datasets | Complete: UCI bike counts and Open-Meteo ERA5 weather |
+| Parallel independent cleaning branches | Complete: real ingestion/cleaning overlap verified |
+| Validated date merge and database load | Complete: 731 one-to-one matches, no unmatched dates, transactional idempotent PostgreSQL upserts |
+| Read database back for analysis | Complete: three genuine database-fed EDA charts |
+| Original executable agent loop | Complete: explicit LangGraph state, candidate/evaluation nodes and bounded conditional retry |
+| Appropriate held-out metrics | Complete: chronological split, Dummy/Ridge MAE/RMSE/R2, one final test stage |
+| Container setup and running instructions | Complete: pinned Docker environments and project commands |
+| Required application screenshots | Complete: successful DAG, DAG graph, agent graph and evaluation captures |
+| Optional distinct adaptive specialists | Verified: coordinator, diagnostics/refinement, model selection, recovery and reporting |
+| Optional evaluation suite/dashboard | Verified for 27 declared executions, with scenario-specific criteria and saved-artifact audit |
+| Optional strict two-classroom-baseline comparison | Native DAG and completed LangGraph reproduced on the same fraud sample; Bike Demand ports remain explicitly qualified adaptations |
 
-## Phase B — Part 1, runtime verified
-
-- [x] Implement original Airflow 3 DAG and source transformations.
-- [x] Observe true task overlap, a successful scheduler-created run, and the next 06:00 local schedule.
-- [x] Enforce exact schema/date/units/one-to-one merge contracts; host tests pass.
-- [x] Migrate app PostgreSQL, load 731 rows transactionally, prove rerun idempotence and real SQL rollback in the separate test DB.
-- [x] Produce three EDA charts per run from new DB reads; document measured findings and limitations.
-- [x] Run host and full real Linux/DagBag/PostgreSQL tests; export genuine logs/SQL/EDA evidence.
-- [x] Prepare submission/part1 with fresh live run/task checks, immutable EDA/validation exports and a READ ONLY PostgreSQL report.
-- [x] Preserve real required Airflow run and graph screenshots: 01_airflow_dag_success.png and 02_airflow_graph.png. Supporting schedule/SQL/EDA UI captures remain optional.
-
-## Phase C — Part 2, runtime verified; screenshots captured
-
-- [x] Implement and stream original executable LangGraph workflow.
-- [x] Train on persisted cleaned PostgreSQL data with leakage-safe temporal splits.
-- [x] Exercise real retry/finish and missing-DB failure; 19 unit tests cover early success, retry, failure, max attempts and artifacts.
-- [x] Compare actual Ridge versus Dummy held-out MAE/RMSE/R2 without test-set tuning.
-- [x] Build runtime-reflective compiled-graph UI; verify real events/replay/evaluation and export genuine run artifacts.
-- [x] Capture and visually review all six real submission screenshots, including agent graph, retry, evaluation and comparison charts.
-- [x] Update root README for both parts with actual results, limitations, commands and existing image links.
-
-## Submission / optional work
-
-- [x] Review the exact recommended staging manifest for secrets, ignored files, real evidence and source attribution; 59 final tests pass.
-- [ ] Obtain explicit permission before remote creation, push, publishing or deployment.
-- [ ] Optional Part 3 is out of scope; do not claim bonus evaluations without doing them.
+The latest recorded combined test run passed 102 tests. Thirteen genuine screenshots document both required parts and the optional extension. Course deadline/timezone and any AI-use disclosure requirements are governed by Canvas.
